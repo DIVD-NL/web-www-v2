@@ -1,18 +1,11 @@
 #!/bin/bash
 
-
+hugo
+docker pull cyb3rjak3/html5validator
 docker run \
-	--volume="$PWD:/root/project:delegated" \
+	--volume="$PWD/public:/root/project:delegated" \
 	--entrypoint /bin/sh \
-	-ti node:20-alpine \
+	-ti cyb3rjak3/html5validator \
 	-c "
-		cd /root/project/;
-		yarn
-		yarn build
-
-		apk update
-		apk add py3-pip ruby ruby-dev ruby-nokogiri alpine-sdk openjdk11-jre-headless bash
-		pip3 install html5validator 
-		gem install --no-document html-proofer
-		./proof_html.sh
+		html5validator --root /root/project --also-check-css --log INFO
 "
