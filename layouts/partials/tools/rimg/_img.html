@@ -10,7 +10,6 @@
   $ . -}} {{- $attributes = printf `%s %s="%s"` $attributes $v . -}} {{- end -}} {{- end -}}
   <img
     src="{{.RelPermalink}}"
-    type="{{.MediaType}}"
     {{$attributes|safeHTMLAttr}}
   />
 </picture>
