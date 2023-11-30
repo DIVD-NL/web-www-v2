@@ -11,7 +11,7 @@
 <section class="card {{ range $classes }} card-{{ . }} {{ end }}">
     <figure>
         {{ with resources.Get $imageSource }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" $linkTitle) }} 
+            {{ partial "tools/rimg/img" (dict "img" . "alt" $name) }} 
         {{ else }}
             <img src="#" alt="Default alt text" />
         {{ end }}
