@@ -7,7 +7,9 @@ intro: "Wij maken de digitale wereld veiliger door te scannen naar
 fold:
   showcase: /newsroom/articles/test-article-with-image
   received: Heb je een email van ons csirt team ontvangen? Lees hier verder
+  received_alt: Afbeelding van een enveloppe
   family: Wordt onderdeel van de DIVD en help ons de digitale wereld veiliger te maken
+  family_alt: Plaatje van een groep mensen die de DIVD familie moeten voorstellen
 whatwedo:
   title: Wat doen we?
   description: "Wij scannen ip-adressen op het internet naar bekende, en

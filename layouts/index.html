@@ -24,14 +24,17 @@
 
             {{ partial "card" (dict 
                 "imageSource" "images/global/received_email.png" 
+                "imageAlt" .Received_Alt
                 "title" .Received 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 
-                "classes" (slice "article")) 
+                "classes" (slice "article")
+                ) 
             }}
 
             {{ partial "card" (dict 
                 "imageSource" "images/global/divd_family.png" 
+                "imageAlt" .Family_Alt
                 "title" .Family 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 

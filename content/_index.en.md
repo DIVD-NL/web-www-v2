@@ -7,7 +7,9 @@ intro: "We aim to make the digital world safer by reporting vulnerabilities we
 fold:
   showcase: /newsroom/articles/online-test-article
   received: Received an E-mail from us? Don’t worry! Learn more here.
+  received_alt: Image of an envelope
   family: Become part of DIVD and help us protect the digital world
+  family_alt: Picture of group of people depicting the DIVD family
 whatwedo:
   title: What we do
   description: "DIVD aims to make the digital world safer by reporting

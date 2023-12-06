@@ -10,6 +10,7 @@
 
   {{ partial "card" (dict 
     "imageSource" $imageSource
+    "imageAlt" .Params.imageAlt
     "title" .Title 
     "tag" $tag
     "linkTitle" (i18n "readmore") 
