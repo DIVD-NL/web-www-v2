@@ -34,14 +34,14 @@
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
         <div>
           <h2>{{ .Params.appreciate.title }}</h2>
-          <p className="pre">{{ .Params.appreciate.description }}</p>
+          <p class="pre">{{ .Params.appreciate.description }}</p>
 
           {{ with resources.Get "images/global/divdyay.png" }} 
             {{ partial "tools/rimg/img" (dict "img" . "alt" "DIVD Yay!") }}
           {{ end }}
         </div>
         <div id="donate">
-          <div className="block">
+          <div class="block">
             <h3>{{ .Params.donatesupp.title }}</h3>
             <p class="pre">{{ .Params.donatesupp.description }}</p>
             {{ range .Params.donatesub.links }}
