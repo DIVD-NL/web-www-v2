@@ -5,11 +5,15 @@ intro: We are a group of volunteers that scout the web for potential cyber
   security risks.
 becomevolunteer:
   title: Become a volunteer
+  image: images/global/becomevolunteer.png
+  alt: Drawing of a group of voluteer hackers
   description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus
     euismod venenatis gravida purus non. Lectus praesent amet nunc et
     vestibulum.
 becomepartner:
   title: Become a partner
+  image: images/global/becomepartner.png
+  alt: Drawing of a DIVD voluteer shaking the hand of a DIVD partner
   description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus
     euismod venenatis gravida purus non. Lectus praesent amet nunc et
     vestibulum.

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf public/*
 hugo
 node ./scripts/postbuild.js
 docker pull cyb3rjak3/html5validator

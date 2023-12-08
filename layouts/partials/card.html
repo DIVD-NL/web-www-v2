@@ -10,6 +10,9 @@
 {{ $content := .content }}
 
 {{ $alt := $imageAlt | default $name }}
+{{ if not $alt }}
+    {{ warnf "No alt tag set for card with name '%s', title '%s', link '%s' and image '%s'" $name $title $link $imageSource }}
+{{ end }}
 
 <section class="card {{ range $classes }} card-{{ . }} {{ end }}">
     <figure>

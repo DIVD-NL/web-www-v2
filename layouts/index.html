@@ -57,21 +57,24 @@
           <div class="carousel">
             <div class="slides">
               {{ partial "card" (dict 
-                "imageSource" "images/global/scout.png" 
+                "imageSource" .t1_image
+                "imageAlt" .t1_alt
                 "title" .t1 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 
                 "classes" (slice "cta")) 
               }}
               {{ partial "card" (dict 
-                "imageSource" "images/global/assessing.png" 
+                "imageSource" .t2_image 
+                "imageAlt" .t2_alt
                 "title" .t2 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 
                 "classes" (slice "cta")) 
               }}
               {{ partial "card" (dict 
-                "imageSource" "images/global/scout.png" 
+                "imageSource" .t3_image
+                "imageAlt" .t3_alt
                 "title" .t3 
                 "linkTitle" (i18n "readmore") 
                 "link" "/test" 

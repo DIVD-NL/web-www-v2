@@ -18,13 +18,15 @@
 
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
         {{ partial "card" (dict 
-          "imageSource" "images/global/becomevolunteer.png" 
+          "imageSource" .Params.becomevolunteer.image
+          "imageAlt" .Params.becomevolunteer.alt
           "title" .Params.becomevolunteer.title
           "content" .Params.becomevolunteer.description
           "classes" (slice "cta")) 
         }}
         {{ partial "card" (dict 
-          "imageSource" "images/global/becomepartner.png" 
+          "imageSource" .Params.becomepartner.image
+          "imageAlt" .Params.becomepartner.alt
           "title" .Params.becomepartner.title
           "content" .Params.becomepartner.description
           "classes" (slice "cta")) 
