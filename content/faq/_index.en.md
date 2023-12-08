@@ -15,23 +15,25 @@ faqgroups:
           adresses to see if they're vulernable and if that's the case we'll
           send out an email to every vulnerable IP adress. 
 
-          Our emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl](https://csirt.divd.nl) site. 
 
-          Learn more about what to do when you receive an email. [link naar email-pagina]
+          O﻿ur emails are personally written by one of our researchers and contain a link to the casefile on the [csirt.divd.nl ](csirt.divd.nl)site. 
+
+
+          Learn more about what to do when you receive an email. \[link naar email-pagina]
       - title: Who works for DIVD?
         description: >-
-          Everybody who volunteers at DIVD has and....
+          E﻿verybody who volunteers at DIVD has and....
 
 
-          DIVD'ers work in different fields of work, for example: (commercial) security companies, government or as a freelancer. And some people don't work in security at all but they have great interest in making the digital world safer. 
+          D﻿IVD'ers work in different fields of work, for example: (commercial) security companies, government or as a freelancer. And some people don't work in security at all but they have great interest in making the digital world safer. 
 
 
-          All of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
+          A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
 
 
-          Individuals of all kinds of backgrounds and genders are most welcome at DIVD. We do not only welcome and embrace them, but value their unique perspectives and contributions to our community. We find it important that everybody can feel and act like themselves.
+          I﻿ndividuals of all kinds of backgrounds and genders are most welcome at DIVD. We do not only welcome and embrace them, but value their unique perspectives and contributions to our community. We find it important that everybody can feel and act like themselves.
   - heading: An extra group
     faqs:
       - title: A question
-        description: and an answer
+        description: a﻿nd an answer
 ---
