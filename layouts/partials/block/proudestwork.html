@@ -1,4 +1,6 @@
 
+{{ partial "comment.html" (dict "comment" "proudestwork.html" ) }}
+
 {{ $blocks := .Site.GetPage "/block" }}
 
 {{ with $blocks.Params.proudestwork }}
@@ -15,6 +17,8 @@
         {{ end }}  
       </div>
       {{ partial "carousel_controls" (len .ourproudestwork) }}
+    </div>
   {{ partial "p/layout_close" }} 
 
 {{ end }}
+{{ partial "comment.html" (dict "comment" "/proudestwork.html" ) }}
