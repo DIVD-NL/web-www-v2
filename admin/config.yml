@@ -49,7 +49,15 @@ collections:
               widget: "string",
               i18n: true,
             }
+          - name: "received_alt"
+            label: "Alt text for received image"
+            widget: "string"
+            i18n: true
           - { label: "Family", name: "family", widget: "string", i18n: true }
+          - name: "family_alt"
+            label: "Alt text for family image"
+            widget: "string"
+            i18n: true
 
       - name: "whatwedo"
         label: "What we do"
@@ -60,8 +68,35 @@ collections:
           - { label: title, name: title, widget: string, i18n: true }
           - { label: description, name: description, widget: text, i18n: true }
           - { label: t1, name: t1, widget: string, i18n: true }
+          - {
+              label: "t1_Image",
+              name: "t1_image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: true,
+            }          
+          - { label: t1_alt, name: "Alt text for t1 image", widget: string, i18n: true }
           - { label: t2, name: t2, widget: string, i18n: true }
+          - {
+              label: "t2_Image",
+              name: "t2_image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: true,
+            }          
+          - { label: t2_alt, name: "Alt text for t2 image", widget: string, i18n: true }
           - { label: t3, name: t3, widget: string, i18n: true }
+          - {
+              label: "t3_Image",
+              name: "t3_image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: true,
+            }          
+          - { label: t3_alt, name: "Alt text for t3 image", widget: string, i18n: true }
 
       - name: "helpushelpyou"
         label: "Help us, help you"
@@ -279,6 +314,7 @@ collections:
           media_folder: "/assets/images/articles",
           required: false,
         }
+      - { label: alt, name: "Alt tag for image", widget: string, i18n: true, required: false }
       - {
           label: "case",
           required: false,
@@ -343,6 +379,15 @@ collections:
             name: "title"
             widget: "string"
             i18n: true
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: false,
+            }          
+          - { label: alt, name: "Alt tag for image", widget: string, i18n: true }            
           - label: "Description"
             name: "description"
             widget: "text"
@@ -356,6 +401,15 @@ collections:
             name: "title"
             widget: "string"
             i18n: true
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              public_folder: "/images/",
+              media_folder: "/assets/images/",
+              required: false,
+            }          
+          - { label: alt, name: "Alt tag for image", widget: string, i18n: true }            
           - label: "Description"
             name: "description"
             widget: "text"
