@@ -24,7 +24,7 @@
         <h2>{{ .Params.corevaluestitle }}</h2>
         <article>
           {{ range $index, $elements := .Params.corevalues }}
-            <section key={i}>
+            <section>
               <h3>
                 <span>{{ add $index 1 }}</span>
                 {{ .title }}

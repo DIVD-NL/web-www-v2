@@ -1,3 +1,6 @@
+
+{{ partial "comment.html" (dict "comment" "p/block/faq.html.html" ) }}
+
 {{ $page := .Site.GetPage "/faq" }}
 
 
@@ -14,7 +17,7 @@
         {{ with index .Params.faqgroups 0 }}
           {{ range $index, $element := .faqs }}
             <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
-              <h3>{{ .title }} <span /></h3>
+              <h3>{{ .title }} <span> </span></h3>
               <div class="accordion-content">{{ .description }}</div>
             </div>
           {{ end }}
@@ -24,3 +27,5 @@
   {{ partial "p/layout_close" }} 
 
 {{ end }}
+
+{{ partial "comment.html" (dict "comment" "/p/block/faq.html.html" ) }}
