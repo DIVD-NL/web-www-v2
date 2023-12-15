@@ -22,7 +22,7 @@
   ,{
     "type": "faq",
     "title": "{{ .title }}",
-    "content": "{{ replace .description "\n" "\\n"| safeJS }}"
+    "content": "{{ replace .description "\n" "\\n"| markdownify | plainify }}"
   }
   {{- end -}}
 {{- end -}}
