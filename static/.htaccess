@@ -13,10 +13,14 @@ ErrorDocument 404 /404.html
 RewriteEngine On
 
 # Rewrite and redirect /people requests
-RewriteCond %{REQUEST_URI} ^/beta/people/ [NC]
+RewriteCond %{REQUEST_URI} ^/divd-nl-2024/people/ [NC]
 RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4-$5-$6 [L,r=301]
 RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4-$5 [L,r=301]
 RewriteRule people/(.*?)\s(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3-$4 [L,r=301]
 RewriteRule people/(.*?)\s(.*?)\s(.*) /who-we-are/team/people/$1-$2-$3 [L,r=301]
 RewriteRule people/(.*?)\s(.*) /who-we-are/team/people/$1-$2 [L,r=301]
 RewriteRule people/(.*) /who-we-are/team/people/$1 [L,r=301]
+
+# Redirect /donate
+RewriteCond %{REQUEST_URI} ^/divd-nl-2024/donate [NC]
+RewriteRule .* /contribute/#donate [NE,L,r=301]
