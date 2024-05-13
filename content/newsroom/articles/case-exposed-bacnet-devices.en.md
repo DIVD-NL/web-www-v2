@@ -1,11 +1,10 @@
 ---
 title: "CASE: SMARTERMAIL"
 date: 2024-01-09T20:29:38.981Z
-author:
-  - /people/arthur-dent
+author: []
 tag: case
 intro: A DIVD researcher found multiple vulnerabilities in SmarterMail. Both
-  vulnerabilities were discovered within the webmail fronted of SmarterMail.
+  vulnerabilities were discovered within the webmail fronted of SmarterMail. Dus
 image: /images/articles/1675785490-esxi-16_9-1.png
 case:
   caseid: DIVD-2021-00006
