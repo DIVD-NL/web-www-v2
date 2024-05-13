@@ -1,12 +1,10 @@
 ---
 title: "CASE: KASEYA"
 date: 2024-02-14T08:28:57.185Z
-author:
-  - /who-we-are/team/people/victor-gevers
-  - /who-we-are/team/people/joost-hendricksen
+author: []
 tag: case
 intro: One of the biggest (ransomware) cases in historie, a case with a huge
-  impact worldwide.
+  impact worldwide. Dus.
 case:
   caseid: DIVD-2021-00002
   closed: true
