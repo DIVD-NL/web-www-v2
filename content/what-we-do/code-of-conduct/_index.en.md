@@ -30,4 +30,4 @@ title: Code of Conduct
 
 ## MORE INFO:
 
-Is it legit to exchange lists of IP addresses together with vulnerabilities? The short answer is: Yes, according to Dutch law we can. The more elaborate answer you will find in this Liability Impact Assessment, prepared by Privacy Management Partners (in Dutch). [Click here to download](https://www.divd.nl/assets/downloads/LIA_abuse_informatie_v1.1.pdf) (Dutch)
+Is it legit to exchange lists of IP addresses together with vulnerabilities? The short answer is: Yes, according to Dutch law we can. The more elaborate answer you will find in this Liability Impact Assessment, prepared by Privacy Management Partners (in Dutch). <https://www.divd.nl/documents/LIA_abuse_informatie_v1.1.pdf>
