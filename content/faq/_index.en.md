@@ -56,7 +56,7 @@ faqgroups:
           * J﻿oin us
           * P﻿ut security.txt on your website
           * T﻿ake actions after you've received a notification
-          * b﻿ecome a partner or make a donation
+          * B﻿ecome a partner or make a donation
         title: How can we contribute to this initiative?
   - heading: Become a volunteer
     faqs:
