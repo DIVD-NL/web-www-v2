@@ -1,12 +1,13 @@
 ---
-title: Frequently asked questions
-opener: In case you still have any questions, we have listed the most frequently
-  asked questions for you.
+title: "Dynamic FAQ section, an extra FAQ "
+opener: An extra FAQ section
 intro: "If this F.A.Q. doesn't answer your question, please do not hesitate to
   contact us. We'll do our best to answer your question to the best of our
   knowledge. "
+button_text: all FAQ
+button_url: https://csirt.divd.nl/
 faqgroups:
-  - heading: Home
+  - heading: English
     faqs:
       - title: Is it legal what DIVD is doing?
         description: "The Dutch jurisprudence is clear: if you serve a societal need
@@ -78,11 +79,7 @@ faqgroups:
 
 
           A﻿ll of our volunteers are screened and provided an certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
-  - heading: Become a partner
-    faqs:
-      - title: How can I help?
-        description: Please check our partner page for more information
-  - heading: Notification email
+  - heading: German - Deutsch
     faqs:
       - description: >-
           If we find a vulnerability, we'll set up a case with all the details

@@ -22,7 +22,7 @@ We streven ernaar de digitale wereld veiliger te maken door kwetsbaarheden die w
 
 #### **Bestuur**[](/documents/uittreksel_handelsregister_75957345.pdf)
 
-* [Overzicht bestuursleden](https://www.divd.nl/documents/uittreksel_handelsregister_75957345.pdf)
+* [Overzicht bestuursleden](/documents/uittreksel_handelsregister_75957345.pdf)
 
 **Beloningsbeleid**
 
@@ -31,5 +31,5 @@ Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoedi
 **Documenten**
 
 * [Jaarverslag 2022](/documents/DIVD%20jaarverslag%202022.pdf)
-* [Jaarverslag 2021](/documents/DIVD%20jaarverslag%202021.pdf)[](/documents/Standaardformulier%20ANBI.pdf)
-* [Standaardformulier ANBI](https://www.divd.nl/documents/Standaardformulier%20ANBI.pdf)
+* [Jaarverslag 2021](/documents/DIVD%20jaarverslag%202021.pdf)
+* [Standaardformulier ANBI](/documents/Standaardformulier%20ANBI.pdf)

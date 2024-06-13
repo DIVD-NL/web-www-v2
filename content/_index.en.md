@@ -1,8 +1,8 @@
 ---
 title: Home
 opener: A watchful eye in the digital world
-intro: "We aim to make the digital world safer by reporting vulnerabilities we
-  find in digital systems to the people who can fix them. "
+intro: We aim to make the digital world safer by reporting vulnerabilities we
+  find in digital systems to the people who can fix them.
 fold:
   showcase: /newsroom/articles/operation-endgame-divd-2024-00019
   received: Received an E-mail from us? Don’t worry! Learn more here.

@@ -1,5 +1,5 @@
 ---
-title: Notification email
+title: Notification emails
 opener: We report vulnerabilities to prevent issues
 intro: "Whenever a vulnerability is found, we open a case and create a
   fingerprint. After that we'll start scanning to identify vulnerable instances

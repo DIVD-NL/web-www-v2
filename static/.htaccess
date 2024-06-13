@@ -1,23 +1,45 @@
+# We wnat to rewrite
+RewriteEngine On
+
+# Detect HTTPS
+
+SetEnvIfNoCase X-HTTPS-Session Yes is_ssl=yes
+SetEnvIfNoCase X-HTTPS-Session Yes is_https=yes
+SetEnvIfNoCase X-HTTPS-Session Yes HTTPS=on
+
+# Security headers
 Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains;"
 Header always append X-Frame-Options DENY
 Header set X-Content-Type-Options nosniff
 Header set X-XSS-Protection "1; mode=block"
 Header set Content-Security-Policy "default-src 'none'; frame-src https://form.jotform.com https://eu-submit.jotform.com; font-src 'self'; img-src 'self' data: https://cdn.theorg.com https://divd.goatcounter.com/count; script-src 'self' https://form.jotform.com https://unpkg.com/ https://gc.zgo.at; style-src 'self'; connect-src 'self' https://divd.goatcounter.com/count; base-uri 'self'; frame-ancestors 'self'; form-action 'self';"
-
-
 Header always set Referrer-Policy "same-origin"
 
+# Error document
 ErrorDocument 404 /404.html
 
-# Rewrite rules
-RewriteEngine On
+# Redirect http -> https
+RewriteCond %{HTTP:X-HTTPS-SESSION} !^yes$
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,QSA]
 
-# Other well known urls
+# Block requests not for www.divd.nl
+RewriteCond %{HTTP_HOST} !^www.divd.nl
+RewriteRule (.*) - [r=404]
+
+# Handle requests to directories without trailing slash
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule (.*[^\/])$ https://www.divd.nl/$1/ [L,r=301,QSA]
+
+# Redirect requests directly to https://www.divd.nl/divd-nl-2024/...
+RewriteCond %{THE_REQUEST} ^\w+\s+/?divd-nl-2024
+RewriteRule (.*) https://www.divd.nl/$1 [L,r=301,QSA]
+
+# Vanity / well-known urls
 RewriteCond %{REQUEST_URI} ^/divd-nl-2024/donate [NC]
-RewriteRule .* /contribute/#donate [NE,L,r=301]
+RewriteRule .* /contribute/#donate [NE,L,r=301,QSA]
 
 RewriteCond %{REQUEST_URI} ^/divd-nl-2024/code [NC]
-RewriteRule .* /what-we-do/code-of-conduct/ [L,r=301]
+RewriteRule .* /what-we-do/code-of-conduct/ [L,r=301,QSA]
 
 RewriteCond %{REQUEST_URI} ^/divd-nl-2024/join [NC]
-RewriteRule .* /contribute/volunteers/ [L,r=301]
+RewriteRule .* /contribute/volunteers/ [L,r=301,QSA]
