@@ -30,6 +30,8 @@ Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoedi
 
 **Documenten**
 
+* [Financieel verslag 2023](/documents/DIVD.financieel.verslag.2023.pdf)
+* [Jaarverslag 2023](/documents/DIVD.Annual.Report.2023.pdf)
 * [Jaarverslag 2022](/documents/DIVD%20jaarverslag%202022.pdf)
 * [Jaarverslag 2021](/documents/DIVD%20jaarverslag%202021.pdf)
 * [Standaardformulier ANBI](/documents/Standaardformulier%20ANBI.pdf)
