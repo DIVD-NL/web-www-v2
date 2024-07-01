@@ -12,3 +12,6 @@ out
 # Package dependencies
 node_modules/
 /npm-debug.log
+
+# Compilation results from the SCSS transpiler
+resources/
