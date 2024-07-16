@@ -23,11 +23,11 @@
     height: 100%;
     top: 0;
     left: 50%;
-    width: calc(100vw - 50%);
+    width: calc(100vw - 50% - 16px);
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    // overflow: hidden;
+    overflow: hidden;
 
     img {
       top: 0;

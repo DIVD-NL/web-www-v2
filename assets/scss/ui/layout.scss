@@ -140,7 +140,7 @@
       padding: 0 16px;
     }
     &.pl-extend {
-      flex: 0 0 calc(var(--cw) + var(--rest));
+      flex: 0 0 calc(var(--cw) + var(--rest) - 16px);
       overflow-x: hidden;
       padding-right: 0;
     }

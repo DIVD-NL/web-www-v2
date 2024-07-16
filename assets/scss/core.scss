@@ -13,6 +13,9 @@ body {
 }
 
 
+// * {
+//   outline: 1px solid red;
+// }
 
 .topic-intro {
   background-color: #1D1D1D;
@@ -761,4 +764,9 @@ table.donations {
       font-style: normal;
     }
   }
+}
+
+
+.hidden {
+  display: none !important;
 }

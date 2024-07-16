@@ -27,7 +27,7 @@ The project will require both people and teams data to be present. If not, these
 
 ```sh
 npm run gen-people
-npm run gen-team
+npm run gen-teams
 ```
 
 ## Local admin
