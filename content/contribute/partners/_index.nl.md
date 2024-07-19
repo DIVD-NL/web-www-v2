@@ -1,13 +1,13 @@
 ---
 type: partners
 title: Wordt partner
-opener: Friends of DIVD
-intro: Share and pursue your passion for cybersecurity with like-minded people
-  while helping to create a safer digital world
-partnerstitle: Our Partners
-partnersintro: We would be nothing with our partners (we like to call them
-  friends) and therefore we truly appreciate them. Let us know if you want to
-  become a DIVD partner
+opener: Vrienden van DIVD
+intro: Deel en volg je passie voor cyberbeveiliging met gelijkgestemden terwijl
+  je helpt om een veiligere digitale wereld te creëren
+partnerstitle: Onze partners
+partnersintro: We zouden niets zijn zonder onze partners (we noemen ze graag
+  vrienden) en daarom waarderen we ze echt. Laat het ons weten als je een
+  DIVD-partner wilt worden.
 partnerquote:
   name: Jan Dijkstra
   website: https://a2b.nl

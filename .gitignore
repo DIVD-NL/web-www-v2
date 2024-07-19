@@ -1,6 +1,14 @@
-public/
+# VS Code config
+.vscode
+
+# Mac system files
+.DS_Store
+
+# Generated web files
+public
+resources
+out
+
+# Package dependencies
 node_modules/
 /npm-debug.log
-.DS_Store
-out/
-

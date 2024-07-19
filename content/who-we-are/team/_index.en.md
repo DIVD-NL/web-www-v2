@@ -2,12 +2,14 @@
 type: team
 title: The Team
 opener: Meet our Team
-intro: We're very thankful and proud of all our team members, who spend their
-  free time to a good cause, voluntarily. The people who work with us are very
-  various people, some have just started their career in cybersecurity and
-  others have worked in cybersecurity for a very long time. Due to privacy
-  reasons, which we can only encourage, not every member has a profile picture
-  or is mentioned in a team.
+intro: >-
+  We're very grateful and proud of all our team members, who voluntary dedicate
+  their free time for a great cause. Our team is a mix of different people; some
+  are just starting out in cybersecurity, while others have been in it for a
+  long time. 
+
+
+  Not every member has a profile picture or is listed in a team. Privacy matters!
 in_progress: false
 teams:
   - title: Board
@@ -18,28 +20,7 @@ teams:
     description: The CSIRT is the engineblock of DIVD. It is responsible for
       scanning the internet and notifying the system owners as well as running
       our CVE Numbering Authority activities.
-    members:
-      - /who-we-are/team/people/alwin-warringa
-      - /who-we-are/team/people/axel
-      - /who-we-are/team/people/barre-dijkstra
-      - /who-we-are/team/people/boaz-braaksma
-      - /who-we-are/team/people/celistine-oosting
-      - /who-we-are/team/people/edwin-van-vliet
-      - /who-we-are/team/people/fabian-bron
-      - /who-we-are/team/people/finn-van-der-knaap
-      - /who-we-are/team/people/jelle-ursem
-      - /who-we-are/team/people/jeroen-ellermeijer
-      - /who-we-are/team/people/jeroen-de-baare
-      - /who-we-are/team/people/kaj-koole
-      - /who-we-are/team/people/laurent-de-vries
-      - /who-we-are/team/people/lennaert
-      - /who-we-are/team/people/max-van-der-horst
-      - /who-we-are/team/people/oscar-vlugt
-      - /who-we-are/team/people/ralph-horn
-      - /who-we-are/team/people/stan-plasmeijer
-      - /who-we-are/team/people/victor-pasman
-      - /who-we-are/team/people/wessel-baltus
-      - /who-we-are/team/people/wessel-van-der-goot
+    members: []
   - title: Research & Development
     description: DIVD has two teams highly skilled security researchers who seek and
       report vulnerabilities as a voluntary service next to their jobs. DIVD
@@ -89,20 +70,11 @@ teams:
       - /who-we-are/team/people/marieke-smits
   - title: Governance, Risk & Compliance (GRC)
     description: ""
-    members:
-      - /who-we-are/team/people/alexia-ronda
-      - /who-we-are/team/people/dennis-kussendrager
-      - /who-we-are/team/people/filip-chyla
-      - /who-we-are/team/people/ferdinand-uittenbogaard
-      - /who-we-are/team/people/frank-breedijk
-      - /who-we-are/team/people/peter-baard
+    members: []
   - title: Office
     description: Providing some sense of direction to a bunch of hackers, aka
       advanced cat herding.
-    members:
-      - /who-we-are/team/people/chris-van-t-hof
-      - /who-we-are/team/people/h-meuris
-      - /who-we-are/team/people/rob-gerritsen
+    members: []
   - title: Project Office
     description: ""
     members: []

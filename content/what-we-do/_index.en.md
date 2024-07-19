@@ -7,27 +7,27 @@ intro: We are a collective with over 130 very enthusiastic and skilled people
 whatwedocontent:
   title: What we do
   description: >-
-    DIVD scans the internet on the presence of Common Vulnerabilities and
-    Exposures (CVEs) which might be quite impactfull. When we find vulnerable
-    URLs, we send owners an notification email on the vulnerability present,
-    where we found it and what to do. 
+    DIVD scans the internet for the presence of Common Vulnerabilities and
+    Exposures (CVEs), which is a list of publicly disclosed security
+    vulnerabilities. When we find vulnerable URLs, we send the owners of the
+    website or system a notification email. This email includes information
+    about the vulnerability that was found, where it was found, and what steps
+    to take to mitigate the risk of exploitation.
 
 
-
-
-    We also find new vulnerabilities (zero-days) and share these with the software vendor, so they can fix it. Furthermore, when we detect instances of compromised credentials, we take swift action by alerting affected individuals via email and urging them to immediately change their passwords or take other necessary steps. 
+    In addition to scanning the internet for known and publicly disclosed security vulnerabilities, we also actively search for and discover new vulnerabilities (zero-day vulnerabilities). These are typically unknown to the public and no patch or fix exists for them yet. We share this information with the (software) vendor or owner so they can design a solution. Furthermore, when we detect instances of compromised credentials, we take swift action by alerting affected individuals via email and urging them to immediately change their passwords or take other necessary steps.
 scouting:
   title: "Scan the internet for vulnerabilities "
-  description: "When our CSIRT team finds or becomes aware of a vulnerability,
-    they scan the internet and identify the affected systems. "
+  description: Upon discovering or becoming aware of a vulnerability, our CSIRT
+    team conducts an internet scan to identify the systems that are affected.
 assessing:
-  description: "When affected systems are identified, we investigate the owners of
-    these systems and notify them. Our notification email informs them and
-    offers steps to fix or mitigate the issue. "
-  title: Reporting  the vulnerability to the right people
+  description: When affected systems are identified, we reach out to the owners of
+    these systems. The email we send provides them with information about the
+    vulnerability and suggests measures to resolve or lessen its impact.
+  title: Reporting the vulnerability to the right people
 reporting:
-  description: "DIVD is also a CVE Numbering Authority, in this role we assign CVE
-    numbers and help security researchers engage with vendors to disclose
-    vulnerabilities. "
-  title: 0 Day disclosure
+  description: "DIVD is a CVE Numbering Authority (CNA). We identify
+    vulnerabilities and assign unique identifiers (CVEs). Furthermore, we help
+    security researchers engage with vendors to disclose vulnerabilities. "
+  title: Zero-day disclosure
 ---

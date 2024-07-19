@@ -23,7 +23,7 @@ whatwedo:
   t3_image: /images/divd-illustration-library_report-what-we-do.png
   description: "DIVD aims to make the digital world safer by reporting
     vulnerabilities we find in digital systems to the people who can fix them.
-    We have a global reach, but do it Dutch style: open, honest, collaborative
+    We have a global reach, but do it Dutch style: open, honest, collaborative,
     and for free. "
   t1: Scan the internet for vulnerabilities
   t2: Reporting the vulnerability to the right people

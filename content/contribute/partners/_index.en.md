@@ -5,10 +5,10 @@ opener: Friends of DIVD
 intro: Share and pursue your passion for cybersecurity with like-minded people
   while helping to create a safer digital world
 sponsordeck: https://divd.nl
-partnerstitle: Our Partners
+partnerstitle: Our partners
 partnersintro: We would be nothing with our partners (we like to call them
   friends) and therefore we truly appreciate them. Let us know if you want to
-  become a DIVD partner
+  become a DIVD partner.
 partnerquote:
   name: Dave Maasland
   website: https://www.eset.com/nl/
