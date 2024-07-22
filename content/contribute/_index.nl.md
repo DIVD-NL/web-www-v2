@@ -1,30 +1,53 @@
 ---
-title: Contribute
-opener: Help us creating a safe digital world for the future
-intro: We are a group of volunteers that scout the web for potential cyber
-  security risks.
+title: Bijdragen
+opener: "Onze missie om anderen te helpen: hoe jij betrokken kunt raken"
+intro: Wij zijn een groep vrijwilligers die het web verkennen op potentiële
+  cyberbeveiligingsrisico's.
 becomevolunteer:
-  title: Become a volunteer
+  title: Vrijwilliger worden
   image: images/global/becomevolunteer.png
   alt: Tekening van vrijwillige hackers
-  description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus
-    euismod venenatis gravida purus non. Lectus praesent amet nunc et
-    vestibulum.
+  description: "Heb je interesse om je aan te sluiten bij ons diverse team van
+    ethische hackers, onderzoekers, IT-professionals of juridische experts en te
+    leren van de besten? Meld je nu aan. "
+  Alt tag for image: Een illustratie van 2 mensen die over code praten,
+    weergegeven door een spreekballon gevuld met 010101.
 becomepartner:
-  title: Become a partner
+  title: Partner worden
   image: images/global/becomepartner.png
   alt: Drawing can een DIVD vrijwilliger die de hand schud van een partner
-  description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus
-    euismod venenatis gravida purus non. Lectus praesent amet nunc et
-    vestibulum.
+  description: "Als organisatie die zich inzet voor de hele internetcommunity,
+    bieden we niet alleen hulp aan uw klanten, maar ook aan diens leveranciers.
+    U kunt ons beschouwen als de vrijwillige brandweer: terwijl u uw eigen
+    infrastructuur beschermt, staan wij klaar om uw buren te helpen en zo
+    indirect ook uw bedrijf te beschermen."
+  Alt tag for image: Een illustratie van 2 mensen die praten en informatie uitwisselen
 appreciate:
-  title: We are a voluntairly run organization, we appreciate every donation.
-  description: >-
-    Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod
-    venenatis gravida purus non. Lectus praesent amet nunc et vestibulum.
-
-
-    Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lectus praesent amet nunc et vestibulum.
+  title: Omdat we een vrijwilligersorganisatie zijn, waarderen we elke donatie.
+  description: Als partner zijn uw bijdragen in de vorm van financiering,
+    vrijwilligerswerk en middelen (tools) voor ons van onschatbare waarde. Als
+    tegenprestatie toont u uw betrokkenheid bij het bevorderen van een veiligere
+    internetomgeving. Een partnerschap met DIVD biedt uw teamleden ook de
+    mogelijkheid om deel te nemen aan samenwerkingsprojecten met bekwame
+    (ethisch) hackers, waarbij ze kunnen deelnemen aan leuke initiatieven en
+    kunnen leren van vooraanstaande professionals uit de beveiligingsindustrie.
+donatesupp:
+  title: Doneer via SUPP
+  description: iDEAL, SOFORT, Bancontact of KBC/CBC
+  links:
+    - label: Doneer €10
+      link: https://supp.to/divdnl/donate
+    - label: Doneer €25
+      link: https://supp.to/divdnl/donate
+    - label: Doneer €50
+      link: https://supp.to/divdnl/donate
+  customlink: https://supp.to/divdnl/donate
+donatepaypal:
+  label: Doneer via Paypal
+  link: https://paypal.com/donate/?hosted_button_id=U5MRM5XSH36BG
+donatebanktransfer:
+  label: Doneer via bank transfer
+  link: "mailto: question@divd.nl"
 donations:
   - date: 2024-03-27
     amount: € 5.000

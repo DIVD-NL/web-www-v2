@@ -1,6 +1,6 @@
 ---
 type: partners
-title: Wordt partner
+title: Partner worden
 opener: Vrienden van DIVD
 intro: Deel en volg je passie voor cyberbeveiliging met gelijkgestemden terwijl
   je helpt om een veiligere digitale wereld te creëren

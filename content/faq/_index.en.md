@@ -6,7 +6,7 @@ intro: If this F.A.Q. doesn’t provide the answer you’re looking for, feel fr
   to reach out to us. We strive to respond to your queries to the best of our
   ability.
 faqgroups:
-  - heading: English
+  - heading: Home
     faqs:
       - title: Is it legal what DIVD is doing?
         description: "The Dutch jurisprudence is clear: if you serve a societal need

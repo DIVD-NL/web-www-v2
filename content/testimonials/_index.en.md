@@ -27,7 +27,7 @@ testimonials:
 
       one vulnerability at a time, strengthening our cyber defenses with quiet resolve and 
 
-      unwavering commitment.
+      unwavering commitment."
     name: Jaya Baloo
     role: CISO Rapid7
     image: /images/testimonials/jaya-baloo.jpeg
