@@ -1,7 +1,7 @@
 ---
 title: ANBI
 ---
-## ANBI
+## ANBI (Algemeen Nut Beogende Instelling)
 
 STICHTING DUTCH INSTITUTE FOR VULNERABILITY DISCLOSURE (DIVD)
 
@@ -26,7 +26,7 @@ We streven ernaar de digitale wereld veiliger te maken door kwetsbaarheden die w
 
 **Beloningsbeleid**
 
-Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoeding.
+* Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoeding.
 
 **Documenten**
 
@@ -35,3 +35,20 @@ Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoedi
 * [Jaarverslag 2022](/documents/DIVD%20jaarverslag%202022.pdf)
 * [Jaarverslag 2021](/documents/DIVD%20jaarverslag%202021.pdf)
 * [Standaardformulier ANBI](/documents/Standaardformulier%20ANBI.pdf)
+
+```
+<hr>
+
+```
+
+***Purpose of the foundation*** 
+
+*We aim to make the digital world safer by reporting vulnerabilities we find in digital systems to the people who can fix them. We have a global reach, but do it Dutch-style: open, honest, together and free.*
+
+***Board***
+
+* *[Overview board members](https://www.divd.nl/who-we-are/team/)*
+
+***Rewards Policy***
+
+* *Board members are volunteers and receive no payment for their work.*[](https://www.divd.nl/who-we-are/team/)[](/documents/Standaardformulier%20ANBI.pdf)
