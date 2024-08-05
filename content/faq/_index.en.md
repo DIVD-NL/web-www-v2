@@ -5,6 +5,8 @@ opener: In case you still have any questions, we have listed the most frequently
 intro: If this F.A.Q. doesn’t provide the answer you’re looking for, feel free
   to reach out to us. We strive to respond to your queries to the best of our
   ability.
+button_text: .
+button_url: .
 faqgroups:
   - heading: Home
     faqs:
@@ -30,7 +32,7 @@ faqgroups:
           have great interest in making the digital world safer. 
 
 
-          A﻿ll our volunteers are screened, and have provided a certificate of conduct. Our code of conduct is sacred, we do not deviate from it.
+          A﻿ll our volunteers are screened and need a [Dutch certificate of conduct.](https://justis.nl/en/products/certificate-of-conduct) Our code of conduct is sacred; we do not deviate from it.
       - description: Any vulnerability that falls under the category of high risk or
           high impact. The sequence in which we handle vulnerabilities is
           influenced by multiple metrics, including the level of exposure online
