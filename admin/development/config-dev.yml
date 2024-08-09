@@ -1474,6 +1474,7 @@ collections:
             search_fields: ["title", "case.caseid"]
             value_field: "/newsroom/articles/{{slug}}"
             display_fields: ["title", "case.caseid"]
+            required: false
             multiple: true
 
       # BLOCK:  Our mission #####################################################
