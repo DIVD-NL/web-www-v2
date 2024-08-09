@@ -1,11 +1,11 @@
 ---
 title: Home
 opener: A watchful eye in the digital world
-intro: "We aim to make the digital world safer by reporting vulnerabilities we
-  find in digital systems to the people who can fix them. "
+intro: Our goal is to enhance digital security by reporting the vulnerabilities
+  we discover in digital systems to those who can address and resolve them.
 fold:
-  showcase: /newsroom/articles/operation-endgame-divd-2024-00019
-  received: Received an E-mail from us? Don’t worry! Learn more here.
+  showcase: /newsroom/articles/_index
+  received: Received an E-mail from us? Don’t worry!
   received_alt: Image of an envelope
   family: Become part of DIVD and help us protect the digital world
   family_alt: Picture of group of people depicting the DIVD family
@@ -27,21 +27,23 @@ whatwedo:
     and for free. "
   t1: Scan the internet for vulnerabilities
   t2: Reporting the vulnerability to the right people
-  t3: 0 Day disclosure
+  t3: 0-Day disclosure
 helpushelpyou:
-  title: Help us, help you!
-  description: >-
-    Make our work easier by putting our security.txt in the code of
-          your website and our IP 194.5.73.0-255 on your allow list. This way you
-          make sure that our research team can look for vulnerabilities without
-          alarming your cyber security systems. And we know who to talk to when we
-          find vulnerabilities.
+  title: Security.txt. Small effort, big effect!
+  description: Simplify our work by adding our security.txt file to your website's
+    code and including our IP range (194.5.73.0-255) on your allow list. This
+    will enable our research team to search for vulnerabilities without setting
+    off your cybersecurity systems. It will also provide us with the correct
+    contact information when we discover vulnerabilities. The implementation is
+    straightforward, requiring only the creation and publication of a text file
+    on the server. See securitytxt.org for more information.
 volunteer:
-  title: Want to become a volunteer?
+  title: Want to join us in making the digital world a safer place? Become a
+    volunteer!
   checklist:
     - item: "Become part of the hacker community with Ethical Hackers, CISO's &
-        researchers "
+        Researchers "
     - item: Develop yourself, we provide very cool stuff at our e-learningplatform
-    - item: Activities, a party so now and then and a lifetime stock of DIVD stickers
-        & other merch
+    - item: Activities, a party so now and then, and a lifetime stock of DIVD stickers
+        & exclusive merchandise
 ---
