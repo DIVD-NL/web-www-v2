@@ -8,9 +8,9 @@
     width: 100%;
     flex: 0 0 200px;
     overflow: hidden;
-    
+
     position: relative;
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -40,8 +40,6 @@
     display: flex;
     flex-direction: column;
 
-    
-
     h2 {
       flex: 1 1 auto;
       font-weight: 700;
@@ -61,10 +59,49 @@
   }
 }
 
-
 .card-article {
   figure {
-    clip-path: polygon(360px 220px, 0px calc(100% - 0px), 0px 23.54px, 0px 23.54px, 0.30812px 19.72188px, 1.20016px 16.09984px, 2.62764px 12.72236px, 4.54208px 9.63792px, 6.895px 6.895px, 9.63792px 4.54208px, 12.72236px 2.62764px, 16.09984px 1.20016px, 19.72188px 0.30812px, 23.54px 0, calc(100% - 77.06px) 0px, calc(100% - 77.06px) 0px, calc(100% - 75.89428px) 0.04116px, calc(100% - 74.73984px) 0.16368px, calc(100% - 73.60076px) 0.36612px, calc(100% - 72.48112px) 0.64704px, calc(100% - 71.385px) 1.005px, calc(100% - 70.31648px) 1.43856px, calc(100% - 69.27964px) 1.94628px, calc(100% - 68.27856px) 2.52672px, calc(100% - 67.31732px) 3.17844px, calc(100% - 66.4px) 3.9px, calc(100% - 5.86px) 55.05px, calc(100% - 5.86px) 55.05px, calc(100% - 4.7943899999999px) 56.03488px, calc(100% - 3.8259199999999px) 57.10064px, calc(100% - 2.9581299999999px) 58.23996px, calc(100% - 2.1945599999999px) 59.44552px, calc(100% - 1.5387499999999px) 60.71px, calc(100% - 0.99423999999999px) 62.02608px, calc(100% - 0.56456999999989px) 63.38644px, calc(100% - 0.25327999999996px) 64.78376px, calc(100% - 0.063909999999964px) 66.21072px, calc(100% - 0px) 67.66px, 100% calc(100% - 0.0099999999999909px)); 
+    clip-path: polygon(
+      360px 220px,
+      0px calc(100% - 0px),
+      0px 23.54px,
+      0px 23.54px,
+      0.30812px 19.72188px,
+      1.20016px 16.09984px,
+      2.62764px 12.72236px,
+      4.54208px 9.63792px,
+      6.895px 6.895px,
+      9.63792px 4.54208px,
+      12.72236px 2.62764px,
+      16.09984px 1.20016px,
+      19.72188px 0.30812px,
+      23.54px 0,
+      calc(100% - 77.06px) 0px,
+      calc(100% - 77.06px) 0px,
+      calc(100% - 75.89428px) 0.04116px,
+      calc(100% - 74.73984px) 0.16368px,
+      calc(100% - 73.60076px) 0.36612px,
+      calc(100% - 72.48112px) 0.64704px,
+      calc(100% - 71.385px) 1.005px,
+      calc(100% - 70.31648px) 1.43856px,
+      calc(100% - 69.27964px) 1.94628px,
+      calc(100% - 68.27856px) 2.52672px,
+      calc(100% - 67.31732px) 3.17844px,
+      calc(100% - 66.4px) 3.9px,
+      calc(100% - 5.86px) 55.05px,
+      calc(100% - 5.86px) 55.05px,
+      calc(100% - 4.7943899999999px) 56.03488px,
+      calc(100% - 3.8259199999999px) 57.10064px,
+      calc(100% - 2.9581299999999px) 58.23996px,
+      calc(100% - 2.1945599999999px) 59.44552px,
+      calc(100% - 1.5387499999999px) 60.71px,
+      calc(100% - 0.99423999999999px) 62.02608px,
+      calc(100% - 0.56456999999989px) 63.38644px,
+      calc(100% - 0.25327999999996px) 64.78376px,
+      calc(100% - 0.063909999999964px) 66.21072px,
+      calc(100% - 0px) 67.66px,
+      100% calc(100% - 0.0099999999999909px)
+    );
   }
 }
 
@@ -82,16 +119,16 @@
 }
 
 .card-person {
-  border-radius: 20px; 
+  border-radius: 20px;
   padding: 16px;
   background-color: #fff;
   display: grid;
   grid-template-columns: 64px 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "pic head"
-                       "content content";
+  grid-template-areas:
+    "pic head"
+    "content content";
 
-  
   figure {
     width: 64px;
     height: 64px;
@@ -99,8 +136,7 @@
     position: relative;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #e3e3e3; 
-
+    background-color: #e3e3e3;
   }
 
   header {
@@ -163,10 +199,10 @@
   }
 
   header {
-    
     padding: 8px 16px 16px 16px;
-    h3, h3 a {
-      color: #FFD736;
+    h3,
+    h3 a {
+      color: #ffd736;
       text-align: center;
       font-family: Open Sans;
       font-size: 1em;
@@ -179,7 +215,7 @@
     }
 
     h6 {
-      color: #FFF;
+      color: #fff;
       text-align: center;
       font-family: Open Sans;
       font-size: 14px;
@@ -193,13 +229,12 @@
     }
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     min-width: 160px;
   }
 }
 
 .people-image {
-  
   max-width: 100%;
   height: 600px;
   border-top-right-radius: 240px;
@@ -222,7 +257,12 @@
   display: flex;
   flex-direction: column;
   img {
+    height: 450px;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
   }
 
   article {
@@ -243,12 +283,9 @@
     }
   }
 
-  
-
   &.secondary {
     article {
       background-color: var(--brand);
     }
   }
-
 }
