@@ -4,7 +4,8 @@ opener: Meet our Team
 intro: |-
   We are very grateful and proud of all our team members who voluntarily dedicate their free time to this great cause. Our team is a diverse mix of individuals, with some just starting out in cybersecurity and others who have been in the field for a long time.
 
-  Not every member has a profile picture or is listed in a team. Privacy matters!
+  Not every member has a profile picture or is listed in a team. Privacy
+  matters!
 in_progress: false
 teams:
   - title: Board
@@ -35,7 +36,8 @@ teams:
     members: []
   - title: Advisory board
     description: ""
-    members: []
+    members:
+      - /who-we-are/team/people/chantal-stekelenburg
   - title: Ethics Committee
     description: ""
     members: []
