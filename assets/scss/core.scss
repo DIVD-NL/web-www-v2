@@ -1,4 +1,6 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
@@ -12,12 +14,10 @@ body {
   color: var(--fg);
 }
 
-
-
 .topic-intro {
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   padding-top: 128px;
-  border-bottom-left-radius: 150px; 
+  border-bottom-left-radius: 150px;
   padding-bottom: 32px;
 
   h1 {
@@ -30,16 +30,23 @@ body {
 
   @media (max-width: 700px) {
     padding-top: 64px;
-    border-bottom-left-radius: 64px; 
-  }          
+    border-bottom-left-radius: 64px;
+  }
 }
 
 .bg-gradient {
-  background: linear-gradient(to bottom, rgba(61, 220, 235, 0.2)  60%, #FFFFFF 100%);
-
+  background: linear-gradient(
+    to bottom,
+    rgba(61, 220, 235, 0.2) 60%,
+    #ffffff 100%
+  );
 
   &.bg-gradient-reverse {
-    background: linear-gradient(to top, rgba(61, 220, 235, 0.2)  60%, #FFFFFF 100%);
+    background: linear-gradient(
+      to top,
+      rgba(61, 220, 235, 0.2) 60%,
+      #ffffff 100%
+    );
   }
 
   &.bottom-lg {
@@ -51,13 +58,11 @@ p.pre {
   white-space: pre-line;
 }
 
-
 a.title-link {
   border-bottom: 0;
 }
 
 a.cta {
-
   background-color: black;
   color: white;
   border-radius: 24px;
@@ -81,7 +86,6 @@ a.cta {
     height: 12px;
     fill: #fff;
   }
-
 
   &.inverse {
     background-color: white;
@@ -111,10 +115,9 @@ a.cta {
 
   &.gray {
     color: black;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
   }
 }
-
 
 .divd-family-list {
   display: grid;
@@ -125,7 +128,7 @@ a.cta {
   .divd-family-item {
     border-radius: 20px;
     padding: 32px;
-    background-color: #1D1D1D;
+    background-color: #1d1d1d;
     color: #fff;
 
     display: flex;
@@ -144,7 +147,7 @@ a.cta {
     }
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     grid-template-columns: 1fr;
     grid-gap: 8px;
 
@@ -176,14 +179,9 @@ a.cta {
           }
         }
       }
-
-      
     }
   }
-
 }
-
-
 
 .partner-card {
   border-radius: 20px;
@@ -220,7 +218,7 @@ a.cta {
     display: flex;
     flex-direction: column;
 
-    .content { 
+    .content {
       flex: 1 1 auto;
     }
 
@@ -230,23 +228,20 @@ a.cta {
   }
 }
 
-
-
 .partner-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
-  
 }
 
-
-button, .button {
+button,
+.button {
   background-color: black;
   color: white;
   border-radius: 24px;
   border: 0;
 
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -296,7 +291,6 @@ button, .button {
     }
   }
 
-
   svg {
     width: 15px;
     height: 15px;
@@ -318,7 +312,6 @@ ol {
 
     ul {
       list-style: circle;
-      
     }
   }
 }
@@ -348,7 +341,6 @@ ol {
   }
 }
 
-
 .default-content {
   padding: 32px 50px 50px 50px;
 
@@ -356,30 +348,27 @@ ol {
     max-width: 760px;
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     padding: 32px 0 50px 0;
   }
 }
 
 .flex {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   gap: 20px;
 
   &.start {
     justify-content: flex-start;
   }
 
-  &
-
-  &.flex-50 {
-    
+  & &.flex-50 {
     > * {
       flex: 0 0 50%;
     }
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     display: block;
   }
 }
@@ -398,7 +387,7 @@ ol {
   }
 
   // Mobile & tablet
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     &.grid-3 {
       grid-template-columns: 1fr 1fr;
       grid-gap: 4px;
@@ -410,7 +399,6 @@ ol {
     }
   }
 }
-
 
 ul.article-list {
   li {
@@ -439,11 +427,10 @@ ul.article-list {
   max-width: 620px;
 }
 
-
 a.external {
   svg {
     width: 12px;
-    heighT: 12px;
+    height: 12px;
   }
 }
 
@@ -461,10 +448,8 @@ ul.checklist {
   }
 }
 
-
 .steps {
   section {
-    
     border-radius: 20px;
     overflow: hidden;
     header {
@@ -500,7 +485,6 @@ ul.checklist {
   }
 }
 
-
 .panel {
   background-color: #fff;
   padding: 60px;
@@ -529,7 +513,6 @@ ul.checklist {
   @media (max-width: 700px) {
     padding-top: 16px;
   }
-  
 }
 .pt-lg {
   padding-top: 64px;
@@ -554,17 +537,16 @@ ul.checklist {
   padding-bottom: 428px;
 }
 
-
 form.default {
   max-width: 400px;
 
-  
   label {
     display: block;
     margin-bottom: 4px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     border-radius: 4px;
     border: 1px solid black;
@@ -575,10 +557,10 @@ form.default {
     min-height: 100px;
   }
 
-
   section {
     margin-bottom: 20px;
-    &.required label:after, p.required label:after {
+    &.required label:after,
+    p.required label:after {
       content: "*";
       color: red;
     }
@@ -606,7 +588,6 @@ form.default {
       }
     }
   }
-
 }
 
 .hide-mob {
@@ -615,9 +596,7 @@ form.default {
   }
 }
 
-
 ul.sumup {
-
   li {
     display: flex;
     background-color: #000;
@@ -637,10 +616,10 @@ ul.sumup {
     }
   }
 
-  @media (max-width: 700px) { 
+  @media (max-width: 700px) {
     li {
       border-radius: 10px;
-      
+
       img {
         flex: 0 0 120px;
         max-width: 120px;
@@ -657,14 +636,14 @@ ul.sumup {
   visibility: hidden;
 }
 
-
 table.donations {
   width: 100%;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   overflow: hidden;
 
-  td, th {
+  td,
+  th {
     padding: 20px 20px;
   }
   thead {
@@ -672,7 +651,7 @@ table.donations {
       th {
         text-align: left;
         color: #fff;
-        background-color: black;        
+        background-color: black;
       }
     }
   }
@@ -683,7 +662,6 @@ table.donations {
     }
   }
 }
-
 
 .image-grow {
   overflow: hidden;
@@ -721,14 +699,14 @@ table.donations {
 // Style show more element on people pages
 .csirt-show-more {
   border-radius: 22px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   color: black;
   display: inline-block; /* Ensure the details element is inline-block */
   padding: 0; /* Remove padding from the details element */
   margin-bottom: 16px;
 
   summary {
-    background-color: #F2F2F2; /* Apply the background color to the summary */
+    background-color: #f2f2f2; /* Apply the background color to the summary */
     padding: 8px 16px; /* Apply padding to the summary */
     border-radius: 22px; /* Apply border-radius to the summary */
     cursor: pointer; /* Change cursor to pointer for better UX */
@@ -777,7 +755,7 @@ table.donations {
 
   summary {
     span {
-      display:none;
+      display: none;
     }
 
     em {
@@ -814,7 +792,7 @@ blockquote {
   padding: 10px 20px;
   margin: 20px 0;
   border-left: 5px solid #545454;
-  margin-left: 40px;  /* Indent the blockquote */
+  margin-left: 40px; /* Indent the blockquote */
   margin-right: 40px; /* Indent the blockquote */
 
   p {
@@ -831,25 +809,25 @@ blockquote {
 }
 
 .callout.info {
-  border-left-color: #3DDCEB;
-  background-color: #E0F7FA; /* lighter shade of #3DDCEB */
+  border-left-color: #3ddceb;
+  background-color: #e0f7fa; /* lighter shade of #3DDCEB */
   color: #000000;
 }
 
 .callout.warning {
-  border-left-color: #FFD736;
-  background-color: #FFF9E5; /* lighter shade of #FFD736 */
+  border-left-color: #ffd736;
+  background-color: #fff9e5; /* lighter shade of #FFD736 */
   color: #000000;
 }
 
 .callout.error {
-  border-left-color: #FF5733; /* custom bright red */
-  background-color: #FFDAD4; /* darker shade for better readability */
+  border-left-color: #ff5733; /* custom bright red */
+  background-color: #ffdad4; /* darker shade for better readability */
   color: #000000;
 }
 
 .callout.success {
-  border-left-color: #3DDC9A; /* custom bright green */
-  background-color: #E5FFF2; /* lighter shade of the custom bright green */
+  border-left-color: #3ddc9a; /* custom bright green */
+  background-color: #e5fff2; /* lighter shade of the custom bright green */
   color: #000000;
 }
