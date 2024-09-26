@@ -26,6 +26,11 @@ languages:
 
 timezone: "Europe/Amsterdam"
 
+build:
+  cachebusters:
+    - source: layouts/.*
+      target: css
+
 server:
   headers:
     - for: /**
