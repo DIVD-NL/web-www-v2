@@ -1,4 +1,4 @@
-{{ $isDev := ne hugo.Environment "production" }}
+{{ $isDev := false }}
 {{ $cssOpts := (dict "targetPath" "styles/screen.css" "enableSourceMap" $isDev ) }}
 {{ $screenCSS := resources.Get "scss/screen.scss" | toCSS $cssOpts }}
 
