@@ -3,9 +3,9 @@
 {{ $screenCSS := resources.Get "scss/screen.scss" | toCSS $cssOpts }}
 
 
-
+{{ if not $isDev }}
   {{ $screenCSS = $screenCSS |  postCSS | minify | fingerprint }}
-
+{{ end }}
 <link
   href="{{ $screenCSS.RelPermalink }}"
   rel="stylesheet"
