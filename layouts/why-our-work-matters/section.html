@@ -16,7 +16,7 @@
   </div>
   {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
 
-    <div class="overlap-top-lg">
+    <div class="overlap-top-lg [&>*:nth-child(2)]:pb-0">
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
       <div class="article-body">
         <article>
@@ -28,7 +28,7 @@
     {{ partial "p/layout_close" }}
 
       {{ partial "p/layout_open" (dict "classes" (slice "article" "opener" )) }}
-        <div class="article-body opener-body">
+        <div class="article-body opener-body pb-4 text-center">
           <article>
               {{ .Params.opener | markdownify }}
           </article>
