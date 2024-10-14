@@ -1,18 +1,6 @@
 .volunteer {
-
   .core-values {
-    h2 {
-      color: #fff;
-    }
-
     article {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-gap: 32px;
-
-
-
       section {
         h3 {
           padding: 16px;
@@ -38,7 +26,6 @@
         background-color: white;
         border-radius: 8px;
         overflow: hidden;
-
       }
 
       p {
@@ -46,13 +33,11 @@
       }
     }
 
-    @media(max-width: 700px) {
+    @media (max-width: 700px) {
       article {
         grid-template-columns: 1fr;
         grid-gap: 16px;
       }
     }
   }
-
-
 }
