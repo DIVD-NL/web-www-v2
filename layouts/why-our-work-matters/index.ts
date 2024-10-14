@@ -1,4 +1,4 @@
-import { Intro } from "../partials/components/intro";
+import { Intro } from "../partials/sections/intro";
 
 export const WhyOurWorkMatters = {
   label: 'Why our work matters',
