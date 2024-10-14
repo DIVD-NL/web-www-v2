@@ -1,3 +1,3 @@
-import { Pages } from '../layouts/pages';
+import { WhyOurWorkMatters } from '../layouts/why-our-work-matters';
 
-export default [Pages];
+export default [WhyOurWorkMatters];

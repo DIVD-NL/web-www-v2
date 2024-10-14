@@ -1,20 +1,23 @@
 {{ define "main" }}
 
-  <div class="topic-layout why-our-work-matters-page">
+  <main class="topic-layout why-our-work-matters-page">
+
     <div class="bg-gradient bg-gradient-reverse pb-xxlg">
-    <div class="topic-intro reverse">
-      {{ partial "breadcrumbs" . }}
-      {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
-        <div>
-          <h1>{{ .Params.title }}</h1>
-        </div>
-        <div>
-          <p>{{ .Params.intro | markdownify }}</p>
-        </div>  
-      {{ partial "p/layout_close" }}
+      <div class="topic-intro reverse">
+        {{ partial "breadcrumbs" . }}
+      </div>
     </div>
-  </div>
-  {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
+
+    {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
+      <div>
+        <h1>{{ .Params.title }}</h1>
+      </div>
+      <div>
+        <p>{{ .Params.intro | markdownify }}</p>
+      </div>  
+    {{ partial "p/layout_close" }}
+
+    {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
 
     <div class="overlap-top-lg [&>*:nth-child(2)]:pb-0">
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
@@ -88,6 +91,6 @@
 
     {{ partial "p/section_close" }}    
 
-  </div>
+  </main>
 
 {{ end }}
