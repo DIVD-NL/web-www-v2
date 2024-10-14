@@ -1,3 +1,5 @@
+import { Intro } from "../partials/components/intro";
+
 export const WhyOurWorkMatters = {
   label: 'Why our work matters',
   folder: 'content/why-our-work-matters',
@@ -9,7 +11,7 @@ export const WhyOurWorkMatters = {
       label: 'Sections',
       name: 'sections',
       widget: 'list',
-      types: [],
+      types: [Intro],
     },
   ],
 };

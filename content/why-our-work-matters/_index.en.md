@@ -64,6 +64,16 @@ casehighlight:
     **Note that it is very complex to summarize any DIVD case, or make accurate and precise assumptions about which risks were specifically mitigated. If you have any questions, please read about our case on the CSIRT page and [contact DIVD](https://www.divd.nl/contact/).*
 main:
   title: More text here
+sections:
+  - title: asdf
+    intro: asdf
+    type: intro
+  - title: asdf2
+    intro: asdf2
+    type: intro
+  - title: asdf3
+    intro: asdf3
+    type: intro
 ---
 **DIVD scans the entire internet.** 
 
@@ -82,3 +92,4 @@ DIVD independently [assigns new unique identifiers (CVEs)](https://csirt.divd.nl
 DIVD is recognized for its transparent approach in reporting vulnerabilities and the actions taken to resolve them. This level of openness fosters trust within both the cybersecurity community and the general public. We promote ethical hacking and responsible disclosure while striving to tackle broader cybersecurity challenges. Unlike many cybersecurity organizations, DIVD is a non-profit entity, run by volunteers.
 
 DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.
+
