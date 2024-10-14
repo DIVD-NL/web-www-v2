@@ -18,15 +18,15 @@
       {{ with resources.Get "images/global/volunteers.png" }} 
         {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
       {{ end }}
-      <div class="bubble bubble-small-half far-right over"></div>
+      <div class="bubble bubble-small-half far-right"></div>
     </aside>
   </div>
 
   {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
     {{ partial "p/layout_open" (dict "classes" (slice "default")) }} 
       <div class="core-values">
-        <h2>{{ .Params.corevaluestitle }}</h2>
-        <article>
+        <h2 class="text-white">{{ .Params.corevaluestitle }}</h2>
+        <article class="grid gap-8 grid-cols-[1fr_1fr] grid-rows-[1fr_1fr]">
           {{ range $index, $elements := .Params.corevalues }}
             <section>
               <h3>
