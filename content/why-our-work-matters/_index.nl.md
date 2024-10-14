@@ -20,3 +20,4 @@ corevalues:
     description: It is crucial for volunteers to have a robust knowledge of cybersecurity principles and methods. If they are considering joining one of our technical teams, they need to possess the necessary technical expertise to effectively detect and scrutinize vulnerabilities in online systems. Keeping up-to-date with the latest technologies and threats through continuous learning is indispensable.
 ---
 c
+
