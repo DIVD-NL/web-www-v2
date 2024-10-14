@@ -1,0 +1,5 @@
+{{ range .Params.sections }}
+  {{ if eq .type "intro" }}
+    {{ partial "sections/intro/intro" . }}
+  {{ end }}
+{{ end }}

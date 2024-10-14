@@ -1,10 +1,13 @@
 {{ define "main" }}
 
   <main class="topic-layout why-our-work-matters-page">
+    {{ partial "breadcrumbs" . }}
+
+    {{ partial "sections/sections" . }}
 
     <div class="bg-gradient bg-gradient-reverse pb-xxlg">
       <div class="topic-intro reverse">
-        {{ partial "breadcrumbs" . }}
+        <!-- {{ partial "breadcrumbs" . }} -->
       </div>
     </div>
 

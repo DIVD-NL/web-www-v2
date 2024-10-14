@@ -1,11 +1,10 @@
 <div class="topic-intro reverse">
-    {{ partial "breadcrumbs" . }}
     {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
     <div>
-        <h1>{{ .Params.sections.title }}</h1>
+        <h1>{{ .title }}</h1>
     </div>
     <div>
-        <p>{{ .Params.sections.intro | markdownify }}</p>
+        <p>{{ .intro | markdownify }}</p>
     </div>
     {{ partial "p/layout_close" }}
 </div>
