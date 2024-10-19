@@ -1,4 +1,4 @@
-import { Intro } from "../partials/sections/intro";
+import { sections } from '../partials/sections';
 
 export const WhyOurWorkMatters = {
   label: 'Why our work matters',
@@ -9,9 +9,10 @@ export const WhyOurWorkMatters = {
   fields: [
     {
       label: 'Sections',
+      label_singular: 'Section',
       name: 'sections',
       widget: 'list',
-      types: [Intro],
+      types: sections,
     },
   ],
 };

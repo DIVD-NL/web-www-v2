@@ -1,5 +1,7 @@
 {{ range .Params.sections }}
-  {{ if eq .type "intro" }}
-    {{ partial "sections/intro/intro" . }}
+  {{ if eq .type "titleText" }}
+    {{ partial "sections/title-text/title-text" . }}
+  {{ else if eq .type "paper" }}
+    {{ partial "sections/paper/paper" . }} 
   {{ end }}
 {{ end }}

@@ -65,15 +65,25 @@ casehighlight:
 main:
   title: More text here
 sections:
-  - title: asdf
-    intro: asdf
-    type: intro
-  - title: asdf2
-    intro: asdf2
-    type: intro
-  - title: asdf3
-    intro: asdf3
-    type: intro
+  - title: DIVD’s work is of great importance, here is why
+    text: This page explains why our work matters to society, partners, and other organizations.
+    type: titleText
+  - text: |-
+      ## DIVD scans the entire internet
+
+      #### **Traditional methods, like penetration tests, often focus on a specific scope, usually limited to an organization’s IP addresses or URLs.  In contrast, DIVD seeks to identify all systems with a particular vulnerability, often discovering issues in systems that organizations were unaware they had.**
+
+      **DIVD takes this a step further.**
+      Because we work for the common good and adhere to guidelines for ethical hacking, we extend our reach beyond the limits imposed on governments or commercial security companies. This allows us to determine with greater certainty whether a system is vulnerable. An email notification from DIVD always indicates a vulnerability that needs immediate attention.
+
+      **DIVD scans for both regular security vulnerabilities and zero-day vulnerabilities.**
+      DIVD independently assigns new unique identifiers (CVEs) when new (previously unknown) vulnerabilities are identified by its researchers.
+
+      **DIVD is known for its transparency & collaboration.**
+      DIVD is recognized for its transparent approach in reporting vulnerabilities and the actions taken to resolve them. This level of openness fosters trust within both the cybersecurity community and the general public. We promote ethical hacking and responsible disclosure while striving to tackle broader cybersecurity challenges. Unlike many cybersecurity organizations, DIVD is a non-profit entity, run by volunteers.
+
+      **DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.**
+    type: paper
 ---
 **DIVD scans the entire internet.** 
 
@@ -92,4 +102,7 @@ DIVD independently [assigns new unique identifiers (CVEs)](https://csirt.divd.nl
 DIVD is recognized for its transparent approach in reporting vulnerabilities and the actions taken to resolve them. This level of openness fosters trust within both the cybersecurity community and the general public. We promote ethical hacking and responsible disclosure while striving to tackle broader cybersecurity challenges. Unlike many cybersecurity organizations, DIVD is a non-profit entity, run by volunteers.
 
 DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.
+
+
+
 

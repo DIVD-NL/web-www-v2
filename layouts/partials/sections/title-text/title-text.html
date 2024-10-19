@@ -1,10 +1,10 @@
-<div class="topic-intro reverse">
+<section class="topic-intro reverse rounded-none">
     {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
     <div>
         <h1>{{ .title }}</h1>
     </div>
-    <div>
-        <p>{{ .intro | markdownify }}</p>
+    <div class="flex items-center text-[32px]">
+        <p>{{ .text | markdownify }}</p>
     </div>
     {{ partial "p/layout_close" }}
-</div>
+</section>

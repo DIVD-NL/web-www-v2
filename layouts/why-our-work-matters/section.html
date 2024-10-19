@@ -1,98 +1,9 @@
 {{ define "main" }}
 
-  <main class="topic-layout why-our-work-matters-page">
+  <main class="topic-layout why-our-work-matters-page bg-[#1d1d1d]">
     {{ partial "breadcrumbs" . }}
 
     {{ partial "sections/sections" . }}
-
-    <div class="bg-gradient bg-gradient-reverse pb-xxlg">
-      <div class="topic-intro reverse">
-        <!-- {{ partial "breadcrumbs" . }} -->
-      </div>
-    </div>
-
-    {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
-      <div>
-        <h1>{{ .Params.title }}</h1>
-      </div>
-      <div>
-        <p>{{ .Params.intro | markdownify }}</p>
-      </div>  
-    {{ partial "p/layout_close" }}
-
-    {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
-
-    <div class="overlap-top-lg [&>*:nth-child(2)]:pb-0">
-      {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
-      <div class="article-body">
-        <article>
-          <h1>{{ .Params.contenttitle | markdownify }}</h1>
-
-            {{ .Content }}
-        </article>
-      </div>
-    {{ partial "p/layout_close" }}
-
-      {{ partial "p/layout_open" (dict "classes" (slice "article" "opener" )) }}
-        <div class="article-body opener-body pb-4 text-center">
-          <article>
-              {{ .Params.opener | markdownify }}
-          </article>
-        </div>
-      {{ partial "p/layout_close" }}
-
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2" "stretch")) }}
-        <div class="intro-card">
-          {{ with resources.Get .Params.leftblock.image }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" .Params.leftblock.alt) }}
-          {{ end }}
-          <article>
-            <header>
-              <h3>{{ .Params.leftblock.title }}</h3>
-              <p>{{ .Params.leftblock.content | markdownify }}</p>
-            </header>
-            {{ if .Params.leftblock.learnmore }}
-              <nav>
-                <a class="cta" href="{{ .Params.leftblock.learnmore | relLangURL }}">{{ i18n "learnmore" }}</a>
-              </nav>
-            {{ end }}
-          </article>
-        </div>
-
-        <div class="intro-card secondary">
-          {{ with resources.Get .Params.rightblock.image }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" .Params.rightblock.alt) }}
-          {{ end }}
-          <article>
-            <header>
-              <h3>{{ .Params.rightblock.title }}</h3>
-              <p>{{ .Params.rightblock.content | markdownify }}</p>
-            </header>
-            {{ if .Params.rightblock.learnmore }}
-              <nav>
-                <a class="cta"  href="{{ .Params.rightblock.learnmore | relLangURL }}">{{ i18n "learnmore" }}</a>
-              </nav>
-            {{ end }}
-          </article>
-        </div>
-     
-      {{ partial "p/layout_close" }}
-
-      {{ if .Params.casehighlight.content }}
-        {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
-          <div class="article-body">
-            <article>
-              <h1>{{ .Params.casehighlight.title | markdownify }}</h1>
-
-                {{ .Params.casehighlight.content | markdownify }}
-            </article>
-          </div>
-        {{ partial "p/layout_close" }}
-      {{ end }}
-
-    </div>
-
-    {{ partial "p/section_close" }}    
 
   </main>
 
