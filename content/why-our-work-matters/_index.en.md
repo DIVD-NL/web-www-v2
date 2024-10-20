@@ -84,6 +84,11 @@ sections:
 
       **DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.**
     type: paper
+  - text: |-
+      ## What happens when we find a vulnerability? Here’s an example.
+
+      A good example of what the world would look like without DIVD’s efforts is the SolarMan case. In 2022, a DIVD researcher found a GitHub repository containing the username and password for SolarMan’s Super Admin account. These credentials were visible to anyone who would visit the GitHub page, meaning that anyone in the world with internet access could have gained unauthorized access to nearly 1,000,000 installations.
+    type: doubleDecker
 ---
 **DIVD scans the entire internet.** 
 
@@ -102,6 +107,7 @@ DIVD independently [assigns new unique identifiers (CVEs)](https://csirt.divd.nl
 DIVD is recognized for its transparent approach in reporting vulnerabilities and the actions taken to resolve them. This level of openness fosters trust within both the cybersecurity community and the general public. We promote ethical hacking and responsible disclosure while striving to tackle broader cybersecurity challenges. Unlike many cybersecurity organizations, DIVD is a non-profit entity, run by volunteers.
 
 DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.
+
 
 
 

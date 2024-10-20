@@ -3,5 +3,7 @@
     {{ partial "sections/title-text/title-text" . }}
   {{ else if eq .type "paper" }}
     {{ partial "sections/paper/paper" . }} 
+  {{ else if eq .type "doubleDecker" }}
+    {{ partial "sections/double-decker/double-decker" . }} 
   {{ end }}
 {{ end }}
