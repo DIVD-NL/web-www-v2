@@ -1,4 +1,4 @@
-<section class="{{ if .hasBackground }} max-w-[1200px] mx-auto {{ else }} bg-white {{ end }} mb-32">
+<section class="{{ if .hasBackground }} max-w-[1200px] mx-auto pb-32 {{ else }} bg-white {{ end }}">
     <div class="flex flex-col py-10 pr-96 -mx-10 bg-white rounded-tl-[20px] rounded-tr-[300px] {{ if .hasBackground }} pl-20 {{ else }} max-w-[1200px] mx-auto pl-10 {{ end }}}}">
         <p>{{ .text | markdownify }}</p>
     </div>

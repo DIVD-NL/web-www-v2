@@ -1,18 +1,11 @@
 import button from '../../components/button';
 
-export const TitleText = {
-  name: 'titleText',
-  label: 'Title with Text',
+export const Pill = {
+  name: 'pill',
+  label: 'Pill',
   widget: 'object',
   i18n: true,
   fields: [
-    {
-      label: 'Title',
-      name: 'title',
-      widget: 'string',
-      default: '',
-      i18n: true,
-    },
     {
       label: 'Text',
       name: 'text',
