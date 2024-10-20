@@ -84,11 +84,27 @@ sections:
 
       **DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.**
     type: paper
+    hasBackground: true
   - text: |-
       ## What happens when we find a vulnerability? Here’s an example.
 
       A good example of what the world would look like without DIVD’s efforts is the SolarMan case. In 2022, a DIVD researcher found a GitHub repository containing the username and password for SolarMan’s Super Admin account. These credentials were visible to anyone who would visit the GitHub page, meaning that anyone in the world with internet access could have gained unauthorized access to nearly 1,000,000 installations.
     type: doubleDecker
+  - text: |-
+      ## SolarMan’s Password Oopsie
+
+      How 1 million installations almost went dark
+
+      The 1,000,000 installations refer to solar power plants (installations) managed through the SolarMan platform. These installations have a total power output of over 10GwP (gigawatts peak). Most of these systems are located in China and Australia, with a significant number of over 40,000 in The Netherlands.
+
+      DIVD contacted the company responsible for the repository. Eventually, the exposed password was reset and the repository was deleted. But what if the vulnerability hadn’t been discovered and the credentials remained publicly available?
+
+      Cybercriminals could theoretically have been able to gain access to the SolarMan Super Admin account, potentially controlling nearly 1,000,000 installations. They could theoretically have had the ability to alter system settings, disrupt services, or disable installations, causing widespread operational issues.
+      Sensitive information could potentially have been exposed, leading to data breaches. Compromised systems could theoretically have been used to deploy malware, resulting in further security incidents and potential damage to connected networks.
+
+      **The company’s reputation could have been severely damaged, resulting in a loss of trust from customers and partners.**
+    type: paper
+    hasBackground: false
 ---
 **DIVD scans the entire internet.** 
 
@@ -107,6 +123,7 @@ DIVD independently [assigns new unique identifiers (CVEs)](https://csirt.divd.nl
 DIVD is recognized for its transparent approach in reporting vulnerabilities and the actions taken to resolve them. This level of openness fosters trust within both the cybersecurity community and the general public. We promote ethical hacking and responsible disclosure while striving to tackle broader cybersecurity challenges. Unlike many cybersecurity organizations, DIVD is a non-profit entity, run by volunteers.
 
 DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.
+
 
 
 

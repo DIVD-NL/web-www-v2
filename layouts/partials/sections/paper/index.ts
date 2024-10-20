@@ -10,5 +10,12 @@ export const Paper = {
       widget: 'markdown',
       i18n: true,
     },
+    {
+      label: 'Background enabled',
+      name: 'hasBackground',
+      required: false,
+      default: false,
+      widget: 'boolean',
+    },
   ],
 };
