@@ -1,0 +1,12 @@
+<article class="flex w-full h-[310px] bg-[#F2F2F2] rounded-[20px]">
+    <div class="flex flex-col p-6 w-[390px] gap-0">
+        <div class="flex w-fit px-4 border-2 border-black border-solid uppercase rounded-full font-bold">
+            {{ .category }}
+        </div>
+        <h3 class="mb-0 mt-2">{{ .title }}</h3>
+        <p class="mb-4">{{ .text }}</p>
+        <button class="flex w-fit px-6 py-3">{{ .button.label }}</button>
+    </div>
+    {{ $image := resources.GetRemote "https://picsum.photos/200/300" }}
+    <img class="max-w-none w-[180px] h-full rounded-r-[20px] object-cover object-center" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+</article>

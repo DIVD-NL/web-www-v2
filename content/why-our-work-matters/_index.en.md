@@ -46,6 +46,24 @@ sections:
       external: false
     text: Note that it is very complex to summarize any DIVD case, or make accurate and precise assumptions about which risks were specifically mitigated. If you have any questions, please read about our case on the CSIRT
     type: pill
+  - rightArticle:
+      button:
+        label: Read more
+        url: moar
+        external: false
+      category: Culture
+      title: Microsoft update makes Outlook very vulnerable
+      text: Lorem ipsum dolor sit amet consectetur. Ultricies faucibus sit sit ante vestibulum dictum venenatis commodo.
+    leftArticle:
+      button:
+        label: Read more
+        url: moar
+        external: false
+      category: Culture
+      title: Our yearly get-together was a great succes!
+      text: Lorem ipsum dolor sit amet consectetur. Ultricies faucibus sit sit ante vestibulum dictum venenatis commodo.
+    title: Suggested Articles
+    type: suggestedArticles
 title: Our work is of great importance, here is why
 intro: |-
   This page explains why our work matters to society, partners, and other organisations. 
@@ -129,6 +147,7 @@ DIVD independently [assigns new unique identifiers (CVEs)](https://csirt.divd.nl
 DIVD is recognized for its transparent approach in reporting vulnerabilities and the actions taken to resolve them. This level of openness fosters trust within both the cybersecurity community and the general public. We promote ethical hacking and responsible disclosure while striving to tackle broader cybersecurity challenges. Unlike many cybersecurity organizations, DIVD is a non-profit entity, run by volunteers.
 
 DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.
+
 
 
 
