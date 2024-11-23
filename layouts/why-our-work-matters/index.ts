@@ -1,6 +1,7 @@
 import { sections } from '../partials/sections';
 
 export const WhyOurWorkMatters = {
+  name: 'WOWM',
   label: 'Why our work matters',
   folder: 'content/why-our-work-matters',
   slug: '_index',
