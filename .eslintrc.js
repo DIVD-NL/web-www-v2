@@ -7,6 +7,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'comma-dangle': 'off',
-    'max-len': 'off'
-  }
+    'max-len': 'off',
+  },
+  ignorePatterns: ['node_modules/', 'dist/', 'public/', '.parcel-cache/', 'static/'],
 };
