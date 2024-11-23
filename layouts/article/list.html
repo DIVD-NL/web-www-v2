@@ -8,19 +8,6 @@
     {{ template "_internal/pagination.html" . }}
 
 
-    <div class="debug-info">
-      Hey! I'm trying to understand how the paginator behaves and why it does
-      what it does. Here's some info about the paginator: Paginator Info:
-      <p>Page Number: {{ .Paginator.PageNumber }}</p>
-      <p>Total Pages: {{ .Paginator.TotalPages }}</p>
-      <p>Has Next: {{ .Paginator.HasNext }}</p>
-      <p>Has Prev: {{ .Paginator.HasPrev }}</p>
-      <p>Pages on Current Page:</p>
-      {{ range .Paginator.Pages }}
-        <p>Title: {{ .Title }} - Date: {{ .Date }}</p>
-      {{ end }}
-    </div>
-
     <div class="newsroom-article-list">
       {{ range .Paginator.Pages.ByDate.Reverse }}
         <div class="article">
