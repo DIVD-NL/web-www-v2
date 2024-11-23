@@ -2,7 +2,9 @@
 module.exports = {
   content: ['./layouts/**/*.html'],
   theme: {
-    extend: {},
+    screens: {
+      desktop: '1280px',
+    },
   },
   plugins: [],
 };
