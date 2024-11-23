@@ -6,7 +6,7 @@ export const Collection = {
   },
   folder: 'content/newsroom/articles',
   create: true,
-  slug: '{{slug}}',
+  slug: '{{ .Title | urlize }}',
   fields: [
     {
       label: 'Title',
@@ -25,7 +25,7 @@ export const Collection = {
       name: 'author',
       widget: 'relation',
       collection: 'people',
-      value_field: '/who-we-are/team/people/{{slug}}',
+      value_field: '/who-we-are/team/people/{{ .Title | urlize }}',
       display_fields: ['title'],
       search_fields: ['title'],
       required: false,
@@ -119,7 +119,7 @@ export const Collection = {
           name: 'researchers_people',
           widget: 'relation',
           collection: 'people',
-          value_field: '/who-we-are/team/people/{{slug}}',
+          value_field: '/who-we-are/team/people/{{ .Title | urlize }}',
           display_fields: ['title'],
           search_fields: ['title'],
           multiple: true,
