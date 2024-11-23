@@ -7,4 +7,5 @@ case:
   closed: false
   link: https://divd.nl
 ---
+
 T﻿his case was amazing!

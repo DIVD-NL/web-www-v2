@@ -1,11 +1,11 @@
 # DIVD website
-If you notice anything that might need improvement or is just not working for you, let us know. Feel free to give feedback by sumbitting an issue.  Bonuspoints for a detailled description and screenshots if possible. 
 
+If you notice anything that might need improvement or is just not working for you, let us know. Feel free to give feedback by sumbitting an issue. Bonuspoints for a detailled description and screenshots if possible.
 
 # Chocolate Requests
-A pull request is like a box of chocolate...
-The first 10 pull requests that genuinely improve the website will receive a box of chocolates. Pull requests related to spelling or typographical errors do not count. We all like a challenge right? 
 
+A pull request is like a box of chocolate...
+The first 10 pull requests that genuinely improve the website will receive a box of chocolates. Pull requests related to spelling or typographical errors do not count. We all like a challenge right?
 
 # Prerequisites
 

@@ -8,4 +8,5 @@ case:
   closed: true
 image_alt: Foto van de ingang van een mijn
 ---
+
 The body of the article

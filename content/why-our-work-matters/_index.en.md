@@ -130,15 +130,16 @@ casehighlight:
 main:
   title: More text here
 ---
-**DIVD scans the entire internet.** 
+
+**DIVD scans the entire internet.**
 
 Traditional methods, like penetration tests, often focus on a specific scope, usually limited to an organization's IP addresses or URLs.  In contrast, DIVD seeks to identify all systems with a particular vulnerability, often discovering issues in systems that organizations were unaware they had.
 
-**DIVD can take this a step further.** 
+**DIVD can take this a step further.**
 
 Because we work for the common good and adhere to guidelines for ethical hacking, we can extend our reach beyond the limits imposed on governments or commercial security companies. This allows us to determine with greater certainty whether a system is vulnerable. An email notification from DIVD almost always indicates a vulnerability that needs immediate attention.
 
-**DIVD scans for both regular security vulnerabilities *and* zero-day vulnerabilities.** 
+**DIVD scans for both regular security vulnerabilities _and_ zero-day vulnerabilities.**
 
 DIVD independently [assigns new unique identifiers (CVEs)](https://csirt.divd.nl/cna/) when new (previously unknown) vulnerabilities are identified by its researchers.
 
@@ -147,11 +148,3 @@ DIVD independently [assigns new unique identifiers (CVEs)](https://csirt.divd.nl
 DIVD is recognized for its transparent approach in reporting vulnerabilities and the actions taken to resolve them. This level of openness fosters trust within both the cybersecurity community and the general public. We promote ethical hacking and responsible disclosure while striving to tackle broader cybersecurity challenges. Unlike many cybersecurity organizations, DIVD is a non-profit entity, run by volunteers.
 
 DIVD actively engages with the cybersecurity community, including researchers, ethical hackers, and other stakeholders, to share knowledge and improve collective security efforts.
-
-
-
-
-
-
-
-

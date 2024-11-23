@@ -1,5 +1,5 @@
 ---
 title: Search
 outputs:
-- json
+  - json
 ---

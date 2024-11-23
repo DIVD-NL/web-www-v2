@@ -1,18 +1,16 @@
-
-
-
 {{ define "main" }}
-{{ partial "breadcrumbs" . }}
+  {{ partial "breadcrumbs" . }}
 
-<div class="topic-layout newsroom articles">
 
-  {{ partial "p/section_open" (dict "classes" (slice "default")) }} 
+  <div class="topic-layout newsroom articles">
+    {{ partial "p/section_open" (dict "classes" (slice "default")) }}
     {{ partial "p/layout_open" }}
     {{ template "_internal/pagination.html" . }}
 
+
     <div class="debug-info">
-      Hey! I'm trying to understand how the paginator behaves and why it does what it does. Here's some info about the paginator:
-      Paginator Info:
+      Hey! I'm trying to understand how the paginator behaves and why it does
+      what it does. Here's some info about the paginator: Paginator Info:
       <p>Page Number: {{ .Paginator.PageNumber }}</p>
       <p>Total Pages: {{ .Paginator.TotalPages }}</p>
       <p>Has Next: {{ .Paginator.HasNext }}</p>
@@ -23,9 +21,8 @@
       {{ end }}
     </div>
 
-      <div class="newsroom-article-list">
-        
-        {{ range .Paginator.Pages.ByDate.Reverse }}
+    <div class="newsroom-article-list">
+      {{ range .Paginator.Pages.ByDate.Reverse }}
         <div class="article">
           <section>
             <div class="summary">
@@ -47,14 +44,11 @@
             </aside>
           {{ end }}
         </div>
-        {{ end }}
+      {{ end }}
 
-      </div>
-      {{ template "_internal/pagination.html" . }}
+    </div>
+    {{ template "_internal/pagination.html" . }}
     {{ partial "p/layout_close" }}
-  {{ partial "p/section_close" }}
-</div>
-
-
+    {{ partial "p/section_close" }}
+  </div>
 {{ end }}
-

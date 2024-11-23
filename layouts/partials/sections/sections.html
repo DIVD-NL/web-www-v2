@@ -1,12 +1,12 @@
 {{ range .Params.sections }}
   {{ if eq .type "doubleDecker" }}
-    {{ partial "sections/double-decker/double-decker" . }} 
+    {{ partial "sections/double-decker/double-decker" . }}
   {{ else if eq .type "paper" }}
-    {{ partial "sections/paper/paper" . }} 
+    {{ partial "sections/paper/paper" . }}
   {{ else if eq .type "pill" }}
-    {{ partial "sections/pill/pill" . }} 
+    {{ partial "sections/pill/pill" . }}
   {{ else if eq .type "suggestedArticles" }}
-    {{ partial "sections/suggested-articles/suggested-articles" . }} 
+    {{ partial "sections/suggested-articles/suggested-articles" . }}
   {{ else if eq .type "titleText" }}
     {{ partial "sections/title-text/title-text" . }}
   {{ end }}

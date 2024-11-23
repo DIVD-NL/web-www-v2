@@ -9,7 +9,7 @@ testimonials:
 
       Over time we’ve come to realize that they actually secure our society. And that’s exactly 
 
-      what DIVD does: they secure our society.” 
+      what DIVD does: they secure our society.”
     image: /images/testimonials/mikkohypponen_2013x-embed.jpg
   - name: Dave Maasland
     role: CEO ESET Netherlands

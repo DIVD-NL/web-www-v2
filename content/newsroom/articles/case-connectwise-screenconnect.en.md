@@ -18,6 +18,7 @@ case:
       link: https://www.divd.nl/who-we-are/team/people/barre-dijkstra/
 faq_enabled: false
 ---
+
 ## SUMMARY
 
 A critical security issue was recently identified in ConnectWise ScreenConnect. If abused, the flaw may enable an unauthenticated attacker to bypass the authentication and execute remote code or directly impact confidential data or critical systems.

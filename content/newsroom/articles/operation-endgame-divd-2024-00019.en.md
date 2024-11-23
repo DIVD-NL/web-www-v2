@@ -22,7 +22,8 @@ faq:
   title: Frequently Asked Questions
   faqgroups:
     - faqs:
-        - description: "It’s great that you’re skeptical. However, **this is legit and
+        - description:
+            "It’s great that you’re skeptical. However, **this is legit and
             definitely not a scam.** This operation is a collaboration between
             the Dutch National Police, Europol, Digital Trust Center, NCSC and
             others. We, Dutch Institute of Vulnerability Disclosure (DIVD), are
@@ -31,13 +32,15 @@ faq:
             mentiones DIVD and shares a link back to this casefile."
           title: "Is this a scam? "
         - title: Do you have my password?
-          description: No, we do not have your password. We may have sent you an email
+          description:
+            No, we do not have your password. We may have sent you an email
             containing a partial password, with only the last four characters
             visible. This is the only part of your password we possess because
             the Dutch Police ensured that all passwords were hidden before
             sharing the data with us.
         - title: You are processing my personal data without my consent, is that legal?
-          description: Yes it is.Under Dutch law and European privacy regulations, we can
+          description:
+            Yes it is.Under Dutch law and European privacy regulations, we can
             process this data based on a so-called “legitimate interest.”DIVD is
             a private foundation that operates under a strict [code of
             conduct](https://www.divd.nl/what-we-do/code-of-conduct/), with the
@@ -51,11 +54,12 @@ faq:
 
     The FAQ is available in English, Dutch, German, French, and Spanish.
 ---
+
 As part of Operation Endgame the Dutch Police and Europol have infiltrated a number of botnets, including at least Smokeloader, cedId, Pikabot, SystemBC, and Bumblebee. During this infiltration they obtained data about the victims of these botnets. DIVD is providing victim notification for civilians.
 
 This data has been shared with us and various other parties like [Have I Been Pwned](https://haveibeenpwned.com/), [Spam House](https://spamhouse.org), [](https://spamhouse.org)[Project No More Leaks,](https://www.politie.nl/onderwerpen/no-more-leaks.html)[ ](https://www.politie.nl/onderwerpen/no-more-leaks.html)[the (Dutch) NCSC](https://ncsc.nl), [CSIRT-DSP](https://csirtdsp.nl/) and [Digital Trust Center ](https://www.digitaltrustcenter.nl/).
 
-The data we have received consists of the following data sets: 
+The data we have received consists of the following data sets:
 
 1. Email credentials, either SMTP or IMAP credentials
 2. ADFS credentials consisting of AD-domain and login credentials

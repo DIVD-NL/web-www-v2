@@ -1,20 +1,20 @@
 {{ $blocks := .Site.GetPage "/block" }}
 
-
 {{ with $blocks.Params.ethics }}
-  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }} 
-    <div class="image-container">
-      {{ with resources.Get "images/global/ethics.png" }} 
-        {{ partial "tools/rimg/img" (dict "img" . "alt" "Ethics") }}
-      {{ end }}
+  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+  <div class="image-container">
+    {{ with resources.Get "images/global/ethics.png" }}
+      {{ partial "tools/rimg/img" (dict "img" . "alt" "Ethics") }}
+    {{ end }}
+  </div>
+  <div class="fill-center">
+    <div>
+      <h2>{{ .title }}</h2>
+      <p>{{ .intro }}</p>
+      <a class="cta" href="{{ "what-we-do/code-of-conduct" | relLangURL }}"
+        >{{ i18n "codeofconduct" }}</a
+      >
     </div>
-    <div class="fill-center">
-      <div>
-        <h2>{{ .title }}</h2>
-        <p>{{ .intro }}</p>
-        <a class="cta" href="{{ "what-we-do/code-of-conduct" | relLangURL }}">{{ i18n "codeofconduct" }}</a>
-      </div>
-    </div>
+  </div>
   {{ partial "p/layout_close" }}
-
 {{ end }}

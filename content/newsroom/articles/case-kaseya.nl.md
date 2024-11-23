@@ -10,4 +10,5 @@ case:
   caseid: DIVD-2021-00002
   closed: true
 ---
+
 T﻿he body

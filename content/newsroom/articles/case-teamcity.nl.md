@@ -5,4 +5,5 @@ intro: This is the introduction text of the article
 image: /images/articles/agracadavra.png
 image_alt: Picture of a bug (insect)
 ---
+
 T﻿he body of the article

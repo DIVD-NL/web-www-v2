@@ -21,6 +21,7 @@ case:
       link: https://www.divd.nl/who-we-are/team/people/wietse-boonstra/
 faq_enabled: false
 ---
+
 DIVD notified SmarterTools Inc. of the following vulnerabilities:
 
 - [CVE-2021-43977](https://csirt.divd.nl/cves/CVE-2021-43977) - SmarterTools SmarterMail before 100.0.7803 (May 13, 2021) and 16.x allows XSS.

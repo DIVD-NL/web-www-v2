@@ -1,39 +1,39 @@
 name: build_and_test_no_deploy
 run-name: Build and test website, but not deploy
 on:
-    pull_request:
+  pull_request:
 
 jobs:
-    build_and_test_no_deploy:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
-        - name: Setup Node
-          uses: actions/setup-node@v4
-          with:
-            node-version: 20
-            cache: 'npm'
-        - name: Setup Hugo
-          uses: peaceiris/actions-hugo@v2
-          with:
-            hugo-version: 'latest'
-            extended: true
-        - name: Build
-          run:  |
-                npm install
-                npm run gen-people
-                npm run gen-teams
-                npm run update-stats
-                hugo --minify
-                npm run postbuild
-    #      - name: Test HTML code
-    #        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
-    #        with:
-    #          root: public
-    #      - name: Upload HTML test report 
-    #        uses: actions/upload-artifact@v3
-    #        if: success() || failure() # Run even if we had an error
-    #        with:
-    #          name: html5validator_log
-    #          path: log.log
+  build_and_test_no_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+      - name: Build
+        run: |
+          npm install
+          npm run gen-people
+          npm run gen-teams
+          npm run update-stats
+          hugo --minify
+          npm run postbuild
+  #      - name: Test HTML code
+  #        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+  #        with:
+  #          root: public
+  #      - name: Upload HTML test report
+  #        uses: actions/upload-artifact@v3
+  #        if: success() || failure() # Run even if we had an error
+  #        with:
+  #          name: html5validator_log
+  #          path: log.log

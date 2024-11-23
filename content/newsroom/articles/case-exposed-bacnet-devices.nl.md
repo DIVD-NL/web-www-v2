@@ -7,4 +7,5 @@ case:
   caseid: DIVD-2022-00005
   closed: true
 ---
+
 CASE: SMARTERMAIL

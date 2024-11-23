@@ -24,9 +24,10 @@ faq:
   intro: ""
   url: ""
 ---
+
 By [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
 
-> *In 2022, a group of security researchers discovered a misconfigured Amazon S3 bucket exposing 3TB of data. We are not talking about random bits and bytes, but among those [1.5 million unprotected files](https://www.skyhighsecurity.com/about/resources/intelligence-digest/unsecured-servers-can-put-lives-at-stake.html?eid=evpxmdrt&smcid=lnp&utm_source=linkedin&utm_medium=paidsocial&utm_campaign=skyhighsecuritybrandlaunch_jp&utm_content=plane&utm_term=q4_2022) were airport employee records, ID card photos, and personally identifiable information (PII) including names, photos, occupations, and national ID numbers dating back to [at least 2018](https://www.safetydetectives.com/news/securitas-leak-report/). Other information that could be extracted was in the form of Android mobile apps that are used by security personnel to help with various tasks, such as incident reporting. According to [SafetyDetectives](https://www.safetydetectives.com/news/securitas-leak-report/), the Amazon S3 bucket was left open and accessible, without any authentication procedures in place.*
+> _In 2022, a group of security researchers discovered a misconfigured Amazon S3 bucket exposing 3TB of data. We are not talking about random bits and bytes, but among those [1.5 million unprotected files](https://www.skyhighsecurity.com/about/resources/intelligence-digest/unsecured-servers-can-put-lives-at-stake.html?eid=evpxmdrt&smcid=lnp&utm_source=linkedin&utm_medium=paidsocial&utm_campaign=skyhighsecuritybrandlaunch_jp&utm_content=plane&utm_term=q4_2022) were airport employee records, ID card photos, and personally identifiable information (PII) including names, photos, occupations, and national ID numbers dating back to [at least 2018](https://www.safetydetectives.com/news/securitas-leak-report/). Other information that could be extracted was in the form of Android mobile apps that are used by security personnel to help with various tasks, such as incident reporting. According to [SafetyDetectives](https://www.safetydetectives.com/news/securitas-leak-report/), the Amazon S3 bucket was left open and accessible, without any authentication procedures in place._
 
 ### What is an AWS S3 bucket?
 
@@ -64,7 +65,7 @@ A data breach is one of the last things you want to happen in your organisation.
 
 Implement least privilege access by giving users and applications only the permissions they need to perform their task(s). Regularly review and adjust permissions to avoid over-privileged access and remove permissions when the user or application no longer needs it. Disable public access to your S3 buckets if it is not strictly necessary.
 
-### ✅ Control ownership of objects and disable ACLs for your bucket 
+### ✅ Control ownership of objects and disable ACLs for your bucket
 
 Use [AWS IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) for granular permission management, and clearly define who can access the data and what actions they can perform. Avoid public-read or public-write permissions unless absolutely necessary. If public access is necessary, limit it to the minimum and monitor it closely. Keep access control lists (ACLs) disabled by applying the "[Bucket owner enforced](https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html)" setting and using your bucket policy to share data with external users as needed.
 

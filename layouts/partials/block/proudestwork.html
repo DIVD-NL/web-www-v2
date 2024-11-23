@@ -1,24 +1,22 @@
-
 {{ partial "comment.html" (dict "comment" "proudestwork.html" ) }}
 
 {{ $blocks := .Site.GetPage "/block" }}
 
 {{ with $blocks.Params.proudestwork }}
-  {{ partial "p/layout_open" (dict "classes" (slice "extend")) }} 
-    <h2>{{ .Title }}</h2>
-    <div class="carousel responsive-controls">
-      <div class="slides">
-        {{ with .ourproudestwork }}
-          {{ range . }}
-            {{ partial "card-article" . }}
-          {{ end }}
-        {{ else }}
-          <p>No items in our proudest work.</p>
-        {{ end }}  
-      </div>
-      {{ partial "carousel_controls" (len .ourproudestwork) }}
+  {{ partial "p/layout_open" (dict "classes" (slice "extend")) }}
+  <h2>{{ .Title }}</h2>
+  <div class="carousel responsive-controls">
+    <div class="slides">
+      {{ with .ourproudestwork }}
+        {{ range . }}
+          {{ partial "card-article" . }}
+        {{ end }}
+      {{ else }}
+        <p>No items in our proudest work.</p>
+      {{ end }}
     </div>
-  {{ partial "p/layout_close" }} 
-
+    {{ partial "carousel_controls" (len .ourproudestwork) }}
+  </div>
+  {{ partial "p/layout_close" }}
 {{ end }}
 {{ partial "comment.html" (dict "comment" "/proudestwork.html" ) }}

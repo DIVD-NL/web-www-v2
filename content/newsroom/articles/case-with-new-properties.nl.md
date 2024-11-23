@@ -15,9 +15,10 @@ case:
     - label: Lemon
   closed: true
 ---
+
 T﻿his is the body of the article
 
-W﻿ith some markup for **bold** and *italic*
+W﻿ith some markup for **bold** and _italic_
 
 ### A﻿nd a header
 

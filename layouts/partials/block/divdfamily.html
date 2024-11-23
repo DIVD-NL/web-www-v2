@@ -1,28 +1,27 @@
-
 {{ $blocks := .Site.GetPage "/block" }}
-
 
 {{ with $blocks.Params.divdfamily }}
 
-    {{ partial "p/layout_open" (dict "classes" (slice "default")) }} 
-      <div>
-          <h2>{{ .Title }}</h2>
+  {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
+  <div>
+    <h2>{{ .Title }}</h2>
+    <p>{{ .description }}</p>
+  </div>
+  <div class="divd-family-list">
+    {{ range .members }}
+      <div class="divd-family-item">
+        <section>
+          <h3>{{ .name }}</h3>
           <p>{{ .description }}</p>
+        </section>
+        <nav>
+          <a class="cta" href="{{ .link }}" target="_blank"
+            >{{ i18n "visitsite" }} {{ partial "svg/icon" "external" }}</a
+          >
+        </nav>
       </div>
-      <div class="divd-family-list">
-        {{ range .members }}
-          <div class="divd-family-item">
-            <section>
-              <h3>{{ .name }}</h3>
-              <p>{{ .description }}</p>
-            </section>
-            <nav>
-              <a class="cta" href="{{ .link }}" target="_blank">{{ i18n "visitsite"}} {{ partial "svg/icon" "external" }}</a>
-            </nav>
-          </div>
-        {{ end }}
-      </div>
-    {{ partial "p/layout_close" }}
-    
+    {{ end }}
+  </div>
+  {{ partial "p/layout_close" }}
 
 {{ end }}

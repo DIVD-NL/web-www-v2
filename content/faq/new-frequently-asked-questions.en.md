@@ -26,7 +26,8 @@ faqgroups:
           tincidunt mi nisi accumsan libero. Integer quis erat id ante mattis
           lobortis. Nam sed sapien et neque malesuada tincidunt in varius massa.
       - title: Question 2
-        description: Proin a tortor ut turpis sodales lacinia sed a orci. Vivamus
+        description:
+          Proin a tortor ut turpis sodales lacinia sed a orci. Vivamus
           facilisis erat tortor, porta lobortis ligula egestas sed. Curabitur id
           commodo ipsum, sed feugiat nulla. Nulla quis feugiat urna. Suspendisse
           eget consequat turpis. Morbi commodo dui sed turpis hendrerit, eget
@@ -39,7 +40,8 @@ faqgroups:
           lacinia.
   - heading: FAQ Group 2
     faqs:
-      - description: Nulla quis leo in lorem tempor rhoncus nec eget sem. Morbi nec diam
+      - description:
+          Nulla quis leo in lorem tempor rhoncus nec eget sem. Morbi nec diam
           ullamcorper, lobortis magna quis, viverra dui. Nullam facilisis
           accumsan lorem in convallis. Quisque semper consequat metus eu
           eleifend. Vestibulum in elit quis quam convallis efficitur ut et enim.
@@ -48,7 +50,8 @@ faqgroups:
           risus. Etiam sed mollis est, non pellentesque erat.
         title: Question 1
       - title: Question 2
-        description: In hac habitasse platea dictumst. Mauris non tortor blandit,
+        description:
+          In hac habitasse platea dictumst. Mauris non tortor blandit,
           convallis erat id, rutrum risus. Praesent maximus facilisis nisi, eu
           bibendum ex bibendum non. Aliquam eget libero erat. Phasellus lorem
           purus, commodo vitae nunc eget, eleifend ultricies sem. Ut pulvinar

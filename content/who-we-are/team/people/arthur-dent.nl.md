@@ -20,4 +20,5 @@ links:
   - name: Personal site
     link: https://arthurdent.com
 ---
+
 Arthur Dent, the quintessential Englishman, finds himself thrust into the bewildering cosmos after the Earth's unexpected demolition to make way for a hyperspace bypass. Clad in his perennially worn dressing gown, Arthur embodies the everyman, bewildered and unprepared for the wild eccentricities of the universe. His mundane, tea-loving life on Earth stands in stark contrast to his subsequent interstellar adventures, where he encounters bizarre planets and peculiar alien life forms. Struggling to grasp the absurdity of his new reality, Arthur's journey is a comedic yet poignant exploration of the human condition amidst the backdrop of the unfathomable universe.

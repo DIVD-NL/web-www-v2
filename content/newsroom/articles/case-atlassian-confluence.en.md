@@ -20,6 +20,7 @@ case:
       link: ""
 faq_enabled: false
 ---
+
 On May 30th – Memorial Day 2022 – researchers of the Washington DC-based cybersecurity firm [Volexity ](https://www.volexity.com/)started an investigation after one of the customers detected suspicious activity on two internet-facing web servers, that were running Atlassian Confluence Server software.
 
 As the Volexity researchers delved deeper into their investigations, they discovered web shells being written to the disk, and upon further analysis, they were able to recreate the exploit and so identified a zero-day vulnerability in the current versions of the Confluence Server and Data Center. This software, used by governments, banks, and critical infrastructure, was under attack. Volexity acted quickly, contacting Atlassian on May 31, 2022, to report the relevant details of their findings. At the time of discovery, this exploit was only used in a very targeted way.

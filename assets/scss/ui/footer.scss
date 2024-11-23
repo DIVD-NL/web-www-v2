@@ -1,5 +1,5 @@
 footer.main {
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
 
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ footer.main {
     }
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     article {
       padding: 16px;
       .container {
@@ -73,7 +73,6 @@ footer.main {
   li {
     padding-right: 16px;
     ul {
-      
       li {
         padding-bottom: 8px;
         a {
@@ -88,7 +87,7 @@ footer.main {
     }
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     li {
       ul {
         li {
@@ -102,7 +101,7 @@ footer.main {
 }
 
 .ethics-footer {
-  margin-top: 40px !important; 
+  margin-top: 40px !important;
   background-color: #fff;
   border-radius: 42px;
   max-width: var(--cw);
@@ -110,24 +109,23 @@ footer.main {
   overflow: hidden;
   display: flex;
 
-  h3, p {
+  h3,
+  p {
     color: #000;
   }
 
-
   img {
     flex: 0 0 30%;
-    object-fit: cover; 
+    object-fit: cover;
     height: 220px;
   }
-
 
   .content {
     flex: 1 1 auto;
     padding: 20px 16px;
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     flex-direction: column;
 
     img {

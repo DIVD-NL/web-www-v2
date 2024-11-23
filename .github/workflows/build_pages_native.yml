@@ -1,6 +1,6 @@
 name: build_test_deploy
 run-name: Build and test website (and deploy if needed)
-on: 
+on:
   push:
     branches:
       - main
@@ -20,38 +20,38 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: "latest"
           extended: true
       - name: Build
-        run:  |
-            npm install
-            npm run gen-people
-            npm run gen-teams
-            npm run update-stats
-            hugo --minify
-            npm run postbuild
-#      - name: Test HTML code
-#        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
-#        with:
-#          root: public
-#      - name: Upload HTML test report 
-#        uses: actions/upload-artifact@v3
-#        if: success() || failure() # Run even if we had an error
-#        with:
-#          name: html5validator_log
-#          path: log.log
-      - name: Modify .htacess for staging
-        if:   ${{ github.ref == 'refs/heads/staging' }} 
         run: |
-           sed -i 's#www\.divd#staging.divd#' public/.htaccess
-           sed -i 's#\-2024#-staging#g'       public/.htaccess
+          npm install
+          npm run gen-people
+          npm run gen-teams
+          npm run update-stats
+          hugo --minify
+          npm run postbuild
+      #      - name: Test HTML code
+      #        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+      #        with:
+      #          root: public
+      #      - name: Upload HTML test report
+      #        uses: actions/upload-artifact@v3
+      #        if: success() || failure() # Run even if we had an error
+      #        with:
+      #          name: html5validator_log
+      #          path: log.log
+      - name: Modify .htacess for staging
+        if: ${{ github.ref == 'refs/heads/staging' }}
+        run: |
+          sed -i 's#www\.divd#staging.divd#' public/.htaccess
+          sed -i 's#\-2024#-staging#g'       public/.htaccess
       - name: rsync deploy staging
         uses: burnett01/rsync-deployments@5.2.1
-        if:   ${{ github.ref == 'refs/heads/staging' }} # && ( success() || failure() ) # Remove the && clause when a HTML check is flawless
+        if: ${{ github.ref == 'refs/heads/staging' }} # && ( success() || failure() ) # Remove the && clause when a HTML check is flawless
         with:
           switches: -avzr --delete
           path: public/
@@ -61,7 +61,7 @@ jobs:
           remote_key: ${{ secrets.DEPLOY_KEY }}
       - name: rsync deploy production
         uses: burnett01/rsync-deployments@5.2.1
-        if:   ${{ github.ref == 'refs/heads/main' }} # && ( success() || failure() ) # Remove the && clause when a HTML check is flawless
+        if: ${{ github.ref == 'refs/heads/main' }} # && ( success() || failure() ) # Remove the && clause when a HTML check is flawless
         with:
           switches: -avzr --delete
           path: public/
@@ -71,6 +71,6 @@ jobs:
           remote_key: ${{ secrets.DEPLOY_KEY }}
       - name: Deploy GitHub pages
         uses: JamesIves/github-pages-deploy-action@v4
-        if:   ( ${{ github.ref == 'refs/heads/main' }} || ${{ github.ref == 'refs/heads/staging' }} ) # && ( success() || failure() )  # Remove the && clause when a HTML check is flawless
+        if: ( ${{ github.ref == 'refs/heads/main' }} || ${{ github.ref == 'refs/heads/staging' }} ) # && ( success() || failure() )  # Remove the && clause when a HTML check is flawless
         with:
-          folder: admin # The folder the action should deploy.      
+          folder: admin # The folder the action should deploy.

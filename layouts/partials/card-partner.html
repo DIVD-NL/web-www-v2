@@ -7,22 +7,22 @@
 
 
 <div class="partner-card">
-    <figure>
-        {{ with resources.Get $imageSource }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" $name) }} 
-        {{ else }}
-            <img src="#" alt="{{ $name }}" />
-        {{ end }}
-    </figure>
-    <section>
-        <div class="content">
-            <h3>{{ $name }}</h3>
-            <p>{{ $description }}</p>
-        </div>
-        <nav>
-            <a class="cta external inverse" href="{{ $link }}" target="_blank">
-                {{ $cta }}
-            </a>
-        </nav>
-    </section>
+  <figure>
+    {{ with resources.Get $imageSource }}
+      {{ partial "tools/rimg/img" (dict "img" . "alt" $name) }}
+    {{ else }}
+      <img src="#" alt="{{ $name }}" />
+    {{ end }}
+  </figure>
+  <section>
+    <div class="content">
+      <h3>{{ $name }}</h3>
+      <p>{{ $description }}</p>
+    </div>
+    <nav>
+      <a class="cta external inverse" href="{{ $link }}" target="_blank">
+        {{ $cta }}
+      </a>
+    </nav>
+  </section>
 </div>

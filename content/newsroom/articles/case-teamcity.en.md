@@ -18,6 +18,7 @@ case:
       link: https://www.divd.nl/people/Alwin%20Warringa/
     - label: Gerben van der Wel
 ---
+
 ## SUMMARY
 
 A critical security issue was recently identified in TeamCity On-Premises. If abused, the flaw may enable an unauthenticated attacker with HTTP(S) access to a TeamCity server to perform bypass authentication checks and gain administrative control of that TeamCity server.
@@ -32,6 +33,6 @@ DIVD is currently working to identify vulnerable instances and notify the owners
 
 ## MORE INFORMATION
 
-* [JetBrains Advisory](https://blog.jetbrains.com/teamcity/2024/03/additional-critical-security-issues-affecting-teamcity-on-premises-cve-2024-27198-and-cve-2024-27199-update-to-2023-11-4-now/)
-* [CVE-2024-27198](https://nvd.nist.gov/vuln/detail/CVE-2024-27198)
-* [CVE-2024-27199](https://nvd.nist.gov/vuln/detail/CVE-2024-27199)
+- [JetBrains Advisory](https://blog.jetbrains.com/teamcity/2024/03/additional-critical-security-issues-affecting-teamcity-on-premises-cve-2024-27198-and-cve-2024-27199-update-to-2023-11-4-now/)
+- [CVE-2024-27198](https://nvd.nist.gov/vuln/detail/CVE-2024-27198)
+- [CVE-2024-27199](https://nvd.nist.gov/vuln/detail/CVE-2024-27199)
