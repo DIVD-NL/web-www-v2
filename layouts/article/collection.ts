@@ -59,6 +59,7 @@ export const Collection = {
       required: false,
     },
     {
+      // TODO this should be split off in its own object
       label: 'case',
       required: false,
       name: 'case',
@@ -133,6 +134,7 @@ export const Collection = {
       i18n: true,
     },
     {
+      // TODO this should be split off in its own object
       label: 'Enable FAQ',
       name: 'faq_enabled',
       widget: 'boolean',
