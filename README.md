@@ -42,14 +42,7 @@ npm run gen-teams
 ## Local admin
 
 ```sh
-just admin
-open http://localhost:8000
-just admin-stop #when done
-
-# equivalent to:
-
-npx decap-server
-python3 -m http.server --directory ./admin/development
+npx vite
 ```
 
 ## Test production version
