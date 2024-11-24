@@ -1,31 +1,52 @@
 <!-- Check if the FAQ is required as per the setting in the CMS -->
 {{ if .faq_enabled }}
-    <div class="article-faq">
+    <div class="px-4 md:px-10 lg:px-12 py-12">
         {{ $context := . }}
         {{ $index := 0 }}
 
-        {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
-        <div>
-            <h2>{{ .title }}</h2>
-            <p>{{ .intro }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Left Column -->
+            <div>
+                <h2 class="text-2xl font-bold">{{ .title }}</h2>
+                <p class="mt-2 text-lg text-gray-600">{{ .intro }}</p>
 
-            {{ if .leftButton }} {{ partial "components/button/button.html" .leftButton }} {{ end }}
-            {{ if .rightButton }} {{ partial "components/button/button.html" .rightButton }} {{ end }}
-        </div>
-        <div>
-            <div class="accordion">
-            {{ with index .faqgroups $index }}
-                {{ range $index, $element := .faqs }}
-                <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
-                    <h3>{{ .title }} <span> </span></h3>
-                    <div class="accordion-content p">
-                    {{ .description|markdownify }}
-                    </div>
-                </div>
+                {{ if .leftButton }}
+                    {{ partial "components/button/button.html" .leftButton }}
                 {{ end }}
-            {{ end }}
+
+                {{ if .rightButton }}
+                    {{ partial "components/button/button.html" .rightButton }}
+                {{ end }}
+            </div>
+            <!-- Right Column -->
+            <div>
+                <div class="space-y-4">
+                    {{ with index .faqgroups $index }}
+                        {{ range $index, $element := .faqs }}
+                            <div class="border-b-2 border-solid border-b-black">
+                                <!-- Hidden checkbox to toggle the accordion -->
+                                <input type="checkbox" id="faq-{{ $index }}" class="hidden peer" />
+
+                                <!-- Accordion header -->
+                                <label for="faq-{{ $index }}"
+                                    class="text-xl font-semibold flex justify-between items-center py-4 cursor-pointer">
+                                    {{ .title }}
+                                    <!-- Arrow icon -->
+                                    <span class="transform transition-transform duration-300 peer-checked:rotate-180 min-w-fit">
+                                        <img src="data:image/svg+xml,%3Csvg viewBox='0 0 14 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3793 1.3614L12.0906 0.0727085L6.80938 5.35396L1.52792 0.0725092L0.239236 1.3612L6.80541 7.92737L6.80918 7.9236L6.81315 7.92757L13.3793 1.3614Z' /%3E%3C/svg%3E"
+                                            alt="arrow" class="w-4 h-4" />
+                                    </span>
+                                </label>
+
+                                <!-- Accordion content -->
+                                <div class="hidden peer-checked:block p-4 text-gray-700">
+                                    {{ .description | markdownify }}
+                                </div>
+                            </div>
+                        {{ end }}
+                    {{ end }}
+                </div>
             </div>
         </div>
-        {{ partial "p/layout_close" }}
     </div>
 {{ end }}
