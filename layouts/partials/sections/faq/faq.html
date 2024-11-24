@@ -24,8 +24,14 @@
                     {{ with index .faqgroups $index }}
                         {{ range $index, $element := .faqs }}
                             <div class="border-b-2 border-solid border-b-black">
-                                <!-- Hidden checkbox to toggle the accordion -->
-                                <input type="checkbox" id="faq-{{ $index }}" class="hidden peer" />
+                                <!-- Hidden input to toggle the accordion -->
+                                <input 
+                                    type="radio"
+                                    id="faq-{{ $index }}"
+                                    name="accordion-group"
+                                    class="hidden peer"
+                                    {{ if eq $index 0 }}checked{{ end }}
+                                />
 
                                 <!-- Accordion header -->
                                 <label for="faq-{{ $index }}"
@@ -39,7 +45,7 @@
                                 </label>
 
                                 <!-- Accordion content -->
-                                <div class="hidden peer-checked:block p-4 text-gray-700">
+                                <div class="hidden peer-checked:block py-4 text-gray-700">
                                     {{ .description | markdownify }}
                                 </div>
                             </div>
