@@ -18,8 +18,7 @@
     "gen-people": "node ./scripts/generate_people.js",
     "gen-teams": "node ./scripts/generate_teams.js",
     "update-stats": "node ./scripts/update_stats.js",
-    "start": "parcel cms/index.html",
-    "build": "parcel build cms/index.html"
+    "cms": "vite"
   },
   "author": "Les Kleuver",
   "license": "ISC",
@@ -29,7 +28,6 @@
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
-    "parcel": "^2.12.0",
     "postcss": "^8.4.45",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.3.3",

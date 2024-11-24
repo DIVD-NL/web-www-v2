@@ -8,11 +8,8 @@
 public
 resources
 out
+dist
 
 # Package dependencies
 node_modules/
 /npm-debug.log
-
-
-.parcel-cache
-dist

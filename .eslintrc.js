@@ -10,5 +10,5 @@ module.exports = {
     'max-len': 'off',
     indent: 'off',
   },
-  ignorePatterns: ['node_modules/', 'dist/', 'public/', '.parcel-cache/', 'static/'],
+  ignorePatterns: ['node_modules/', 'dist/', 'public/', 'static/'],
 };

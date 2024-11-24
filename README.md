@@ -42,7 +42,7 @@ npm run gen-teams
 ## Local admin
 
 ```sh
-npx vite
+npm run cms
 ```
 
 ## Test production version
