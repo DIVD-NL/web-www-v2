@@ -1,10 +1,10 @@
 <!-- Check if the FAQ is required as per the setting in the CMS -->
 {{ if .faq_enabled }}
-    <div class="px-4 md:px-10 lg:px-12 py-12">
+    <div class="px-4 desktop:px-12 lg:px-12 py-12">
         {{ $context := . }}
         {{ $index := 0 }}
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 desktop:grid-cols-2 gap-8">
             <!-- Left Column -->
             <div>
                 <h2 class="text-2xl font-bold">{{ .title }}</h2>
@@ -35,7 +35,7 @@
 
                                 <!-- Accordion header -->
                                 <label for="faq-{{ $index }}"
-                                    class="text-xl font-semibold flex justify-between items-center py-4 cursor-pointer">
+                                    class="text-xl font-semibold flex justify-between desktop:justify-start items-center py-4 cursor-pointer">
                                     {{ .title }}
                                     <!-- Arrow icon -->
                                     <span class="transform transition-transform duration-300 peer-checked:rotate-180 min-w-fit">
