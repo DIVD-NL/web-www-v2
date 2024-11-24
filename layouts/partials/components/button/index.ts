@@ -20,6 +20,13 @@ export default {
       //   ],
     },
     {
+      label: 'Inverted colors',
+      name: 'invertedColors',
+      widget: 'boolean',
+      required: false,
+      default: false,
+    },
+    {
       label: 'External link',
       name: 'external',
       widget: 'boolean',

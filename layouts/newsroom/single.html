@@ -79,12 +79,7 @@
         {{ end }}
       </aside>
     </div>
-    <!-- Check if the FAQ is required as per the setting in the CMS -->
-    {{ if and (isset .Params "faq_enabled") (.Params.faq_enabled) }}
-      <div class="article-faq">
-        {{ partial "block/faq" . }}
-      </div>
-    {{ end }}
+    {{ partial "sections/sections" . }}
     {{ partial "p/layout_close" }}
 
     {{ partial "p/section_close" }}

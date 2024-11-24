@@ -1,0 +1,31 @@
+<!-- Check if the FAQ is required as per the setting in the CMS -->
+{{ if .faq_enabled }}
+    <div class="article-faq">
+        {{ $context := . }}
+        {{ $index := 0 }}
+
+        {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+        <div>
+            <h2>{{ .title }}</h2>
+            <p>{{ .intro }}</p>
+
+            {{ if .leftButton }} {{ partial "components/button/button.html" .leftButton }} {{ end }}
+            {{ if .rightButton }} {{ partial "components/button/button.html" .rightButton }} {{ end }}
+        </div>
+        <div>
+            <div class="accordion">
+            {{ with index .faqgroups $index }}
+                {{ range $index, $element := .faqs }}
+                <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
+                    <h3>{{ .title }} <span> </span></h3>
+                    <div class="accordion-content p">
+                    {{ .description|markdownify }}
+                    </div>
+                </div>
+                {{ end }}
+            {{ end }}
+            </div>
+        </div>
+        {{ partial "p/layout_close" }}
+    </div>
+{{ end }}

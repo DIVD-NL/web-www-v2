@@ -6,7 +6,7 @@
     </div>
     <h3 class="mb-0 mt-2">{{ .title }}</h3>
     <p class="mb-4">{{ .text }}</p>
-    <button class="flex w-fit px-6 py-3">{{ .button.label }}</button>
+    {{ if .button }} <button class="flex w-fit px-6 py-3">{{ .button.label }}</button> {{ end }}
   </div>
   {{ $image := resources.GetRemote "https://picsum.photos/200/300" }}
   <img

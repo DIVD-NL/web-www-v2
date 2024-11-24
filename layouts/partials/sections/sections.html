@@ -9,5 +9,7 @@
     {{ partial "sections/suggested-articles/suggested-articles" . }}
   {{ else if eq .type "titleText" }}
     {{ partial "sections/title-text/title-text" . }}
+  {{ else if eq .type "faq" }}
+    {{ partial "sections/faq/faq" . }}
   {{ end }}
 {{ end }}
