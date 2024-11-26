@@ -1,23 +1,20 @@
 {{ define "main" }}
-  {{ $extraClass := "default" }}
+  {{ $extraClass := "default pt-32 bg-light-black" }}
   {{ if .Params.image }}
     {{ $extraClass = "has-image" }}
   {{ end }}
 
 
-  <div class="article-layout">
+  <section class="pt-32 bg-light-black">
     {{ partial "breadcrumbs" . }}
 
-    {{ partial "p/section_open" (dict "classes" (slice "article" )) }}
-    {{ partial "p/layout_open" (dict "classes" (slice "article" $extraClass)) }}
 
-    {{ if .Params.image }}
-      <div class="image-header">
+    <main class="container bg-white">
+      {{ if .Params.image }}
         {{ with resources.Get .Params.image }}
-          {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+          {{ partial "tools/rimg/img" (dict "img" .) }}
         {{ end }}
-      </div>
-    {{ end }}
+      {{ end }}
 
 
     <div class="article-body">
@@ -79,9 +76,6 @@
         {{ end }}
       </aside>
     </div>
-    {{ partial "sections/sections" . }}
-    {{ partial "p/layout_close" }}
-
-    {{ partial "p/section_close" }}
-  </div>
+    </main>
+  </section>
 {{ end }}
