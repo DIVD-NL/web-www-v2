@@ -32,6 +32,7 @@ jobs:
           npm run gen-people
           npm run gen-teams
           npm run update-stats
+          npm run build-cms
           hugo --minify
           npm run postbuild
       #      - name: Test HTML code

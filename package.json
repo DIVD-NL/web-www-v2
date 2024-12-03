@@ -18,7 +18,8 @@
     "gen-people": "node ./scripts/generate_people.js",
     "gen-teams": "node ./scripts/generate_teams.js",
     "update-stats": "node ./scripts/update_stats.js",
-    "cms": "vite"
+    "cms": "vite",
+    "cms-build": "vite build"
   },
   "author": "Les Kleuver",
   "license": "ISC",
