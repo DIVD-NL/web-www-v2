@@ -1,0 +1,53 @@
+<aside>
+    {{ with .Params.case }}
+      <section>
+        {{ if .lead }}
+          <h4>Case lead</h4>
+          <ul>
+            {{ if .leadlink }}
+              <li><a href="{{ .leadlink }}">{{ .lead }}</a></li>
+            {{ else }}
+              <li>{{ .lead }}</li>
+            {{ end }}
+          </ul>
+        {{ end }}
+
+        {{ if or (isset . "researchers") (isset . "researchers_people") }}
+          <h4>Researchers</h4>
+          <ul>
+            {{ if .researchers_people }}
+              {{ range .researchers_people }}
+                {{ $peoplePage := site.GetPage "page" . }}
+                <li>
+                  <a href="{{ $peoplePage.Permalink }}"
+                    >{{ $peoplePage.Title }}</a
+                  >
+                </li>
+              {{ end }}
+            {{ end }}
+            {{ range .researchers }}
+              {{ if .link }}
+                <li>{{ .label }}</li>
+              {{ else }}
+                <li><a href="{{ .link }}">{{ .label }}</a></li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        {{ end }}
+
+        {{ partial "components/button/button.html" .link }}
+
+        <!-- <a
+          class="cta"
+          target="_blank"
+          href="{{ if .link }}
+            {{ .link }}
+          {{ else }}
+            https://csirt.divd.nl/
+          {{ end }}">
+          {{ .caseid }}
+          {{ partial "svg/icon" "external" }}
+        </a> -->
+      </section>
+    {{ end }}
+</aside>
