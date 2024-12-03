@@ -2,7 +2,7 @@ import caseWidget from '../partials/components/case-researchers-widget';
 import { articleSections } from '../partials/sections';
 
 export const Collection = {
-  label: 'Articles',
+  label: 'Newsroom articles',
   name: 'articles',
   i18n: {
     structure: 'multiple_files',
@@ -62,7 +62,7 @@ export const Collection = {
       required: false,
     },
     {
-      ...caseWidget
+      ...caseWidget,
     },
     {
       label: 'Body',

@@ -1,4 +1,3 @@
-import { Collection as ArticlesCollection } from '../layouts/article/collection';
-import { WhyOurWorkMatters } from '../layouts/why-our-work-matters';
+import { Collection as ArticlesCollection } from '../layouts/newsroom/collection';
 
-export default [ArticlesCollection, WhyOurWorkMatters];
+export default [ArticlesCollection];
