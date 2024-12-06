@@ -23,6 +23,10 @@ case:
       link: https://www.divd.nl/who-we-are/team/people/ralph-horn/
     - label: Ruben Uithol
       link: https://www.divd.nl/who-we-are/team/people/ruben-uithol/
+    - label: Matthijs Koot
+      link: ""
+    - label: Frank Breedijk
+      link: ""
   researchers_people: []
 faq_enabled: false
 faq: null
@@ -33,19 +37,19 @@ On Thursday, December 9th, Twitter user Lunasec (@P0rZ9) wrote a cryptic tweet:
 
 _‘Apache Log4j2 jndi RCE’_
 
-The tweet suggested Lunasec could take control of version 2 of Log4j, java’s logging library. Log4j is an open-source Java Library and one of the most popular Java logging frameworks. It is a project of the Apache Software Foundation (ASF), a non-profit organization. The same day that the tweet appeared, a proof of concept of the exploit was published on Github.
+The tweet suggested Lunasec could take control of version 2 of Log4j, java’s logging library. Log4j is an open-source Java Library and one of the most popular Java logging frameworks. It is a project of the Apache Software Foundation (ASF), a non-profit organization. The same day the tweet appeared, a proof of concept of the exploit was published on GitHub.
 
 ## The exploit
 
-The exploit works as follows. A vulnerable Log4j server will log a payload, constructed by an attacker. This can trigger the server, via JNDI (Java Naming and Directory Interface), to make a request to a server controlled by the attacker, to execute another payload. The attack could be executed in many different ways, such as HTTP requests, SMS messages, emails, and by using user-controlled fields, basically anything that ends up in a log. With the right message in the log, an attacker could trigger an unauthenticated Remote Code Execution (RCE).
+The exploit functions in the following way: a vulnerable Log4j server logs a payload that has been crafted by an attacker. This action can trigger the server, through JNDI (Java Naming and Directory Interface), to request a server controlled by the attacker, allowing for the execution of an additional payload. The attack can be carried out in various ways, such as through HTTP requests, SMS messages, emails, or even by using fields that can be manipulated by users—essentially, anything that ends up being logged. With the right message in the log, an attacker could initiate an unauthenticated Remote Code Execution (RCE).
 
 ## The impact
 
-The news caused shockwaves in the information security community. The impact of the vulnerability and the ease with which it could be exploited made the possible impact enormous. Log4j is ubiquitous and present in a whole range of software. In a lot of cases, the developers don’t even know they are using it. ‘It is like sugar: present in your meals, even when you didn’t know,’ said DIVD researcher Frank Breedijk. The vulnerability has been dubbed Log4Shell, to which Apache assigned CVE-2021-44228. It turned out to the vulnerability was already discovered on November 24th, by the Alibaba cloud security team which reported it to Apache.
+The news caused shockwaves in the information security community. The impact of the vulnerability and the ease with which it could be exploited made the possible impact enormous. Log4j is ubiquitous and present in a whole range of software. In a lot of cases, the developers don’t even know they are using it. ‘It is like sugar: present in your meals, even when you didn’t know,’ said DIVD researcher Frank Breedijk. The vulnerability has been dubbed Log4Shell, to which Apache assigned CVE-2021-44228. It turned out that the vulnerability was already discovered on November 24th, by the Alibaba cloud security team which reported it to Apache.
 
 ## What we did
 
-From December 10th, multiple researchers from DIVD worked around the clock to search for vulnerable servers. Most spent an average of 16 hours per day, working on methodologies to scan the internet for this vulnerability, and warning users of vulnerable software. The DIVD notified more than 3,500 users worldwide that were possibly vulnerable and got a notification email with advice to upgrade to patched version 2.16.0. DIVD cooperated with DTACT in building a scanner, and also helped the Dutch NCSC with compiling a list of software vulnerable to log4shell.
+From December 10th, multiple researchers from DIVD worked around the clock to search for vulnerable servers. Most spent an average of 16 hours per day, working on methodologies to scan the internet for this vulnerability, and warning users of vulnerable software. The DIVD notified more than 3,500 users worldwide who were possibly vulnerable and got a notification email with advice to upgrade to patched version 2.16.0. DIVD cooperated with DTACT in building a scanner and also helped the Dutch NCSC with compiling a list of software vulnerable to log4shell.
 
 ## What you can do
 
