@@ -35,7 +35,7 @@ Written on **05 Apr 2022** by [Gerard Janssen](https://www.divd.nl/who-we-are/te
 
 ## The case
 
-On Thursday, December 9th, Twitter user Lunasec (@P0rZ9) wrote a cryptic tweet:
+On Thursday, December 9th 2021, Twitter user Lunasec (@P0rZ9) wrote a cryptic tweet:
 
 _‘Apache Log4j2 jndi RCE’_
 
