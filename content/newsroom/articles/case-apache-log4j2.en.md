@@ -26,12 +26,12 @@ case:
     - label: Matthijs Koot
       link: ""
     - label: Frank Breedijk
-      link: https://staging.divd.nl/who-we-are/team/people/frank-breedijk/
+      link: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers_people: []
 faq_enabled: false
 faq: null
 ---
-Written on 05 Apr 2022 by [Gerard Janssen](https://staging.divd.nl/who-we-are/team/people/gerard-janssen/), and updated on 09 Dec 2024 by [Serena de Pater](https://staging.divd.nl/who-we-are/team/people/serena-de-pater/)
+Written on 05 Apr 2022 by [Gerard Janssen](https://www.divd.nl/who-we-are/team/people/gerard-janssen/), and updated on 09 Dec 2024 by [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
 
 ## The case
 
