@@ -24,14 +24,14 @@ case:
     - label: Ruben Uithol
       link: https://www.divd.nl/who-we-are/team/people/ruben-uithol/
     - label: Matthijs Koot
-      link: ""
+      link: https://www.divd.nl/who-we-are/team/people/matthijs-koot/
     - label: Frank Breedijk
       link: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers_people: []
 faq_enabled: false
 faq: null
 ---
-Written on 05 Apr 2022 by [Gerard Janssen](https://www.divd.nl/who-we-are/team/people/gerard-janssen/), and updated on 09 Dec 2024 by [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
+Written on **05 Apr 2022** by [Gerard Janssen](https://www.divd.nl/who-we-are/team/people/gerard-janssen/),  updated on **09 Dec 2024** by [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
 
 ## The case
 
