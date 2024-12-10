@@ -26,7 +26,7 @@ faq:
 ---
 By [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
 
-> *In 2022, a group of security researchers discovered a misconfigured Amazon S3 bucket exposing 3TB of data. We are not talking about random bits and bytes, but among those [1.5 million unprotected files](https://www.skyhighsecurity.com/about/resources/intelligence-digest/unsecured-servers-can-put-lives-at-stake.html?eid=evpxmdrt&smcid=lnp&utm_source=linkedin&utm_medium=paidsocial&utm_campaign=skyhighsecuritybrandlaunch_jp&utm_content=plane&utm_term=q4_2022) were airport employee records, ID card photos, and personally identifiable information (PII) including names, photos, occupations, and national ID numbers dating back to [at least 2018](https://www.safetydetectives.com/news/securitas-leak-report/). Other information that could be extracted was in the form of Android mobile apps that are used by security personnel to help with various tasks, such as incident reporting. According to [SafetyDetectives](https://www.safetydetectives.com/news/securitas-leak-report/), the Amazon S3 bucket was left open and accessible, without any authentication procedures in place.*
+> _In 2022, a group of security researchers discovered a misconfigured Amazon S3 bucket exposing 3TB of data. We are not talking about random bits and bytes, but among those [1.5 million unprotected files](https://www.skyhighsecurity.com/about/resources/intelligence-digest/unsecured-servers-can-put-lives-at-stake.html?eid=evpxmdrt&smcid=lnp&utm_source=linkedin&utm_medium=paidsocial&utm_campaign=skyhighsecuritybrandlaunch_jp&utm_content=plane&utm_term=q4_2022) were airport employee records, ID card photos, and personally identifiable information (PII) including names, photos, occupations, and national ID numbers dating back to [at least 2018](https://www.safetydetectives.com/news/securitas-leak-report/). Other information that could be extracted was in the form of Android mobile apps that are used by security personnel to help with various tasks, such as incident reporting. According to [SafetyDetectives](https://www.safetydetectives.com/news/securitas-leak-report/), the Amazon S3 bucket was left open and accessible, without any authentication procedures in place._
 
 ### What is an AWS S3 bucket?
 
@@ -36,7 +36,7 @@ Each S3 bucket can hold a virtually unlimited number of objects. You probably wo
 
 When an S3 bucket is visible to everyone on the public internet when it shouldn’t be, it’s called a misconfiguration. Such misconfigurations can turn a private repository of sensitive data into a goldmine for cybercriminals. So, what happens if you accidentally forget to secure your AWS S3 bucket?
 
-### Risks and consequences of misconfigured buckets
+## Risks and consequences of misconfigured buckets
 
 If an S3 bucket is left publicly accessible, anyone can access the data inside. When cybercriminals gain access to confidential or sensitive information, it results in a data breach. This is one of the most severe and likely consequences of an exposed S3 bucket. Depending on the data stored, a data breach can lead to reputational damage, regulatory penalties, and intellectual property theft. In the worst cases, it can also result in identity theft, financial loss, and competitive disadvantages. Cybercriminals can also use the stolen data to threaten to release this data unless a ransom is paid. Getting blackmailed can be perceived as humiliating, and is harmful to the victim’s reputation and trust relationships.
 
@@ -56,7 +56,7 @@ For organisations, especially those in tech and creative industries, intellectua
 
 Publicly accessible data can be leveraged in social engineering attacks. Social engineering attacks exploit human psychology rather than technical vulnerabilities. They often involve manipulation, deception, and lying to innocent people. Now imagine that cybercriminals have obtained publicly accessible information about your infrastructure, from a misconfigured S3 bucket. The cybercriminals could use the exposed information to craft convincing phishing emails, tricking employees or customers into revealing more sensitive information or credentials.
 
-### How can I secure my AWS buckets?
+## How can I secure my AWS buckets?
 
 A data breach is one of the last things you want to happen in your organisation. So, how can you secure your S3 buckets to keep your data safe and out of the hands of cybercriminals? It’s simple! Just follow these steps:
 
