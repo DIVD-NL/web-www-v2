@@ -88,6 +88,6 @@ While cloud services provide convenience and robust security when properly confi
 ## More information
 
 - [A Timeline of Microsoft Data Breaches in the Past 36 Months](https://www.virtru.com/blog/industry-updates/microsoft-data-breaches-2024)
-- [Misconfigured Azure Blob Storage Exposed the Data of 65K Companies and 548K Users](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/)
-- [Sensitive Data of 65,000+ Entities in 111 Countries Leaked due to a Single Misconfigured Data Bucket](https://socradar.io/sensitive-data-of-65000-entities-in-111-countries-leaked-due-to-a-single-misconfigured-data-bucket/)
+- [Article Spiceworks on misconfigured Azure Blob Storage](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/)
+- [Article SOCRadar on data loss due to a single misconfigured data bucket](https://socradar.io/sensitive-data-of-65000-entities-in-111-countries-leaked-due-to-a-single-misconfigured-data-bucket/)
 - [Azure Blob Storage: Navigating Misconfiguration Risks](https://wizardcyber.com/azure-blob-storage-navigating-misconfiguration-risks/)
