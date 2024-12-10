@@ -46,9 +46,11 @@ A data breach is one of the last things you want to happen in your organisation.
 
 Implement least privilege access by giving users and applications only the permissions they need to perform their task(s). When configuring and maintaining Blob Storage containers, regularly review the configuration settings where the access level is defined. When creating a new container you can choose one of the following options:
 
-- **Private Access**: Only specific users and services are granted permission to access the data, ensuring a high level of security. 
-- **Blob (level) Access**: The public cannot list the contents of the container, but anyone with the exact URL can access the blob. This poses a risk of exposing sensitive data if URLs are leaked or guessed.
-- **Container (level) Access**: This is the most permissive setting, allowing anyone to list all the contents of the container simply by knowing its name and the associated storage account name.
+- **Private Access**: Only specific users and services are granted permission to access the data, ensuring a high level of security. Access is contingent on credentials or tokens, adding an extra layer of protection.
+- **Blob (level) Access**: The public cannot list the contents of the container, but anyone with the exact URL can access the blob. This poses a risk of exposing sensitive data if URLs are leaked or guessed. Blob Access is suitable for non-sensitive content that must be shared with external parties, such as public-facing images or documents.
+- **Container (level) Access**: This is the most permissive setting, allowing anyone to list all the contents of the container simply by knowing its name and the associated storage account name. Container Access is suitable for scenarios where data must be widely discoverable without authentication, such as hosting a public dataset.
+
+Needless to say, private access is the most secure option. This configuration ensures that only explicitly authorized users and services can access the data. It provides the highest level of security by enforcing strict access controls.
 
 ### ✅ Disable anonymous read access for containers and blobs
 
@@ -77,7 +79,7 @@ Microsoft Defender for Storage adds an extra layer of security intelligence by d
 
 It can also help to employ additional layers of security such as Azure’s Advanced Threat Protection to detect anomalous access patterns.
 
-### Human error remains the most likely cause of a data breach 
+## Human error remains the most likely cause of a data breach 
 
 It is recommended to follow the advice in this article, but always keep in mind the standard principles when securing any service or configuration in the cloud, which also include regularly reviewing and auditing (storage) configurations and permissions, using strong encryption (at rest, in transit and when in use), and enable logging and monitoring to detect unauthorized access attempts. 
 
