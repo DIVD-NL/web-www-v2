@@ -6,7 +6,18 @@ tag: case
 intro: Services such as Amazon S3 Buckets and Azure Blob Storage offer the convenience of storing data which is accessible by various users and services simultaneously. However,  misconfiguration of any of these storage services can expose your organization to several risks and consequences.
 image: /images/OIG2.jpeg
 Alt tag for image: ""
-case: null
+case:
+  caseid: ""
+  closed: false
+  link: ""
+  lead: ""
+  leadlink: ""
+  researchers:
+    - label: Jelle Ursem
+      link: https://www.divd.nl/who-we-are/team/people/jelle-ursem/
+    - label: Serena de Pater
+      link: https://www.divd.nl/who-we-are/team/people/serena-de-pater/
+  researchers_people: []
 faq_enabled: false
 faq: null
 ---
