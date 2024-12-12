@@ -41,7 +41,27 @@ No time to read the entire article. DIVD notified me, what do I do? (choose all 
 
 {{< /callout >}}
 
-_In October 2022, a [misconfiguration in Microsoft's Azure Blob Storage](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/) service exposed the personal data of more than 548,000 users, including product orders/offers, project details and PII (Personally Identifiable Information) data. The breach was due to the misconfiguration of only one server. According to SOCRadar’s assessment, this exposed server stored 2.4 terabytes of data from 65,000 companies based in 111 countries, including 335,000 emails, 133,000 projects, and 548,000 exposed users. SOCRadar described the incident as "the most significant B2B data leak in recent cybersecurity history" due to the scale and amount of data involved. "As long as humans are involved in configuring such data buckets, leaks will continue to occur."_
+## When you don't secure your Blob Storage containers...
+
+Services such as [Amazon S3 Buckets](https://www.divd.nl/newsroom/articles/buck-et-up-secure-your-aws-s3-buckets-now/) and Azure Blob Storage offer the convenience of storing data which is accessible by various users and services simultaneously. However,  misconfiguration of any of these storage services can expose your organization to several risks and consequences.
+
+> _In October 2022, a [misconfiguration in Microsoft's Azure Blob Storage](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/) service exposed the personal data of more than 548,000 users, including product orders/offers, project details and PII (Personally Identifiable Information) data. The breach was due to the misconfiguration of only one server. According to SOCRadar’s assessment, this exposed server stored 2.4 terabytes of data from 65,000 companies based in 111 countries, including 335,000 emails, 133,000 projects, and 548,000 exposed users. SOCRadar described the incident as "the most significant B2B data leak in recent cybersecurity history" due to the scale and amount of data involved. "As long as humans are involved in configuring such data buckets, leaks will continue to occur."_
+
+### Service disruption
+
+Misconfigured delete permissions could lead to accidental or intentional deletion of critical data. Recovery efforts following data loss or malicious exploitation can disrupt services.
+
+### Reputation damage
+
+If the data in your misconfigured Blob Storage container contains sensitive data such as customer personal information, financial data, health records, or intellectual property, your organisation could suffer significant reputational harm. The news of the data breach spreads quickly online, damaging customer trust and potentially leading to loss of business. This is because people generally don’t like to store sensitive data, such as personal health records or credit card numbers, with a company that has previously taken the protection of other people’s data for granted. 
+
+### Intellectual Property theft
+
+Intellectual property is a valuable asset. Accidentally exposing source code, designs, or proprietary processes can enable competitors to steal or replicate innovative solutions, undermining your company’s competitive edge.
+
+### Using property theft to advance the attack ever further
+
+Publicly accessible data can be leveraged in social engineering attacks. Social engineering attacks exploit human psychology rather than technical vulnerabilities. The attacks often involve manipulation, deception, and lying to innocent people. Now imagine that cybercriminals have obtained publicly accessible information about your infrastructure, from a misconfigured Blob Storage (container). The cybercriminals could use the exposed information to craft convincing phishing emails, tricking employees or customers into revealing more sensitive information or credentials.
 
 ## How to secure a Blob Storage container
 
@@ -108,28 +128,6 @@ According to [Wizardcyber](https://wizardcyber.com/azure-blob-storage-navigating
 ### 9. Contact Grayhatwarfare for deletion
 
 Contact [G](https://buckets.grayhatwarfare.com/)[rayhatwarfare](https://buckets.grayhatwarfare.com/) for deletion.
-
-### 
-
-## Risks and consequences of misconfigured Blob Storage
-
-Services such as [Amazon S3 Buckets](https://www.divd.nl/newsroom/articles/buck-et-up-secure-your-aws-s3-buckets-now/) and Azure Blob Storage offer the convenience of storing data which is accessible by various users and services simultaneously. However,  misconfiguration of any of these storage services can expose your organization to several risks and consequences.
-
-### Service disruption
-
-Misconfigured delete permissions could lead to accidental or intentional deletion of critical data. Recovery efforts following data loss or malicious exploitation can disrupt services.
-
-### Reputation damage
-
-If the data in your misconfigured Blob Storage container contains sensitive data such as customer personal information, financial data, health records, or intellectual property, your organisation could suffer significant reputational harm. The news of the data breach spreads quickly online, damaging customer trust and potentially leading to loss of business. This is because people generally don’t like to store sensitive data, such as personal health records or credit card numbers, with a company that has previously taken the protection of other people’s data for granted. 
-
-### Intellectual Property theft
-
-Intellectual property is a valuable asset. Accidentally exposing source code, designs, or proprietary processes can enable competitors to steal or replicate innovative solutions, undermining your company’s competitive edge.
-
-### Using property theft to advance the attack ever further
-
-Publicly accessible data can be leveraged in social engineering attacks. Social engineering attacks exploit human psychology rather than technical vulnerabilities. The attacks often involve manipulation, deception, and lying to innocent people. Now imagine that cybercriminals have obtained publicly accessible information about your infrastructure, from a misconfigured Blob Storage (container). The cybercriminals could use the exposed information to craft convincing phishing emails, tricking employees or customers into revealing more sensitive information or credentials.
 
 ## Human error remains the most likely cause of a data breach 
 
