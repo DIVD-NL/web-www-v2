@@ -25,25 +25,29 @@ By [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/
 
 > In October 2022, a [misconfiguration in Microsoft's Azure Blob Storage](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/) service exposed the personal data of more than 548,000 users, including product orders/offers, project details and PII (Personally Identifiable Information) data. The breach was due to the misconfuguration of only one misconfigured server. According to SOCRadar’s assessment, this exposed server stored 2.4 terabytes of data from 65,000 companies based in 111 countries, including 335,000 emails, 133,000 projects, and 548,000 exposed users. SOCRadar described the incident as "the most significant B2B data leak in recent cybersecurity history" due to the scale and amount of data involved. "As long as humans are involved in configuring such data buckets, leaks will continue to occur."
 
+{{< callout type="warning" >}}
+
 ### TLDR; I got notified, what do I do?
 
 No time to read the entire article. DIVD notified me, what do I do? (choose all that are applicable)
 
-- Set the Blob Storage container’s access level to private and disable anonymous access.
+- Set the Blob Storage container’s access level to private.
+- Disable anonymous access.
 - Reconfigure shared access policies to enforce the principle of least privilege.
-- Regenerate Shared Access Signatures (SAS) or Storage Account Keys if they might be compromised.
+- Regenerate Shared Access Signatures (SAS) or Storage Account Keys.
 - Apply relevant updates or patches.
-- Secure your logs, and/or enable logging (e.g., Azure Monitor and Azure Blob Storage Diagnostics) to monitor future access attempts.
+- Secure your logs.
+- Enable logging (e.g., Azure Monitor and Azure Blob Storage Diagnostics) to monitor future access attempts.
 - Move business-critical data, PII and other sensitive data to the right container which is adequately protected.
 - Contact [G](https://buckets.grayhatwarfare.com/)[rayhatwarfare](https://buckets.grayhatwarfare.com/) for deletion.
 
-### About Azure Blob Storage
+{{< /callout >}}
 
-Azure Blob Storage is Microsoft's cloud-based object storage solution, designed to manage large volumes of unstructured data. Unstructured data refers to information that does not have a defined data model or format, such as text or binary content. Blob Storage is specifically tailored for various use cases, including delivering images and documents directly to web browsers, logging and storing log files, and streaming multimedia content like videos and audio.
+### 
 
 ## Risks and consequences of misconfigured Blob Storage
 
- Services such as [Amazon S3 Buckets](https://www.divd.nl/newsroom/articles/buck-et-up-secure-your-aws-s3-buckets-now/) and Azure Blob Storage offer the convenience of storing data which is accessible by various users and services simultaneously. However,  misconfiguration of any of these storage services can expose your organization to several risks and consequences.
+Services such as [Amazon S3 Buckets](https://www.divd.nl/newsroom/articles/buck-et-up-secure-your-aws-s3-buckets-now/) and Azure Blob Storage offer the convenience of storing data which is accessible by various users and services simultaneously. However,  misconfiguration of any of these storage services can expose your organization to several risks and consequences.
 
 ### Service disruption
 
@@ -93,7 +97,7 @@ Need guidance to set this up?
 - [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview)
 
 {{< callout type="info" >}}
-A **shared access signature (SAS)** provides secure delegated access to resources in your storage account. An **account SAS** is secured with the storage account key. You can sign a **SAS token** with a user delegation key or with a **storage account key (Shared Key)**.
+A shared access signature (SAS) provides secure delegated access to resources in your storage account. An account SAS is secured with the storage account key. You can sign a SAS token with a user delegation key or with a storage account key (Shared Key).
 {{< /callout >}}
 
 ### Regularly rotate and regenerate your keys
