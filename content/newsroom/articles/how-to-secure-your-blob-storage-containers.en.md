@@ -135,6 +135,8 @@ It is recommended to follow the advice in this article, but always keep in mind 
 
 While cloud services provide convenience and robust security when properly configured, misconfigurations can significantly increase the risk of data exposure. Human error remains a persistent issue, despite continuous technological advancements.
 
-## Join DIVD: Working Together for a Safer World
+## Join DIVD: Working together for a safer digital world
 
 Because of our notifications, organizations become aware of weaknesses and accidental misconfigurations in their systems, allowing them to address these issues before cybercriminals can exploit them. This approach helps in preventing cyber attacks and contributes to a safer digital world.
+
+Are you interested in joining our diverse team of ethical hackers, researchers, IT professionals, or legal experts, and learning from the best? Become a [volunteer](https://www.divd.nl/contribute/volunteers/)!
