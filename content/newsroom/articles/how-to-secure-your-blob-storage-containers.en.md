@@ -25,6 +25,18 @@ By [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/
 
 > In October 2022, a [misconfiguration in Microsoft's Azure Blob Storage](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/) service exposed the personal data of more than 548,000 users, including product orders/offers, project details and PII (Personally Identifiable Information) data. The breach was due to the misconfuguration of only one misconfigured server. According to SOCRadar’s assessment, this exposed server stored 2.4 terabytes of data from 65,000 companies based in 111 countries, including 335,000 emails, 133,000 projects, and 548,000 exposed users. SOCRadar described the incident as "the most significant B2B data leak in recent cybersecurity history" due to the scale and amount of data involved. "As long as humans are involved in configuring such data buckets, leaks will continue to occur."
 
+### TLDR; I got notified, what do I do?
+
+No time to read the entire article. DIVD notified me, what do I do? (choose all that are applicable)
+
+- Set the Blob Storage container’s access level to private and disable anonymous access.
+- Reconfigure shared access policies to enforce the principle of least privilege.
+- Regenerate Shared Access Signatures (SAS) or Storage Account Keys if they might be compromised.
+- Apply relevant updates or patches.
+- Secure your logs, and/or enable logging (e.g., Azure Monitor and Azure Blob Storage Diagnostics) to monitor future access attempts.
+- Move business-critical data, PII and other sensitive data to the right container which is adequately protected.
+- Contact [G](https://buckets.grayhatwarfare.com/)[rayhatwarfare](https://buckets.grayhatwarfare.com/) for deletion.
+
 ### About Azure Blob Storage
 
 Azure Blob Storage is Microsoft's cloud-based object storage solution, designed to manage large volumes of unstructured data. Unstructured data refers to information that does not have a defined data model or format, such as text or binary content. Blob Storage is specifically tailored for various use cases, including delivering images and documents directly to web browsers, logging and storing log files, and streaming multimedia content like videos and audio.
@@ -53,7 +65,7 @@ Publicly accessible data can be leveraged in social engineering attacks. Social 
 
 A data breach is one of the last things you want to happen in your organisation. So, how can you secure your Blob Storage containers to keep your data safe and out of the hands of cybercriminals? It’s simple! Just follow these steps:
 
-### Implement least privilege access
+### Implement least-privilege access
 
 Implement least privilege access by giving users and applications only the permissions they need to perform their task(s). When configuring and maintaining Blob Storage containers, regularly review the configuration settings where the access level is defined. When creating a new container you can choose one of the following options:
 
@@ -71,12 +83,28 @@ When anonymous access is enabled at the container level, it allows cybercriminal
 
 ### Use Microsoft Entra ID to authorize access to blob data & prevent Shared Key Authorization
 
-By default, requests can be authorized with either Microsoft Entra credentials, or by using the account access key for Shared Key authorization. Of these two types of authorization, Microsoft Entra ID provides superior security and ease of use over Shared Key, and is recommended by Microsoft. When you disallow Shared Key authorization for a storage account, Azure Storage rejects all subsequent requests to that account that are authorized with the account access keys. Only secured requests that are authorized with Microsoft Entra ID will succeed. 
+By default, requests can be authorized with either Microsoft Entra credentials, or by using the account access key for Shared Key authorization. Of these two types of authorization, Microsoft Entra ID provides superior security and ease of use over Shared Key and is recommended by Microsoft. When you disallow Shared Key authorization for a storage account, Azure Storage rejects all subsequent requests to that account that are authorized with the account access keys. Only secured requests that are authorized with Microsoft Entra ID will succeed. 
 
 Need guidance to set this up? 
 
 - [Authorize access to Azure Storage data with Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-access-azure-active-directory)
 - [Prevent Shared Key authorization for an Azure Storage account](https://learn.microsoft.com/en-us/azure/storage/common/shared-key-authorization-prevent?tabs=portal)
+- [How to view, manage, and rotate storage account access keys. ](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&bc=%2Fazure%2Fstorage%2Fblobs%2Fbreadcrumb%2Ftoc.json&tabs=azure-portal)
+- [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview)
+
+{{< callout type="info" >}}
+A **shared access signature (SAS)** provides secure delegated access to resources in your storage account. An **account SAS** is secured with the storage account key. You can sign a **SAS token** with a user delegation key or with a **storage account key (Shared Key)**.
+{{< /callout >}}
+
+### Regularly rotate and regenerate your keys
+
+When you create a storage account, Azure generates two 512-bit storage account access keys for the account. These keys can be used to authorize access to data in your storage account via Shared Key authorization, or via SAS tokens that are signed with the shared key.
+
+It is recommended to regularly rotate and regenerate your keys. This can be done manually or using the Azure Key Vault. Keep in mind: Storage account access keys provide full access to the storage account data and the ability to generate SAS tokens.
+
+### Regularly check what is stored where
+
+Our volunteers often find publicly accessible Blob Storage containers that were once created to only contain publicly known or insensitive information, but now also contain sensitive or private data. Regularly check if your Blob Storage containers only contain the data which the container was originally created for. Store business-critical data in immutable blobs, disallow cross-tenant object replication and configure legal holds and time-based retention policies if necessary. 
 
 ### Implement strict naming conventions
 
@@ -89,6 +117,10 @@ According to [Wizardcyber](https://wizardcyber.com/azure-blob-storage-navigating
 Microsoft Defender for Storage adds an extra layer of security intelligence by detecting unusual and potentially harmful attempts to access or exploit storage accounts. When anomalies in activity are detected, security alerts are triggered in Microsoft Defender for Cloud. These alerts are also sent via email to subscription administrators, providing details about the suspicious activity along with recommendations for investigation and remediation of potential threats. For more information, see [Configure Microsoft Defender for Storage](https://learn.microsoft.com/en-us/azure/storage/common/azure-defender-storage-configure).
 
 It can also help to employ additional layers of security such as Azure’s Advanced Threat Protection to detect anomalous access patterns.
+
+### Use Azure Storage Explorer to check  your security posture
+
+You can use [Azure Storage Explorer](https://learn.microsoft.com/en-us/azure/storage/storage-explorer/vs-azure-tools-storage-explorer-blobs) to check the security configuration of your Azure Blob Storage containers by reviewing things like access levels, permissions, and encryption. In Azure Storage Explorer, you can for example manage (add and remove) access policies for a blob container. When you create a new Blob container right now, the default setting is that every Blob container is set to "No public access".
 
 ## Human error remains the most likely cause of a data breach 
 
