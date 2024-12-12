@@ -41,7 +41,7 @@ No time to read the entire article. DIVD notified me, what do I do? (choose all 
 
 {{< /callout >}}
 
-## When you don't secure your Blob Storage containers...
+## When you don't secure them...
 
 Services such as [Amazon S3 Buckets](https://www.divd.nl/newsroom/articles/buck-et-up-secure-your-aws-s3-buckets-now/) and Azure Blob Storage offer the convenience of storing data which is accessible by various users and services simultaneously. However,  misconfiguration of any of these storage services can expose your organization to several risks and consequences.
 
