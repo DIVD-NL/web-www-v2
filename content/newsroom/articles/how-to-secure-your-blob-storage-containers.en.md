@@ -34,14 +34,14 @@ No time to read the entire article. DIVD notified me, what do I do? (choose all 
 - Reconfigure shared access policies to enforce the principle of least privilege.
 - Regenerate Shared Access Signatures (SAS) or Storage Account Keys.
 - Apply relevant updates or patches.
-- Secure your logs.
 - Enable logging (e.g., Azure Monitor and Azure Blob Storage Diagnostics) to monitor future access attempts.
+- Secure your existing logs.
 - Move business-critical data, PII and other sensitive data to the right container which is adequately protected.
 - Contact [G](https://buckets.grayhatwarfare.com/)[rayhatwarfare](https://buckets.grayhatwarfare.com/) for deletion.
 
 {{< /callout >}}
 
-In October 2022, a [misconfiguration in Microsoft's Azure Blob Storage](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/) service exposed the personal data of more than 548,000 users, including product orders/offers, project details and PII (Personally Identifiable Information) data. The breach was due to the misconfuguration of only one misconfigured server. According to SOCRadar’s assessment, this exposed server stored 2.4 terabytes of data from 65,000 companies based in 111 countries, including 335,000 emails, 133,000 projects, and 548,000 exposed users. SOCRadar described the incident as "the most significant B2B data leak in recent cybersecurity history" due to the scale and amount of data involved. "As long as humans are involved in configuring such data buckets, leaks will continue to occur."
+_In October 2022, a [misconfiguration in Microsoft's Azure Blob Storage](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/) service exposed the personal data of more than 548,000 users, including product orders/offers, project details and PII (Personally Identifiable Information) data. The breach was due to the misconfuguration of only one misconfigured server. According to SOCRadar’s assessment, this exposed server stored 2.4 terabytes of data from 65,000 companies based in 111 countries, including 335,000 emails, 133,000 projects, and 548,000 exposed users. SOCRadar described the incident as "the most significant B2B data leak in recent cybersecurity history" due to the scale and amount of data involved. "As long as humans are involved in configuring such data buckets, leaks will continue to occur."_
 
 ## How can I secure my Blob Storage container?
 
