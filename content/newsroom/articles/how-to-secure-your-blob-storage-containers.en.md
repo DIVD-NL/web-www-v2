@@ -1,5 +1,5 @@
 ---
-title: How to secure your Blob storage containers
+title: How to secure your Blob Storage containers
 date: 2024-12-10T13:48:00+01:00
 author: []
 tag: case
@@ -25,7 +25,7 @@ By [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/
 
 {{< callout type="warning" >}}
 
-### TLDR; I got notified, what do I do?
+### TL;DR: I got notified, what should I do now?
 
 No time to read the entire article. DIVD notified me, what do I do? (choose all that are applicable)
 
@@ -41,7 +41,7 @@ No time to read the entire article. DIVD notified me, what do I do? (choose all 
 
 {{< /callout >}}
 
-## When you don't secure them...
+## The risks and consequences of a misconfigured Blob Storage container
 
 Services such as [Amazon S3 Buckets](https://www.divd.nl/newsroom/articles/buck-et-up-secure-your-aws-s3-buckets-now/) and Azure Blob Storage offer the convenience of storing data which is accessible by various users and services simultaneously. However,  misconfiguration of any of these storage services can expose your organization to several risks and consequences.
 
@@ -63,11 +63,11 @@ Intellectual property is a valuable asset. Accidentally exposing source code, de
 
 Publicly accessible data can be leveraged in social engineering attacks. Social engineering attacks exploit human psychology rather than technical vulnerabilities. The attacks often involve manipulation, deception, and lying to innocent people. Now imagine that cybercriminals have obtained publicly accessible information about your infrastructure, from a misconfigured Blob Storage (container). The cybercriminals could use the exposed information to craft convincing phishing emails, tricking employees or customers into revealing more sensitive information or credentials.
 
-## How to secure a Blob Storage container
+## How can I secure my Blob Storage container?
 
 A data breach is one of the last things you want to happen in your organisation. So, how can you secure your Blob Storage containers to keep your data safe and out of the hands of cybercriminals? It’s simple! Just follow these steps:
 
-### 1. Set the Blob Storage container’s access level to private.
+### 1. Set the Blob Storage container’s access level to private
 
 Implement least privilege access by giving users and applications only the permissions they need to perform their task(s). When creating a new container you can choose one of the following options:
 
@@ -127,7 +127,7 @@ According to [Wizardcyber](https://wizardcyber.com/azure-blob-storage-navigating
 
 ### 9. Contact Grayhatwarfare for deletion
 
-Contact [G](https://buckets.grayhatwarfare.com/)[rayhatwarfare](https://buckets.grayhatwarfare.com/) for deletion.
+Contact [G](https://buckets.grayhatwarfare.com/)[rayhatwarfare](https://buckets.grayhatwarfare.com/) for the deletion of your information. Grayhatwarfare is an online tool and database designed to index publicly exposed cloud storage buckets, including misconfigured Azure Blob Storage containers, Amazon S3 buckets, and Google Cloud Storage. It could be that we've found your misconfigured containers here.
 
 ## Human error remains the most likely cause of a data breach 
 
@@ -135,9 +135,6 @@ It is recommended to follow the advice in this article, but always keep in mind 
 
 While cloud services provide convenience and robust security when properly configured, misconfigurations can significantly increase the risk of data exposure. Human error remains a persistent issue, despite continuous technological advancements.
 
-## More information
+## Join DIVD: Working Together for a Safer World
 
-- [A Timeline of Microsoft Data Breaches in the Past 36 Months](https://www.virtru.com/blog/industry-updates/microsoft-data-breaches-2024)
-- [Article Spiceworks on misconfigured Azure Blob Storage](https://www.spiceworks.com/it-security/cloud-security/news/microsoft-azure-cloud-misconfiguration/)
-- [Article SOCRadar on data loss due to a single misconfigured data bucket](https://socradar.io/sensitive-data-of-65000-entities-in-111-countries-leaked-due-to-a-single-misconfigured-data-bucket/)
-- [Azure Blob Storage: Navigating Misconfiguration Risks](https://wizardcyber.com/azure-blob-storage-navigating-misconfiguration-risks/)
+Because of our notifications, organizations become aware of weaknesses and accidental misconfigurations in their systems, allowing them to address these issues before cybercriminals can exploit them. This approach helps in preventing cyber attacks and contributes to a safer digital world.
