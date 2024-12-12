@@ -88,10 +88,6 @@ When you disallow Shared Key authorization for a storage account, Azure Storage 
 - [Prevent Shared Key authorization for an Azure Storage account](https://learn.microsoft.com/en-us/azure/storage/common/shared-key-authorization-prevent?tabs=portal)
 - [How to view, manage, and rotate storage account access keys. ](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&bc=%2Fazure%2Fstorage%2Fblobs%2Fbreadcrumb%2Ftoc.json&tabs=azure-portal)
 
-{{< callout type="info" >}}
-A shared access signature (SAS) provides secure delegated access to resources in your storage account. An account SAS is secured with the storage account key. You can sign a SAS token with a user delegation key or with a storage account key (Shared Key).
-{{< /callout >}}
-
 ### 4. Regularly rotate and regenerate your keys
 
 It is recommended that you rotate and regenerate your keys regularly. This can be done manually or using the Azure Key Vault.
