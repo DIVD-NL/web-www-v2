@@ -26,9 +26,24 @@ faq:
 ---
 By [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
 
+{{< callout type="warning" >}}
+
+### TL;DR: I got notified, what should I do now?
+
+No time to read the entire article. DIVD notified me, what do I do? (choose all that are applicable)
+
+1. Disable public access to your S3 buckets if it's not strictly necessary.
+2. Control ownership of objects and disable ACLs for your bucket.
+3. Enable logging and monitoring.
+4. Encrypt your data at rest and in transit.
+5. Conduct regular security audits of your AWS environment.
+6. Proactively search for vulnerabilities or vulnerable systems.
+
+{{< /callout >}}
+
 > _In 2022, a group of security researchers discovered a misconfigured Amazon S3 bucket exposing 3TB of data. We are not talking about random bits and bytes, but among those [1.5 million unprotected files](https://www.skyhighsecurity.com/about/resources/intelligence-digest/unsecured-servers-can-put-lives-at-stake.html?eid=evpxmdrt&smcid=lnp&utm_source=linkedin&utm_medium=paidsocial&utm_campaign=skyhighsecuritybrandlaunch_jp&utm_content=plane&utm_term=q4_2022) were airport employee records, ID card photos, and personally identifiable information (PII) including names, photos, occupations, and national ID numbers dating back to [at least 2018](https://www.safetydetectives.com/news/securitas-leak-report/). Other information that could be extracted was in the form of Android mobile apps that are used by security personnel to help with various tasks, such as incident reporting. According to [SafetyDetectives](https://www.safetydetectives.com/news/securitas-leak-report/), the Amazon S3 bucket was left open and accessible, without any authentication procedures in place._
 
-### What is an AWS S3 bucket?
+## What is an AWS S3 bucket?
 
 An AWS S3 bucket is essentially a container in the cloud where you can store and manage data, such as photos, videos, documents, backups, and more. AWS Stands for Amazon Web Services and S3 stands for Simple Storage Service.
 
@@ -60,31 +75,37 @@ Publicly accessible data can be leveraged in social engineering attacks. Social 
 
 A data breach is one of the last things you want to happen in your organisation. So, how can you secure your S3 buckets to keep your data safe and out of the hands of cybercriminals? It’s simple! Just follow these steps:
 
-### Implement least privilege access
+### 1. Disable public access to your S3 buckets if it's not strictly necessary
 
 Implement least privilege access by giving users and applications only the permissions they need to perform their task(s). Regularly review and adjust permissions to avoid over-privileged access and remove permissions when the user or application no longer needs it. Disable public access to your S3 buckets if it is not strictly necessary.
 
-### Control ownership of objects and disable ACLs for your bucket 
+### 2. Control ownership of objects and disable ACLs for your bucket 
 
 Use [AWS IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) for granular permission management, and clearly define who can access the data and what actions they can perform. Avoid public-read or public-write permissions unless absolutely necessary. If public access is necessary, limit it to the minimum and monitor it closely. Keep access control lists (ACLs) disabled by applying the "[Bucket owner enforced](https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html)" setting and using your bucket policy to share data with external users as needed.
 
-### Enable logging and monitoring
+### 3. Enable logging and monitoring
 
 Activate logging and monitoring features like AWS CloudTrail and Amazon S3 server access logging. These tools help you track access and changes to your S3 buckets, allowing you to detect and respond to suspicious activities quickly. Review both options here:
 
 - [Logging requests with server access logging](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html)
 - [Logging Amazon S3 API calls using AWS CloudTrail](https://docs.aws.amazon.com/AmazonS3/latest/userguide/cloudtrail-logging.html)
 
-### Encrypt your data at rest and in transit
+### 4. Encrypt your data at rest and in transit
 
 Use server-side encryption (SSE) or client-side encryption to protect your data at rest. Ensure data in transit is encrypted using HTTPS to prevent interception.
 
-### Conduct regular security audits of your AWS environment
+### 5. Conduct regular security audits of your AWS environment
 
 Regular security audits can be used to identify and remediate potential vulnerabilities. To simplify compliance auditing and security analysis, you can enable [AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/gs-console.html), which helps you to assess, audit, and evaluate the configurations of your AWS resources.
 
-### Proactively search for vulnerabilities or vulnerable systems
+### 6. Proactively search for vulnerabilities or vulnerable systems
 
 Proactively detect the presence of sensitive data with [Amazon Macie](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html). Amazon Macie uses machine learning and pattern matching to provide visibility into data security risks and enables automated protection against those risks.
 
 By following these steps, you can significantly enhance the security of your S3 buckets and protect your data from unauthorised access and potential breaches. If you happen to forget to secure your S3 bucket, let’s hope & pray that one of DIVD’s finest finds the misconfiguration and reports it to your organisation as soon as it’s discovered!
+
+## Join DIVD: Working together for a safer digital world
+
+Because of our notifications, organizations become aware of weaknesses and accidental misconfigurations in their systems, allowing them to address these issues before cybercriminals can exploit them. This approach helps in preventing cyber attacks and contributes to a safer digital world.
+
+Are you interested in joining our diverse team of ethical hackers, researchers, IT professionals, or legal experts, and learning from the best? Become a [volunteer](https://www.divd.nl/contribute/volunteers/)! Are you happy with the things that DIVD does? [Donate](https://www.divd.nl/contribute/#donate)!
