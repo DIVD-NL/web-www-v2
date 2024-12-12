@@ -1,5 +1,5 @@
 ---
-title: How to secure your Blob Storage containers
+title: How to secure your Blob Storage container
 date: 2024-12-10T13:48:00+01:00
 author: []
 tag: case
