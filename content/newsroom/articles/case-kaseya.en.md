@@ -32,6 +32,8 @@ Written on **02 Dec 2021** by [Gerard Janssen](https://www.divd.nl/who-we-are
 
 On March 23, DIVD volunteer [Wietse Boonstra](https://www.divd.nl/who-we-are/team/people/wietse-boonstra/) found six zero-day vulnerabilities in IT management software from Kaseya, a Miami-based company. Kaseya VSA (Virtual Systems Administrator) is a remote software management tool that can perform just about any system administration task like installing software, applying patches, adding users, or creating backups. It is a tool mostly used by managed service providers (MSPs) to control the systems of their customers. By outsourcing the system administration, smaller organizations can save costs and focus on growing their business. In theory, MSPs also reduce security risk. But if this kind of software is compromised, many clients are at risk.
 
+On 2 April 2021, Wietse found another vulnerability; therefore, the total number of zero-day vulnerabilities found was seven.
+
 ## The Impact
 
 On 02-04-2021, the CVE IDs of the vulnerabilities Wietse Boonstra found were requested, without publishing any technical details:
