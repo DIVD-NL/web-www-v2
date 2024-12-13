@@ -142,4 +142,6 @@ While cloud services provide convenience and robust security when properly confi
 
 Because of our notifications, organizations become aware of weaknesses and accidental misconfigurations in their systems, allowing them to address these issues before cybercriminals can exploit them. This approach helps in preventing cyber attacks and contributes to a safer digital world.
 
+> _Public storage buckets/containers are a giant blind spot in our industry, they are not part of standard pentest or bug bounty programs and nobody realises that anyone can see all their files they thought were secure until I email them. Quite often I can also pivot from a public bucket to more private storage, authenticated API's, your intranet, or worse, your whole database. - Jelle Ursum (volunteer DIVD)_
+
 Are you interested in joining our diverse team of ethical hackers, researchers, IT professionals, or legal experts, and learning from the best? Become a [volunteer](https://www.divd.nl/contribute/volunteers/)! Are you happy with the things that DIVD does? [Donate](https://www.divd.nl/contribute/#donate)!
