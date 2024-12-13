@@ -42,10 +42,7 @@ On 02-04-2021, the CVE IDs of the vulnerabilities Wietse Boonstra found were req
 - **CVE-2021-30119**: Authenticated Reflective XSS possibilities, CVSS score 5.4.
 - **CVE-2021-30120**: Two-factor Authentication bypass, CVSS score 9.9.
 - **CVE-2021-30121**: Local file inclusion, CVSS score 6.5
-
-On April 2nd 2021, Wietse found another vulnerability.
-
-- **CVE-2021-30201**: An XML-External Entity Vulnerability, CVSS score 5.4.
+- **CVE-2021-30201**: An XML-External Entity Vulnerability, CVSS score 5.4 (this one was found on April 2nd 2021).
 
 ## What we did
 
@@ -61,7 +58,7 @@ On the 8th of April, a new scan was performed. 1.799 vulnerable systems were fou
 
 On the 14th of April 2021, the CVEs found by Wietse were approved by MITRE. One day later, Kaseya sent a notification that the programmers patched its cloud service for the first set of vulnerabilities.
 
-### Collaboration with Kaseya
+## Collaboration with Kaseya
 
 Throughout the entire process, Kaseya responded promptly and cooperatively. After DIVD contacted Kaseya, CTO Dan Timpson worked with his team to fix the issues. All vulnerabilities were fixed, and patches were sent to the MSPs: 
 
@@ -69,7 +66,7 @@ Throughout the entire process, Kaseya responded promptly and cooperatively. Afte
 - **18-05-2021**: Kaseya released version VSA 9.5.5, resolving CVE-2021-30118.
 - **26-06-2021**: Kaseya released version ‘9.5.7 on Saas’, resolving CVE-2021-30116 and CVE-2021-30119.
 
-### Ransomware gang Revil 
+## Ransomware gang Revil 
 
 On July 2nd 2021 – at the start of the 4th of July weekend – ransomware gang [Revil](https://en.wikipedia.org/wiki/REvil) attacked many Kaseya VSA instances. This attack exploited the vulnerabilities, leaking credentials, and gaining authenticated access to a part of the Kaseya customer portal. Kaseya immediately contacted Wietse and Victor to help out and scan and warn all potential victims. Lennaert Oudshoorn, Joost Hendrickx, and Frank Breedijk soon joined in scanning all IP addresses for the presence of Kaseya VSA repeatedly and sending messages to the MSPs to turn off Kaseya VSA immediately. We also shared this list with Kaseya, who did their share in notifying their customers. Because our [fingerprint](https://www.divd.nl/warningemail/) contained a customer ID, Kaseya was able to link the instances to the customer and provided them with concrete information: turn off the Kaseya VSA instance on this IP address. In the first 48 hours, the instances that were reachable from the internet dropped from 2.000+ to 140. By working closely with trusted partners and national CERTs, the number of servers in The Netherlands dropped to zero that Sunday afternoon, the 4th of July. The [CSIRT case](https://csirt.divd.nl/cases/DIVD-2021-00002/) was closed on the 9th of July 2021.
 
