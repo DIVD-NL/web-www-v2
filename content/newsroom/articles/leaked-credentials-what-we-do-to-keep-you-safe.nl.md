@@ -48,7 +48,7 @@ For larger breaches, we create two types of summaries:
 
 We share these summaries with relevant organizations like national CERTs, CSIRTs, or corporate security teams. These teams can identify affected domains and request specific data to inform victims.
 
-To protect privacy, we never send plain-text passwords. All traffic is encrypted, and the passwords are masked before sending. For example, for passwords that contain 10 characters or more, we only send the first two and last two characters and replace all other characters with an asterisk. To address ethical concerns about sharing PII with governments from countries with poor human rights records, we will only provide data to government organizations in countries that score above 4 on the most recent [Human Rights Index](https://ourworldindata.org/grapher/human-rights-index-vdem).
+To protect privacy, we never send plain-text passwords. All traffic is encrypted, and the passwords are masked before sending. For example, for passwords that contain 10 characters or more, we only send the first two and last two characters and replace all other characters with an asterisk.  To address ethical concerns about sharing PII with governments from countries with poor human rights records, we will only provide data to government organizations in countries that score above 0.4 on the most recent [Human Rights Index](https://ourworldindata.org/grapher/human-rights-index-vdem).
 
 ### How do we keep sharing of leaked credentials safe?
 
