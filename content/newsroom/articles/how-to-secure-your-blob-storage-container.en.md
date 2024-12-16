@@ -76,6 +76,8 @@ Implement least privilege access by giving users and applications only the permi
 - **Blob (level) Access**: The public cannot list the contents of the container, but anyone with the exact URL can access the blob. This poses a risk of exposing sensitive data if URLs are leaked or guessed. Blob Access is suitable for non-sensitive content that must be shared with external parties, such as public-facing images or documents.
 - **Container (level) Access**: This is the most permissive setting, allowing anyone to list all the contents of the container simply by knowing its name and the associated storage account name. Container Access is suitable for scenarios where data must be widely discoverable without authentication, such as hosting a public dataset.
 
+If you switch from Container-level access to Blob-level access on for an existing container, don’t assume this will automatically make your containers more secure. Third-party indexers, such as GrayHatWarfare, may have already cached the URLs to your blobs in their databases, meaning they can still provide links to your data.
+
 Needless to say, private access is the most secure option. This configuration ensures that only explicitly authorized users and services can access the data. It provides the highest level of security by enforcing strict access controls.
 
 ### 2. Disable anonymous read access 
