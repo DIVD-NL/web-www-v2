@@ -118,11 +118,7 @@ By analyzing logs, you can determine how and when the container was misconfigure
 
 Implement strict naming conventions for Blob Storage containers that do not directly relate to the company or the type of data stored, making them difficult for attackers to predict.
 
-{{< callout type="info" >}}
-
 According to [Wizardcyber](https://wizardcyber.com/azure-blob-storage-navigating-misconfiguration-risks/), cybercriminals often aim to uncover two key pieces of information to exploit Blob Storage: the names of the container and its corresponding storage account. When anonymous access is set to the container level, it becomes possible for an attacker to enumerate, or list, all the blobs within a container.
-
-{{< /callout >}}
 
 ### 9. Contact Grayhatwarfare for deletion
 
