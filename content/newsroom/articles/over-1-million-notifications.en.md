@@ -5,7 +5,7 @@ author: []
 tag: news
 intro: DIVD aims to make the digital world safer by reporting vulnerabilities we find in digital systems to those who can fix them. While the existence of a vulnerability is not something to celebrate, thanks to the hard work of skilled volunteers working for DIVD, we have been able to notify vulnerable organizations of at least 1 million compromised IP addresses.
 image: /images/B2B-Isometric-Illustration.jpg
-Alt tag for image: ""
+alt: ""
 case: null
 faq_enabled: false
 faq: null

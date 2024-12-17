@@ -11,7 +11,6 @@
   <a class="card-link" href="{{ .Permalink }}">
     <div class="card-person-large">
       <div class="figure">
-        {{ warnf "imageSource: %s" $imageFromParam }}
         {{ with resources.Get $imageFromParam }}
           {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
           <!--- $alt --->

@@ -84,7 +84,7 @@ leftblock:
 
     Cybercriminals often prefer to create exploits for big, well-known issues because they can use those exploits to create powerful, cheap attacks that have worked for many years and on many systems.
   image: ""
-  Alt tag for image: ""
+  alt: ""
   learnmore: /dictionary/
   alt: null
 rightblock:
@@ -99,7 +99,7 @@ rightblock:
 
     Since this vulnerability is *unknown*, no one is adequately protected against it. The vendor needs to disclose information about the vulnerability to its partners, but in doing so, they also unintentionally but unavoidably inform cybercriminals about the occurrence of a weakness in their software. This is when a race against the clock begins. Who works faster, the software vendor crafting and distributing a patch, or the cybercriminals crafting and deploying an exploit?
   image: ""
-  Alt tag for image: ""
+  alt: ""
   learnmore: ""
   alt: null
 contenttitle: "## Why our work matters"

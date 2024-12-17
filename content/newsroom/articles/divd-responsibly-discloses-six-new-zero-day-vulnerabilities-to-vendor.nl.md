@@ -5,7 +5,7 @@ author: []
 tag: ""
 intro: .
 image: ""
-Alt tag for image: ""
+alt: ""
 case: null
 faq_enabled: false
 faq: null

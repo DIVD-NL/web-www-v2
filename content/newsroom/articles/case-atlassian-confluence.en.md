@@ -4,11 +4,15 @@ date: 2023-12-18T22:00:00+01:00
 tag: case
 intro: After Veloxity identified a zero-day vulnerability, DIVD, DTC, and NSM cooperated to reach out to notify 18.469 vulnerable ISPs.
 image: /images/articles/what-do-you-need-to-know-about-atlassian-confluence-rce-vulnerability-1200x675.webp
-Alt tag for image: ""
+alt: ""
 case:
   caseid: 2022-00033
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2022-00033/
+  link:
+    label: DIVD-2021-00033
+    url: https://csirt.divd.nl/cases/DIVD-2022-00033/
+    invertedColors: true
+    external: false
   lead: Frank Breedijk
   leadlink: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers:

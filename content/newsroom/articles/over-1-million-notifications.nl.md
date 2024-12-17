@@ -5,7 +5,7 @@ author: []
 tag: ""
 intro: DIVD kondigt met trots aan dat we in totaal meer dan 1M meldingen hebben verstuurd naar kwetsbare organisaties en leveranciers! ✨🎉
 image: ""
-Alt tag for image: ""
+alt: ""
 case: null
 faq_enabled: false
 faq: null

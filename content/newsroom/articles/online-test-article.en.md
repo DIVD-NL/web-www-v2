@@ -4,11 +4,15 @@ date: 2023-10-21T23:24:00+02:00
 tag: case
 intro: In cooperation with DIVD, NCSC-NL and several EU govcerts, 14,986 global vulnerable hosts were found and notified.
 image: /images/articles/divd-2023-00007-global-vmware-esxi-ransomware-attack.png
-Alt tag for image: ""
+alt: ""
 case:
   caseid: DIVD-2023-00007
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2023-00007/
+  link:
+    label: DIVD-2023-00007
+    url: https://csirt.divd.nl/cases/DIVD-2023-00007/
+    invertedColors: false
+    external: true
   lead: Ralph Horn
   leadlink: https://www.divd.nl/who-we-are/team/people/ralph-horn/
   researchers:

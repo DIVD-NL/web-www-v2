@@ -4,7 +4,7 @@ date: 2024-07-31T16:43:00+02:00
 tag: news
 intro: 1.5 million files are stored unprotected on the public internet, does this still happen? Unfortunately, yes, it still happens. Despite our familiarity with security policies, controls, and best practices. In this article, you can read how you can secure your AWS S3 buckets and why it is important to do it.
 image: /images/6583bce8-b9bb-4182-b966-d80ab032b14e.jpg
-Alt tag for image: ""
+alt: ""
 case:
   caseid: ""
   closed: false

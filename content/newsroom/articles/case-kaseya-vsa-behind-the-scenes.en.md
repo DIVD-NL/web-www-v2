@@ -5,11 +5,15 @@ author: []
 tag: case
 intro: In April 2021 Dutch hackers found a number of vulnerabilities in software used by Kaseya, a business that makes tools for system managers working remotely. This is a translation of a chapter from the book Hackers by Gerard Janssen. This chapter starts after the story of Dutch hacker Victor Gevers discovered that two-factor authentication of Donald Trump’s Twitter account was disabled and guessed his Twitter password, in November 2020.
 image: ""
-Alt tag for image: ""
+alt: ""
 case:
   caseid: DIVD-2021-00002
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2021-00002/
+  link:
+    label: DIVD-2021-00002
+    url: https://csirt.divd.nl/cases/DIVD-2021-00002/
+    invertedColors: false
+    external: true
   lead: Frank Breedijk
   leadlink: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers:

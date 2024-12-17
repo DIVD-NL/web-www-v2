@@ -55,8 +55,8 @@ export const Collection = {
       required: false,
     },
     {
-      label: 'alt',
-      name: 'Alt tag for image',
+      label: 'Alt tag for image',
+      name: 'alt',
       widget: 'string',
       i18n: true,
       required: false,

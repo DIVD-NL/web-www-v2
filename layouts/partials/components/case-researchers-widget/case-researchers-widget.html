@@ -35,7 +35,9 @@
           </ul>
         {{ end }}
 
-        {{ partial "components/button/button.html" .link }}
+        {{ if .link }}
+          {{ partial "components/button/button.html" .link }}
+        {{ end}}
 
         <!-- <a
           class="cta"

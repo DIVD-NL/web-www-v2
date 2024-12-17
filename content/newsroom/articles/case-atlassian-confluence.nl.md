@@ -2,7 +2,7 @@
 title: "CASE: ATLASSIAN CONFLUENCE"
 date: 2023-12-18T21:00:49.275Z
 intro: Nadat Veloxity een zero-day kwetsbaarheid had geïdentificeerd, werkten DIVD, DTC en NSM samen om 18.469 kwetsbare ISP's op de hoogte te stellen.
-Alt tag for image: ""
+alt: ""
 case:
   caseid: 2022-00033
   closed: true

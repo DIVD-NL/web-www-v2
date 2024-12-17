@@ -5,11 +5,15 @@ author: []
 tag: case
 intro: A DIVD researcher discovered multiple vulnerabilities in SmarterMail. Both vulnerabilities were found within the webmail frontend of SmarterMail.
 image: /images/articles/smartermail-vulnerability-divd.png
-Alt tag for image: ""
+alt: ""
 case:
   caseid: DIVD-2021-00006
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2021-00006/
+  link:
+    label: DIVD-2021-00006
+    url: https://csirt.divd.nl/cases/DIVD-2021-00006/
+    invertedColors: false
+    external: true
   lead: Lennaert Oudshoorn
   leadlink: https://www.divd.nl/people/Lennaert%20Oudshoorn/
   researchers:

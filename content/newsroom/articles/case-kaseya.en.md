@@ -6,11 +6,15 @@ author:
   - /who-we-are/team/people/joost-hendricksen
 tag: case
 intro: On March 23, 2021, DIVD volunteer Wietse Boonstra found six zero-day vulnerabilities in IT management software from Kaseya, a Miami-based company.  This turned out to be one of the biggest (ransomware) cases in history, a case with a huge impact worldwide.
-Alt tag for image: ""
+alt: ""
 case:
   caseid: DIVD-2021-00002
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2021-00002/
+  link:
+    label: DIVD-2021-00002
+    url: https://csirt.divd.nl/cases/DIVD-2021-00002/
+    invertedColors: false
+    external: true
   lead: Frank Breedijk
   leadlink: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers:
