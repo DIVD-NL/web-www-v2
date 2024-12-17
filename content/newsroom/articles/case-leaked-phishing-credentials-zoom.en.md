@@ -5,11 +5,15 @@ author: []
 tag: case
 intro: At the end of November 2020, criminals conducted a phishing campaign that mimicked Zoom message invites and notifications about mail quarantine. On January 1, 2021, email notifications were sent to the victims of this phishing scheme. In total, 370 emails were distributed.
 image: /images/DIVD-casefile.png
-Alt tag for image: ""
+alt: ""
 case:
   caseid: DIVD-2020-00013
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2020-00013/
+  link:
+    label: DIVD-2020-00013
+    url: https://csirt.divd.nl/cases/DIVD-2020-00013/
+    invertedColors: false
+    external: true
   lead: Frank Breedijk
   leadlink: https://www.divd.nl/who-we-are/team/people/frank-breedijk/
   researchers:

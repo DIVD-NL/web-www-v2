@@ -2,33 +2,37 @@
 
 {{ with $page }}
   {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
-    <div class="reverse">
-      <h2>{{ .Params.partnerstitle }}</h2>
+  <div class="reverse">
+    <h2>{{ .Params.partnerstitle }}</h2>
+  </div>
+  <div class="smallousel">
+    <div class="smallouselnav">
+      <button class="icon small">{{ partial "svg/icon" "chevronleft" }}</button>
     </div>
-    <div class="smallousel">
-      <div class="smallouselnav">
-        <button class="icon small">{{ partial "svg/icon" "chevronleft" }}</button>
-      </div>
-      <div class="smallouselcontent">
-        <div class="slides">
-          {{ range $index, $element := .Params.partnerlist }}
-            <section>
-              {{ with resources.Get .image }} 
-                {{ partial "tools/rimg/img" (dict "img" . "alt" $element.name) }}
-              {{ end }}
-            </section>
-          {{ end }}
-        </div>
-      </div>
-      <div class="smallouselnav">
-        <button class="icon small">{{ partial "svg/icon" "chevronright" }}</button>
+    <div class="smallouselcontent">
+      <div class="slides">
+        {{ range $index, $element := .Params.partnerlist }}
+          <section>
+            {{ with resources.Get .image }}
+              {{ partial "tools/rimg/img" (dict "img" . "alt" $element.name) }}
+            {{ end }}
+          </section>
+        {{ end }}
       </div>
     </div>
-    <div class="pt-md reverse">
-      <p>
-        {{ .Params.partnersintro }}
-      </p>
-      <a href="{{ "/contribute/partners" | relLangURL }}" class="cta">{{ i18n "becomeapartner" }}</a>
+    <div class="smallouselnav">
+      <button class="icon small">
+        {{ partial "svg/icon" "chevronright" }}
+      </button>
     </div>
+  </div>
+  <div class="pt-md reverse">
+    <p>
+      {{ .Params.partnersintro }}
+    </p>
+    <a href="{{ "/contribute/partners" | relLangURL }}" class="cta"
+      >{{ i18n "becomeapartner" }}</a
+    >
+  </div>
   {{ partial "p/layout_close" }}
 {{ end }}

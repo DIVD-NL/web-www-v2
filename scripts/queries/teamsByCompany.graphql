@@ -1,8 +1,13 @@
-query teamsByCompany($companySlug: String!, $limit: Int!, $offset: Int!, $membersLimit: Int!) {
+query teamsByCompany(
+  $companySlug: String!
+  $limit: Int!
+  $offset: Int!
+  $membersLimit: Int!
+) {
   teamsByCompany(companySlug: $companySlug, limit: $limit, offset: $offset) {
-  ...LightTeam
-  __typename
-}
+    ...LightTeam
+    __typename
+  }
 }
 fragment LightTeam on Team {
   id

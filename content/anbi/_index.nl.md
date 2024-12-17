@@ -1,6 +1,7 @@
 ---
 title: ANBI
 ---
+
 ## ANBI
 
 1. DIVD is a Dutch research institute that works with volunteers who aim to make the digital world safer by searching the internet for vulnerabilities and reporting the findings to those who can fix these vulnerabilities.

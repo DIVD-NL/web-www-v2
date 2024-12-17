@@ -5,13 +5,13 @@ intro: Wij zijn een groep vrijwilligers die het web verkennen op potentiële cyb
 becomevolunteer:
   title: Vrijwilliger worden
   image: images/global/becomevolunteer.png
-  Alt tag for image: Een illustratie van 2 mensen die over code praten, weergegeven door een spreekballon gevuld met 010101.
+  alt: Een illustratie van 2 mensen die over code praten, weergegeven door een spreekballon gevuld met 010101.
   description: Heb je interesse om je aan te sluiten bij ons diverse team van ethische hackers, onderzoekers, IT-professionals of juridische experts en te leren van de besten? Meld je nu aan.
   alt: Tekening van vrijwillige hackers
 becomepartner:
   title: Partner worden
   image: images/global/becomepartner.png
-  Alt tag for image: Een illustratie van 2 mensen die praten en informatie uitwisselen
+  alt: Een illustratie van 2 mensen die praten en informatie uitwisselen
   description: "Als organisatie die zich inzet voor de hele internetcommunity, bieden we niet alleen hulp aan uw klanten, maar ook aan diens leveranciers. U kunt ons beschouwen als de vrijwillige brandweer: terwijl u uw eigen infrastructuur beschermt, staan wij klaar om uw buren te helpen en zo indirect ook uw bedrijf te beschermen."
   alt: Drawing can een DIVD vrijwilliger die de hand schud van een partner
 appreciate:

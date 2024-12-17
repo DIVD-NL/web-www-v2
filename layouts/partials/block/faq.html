@@ -1,4 +1,3 @@
-
 {{ partial "comment.html" (dict "comment" "p/block/faq.html.html" ) }}
 
 {{ $context := . }}
@@ -7,6 +6,7 @@
 {{ $page := site.GetPage "/faq" }}
 {{ $page = $page.Params }}
 {{ $pageType := "faq" }}
+
 
 <!-- Set page to parent if its an article -->
 {{ if .Parent }}
@@ -21,7 +21,7 @@
   {{ $context = .context }}
   {{ $targetHeading := .targetHeading }}
   {{ if $targetHeading }}
-    
+
   {{ end }}
   {{ range $i, $v := $page.Params.faqgroups }}
     {{ if eq $v.heading $targetHeading }}
@@ -31,47 +31,43 @@
   {{ end }}
 {{ end }}
 
-
-
-
 {{ $isContactPage := eq .RelPermalink "/contact/" }}
-
 
 {{ with $page }}
   {{ warnf "Page Object: %#v" $page }}
-  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }} 
-    <div>
-      <h2>{{ .Title }}</h2>
-      <p>{{.intro}}</p>
+  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+  <div>
+    <h2>{{ .Title }}</h2>
+    <p>{{ .intro }}</p>
 
-
-      {{ if $isContactPage }}
-        <a href="#contact" class="cta">Contact</a>
-      {{ else }}
-        <a href="{{ "contact/" | relLangURL }}" class="cta">Contact</a>
-      {{ end }}
-      {{ warnf "Page Type is %s" $pageType }}
-      {{ if eq $pageType "article" }}
-        {{ warnf "Url is %s" .url }}
-        <a href="{{ .url | relLangURL }}" class="cta inverse">All FAQ</a>
-      {{ else }}
-        <a href="{{ "faq/" | relLangURL }}" class="cta inverse">All FAQ</a>
-      {{ end }}
-    </div>
-    <div>
-      <div class="accordion">
-        {{ with index .faqgroups $index }}
-          {{ range $index, $element := .faqs }}
-            <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
-              <h3>{{ .title }} <span> </span></h3>
-              <div class="accordion-content p">{{ .description|markdownify }}</div>
+    {{ if $isContactPage }}
+      <a href="#contact" class="cta">Contact</a>
+    {{ else }}
+      <a href="{{ "contact/" | relLangURL }}" class="cta">Contact</a>
+    {{ end }}
+    {{ warnf "Page Type is %s" $pageType }}
+    {{ if eq $pageType "article" }}
+      {{ warnf "Url is %s" .url }}
+      <a href="{{ .url | relLangURL }}" class="cta inverse">All FAQ</a>
+    {{ else }}
+      <a href="{{ "faq/" | relLangURL }}" class="cta inverse">All FAQ</a>
+    {{ end }}
+  </div>
+  <div>
+    <div class="accordion">
+      {{ with index .faqgroups $index }}
+        {{ range $index, $element := .faqs }}
+          <div class="accordion-item{{ if eq $index 0 }}active{{ end }}">
+            <h3>{{ .title }} <span> </span></h3>
+            <div class="accordion-content p">
+              {{ .description|markdownify }}
             </div>
-          {{ end }}
+          </div>
         {{ end }}
-      </div>
+      {{ end }}
     </div>
-  {{ partial "p/layout_close" }} 
-
+  </div>
+  {{ partial "p/layout_close" }}
 {{ end }}
 
 {{ partial "comment.html" (dict "comment" "/p/block/faq.html.html" ) }}

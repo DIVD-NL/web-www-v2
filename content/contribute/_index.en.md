@@ -7,13 +7,13 @@ intro: We are a group of volunteers that scout the web for potential cyber secur
 becomevolunteer:
   title: Become a volunteer
   image: /images/1724437526298-1.jpg
-  Alt tag for image: An illustration of 2 people talking about code, shown by a speakingballoon filled with 010101.
+  alt: An illustration of 2 people talking about code, shown by a speakingballoon filled with 010101.
   description: Are you interested in joining our diverse team of ethical hackers, researchers, IT professionals, or legal experts, and learning from the best? Please sign up.
   alt: Drawing of a group of voluteer hackers
 becomepartner:
   title: Become a partner
   image: /images/DIVD Partnerevent 2024 - 2 (1).png
-  Alt tag for image: An illustration of 2 people talking and exchanging information
+  alt: An illustration of 2 people talking and exchanging information
   description: "As an organization dedicated to serving the entire internet community, we extend our assistance not only to your customers but also to their suppliers. You may perceive us as the volunteer fire brigade: while you protect your own infrastructure, we stand ready to aid your neighbors, thereby indirectly safeguarding your establishment as well."
   alt: Drawing of a DIVD voluteer shaking the hand of a DIVD partner
 appreciate:

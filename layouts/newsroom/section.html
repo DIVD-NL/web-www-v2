@@ -1,16 +1,11 @@
-
-
-
-
 {{ define "main" }}
 
-{{ $articlePage := .Site.GetPage "/newsroom/articles" }}
+  {{ $articlePage := .Site.GetPage "/newsroom/articles" }}
 
 
-
-<div class="topic-layout newsroom">
-  <div class="topic-intro reverse">
-    {{ partial "p/layout_open" (dict "classes" (slice "right")) }} 
+  <div class="topic-layout newsroom">
+    <div class="topic-intro reverse">
+      {{ partial "p/layout_open" (dict "classes" (slice "right")) }}
       <div>
         <h1>{{ .Params.opener }}</h1>
       </div>
@@ -20,81 +15,80 @@
           Newsletter
         </a> -->
       </div>
-    {{ partial "p/layout_close" }}
-  </div>
+      {{ partial "p/layout_close" }}
+    </div>
 
-  {{ partial "p/section_open" (dict "classes" (slice "default")) }} 
+    {{ partial "p/section_open" (dict "classes" (slice "default")) }}
     {{ partial "p/layout_open" }}
-      <div>
-        <h2>{{ .Params.starter.title }}</h2>
-        <p class="pre">{{ .Params.starter.description }}</p>
+    <div>
+      <h2>{{ .Params.starter.title }}</h2>
+      <p class="pre">{{ .Params.starter.description }}</p>
 
-        <div class="tag-list">
-          {{ range $key, $value := .Site.Taxonomies.tag }}
-            <a href="{{ $value.Page.Permalink }}" class="tag">{{ $key }}</a>
-          {{ end }}
-        </div>
+      <div class="tag-list">
+        {{ range $key, $value := .Site.Taxonomies.tag }}
+          <a href="{{ $value.Page.Permalink }}" class="tag">{{ $key }}</a>
+        {{ end }}
       </div>
-      
-      <div class="newsroom-article-list">
-        <div class="highlight">
+    </div>
 
-          {{ with site.GetPage (printf "%s" .Params.highlight) }}
+    <div class="newsroom-article-list">
+      <div class="highlight">
+        {{ with site.GetPage (printf "%s" .Params.highlight) }}
 
-            {{ with .Params.image }}
-              <figure>
+          {{ with .Params.image }}
+            <figure>
               {{ with resources.Get . }}
                 {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
               {{ end }}
-              </figure>
-            {{ end }}
-
-            <section>
-              <h3>{{ .Title }}</h3>
-              <p>
-                  {{ .Params.intro | safeHTML | truncate 192 }}
-              </p>
-
-              <a class="cta inverse" href="{{ .Permalink }}">
-                {{ i18n "readmore" }}
-              </a>
-            </section>
+            </figure>
           {{ end }}
-        </div>
 
-        {{ range first 6 $articlePage.Pages.ByDate.Reverse }}
-          <div class="article">
-            <section>
-              <div class="summary">
-                <h4>{{ .Params.tag }}</h4>
-                <h3>{{ .Title }}</h3>
-                <p>{{ .Params.intro | safeHTML | truncate 192 }}</p>
-              </div>
-              <nav>
-                <a href="{{ .Permalink }}" class="button">
-                  {{ i18n "readmore" }}
-                </a>
-              </nav>
-            </section>
-            {{ if .Params.image }}
-              <aside>
-                {{ with resources.Get .Params.image }}
-                  {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-                {{ end }}
-              </aside>
-            {{ end }}
-          </div>
+
+          <section>
+            <h3>{{ .Title }}</h3>
+            <p>
+              {{ .Params.intro | safeHTML | truncate 192 }}
+            </p>
+
+            <a class="cta inverse" href="{{ .Permalink }}">
+              {{ i18n "readmore" }}
+            </a>
+          </section>
         {{ end }}
       </div>
 
-      <div class="pt-lg fill-center hor">
-        <a class="cta" href="{{ "newsroom/articles/" | relLangURL }}">{{ i18n "all_articles" }}</a>
-      </div>
-      
+      {{ range first 6 $articlePage.Pages.ByDate.Reverse }}
+        <div class="article">
+          <section>
+            <div class="summary">
+              <h4>{{ .Params.tag }}</h4>
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Params.intro | safeHTML | truncate 192 }}</p>
+            </div>
+            <nav>
+              <a href="{{ .Permalink }}" class="button">
+                {{ i18n "readmore" }}
+              </a>
+            </nav>
+          </section>
+          {{ if .Params.image }}
+            <aside>
+              {{ with resources.Get .Params.image }}
+                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+              {{ end }}
+            </aside>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
 
-      {{ partial "p/layout_close" }}
-  {{ partial "p/section_close" }}
-</div>
+    <div class="pt-lg fill-center hor">
+      <a class="cta" href="{{ "newsroom/articles/" | relLangURL }}"
+        >{{ i18n "all_articles" }}</a
+      >
+    </div>
 
-
+    {{ partial "p/layout_close" }}
+    {{ partial "p/section_close" }}
+  </div>
 {{ end }}

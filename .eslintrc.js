@@ -7,6 +7,8 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'comma-dangle': 'off',
-    'max-len': 'off'
-  }
+    'max-len': 'off',
+    indent: 'off',
+  },
+  ignorePatterns: ['node_modules/', 'dist/', 'public/', 'static/'],
 };

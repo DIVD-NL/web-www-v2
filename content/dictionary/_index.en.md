@@ -2,6 +2,7 @@
 title: DIVDictionary
 intro: On this page, the DIVD Dictionary, you can find a clarification of the cyber security words and phrases you can find on our website. The DIVDictionary intends to explain what each of the words specifically means for DIVD.
 ---
+
 ## Hacking
 
 #### **(Ethical) Hacker**
@@ -18,7 +19,7 @@ An exploit is a malicious application, piece of code or script that can be used 
 
 At DIVD, we adhere to the ‘Principle of Proportionality’ and the ‘Principle of Subsidiarity’, as described in our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/). This means that our research should increase and not decrease the integrity and availability of any online systems. If several means are available to meet the need, we opt for the one that has the least impact on the availability of the systems and services.
 
-#### 
+####
 
 #### **Case**
 
@@ -45,13 +46,13 @@ Responsible disclosure helps protect users, maintains trust between (DIVD) resea
 
 Security.txt is a proposed standard for websites to provide a clear and consistent way for security researchers to report security vulnerabilities. It involves placing a simple text file named security.txt in the well-known location /.well-known/ directory of a website (e.g., [https://example.com/.well-known/security.txt)](https://example.com/.well-known/security.txt)). This file contains contact information and other details that guide researchers on how to responsibly disclose security issues to the organization. Wanna make DIVD’s work easier? Put our [security.txt](https://securitytxt.org/) in the code of your website and our IP 194.5.73.0-255 on your allow list.
 
-#### 
+####
 
 ## Vulnerabilities
 
 #### CVE
 
-CVE stands for "Common Vulnerabilities and Exposures", a [public list](https://cve.mitre.org/cve/search_cve_list.html) of known vulnerabilities in software. DIVD scans the internet for the presence of CVEs. 
+CVE stands for "Common Vulnerabilities and Exposures", a [public list](https://cve.mitre.org/cve/search_cve_list.html) of known vulnerabilities in software. DIVD scans the internet for the presence of CVEs.
 
 #### **High-Risk Vulnerability**
 

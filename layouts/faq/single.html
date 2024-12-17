@@ -1,45 +1,52 @@
 {{ define "main" }}
-<div class="article-layout faq" style="padding-top: 164px">
-  {{ partial "breadcrumbs" . }}
+  <div class="article-layout faq" style="padding-top: 164px">
+    {{ partial "breadcrumbs" . }}
 
-  {{ partial "p/section_open" (dict "classes" (slice "article")) }}
+    {{ partial "p/section_open" (dict "classes" (slice "article")) }}
 
     {{ partial "p/layout_open" (dict "classes" (slice "article")) }}
 
-      <div class="article-body">
-        <article>
-          <h1>{{ .Title }}</h1>
-          <p>{{ .Params.opener }}</p>
-          <p>{{ .Params.intro }}</p>
-          {{ if .Params.button_text }}
-            <div class="pb-lg pt-sm">
-              <a class="cta secondary" href="{{ .Params.button_url }}">{{.Params.button_text}}</a>
+
+    <div class="article-body">
+      <article>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Params.opener }}</p>
+        <p>{{ .Params.intro }}</p>
+        {{ if .Params.button_text }}
+          <div class="pb-lg pt-sm">
+            <a class="cta secondary" href="{{ .Params.button_url }}"
+              >{{ .Params.button_text }}</a
+            >
+          </div>
+        {{ end }}
+        {{ if .Params.faqgroups }}
+          {{ range .Params.faqgroups }}
+            <div class="faqgroup pb-lg">
+              {{ if ne .heading "Home" }}
+                <h2>{{ .heading }}</h2>
+              {{ end }}
+
+
+              <div class="accordion">
+                {{ range $index, $element := .faqs }}
+                  <div
+                    class="accordion-item{{ if eq $index 0 }}active{{ end }}">
+                    <h3>{{ .title }} <span></span></h3>
+                    <div class="accordion-content p">
+                      {{ .description | markdownify }}
+                    </div>
+                  </div>
+                {{ end }}
+              </div>
             </div>
           {{ end }}
-          {{ if .Params.faqgroups }}
-            {{ range .Params.faqgroups }}
-              <div class="faqgroup pb-lg">
-                {{ if ne .heading "Home" }}
-                  <h2>{{ .heading }}</h2>
-                {{ end }}
-
-                <div class="accordion">
-                  {{ range $index, $element := .faqs }}
-                    <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
-                      <h3>{{ .title }} <span></span></h3>
-                      <div class="accordion-content p">{{ .description | markdownify }}</div>
-                    </div>
-                  {{ end }}
-                </div>
-              </div>
-            {{ end }}
-          {{ else }}
-            <p>No FAQ groups available.</p>
-          {{ end }}
-        </article>
-      </div>
+        {{ else }}
+          <p>No FAQ groups available.</p>
+        {{ end }}
+      </article>
+    </div>
     {{ partial "p/layout_close" }}
 
-  {{ partial "p/section_close" }}
-</div>
+    {{ partial "p/section_close" }}
+  </div>
 {{ end }}

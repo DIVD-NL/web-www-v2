@@ -5,11 +5,15 @@ author: []
 tag: case
 intro: On December 8, 2020, FireEye announced that the company had fallen victim to a hack. DIVD scanned for Supernova and found around 700 vulnerable Solarwinds Orion systems facing the internet, worldwide, including systems of foreign defense units and satellite communication. Eight of these systems used IP addresses from the Netherlands.
 image: ""
-Alt tag for image: ""
+alt: ""
 case:
   caseid: DIVD-2020-00014
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2020-00014/
+  link:
+    label: DIVD-2020-00014
+    url: https://csirt.divd.nl/cases/DIVD-2020-00014/
+    invertedColors: false
+    external: true
   lead: Barry van Kampen
   leadlink: https://www.divd.nl/who-we-are/team/people/barry-van-kampen/
   researchers:

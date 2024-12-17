@@ -1,9 +1,8 @@
 {{ define "main" }}
-
   {{ partial "breadcrumbs" . }}
 
-  <div class="home-layout partners-page">
 
+  <div class="home-layout partners-page">
     <div class="opener">
       <article>
         <section>
@@ -17,58 +16,60 @@
       </article>
       <aside>
         <div class="bubble bubble-bottom-right over"></div>
-        
-        {{ with resources.Get "images/global/partners.png" }} 
+
+        {{ with resources.Get "images/global/partners.png" }}
           {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
         {{ end }}
         <div class="bubble bubble-small under"></div>
       </aside>
     </div>
 
-  {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
+    {{ partial "p/section_open" (dict "classes" (slice "inverse")) }}
     {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
-      
-        <div class="reverse pb-xl">
-          <h2>{{ .Params.partnerstitle }}</h2>
-          <p>{{ .Params.partnersintro }}</p>
-          <div class="partner-list">
-            {{ range .Params.partnerlist }}
-              {{ partial "card-partner" (dict 
-                  "imageSource" .image
-                  "name" .name
-                  "link" .website 
-                  "cta" (i18n "visitsite")
-                  "description" .description)
-              }}
-            {{ end }}
-          </div>
-        </div>
-        {{ partial "p/layout_close" }}
-        {{ partial "p/layout_open" (dict "classes" (slice "overlap-bottom")) }}
-          {{ with .Params.partnerquote }}
-            <div class="person-highlight">
-              <figure>
-              {{ with resources.Get .image }} 
-                {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Manager") }}
-              {{ end }}
-              </figure>
-              <article>
-                <h2>{{ .name }}</h2>
-                <h4>{{ .role }}</h4>
-                <p>{{ .quote }}</p>
-                <a class="cta" href="{{ .website }}" target="_blank">{{ i18n "visitsite" }} {{ partial "svg/icon" "external" }}</a>
-              </article>
-            </div>
+
+
+    <div class="reverse pb-xl">
+      <h2>{{ .Params.partnerstitle }}</h2>
+      <p>{{ .Params.partnersintro }}</p>
+      <div class="partner-list">
+        {{ range .Params.partnerlist }}
+          {{ partial "card-partner" (dict
+            "imageSource" .image
+            "name" .name
+            "link" .website
+            "cta" (i18n "visitsite")
+            "description" .description)
+          }}
+        {{ end }}
+      </div>
+    </div>
+    {{ partial "p/layout_close" }}
+    {{ partial "p/layout_open" (dict "classes" (slice "overlap-bottom")) }}
+    {{ with .Params.partnerquote }}
+      <div class="person-highlight">
+        <figure>
+          {{ with resources.Get .image }}
+            {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Manager") }}
           {{ end }}
-        
-      {{ partial "p/layout_close" }}
+        </figure>
+        <article>
+          <h2>{{ .name }}</h2>
+          <h4>{{ .role }}</h4>
+          <p>{{ .quote }}</p>
+          <a class="cta" href="{{ .website }}" target="_blank"
+            >{{ i18n "visitsite" }} {{ partial "svg/icon" "external" }}</a
+          >
+        </article>
+      </div>
+    {{ end }}
+
+    {{ partial "p/layout_close" }}
     {{ partial "p/section_close" }}
     <div class="pt-xlg">
-      {{ partial "p/section_open" (dict "classes" (slice "gradient-reverse"))}} 
-        {{ partial "block/faq" (dict "context" . "targetHeading" "Become a partner") }}
-        {{ partial "block/proudestwork" . }}
+      {{ partial "p/section_open" (dict "classes" (slice "gradient-reverse")) }}
+      {{ partial "block/faq" (dict "context" . "targetHeading" "Become a partner") }}
+      {{ partial "block/proudestwork" . }}
       {{ partial "p/section_close" }}
     </div>
-
   </div>
 {{ end }}

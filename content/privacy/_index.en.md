@@ -1,6 +1,7 @@
 ---
 title: Privacy
 ---
+
 ## Privacy Policy
 
 This page lists our publicly available documents focussing on policies and visions.
@@ -52,18 +53,18 @@ DIVD also processes personal data for the following purposes:
 
 DIVD does not use automated decision-making.
 
-## How Long Does DIVD Store Personal Data? 
+## How Long Does DIVD Store Personal Data?
 
 DIVD does not store personal data longer than is strictly necessary to achieve the purposes for which it was collected. DIVD uses the following retention periods for information:
 
 ### Information
 
 - Financial information (for the tax authorities) 7 years
-- Results of investigations - maximum 3 years *
-- Results of reports - maximum 3 years *
-- E-mail communication 10 years *
+- Results of investigations - maximum 3 years \*
+- Results of reports - maximum 3 years \*
+- E-mail communication 10 years \*
 
-*\* This can change on request from a data subject.*
+_\* This can change on request from a data subject._
 
 ## Does DIVD Share Personal Data With Third Parties?
 
@@ -91,7 +92,7 @@ For more information about these parties, please refer to the statements on thei
 
 You have the right to view, correct or delete your personal data held by DIVD. For those cases where DIVD processes data with the permission of the person to whom this data relates, this person has the right to withdraw your consent to the data processing or to object to the processing of his personal data by DIVD and has the right to data portability.
 
-You can send a request for inspection, correction, deletion or data transfer of your personal data or a request for cancellation of your consent or objection to the processing of your personal data to Privacy@DIVD.nl. To ensure that the request for access has been made by you, DIVD may ask you to enclose a (privacy-friendly) copy of your proof of identity with the request. Make your passport photo, MRZ (machine readable zone, the strip with numbers at the bottom of the passport), passport number and citizen service number (BSN) black in this copy. This is to protect your privacy. If your request relates to IP addresses or domain names, you must also sufficiently demonstrate that these IP addresses and/or domain names are indeed your personal data. DIVD will respond to your request within twenty working days. DIVD would also like to point out that you have the option of submitting a complaint to the national supervisory authority, the Dutch Data Protection Authority. This can be done via the following link: [https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons](https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons "https\://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons")
+You can send a request for inspection, correction, deletion or data transfer of your personal data or a request for cancellation of your consent or objection to the processing of your personal data to Privacy@DIVD.nl. To ensure that the request for access has been made by you, DIVD may ask you to enclose a (privacy-friendly) copy of your proof of identity with the request. Make your passport photo, MRZ (machine readable zone, the strip with numbers at the bottom of the passport), passport number and citizen service number (BSN) black in this copy. This is to protect your privacy. If your request relates to IP addresses or domain names, you must also sufficiently demonstrate that these IP addresses and/or domain names are indeed your personal data. DIVD will respond to your request within twenty working days. DIVD would also like to point out that you have the option of submitting a complaint to the national supervisory authority, the Dutch Data Protection Authority. This can be done via the following link: [https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons](https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons "https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons")
 
 Your copy of your proof of identity will be destroyed as soon as your request has been processed. Unless otherwise indicated, the e-mails of the request are kept for a normal period.
 

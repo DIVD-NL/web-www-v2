@@ -1,43 +1,44 @@
 {{ define "main" }}
-
   <div class="topic-layout why-our-work-matters-page">
     <div class="bg-gradient bg-gradient-reverse pb-xxlg">
-    <div class="topic-intro reverse">
-      {{ partial "breadcrumbs" . }}
-      {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
+      <div class="topic-intro reverse">
+        {{ partial "breadcrumbs" . }}
+        {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
         <div>
           <h1>{{ .Params.title }}</h1>
         </div>
         <div>
           <p>{{ .Params.intro | markdownify }}</p>
-        </div>  
-      {{ partial "p/layout_close" }}
+        </div>
+        {{ partial "p/layout_close" }}
+      </div>
     </div>
-  </div>
-  {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
+    {{ partial "p/section_open" (dict "classes" (slice "inverse")) }}
 
     <div class="overlap-top-lg">
-
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
-        <div class="article-body">
-          <article>
-              <p>
-                {{ .Content }}
-              </p>
-          </article>
-        </div>
+      <div class="article-body">
+        <article>
+          <p>
+            {{ .Content }}
+          </p>
+        </article>
+      </div>
       {{ partial "p/layout_close" }}
 
       {{ partial "p/layout_open" (dict "classes" (slice "article" )) }}
-        <div class="iframe-container">
-          <iframe width="1200" height="750" src="https://cyberveilignederland.nl/woordenboek.iframe?mainColor=ffd735&secondaryColor=111111" title="Cyberveilig woordenboek" frameborder="0"></iframe>
-        </div>
+      <div class="iframe-container">
+        <iframe
+          width="1200"
+          height="750"
+          src="https://cyberveilignederland.nl/woordenboek.iframe?mainColor=ffd735&secondaryColor=111111"
+          title="Cyberveilig woordenboek"
+          frameborder="0"></iframe>
+      </div>
       {{ partial "p/layout_close" }}
 
     </div>
 
-    {{ partial "p/section_close" }}    
-
+    {{ partial "p/section_close" }}
   </div>
-
 {{ end }}

@@ -1,133 +1,135 @@
 {{ define "main" }}
-
   <div class="topic-layout contribute-page">
     <div class="bg-gradient bg-gradient-reverse pb-xxlg">
-    <div class="topic-intro reverse">
-      {{ partial "breadcrumbs" . }}
-      {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
+      <div class="topic-intro reverse">
+        {{ partial "breadcrumbs" . }}
+        {{ partial "p/layout_open" (dict "classes" (slice "right" "vcenter")) }}
         <div>
           <h1>{{ .Params.opener }}</h1>
         </div>
         <div>
-          <p>{{ .Params.intro}}</p>
+          <p>{{ .Params.intro }}</p>
           <a class="cta secondary" href="#donate">{{ i18n "donate" }}</a>
-        </div>  
-      {{ partial "p/layout_close" }}
+        </div>
+        {{ partial "p/layout_close" }}
+      </div>
     </div>
-  </div>
-  {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
+    {{ partial "p/section_open" (dict "classes" (slice "inverse")) }}
 
     <div class="overlap-top-lg">
       {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2" "stretch")) }}
-        <div class="intro-card">
-          {{ with resources.Get .Params.becomevolunteer.image }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" .Params.becomevolunteer.alt) }}
-          {{ end }}
-          <article>
-            <header>
-              <h3>{{ .Params.becomevolunteer.title }}</h3>
-              <p>{{ .Params.becomevolunteer.description }}</p>
-            </header>
-            <nav>
-              <a class="cta" href="{{ "contribute/volunteers/" | relLangURL }}">{{ i18n "learnmore" }}</a>
-            </nav>
-          </article>
-        </div>
+      <div class="intro-card">
+        {{ with resources.Get .Params.becomevolunteer.image }}
+          {{ partial "tools/rimg/img" (dict "img" . "alt" .Params.becomevolunteer.alt) }}
+        {{ end }}
+        <article>
+          <header>
+            <h3>{{ .Params.becomevolunteer.title }}</h3>
+            <p>{{ .Params.becomevolunteer.description }}</p>
+          </header>
+          <nav>
+            <a class="cta" href="{{ "contribute/volunteers/" | relLangURL }}"
+              >{{ i18n "learnmore" }}</a
+            >
+          </nav>
+        </article>
+      </div>
 
-        <div class="intro-card secondary">
-          {{ with resources.Get .Params.becomepartner.image }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" .Params.becomepartner.alt) }}
-          {{ end }}
-          <article>
-            <header>
-              <h3>{{ .Params.becomepartner.title }}</h3>
-              <p>{{ .Params.becomepartner.description }}</p>
-            </header>
-            <nav>
-              <a class="cta"  href="{{ "contribute/partners/" | relLangURL }}">{{ i18n "learnmore" }}</a>
-            </nav>
-          </article>
-        </div>
+      <div class="intro-card secondary">
+        {{ with resources.Get .Params.becomepartner.image }}
+          {{ partial "tools/rimg/img" (dict "img" . "alt" .Params.becomepartner.alt) }}
+        {{ end }}
+        <article>
+          <header>
+            <h3>{{ .Params.becomepartner.title }}</h3>
+            <p>{{ .Params.becomepartner.description }}</p>
+          </header>
+          <nav>
+            <a class="cta" href="{{ "contribute/partners/" | relLangURL }}"
+              >{{ i18n "learnmore" }}</a
+            >
+          </nav>
+        </article>
+      </div>
 
-     
       {{ partial "p/layout_close" }}
     </div>
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
-        <div class="reverse">
-          <h2>{{ .Params.appreciate.title }}</h2>
-          <p class="pre">{{ .Params.appreciate.description }}</p>
-
-        </div>
-        <div class="donate-blocks">
-          <div class="block">
-            <div>
-              <h3 id="donate" class="offset" >{{ .Params.donatesupp.title }}</h3>
-              <p class="pre">{{ .Params.donatesupp.description }}</p>
-              {{ range .Params.donatesupp.links }}
-                <a class="cta gray" href="{{ .link }}">
-                  {{ .label }}
-                </a>
-              {{ end }}
-              <div class="pt-sm">
-                <a class="cta" href="{{ .Params.donatesupp.customlink }}">
-                  {{ i18n "donate_custom_amount" }}
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="block">
-            <h3>{{ .Params.donatepaypal.label }}</h3>
-            <a class="cta" href="{{ .Params.donatepaypal.link }}">{{ .Params.donatepaypal.label }}</a>
-          </div>
-
-          <div class="block">
-            <h3>{{ .Params.donatebanktransfer.label }}</h3>
-            <a class="cta" href="{{ .Params.donatebanktransfer.link }}">{{ .Params.donatebanktransfer.label }}</a>
-          </div>
-
-          <div class="overlap-bottom pt-lg">
-            {{ with resources.Get "images/global/divdyay.png" }} 
-              {{ partial "tools/rimg/img" (dict "img" . "alt" "DIVD Yay!") }}
-            {{ end }}
+    {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+    <div class="reverse">
+      <h2>{{ .Params.appreciate.title }}</h2>
+      <p class="pre">{{ .Params.appreciate.description }}</p>
+    </div>
+    <div class="donate-blocks">
+      <div class="block">
+        <div>
+          <h3 id="donate" class="offset">{{ .Params.donatesupp.title }}</h3>
+          <p class="pre">{{ .Params.donatesupp.description }}</p>
+          {{ range .Params.donatesupp.links }}
+            <a class="cta gray" href="{{ .link }}">
+              {{ .label }}
+            </a>
+          {{ end }}
+          <div class="pt-sm">
+            <a class="cta" href="{{ .Params.donatesupp.customlink }}">
+              {{ i18n "donate_custom_amount" }}
+            </a>
           </div>
         </div>
-      {{ partial "p/layout_close" }}
+      </div>
+
+      <div class="block">
+        <h3>{{ .Params.donatepaypal.label }}</h3>
+        <a class="cta" href="{{ .Params.donatepaypal.link }}"
+          >{{ .Params.donatepaypal.label }}</a
+        >
+      </div>
+
+      <div class="block">
+        <h3>{{ .Params.donatebanktransfer.label }}</h3>
+        <a class="cta" href="{{ .Params.donatebanktransfer.link }}"
+          >{{ .Params.donatebanktransfer.label }}</a
+        >
+      </div>
+
+      <div class="overlap-bottom pt-lg">
+        {{ with resources.Get "images/global/divdyay.png" }}
+          {{ partial "tools/rimg/img" (dict "img" . "alt" "DIVD Yay!") }}
+        {{ end }}
+      </div>
+    </div>
+    {{ partial "p/layout_close" }}
 
     {{ partial "p/section_close" }}
 
-    {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
-        {{ partial "p/layout_open" }}
-        <div style="padding: 32px">
-          <h2>Donations register</h2>
-          <table class="donations">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>By</th>
-              </tr>
-            </thead>
-            <tbody>
-            {{ range .Params.donations }}
-              <tr>
-                <td>{{ time.Format "2 Jan 2006" .date }}</td>
-                <td>{{ .amount }}</td>
-                <td>{{ .by }}</td>
-              </tr>
-            {{ else }}
+    {{ partial "p/section_open" (dict "classes" (slice "default")) }}
+    {{ partial "p/layout_open" }}
+    <div style="padding: 32px">
+      <h2>Donations register</h2>
+      <table class="donations">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>By</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Params.donations }}
+            <tr>
+              <td>{{ time.Format "2 Jan 2006" .date }}</td>
+              <td>{{ .amount }}</td>
+              <td>{{ .by }}</td>
+            </tr>
+          {{ else }}
             <tr>
               <td colspan="3">No donations yet</td>
             </tr>
-            {{ end }}
-            </tbody>
-          </table>
-        </div>    
-        {{ partial "p/layout_close" }}
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+    {{ partial "p/layout_close" }}
     {{ partial "p/section_close" }}
-    
 
   </div>
-
-
 {{ end }}

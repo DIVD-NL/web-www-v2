@@ -1,82 +1,30 @@
 {{ define "main" }}
+  {{ $extraClass := "default pt-32 bg-light-black" }}
+  {{ if .Params.image }}
+    {{ $extraClass = "has-image" }}
+  {{ end }}
 
-{{ $extraClass := "default" }}
-{{ if .Params.image }}
-  {{ $extraClass = "has-image" }}
-{{ end }}
 
-<div class="article-layout">
-  {{ partial "breadcrumbs" . }}
+  <section class="pt-32 bg-light-black">
+    {{ partial "breadcrumbs" . }}
 
-  {{ partial "p/section_open" (dict "classes" (slice "article" ))}} 
 
-    {{ partial "p/layout_open" (dict "classes" (slice "article" $extraClass)) }}
-      
+    <main class="container bg-white">
       {{ if .Params.image }}
-        <div class="image-header">
-          {{ with resources.Get .Params.image }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-          {{ end }}
-        </div>
+        {{ with resources.Get .Params.image }}
+          {{ partial "tools/rimg/img" (dict "img" .) }}
+        {{ end }}
       {{ end }}
 
-      <div class="article-body">
-        <article>
+
+    <div class="article-body">
+      <article>
         <h1>{{ .Title }}</h1>
 
-        
-          {{ .Content }}
-        </article>
-        <aside>
-        {{ with .Params.case }}
-          <section>
-            {{ if .lead }}
-            <h4>Case lead</h4>
-            <ul>
-              {{ if .leadlink }}
-                <li><a href="{{ .leadlink }}">{{ .lead }}</a></li>
-              {{ else }}
-                <li>{{ .lead }}</li>
-              {{ end }}
-            </ul>
-            {{ end }}
-
-            {{ if or (isset . "researchers") (isset . "researchers_people") }}
-              <h4>Researchers</h4>
-              <ul>
-                {{ if .researchers_people }}
-                  {{ range .researchers_people }}
-                    {{ $peoplePage := site.GetPage "page" . }}
-                    <li><a href="{{ $peoplePage.Permalink }}">{{ $peoplePage.Title }}</a></li>
-                  {{ end }}
-                {{ end }}
-                {{ range .researchers }}
-                  {{ if .link }}
-                    <li>{{ .label }}</li>
-                  {{ else }}
-                    <li><a href="{{.link}}">{{ .label }}</a></li>
-                  {{ end }}
-                {{ end }}
-              </ul>
-            {{ end }}
-
-            <a class="cta" target="_blank" href="{{ if .link }}{{ .link }}{{ else }}https://csirt.divd.nl/{{end}}">
-              {{ .caseid}}
-              {{ partial "svg/icon" "external" }}
-            </a>
-          </section>
-        {{ end }}
-        </aside>
-      </div>
-      <!-- Check if the FAQ is required as per the setting in the CMS -->
-      {{ if and (isset .Params "faq_enabled") (.Params.faq_enabled) }}
-        <div class="article-faq">
-          {{ partial "block/faq" . }}
-        </div>
-      {{ end }}
-    {{ partial "p/layout_close" }}
-
-  {{ partial "p/section_close" }}
-</div>
-
+        {{ .Content }}
+      </article>
+      {{ partial "components/case-researchers-widget/case-researchers-widget.html" . }}
+    </div>
+    </main>
+  </section>
 {{ end }}

@@ -1,0 +1,9 @@
+<section class="bg-white pb-16">
+    <div class="max-w-[1200px] mx-auto">
+        <h2>{{ .title }}</h3>
+        <div class="flex gap-14 my-10">
+            {{ partial "components/card-horizontal/card-horizontal.html" .leftArticle }}
+            {{ partial "components/card-horizontal/card-horizontal.html" .rightArticle }}
+        </div>
+    </div>
+</section>

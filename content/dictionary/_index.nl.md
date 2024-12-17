@@ -5,4 +5,5 @@ intro: |-
 
   But what are exactly are (zero-day) vulnerabilities, and why is it so important to find them as soon as possible? Find these (and other) frequently used cyber security definitions on this page.
 ---
+
 .

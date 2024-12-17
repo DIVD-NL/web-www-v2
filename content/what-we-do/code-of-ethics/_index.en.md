@@ -2,6 +2,7 @@
 type: codeofethics
 title: Code of Ethics
 ---
+
 #### **Preamble**
 
 This Code of Ethics guides the ethical conduct of all members of the Dutch Institute for Vulnerability Disclosure (DIVD). It outlines the principles and standards all members must uphold in their professional activities.
@@ -21,11 +22,11 @@ This Code of Ethics guides the ethical conduct of all members of the Dutch Insti
 3. **Professional Competence**: Maintain and enhance professional knowledge and skills to provide high-quality services.
 4. **Honest Communication**: We communicate truthfully and accurately in all professional matters, and conduct all our activities honestly and ethically.
 5. **Ethical Decision-Making**: Make decisions based on moral and honorable principles and sound judgment.
-6. **Mutual Respect**: Diversity is our strength. We respect and celebrate neurodiversity and individual differences in cultural, gender, sexual, religious, and philosophical orientations. 
+6. **Mutual Respect**: Diversity is our strength. We respect and celebrate neurodiversity and individual differences in cultural, gender, sexual, religious, and philosophical orientations.
 
 #### **3. Responsibilities to Stakeholders**
 
-1. **Collaboration:** Share knowledge and experience with the concerned parties while upholding the principles of integrity and confidentiality.  
+1. **Collaboration:** Share knowledge and experience with the concerned parties while upholding the principles of integrity and confidentiality.
 2. **Partners**: We act in the best interests of the organizations we report to, providing services with competence, diligence, and care. We live up to the expectations we raise among the partners we collaborate with and/or sponsor.
 3. **Volunteers**: Foster a collaborative and respectful work environment, supporting and mentoring peers.
 4. **Organizations**: Uphold the policies and values of employers while maintaining professional integrity.

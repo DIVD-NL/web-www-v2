@@ -2,24 +2,22 @@
 
 {{ with $page }}
   {{ partial "p/layout_open" (dict "classes" (slice "extend")) }}
-    <h2>{{ .Title }}</h2>
-    <div class="carousel responsive-controls">
-      <div class="slides">
-        
-          {{ range $index, $element := first 3 .Params.testimonials }}
+  <h2>{{ .Title }}</h2>
+  <div class="carousel responsive-controls">
+    <div class="slides">
+      {{ range $index, $element := first 3 .Params.testimonials }}
+        {{ partial "card" (dict
+          "imageSource" .image
+          "name" .name
+          "title" .role
+          "content" .quote
+          "classes" (slice "person"))
+        }}
 
-            {{ partial "card" (dict 
-                "imageSource" .image
-                "name" .name
-                "title" .role
-                "content" .quote
-                "classes" (slice "person")) 
-            }}
+      {{ end }}
 
-          {{ end }}
-        
-      </div>
-      {{ partial "carousel_controls" 3 }}
     </div>
+    {{ partial "carousel_controls" 3 }}
+  </div>
   {{ partial "p/layout_close" }}
 {{ end }}

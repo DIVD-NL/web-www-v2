@@ -1,0 +1,8 @@
+<a class="border-none" href="{{ .url }}">
+    <button class="px-6 py-3 {{ if .invertedColors }}inverse{{ end }}">
+        {{ .label }}
+        {{ if .external }}
+            {{ partial "svg/icon" "external" }}
+        {{ end }}
+    </button>
+</a>

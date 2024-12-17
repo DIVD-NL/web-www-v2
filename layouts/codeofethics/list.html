@@ -1,36 +1,26 @@
-
-
-
 {{ define "main" }}
 
+  <div class="article-layout">
+    {{ partial "breadcrumbs" . }}
 
-
-<div class="article-layout">
-  {{ partial "breadcrumbs" . }}
-
-  {{ partial "p/section_open" (dict "classes" (slice "article" ))}} 
-
+    {{ partial "p/section_open" (dict "classes" (slice "article" )) }}
     {{ partial "p/layout_open" (dict "classes" (slice "article" "has-image")) }}
-      
-      
-        <div class="image-header">
-          {{ with resources.Get "images/global/codeofconduct_header.png" }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" "Code of ethics") }}
-          {{ end }}
-        </div>
-      
 
-      <div class="article-body">
-        <article>
-          {{ .Content }}
-        </article>
-        <aside>
-        
-        </aside>
-      </div>
+
+    <div class="image-header">
+      {{ with resources.Get "images/global/codeofconduct_header.png" }}
+        {{ partial "tools/rimg/img" (dict "img" . "alt" "Code of ethics") }}
+      {{ end }}
+    </div>
+
+    <div class="article-body">
+      <article>
+        {{ .Content }}
+      </article>
+      <aside></aside>
+    </div>
     {{ partial "p/layout_close" }}
 
-  {{ partial "p/section_close" }}
-</div>
-
+    {{ partial "p/section_close" }}
+  </div>
 {{ end }}

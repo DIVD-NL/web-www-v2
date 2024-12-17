@@ -5,11 +5,15 @@ author: []
 tag: case
 intro: Apache reported a remote code execution vulnerability in Apache Log4j2, the vulnerability in the Log framework of Apache makes it possible to misuse the record log information feature. This makes it possible for an attacker to construct special data request packets through this vulnerable component, and ultimately trigger remote code execution.
 image: /images/DIVD-Lof4J casefile.png
-Alt tag for image: ""
+alt: ""
 case:
   caseid: DIVD-2021-00038
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2021-00038/
+  link:
+    label: DIVD-2021-00038
+    url: https://csirt.divd.nl/cases/DIVD-2021-00038/
+    invertedColors: true
+    external: false
   lead: Victor Gevers
   leadlink: https://www.divd.nl/who-we-are/team/people/victor-gevers/
   researchers:

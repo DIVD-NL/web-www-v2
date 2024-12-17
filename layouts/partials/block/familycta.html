@@ -1,23 +1,22 @@
-
 {{ $blocks := .Site.GetPage "/block" }}
-
 
 {{ with $blocks.Params.familycta }}
 
-    {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }} 
-      <div class="image-container">
-        {{ with resources.Get "images/global/familycta.png" }} 
-          {{ partial "tools/rimg/img" (dict "img" . "alt" "Become part of the family") }}
-        {{ end }}
-      </div>
-      <div class="fill-center">
-        <div>
-          <h2>{{ .Title }}</h2>
-          <p>{{ .intro }}</p>
-          <a href="{{ "contribute/" | relLangURL }}" class="cta">{{ i18n "contribute" }}</a>
-        </div>
-      </div>
-    {{ partial "p/layout_close" }}
-    
+  {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+  <div class="image-container">
+    {{ with resources.Get "images/global/familycta.png" }}
+      {{ partial "tools/rimg/img" (dict "img" . "alt" "Become part of the family") }}
+    {{ end }}
+  </div>
+  <div class="fill-center">
+    <div>
+      <h2>{{ .Title }}</h2>
+      <p>{{ .intro }}</p>
+      <a href="{{ "contribute/" | relLangURL }}" class="cta"
+        >{{ i18n "contribute" }}</a
+      >
+    </div>
+  </div>
+  {{ partial "p/layout_close" }}
 
 {{ end }}

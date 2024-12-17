@@ -1,6 +1,7 @@
 {{ $cssOpts := (dict "targetPath" "styles/screen.css" "enableSourceMap" (not hugo.IsProduction) ) }}
 {{ $screenCSS := resources.Get "scss/screen.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
 
+
 <link
   href="{{ $screenCSS.RelPermalink }}"
   rel="stylesheet"

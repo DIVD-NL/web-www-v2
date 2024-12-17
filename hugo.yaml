@@ -41,3 +41,8 @@ server:
         X-XSS-Protection: "1; mode=block"
         Content-Security-Policy: "default-src 'none'; frame-src https://form.jotform.com https://eu-submit.jotform.com https://divd.goatcounter.com/count https://cyberveilignederland.nl/woordenboek.iframe; font-src 'self'; img-src 'self' data: https://cdn.theorg.com; script-src 'self' https://form.jotform.com https://unpkg.com/ https://gc.zgo.at; style-src 'self'; connect-src 'self' https://divd.goatcounter.com/count; base-uri 'self'; frame-ancestors 'self'; form-action 'self';"
         Referrer-Policy: "same-origin"
+
+markup:
+  goldmark:
+    renderer:
+      hardWraps: true

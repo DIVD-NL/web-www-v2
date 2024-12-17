@@ -1,6 +1,5 @@
 <nav aria-label="breadcrumb" class="breadcrumbs">
   <ul>
-    
     <li class="breadcrumb-item active" aria-current="page">
       {{ if eq .Page.Title "Tag" }}
         Newsroom
@@ -8,7 +7,7 @@
         {{ .Page.Title }}
       {{ end }}
     </li>
-    
+
     {{ range .Page.Ancestors }}
       <li class="breadcrumb-item">
         {{ if eq .Title "Tag" }}
@@ -19,7 +18,6 @@
         <span>&gt;</span>
       </li>
     {{ end }}
-    
-    
+
   </ul>
 </nav>

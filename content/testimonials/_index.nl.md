@@ -12,7 +12,7 @@ testimonials:
 
       Origineel in het Engels: “We used to think that the work of computer security experts is to secure computers. Over time we’ve come to realize that they actually secure our society. And that’s exactly 
 
-      what DIVD does: they secure our society.” 
+      what DIVD does: they secure our society.”
     image: /images/testimonials/mikkohypponen_2013x-embed.jpg
   - name: Dave Maasland
     role: CEO ESET Netherlands

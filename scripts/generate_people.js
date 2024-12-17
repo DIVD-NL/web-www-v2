@@ -9,7 +9,7 @@ const { argv } = yargs
     describe: 'path to directory to create member md files',
     type: 'string',
     demandOption: true,
-    default: './content/who-we-are/team/people'
+    default: './content/who-we-are/team/people',
   })
   .help()
   .alias('help', 'h');
@@ -44,7 +44,7 @@ const fetchPeople = async () => {
   const payload = {
     operationName: 'Company',
     variables: { slug: 'dutch-institute-for-vulnerability-disclosure' },
-    query
+    query,
   };
 
   const response = await axios.post(url, payload, { headers });
@@ -72,13 +72,20 @@ const generatePeople = async () => {
       const newPersonData = {
         type: 'people',
         title: person.fullName,
-        image: person.profileImage ? `${person.profileImage.endpoint}/${person.profileImage.uri}.${person.profileImage.ext}` : ['/images/divd-profilepicture-volunteer1.svg', '/images/divd-profilepicture-volunteer2.svg', '/images/divd-profilepicture-volunteer3.svg', '/images/divd-profilepicture-volunteer4.svg'][Math.floor(Math.random() * 4)],
+        image: person.profileImage
+          ? `${person.profileImage.endpoint}/${person.profileImage.uri}.${person.profileImage.ext}`
+          : [
+              '/images/divd-profilepicture-volunteer1.svg',
+              '/images/divd-profilepicture-volunteer2.svg',
+              '/images/divd-profilepicture-volunteer3.svg',
+              '/images/divd-profilepicture-volunteer4.svg',
+            ][Math.floor(Math.random() * 4)],
         role: person.role,
         intro: '',
         links: [],
         csirt_cases: personData.csirt_cases || [],
         csirt_posts: personData.csirt_posts || [],
-        cve_records: personData.cve_records || []
+        cve_records: personData.cve_records || [],
       };
 
       // Add social links

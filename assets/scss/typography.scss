@@ -1,6 +1,17 @@
 body {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    "Open Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
   font-size: 18px;
 }
 
@@ -25,7 +36,7 @@ h3 {
   font-family: var(--font-text);
   font-weight: 700;
   margin-bottom: 0.4em;
-  line-height:  1.2em;
+  line-height: 1.2em;
 }
 
 h6 {
@@ -76,10 +87,9 @@ li {
 }
 
 p.primary {
-  color: var(--brand)!important;
+  color: var(--brand) !important;
   font-size: 1em;
 }
-
 
 .brand {
   color: var(--brand);
@@ -116,25 +126,24 @@ strong {
   p {
     font-size: 1em;
   }
-
 }
 
-
-
 .reverse {
-
-  h1, h2, p, div, a {
+  h1,
+  h2,
+  p,
+  div,
+  a {
     color: #fff; /* TODO VAR */
   }
-
 
   a {
     border-bottom: 1px solid white;
   }
-
 }
 
-.p, .markdown {
+.p,
+.markdown {
   font-family: var(--font-text);
   font-size: 1em;
   line-height: 1.6em;
@@ -153,10 +162,10 @@ strong {
   ul {
     list-style-position: inside;
   }
-
-  
 }
 
-li, li li, li li li {
+li,
+li li,
+li li li {
   font-size: 1em;
 }
