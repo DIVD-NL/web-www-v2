@@ -3,7 +3,7 @@ title: DIVD responsibly discloses six new zero-day vulnerabilities to vendor
 date: 2024-08-12T05:54:00+02:00
 author: []
 tag: case
-intro: DIVD researchers have discovered and, in collaboration with the vendor, disclosed six new zero-day vulnerabilities in Enphase IQ Gateway devices.
+intro: Aug 12, 2024 - DIVD researchers have discovered and, in collaboration with the vendor, disclosed six new zero-day vulnerabilities in Enphase IQ Gateway devices.
 image: /images/image (1).png
 alt: ""
 case:
@@ -29,13 +29,12 @@ case:
 faq_enabled: false
 faq: null
 ---
-
 **The Hague, Netherlands – Aug 12, 2024**
 by [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/) and [Marieke Smits](https://www.divd.nl/who-we-are/team/people/marieke-smits/)
 
 ## About the case
 
-DIVD researchers have discovered and, in collaboration with the vendor, disclosed **six new zero-day vulnerabilities** in [Enphase IQ Gateway devices](https://enphase.com/cybersecurity/advisories/ensa-2024-6?_gl=1*ut63dx*_up*MQ..*_ga*MTU3MzcwMTgxMC4xNzIzMzY5ODY2*_ga_0L7F5QSJ7V*MTcyMzM2OTg2NS4xLjAuMTcyMzM2OTg2NS4wLjAuMA..). This investigation was conducted by [Wietse Boonstra](https://www.divd.nl/who-we-are/team/people/wietse-boonstra/) and [Hidde Smit](https://www.divd.nl/who-we-are/team/people/hidde-smit/), both researchers at DIVD, under case [DIVD-2024-00011](https://csirt.divd.nl/DIVD-2024-00011).
+DIVD researchers have discovered and, in collaboration with the vendor, disclosed **six new zero-day vulnerabilities** in [Enphase IQ Gateway devices](https://enphase.com/cybersecurity/advisories/ensa-2024-6?_gl=1_ut63dx__up_MQ..__ga_MTU3MzcwMTgxMC4xNzIzMzY5ODY2__ga_0L7F5QSJ7V*MTcyMzM2OTg2NS4xLjAuMTcyMzM2OTg2NS4wLjAuMA..). This investigation was conducted by [Wietse Boonstra](https://www.divd.nl/who-we-are/team/people/wietse-boonstra/) and [Hidde Smit](https://www.divd.nl/who-we-are/team/people/hidde-smit/), both researchers at DIVD, under case [DIVD-2024-00011](https://csirt.divd.nl/DIVD-2024-00011).
 
 Additionally, DIVD has independently assigned CVE IDs (Common Vulnerabilities and Exposure IDs). This highlights DIVD's role as a CVE Numbering Authority (CNA), which distinguishes it from other similar organisations.
 
@@ -66,7 +65,7 @@ Make sure to [follow](https://www.linkedin.com/company/divd-nl/?) us on LinkedIn
 ## **Additional sources & links:**
 
 - [Casefile DIVD-2024-00011](https://csirt.divd.nl/DIVD-2024-00011)
-- [Security advisory from Enphase](https://enphase.com/cybersecurity/advisories/ensa-2024-6?_gl=1*ut63dx*_up*MQ..*_ga*MTU3MzcwMTgxMC4xNzIzMzY5ODY2*_ga_0L7F5QSJ7V*MTcyMzM2OTg2NS4xLjAuMTcyMzM2OTg2NS4wLjAuMA..)
+- [Security advisory from Enphase](https://enphase.com/cybersecurity/advisories/ensa-2024-6?_gl=1_ut63dx__up_MQ..__ga_MTU3MzcwMTgxMC4xNzIzMzY5ODY2__ga_0L7F5QSJ7V*MTcyMzM2OTg2NS4xLjAuMTcyMzM2OTg2NS4wLjAuMA..)
 - [Secura; Scenario’s en maatregelen voor cyberweerbare zonnestroominstallaties](https://topsectorenergie.nl/nl/kennisbank/maatregelen-cyberveiligheid-zonpv/)
   (NL)
 - [Bitdefender report](https://www.bitdefender.com/blog/labs/60-hurts-per-second-how-we-got-access-to-enough-solar-power-to-run-the-united-states/)

@@ -10,5 +10,4 @@ case: null
 faq_enabled: false
 faq: null
 ---
-
 .
