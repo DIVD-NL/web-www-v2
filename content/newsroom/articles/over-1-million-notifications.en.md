@@ -3,15 +3,15 @@ title: Over 1 Million Notifications
 date: 2024-08-01T13:20:00.000Z
 author: []
 tag: news
-intro: DIVD aims to make the digital world safer by reporting vulnerabilities we find in digital systems to those who can fix them. While the existence of a vulnerability is not something to celebrate, thanks to the hard work of skilled volunteers working for DIVD, we have been able to notify vulnerable organizations of at least 1 million compromised IP addresses.
+intro: Aug 1, 2024 - While the existence of a vulnerability is not something to celebrate, thanks to the hard work of skilled volunteers working for DIVD, we have been able to notify vulnerable organizations of at least 1 million compromised IP addresses.
 image: /images/B2B-Isometric-Illustration.jpg
-alt: ""
+Alt tag for image: ""
 case: null
 faq_enabled: false
 faq: null
+alt: ""
 ---
-
-The Hague, Netherlands – Aug 1, 2024
+The Hague, Netherlands – **Aug 1, 2024**
 
 DIVD aims to make the digital world safer by reporting vulnerabilities we find in digital systems to those who can fix them. While the existence of a vulnerability is not something to celebrate, thanks to the hard work of skilled volunteers working for DIVD, we have been able to notify vulnerable organizations of **at least 1 million** (1.295.494) compromised IP addresses. The vulnerable IPs were part of 143 unique [cases](https://csirt.divd.nl/cases/).
 
