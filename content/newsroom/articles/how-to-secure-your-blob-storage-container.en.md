@@ -22,8 +22,6 @@ faq_enabled: false
 faq: null
 alt: ""
 ---
-By [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
-
 {{< callout type="warning" >}}
 
 ### TL;DR: I got notified, what should I do now?
