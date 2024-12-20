@@ -8,14 +8,14 @@
   <section class="pt-32 bg-light-black">
     {{ partial "breadcrumbs" . }}
 
-
-    <main class="container bg-white">
+    <main class="container bg-white mt-16 {{ if .Params.image }} overflow-hidden rounded-tr-[300px] rounded-tl-[20px] {{ end }}">
       {{ if .Params.image }}
-        {{ with resources.Get .Params.image }}
-          {{ partial "tools/rimg/img" (dict "img" .) }}
-        {{ end }}
+        <div class="h-[520px] overflow-hidden [&>picture>img]:w-full [&>picture>img]:h-full [&>picture>img]:object-cover">
+          {{ with resources.Get .Params.image }}
+            {{ partial "tools/rimg/img" (dict "img" .) }}
+          {{ end }}
+        </div>
       {{ end }}
-
 
     <div class="article-body">
       <article>
