@@ -1,6 +1,6 @@
 ---
 title: "CASE: SMBv3 SERVER COMPRESSION TRANSFORM HEADER MEMORY CORRUPTION"
-date: ""
+date: 2021-04-08T00:01:00+02:00
 author: []
 tag: ""
 intro: intro
@@ -10,6 +10,7 @@ case: null
 faq_enabled: false
 faq: null
 ---
+
 Written on **08 Apr 2021** by [Jeroen van de Weerd](https://www.divd.nl/who-we-are/team/people/jeroen-van-de-weerd/), updated on the **12th of Dec 2024** by [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
 
 ## The case
@@ -36,9 +37,9 @@ On March 12, Sophos Labs Offensive Security Team seemed to show a working exploi
 
 ## What you can do
 
-- Close ports that are not necessary to be open to the internet. 
-- Use the latest version of SMB. 
-- Install all patches from Microsoft as soon as possible. 
+- Close ports that are not necessary to be open to the internet.
+- Use the latest version of SMB.
+- Install all patches from Microsoft as soon as possible.
 - Workaround for servers: Block port 445 or disable compression.
 
 Update 12-3-2020: Microsoft has published an out-of-band patch for this vulnerability. We advise everyone to patch as soon as possible. Information about the patch is available here: [https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796)
