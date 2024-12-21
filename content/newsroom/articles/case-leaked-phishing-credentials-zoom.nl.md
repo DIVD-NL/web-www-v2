@@ -1,6 +1,6 @@
 ---
 title: "CASE: LEAKED PHISHING CREDENTIALS (ZOOM)"
-date: ""
+date: 2021-07-01T00:01:00+02:00
 author: []
 tag: ""
 intro: intro
@@ -10,6 +10,7 @@ case: null
 faq_enabled: false
 faq: null
 ---
+
 Geschreven op 01 jul 2021 door Joris van de Vis, bijgewerkt op 09 dec 2024 door Serena de Pater
 
 De zaak
