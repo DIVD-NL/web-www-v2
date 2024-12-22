@@ -9,22 +9,25 @@
     {{ partial "breadcrumbs" . }}
 
 
-    <main class="container bg-white">
+    <main class="container mt-10">
       {{ if .Params.image }}
-        {{ with resources.Get .Params.image }}
-          {{ partial "tools/rimg/img" (dict "img" .) }}
-        {{ end }}
+        <figure
+          class="[&_img]:h-[520px] [&_img]:w-full [&_img]:object-cover [&_img]:rounded-tl-[20px] [&_img]:rounded-tr-[300px]">
+          {{ with resources.Get .Params.image }}
+            {{ partial "tools/rimg/img" (dict "img" .) }}
+          {{ end }}
+        </figure>
       {{ end }}
 
 
-    <div class="article-body">
-      <article>
-        <h1>{{ .Title }}</h1>
+      <div class="article-body bg-white">
+        <article class="bg-white">
+          <h1 class="text-heading-2 font-heading">{{ .Title }}</h1>
+          {{ .Content }}
+        </article>
 
-        {{ .Content }}
-      </article>
-      {{ partial "components/case-researchers-widget/case-researchers-widget.html" . }}
-    </div>
+        {{ partial "components/case-researchers-widget/case-researchers-widget.html" . }}
+      </div>
     </main>
   </section>
 {{ end }}
