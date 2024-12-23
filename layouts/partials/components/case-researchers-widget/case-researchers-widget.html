@@ -1,7 +1,9 @@
-<aside>
+<aside class="flex-none w-[330px] h-fit bg-light-gray rounded-divd-sm">
+  <section
+    class="flex flex-col p-5 [&_h4]:font-semibold [&_h4]:text-[20px] [&_h4]:mb-1">
     {{ with .Params.case }}
-      <section>
-        {{ if .lead }}
+      {{ if .lead }}
+        <article>
           <h4>Case lead</h4>
           <ul>
             {{ if .leadlink }}
@@ -10,9 +12,11 @@
               <li>{{ .lead }}</li>
             {{ end }}
           </ul>
-        {{ end }}
+        </article>
+      {{ end }}
 
-        {{ if or (isset . "researchers") (isset . "researchers_people") }}
+      {{ if or (isset . "researchers") (isset . "researchers_people") }}
+        <article>
           <h4>Researchers</h4>
           <ul>
             {{ if .researchers_people }}
@@ -33,23 +37,13 @@
               {{ end }}
             {{ end }}
           </ul>
-        {{ end }}
+        </article>
+      {{ end }}
 
-        {{ if .link }}
-          {{ partial "components/button/button.html" .link }}
-        {{ end}}
+      {{ if .link }}
+        {{ partial "components/button/button.html" .link }}
+      {{ end }}
 
-        <!-- <a
-          class="cta"
-          target="_blank"
-          href="{{ if .link }}
-            {{ .link }}
-          {{ else }}
-            https://csirt.divd.nl/
-          {{ end }}">
-          {{ .caseid }}
-          {{ partial "svg/icon" "external" }}
-        </a> -->
-      </section>
     {{ end }}
+  </section>
 </aside>
