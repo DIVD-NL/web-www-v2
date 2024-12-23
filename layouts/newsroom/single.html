@@ -9,10 +9,10 @@
     {{ partial "breadcrumbs" . }}
 
 
-    <main class="container mt-10">
+    <main class="container desktop:mt-10">
       {{ if .Params.image }}
         <figure
-          class="[&_img]:h-[520px] [&_img]:w-full [&_img]:object-cover [&_img]:rounded-tl-divd-sm [&_img]:rounded-tr-divd-lg">
+          class="[&_img]:h-[520px] [&_img]:w-full [&_img]:object-cover desktop:[&_img]:rounded-tl-divd-sm desktop:[&_img]:rounded-tr-divd-lg">
           {{ with resources.Get .Params.image }}
             {{ partial "tools/rimg/img" (dict "img" .) }}
           {{ end }}
@@ -20,13 +20,15 @@
       {{ end }}
 
 
-      <section class="article-body bg-white">
-        <article class="bg-white">
-          <h1 class="text-heading-2 font-heading">{{ .Title }}</h1>
+      <section
+        class="flex flex-col desktop:flex-row py-12 break-words px-[30px] desktop:px-[50px] bg-white">
+        <article
+          class="bg-white [&_ul]:pl-5 [&_li]:list-disc [&_li]:leading-8 [&_h2]:font-body [&_h2]:text-[32px] [&_h2]:uppercase [&_h2]:leading-[3rem] [&_h2]:mt-8 [&_p]:text-body">
+          <h1 class="text-heading-2">{{ .Title }}</h1>
           {{ .Content }}
         </article>
 
-        {{ partial "components/case-researchers-widget/case-researchers-widget.html" . }}
+        {{ partial "components/case-researchers-widget/case-researchers-widget" . }}
       </section>
     </main>
   </section>
