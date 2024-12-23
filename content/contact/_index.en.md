@@ -1,8 +1,9 @@
 ---
 title: Contact
 opener: How to get in contact with us
-intro: We are a group of volunteers that scout the web for potential cyber
-  security risks.
+intro: We are a team of over 130 enthusiastic and skilled individuals who are
+  passionate about security and cybersecurity. We work voluntarily to make the
+  digital world safer every day.
 form:
   title: Not a 'regular' office
   description: >-
