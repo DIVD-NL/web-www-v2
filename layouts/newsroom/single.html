@@ -12,7 +12,7 @@
     <main class="container mt-10">
       {{ if .Params.image }}
         <figure
-          class="[&_img]:h-[520px] [&_img]:w-full [&_img]:object-cover [&_img]:rounded-tl-[20px] [&_img]:rounded-tr-[300px]">
+          class="[&_img]:h-[520px] [&_img]:w-full [&_img]:object-cover [&_img]:rounded-tl-divd-sm [&_img]:rounded-tr-divd-lg">
           {{ with resources.Get .Params.image }}
             {{ partial "tools/rimg/img" (dict "img" .) }}
           {{ end }}
@@ -20,14 +20,14 @@
       {{ end }}
 
 
-      <div class="article-body bg-white">
+      <section class="article-body bg-white">
         <article class="bg-white">
           <h1 class="text-heading-2 font-heading">{{ .Title }}</h1>
           {{ .Content }}
         </article>
 
         {{ partial "components/case-researchers-widget/case-researchers-widget.html" . }}
-      </div>
+      </section>
     </main>
   </section>
 {{ end }}
