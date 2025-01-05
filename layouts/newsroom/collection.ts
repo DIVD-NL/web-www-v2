@@ -1,7 +1,7 @@
 import caseWidget from '../partials/components/case-researchers-widget';
 import { articleSections } from '../partials/sections';
 
-export const Collection = {
+export const ArticlesCollection = {
   label: 'Newsroom articles',
   name: 'articles',
   i18n: {
