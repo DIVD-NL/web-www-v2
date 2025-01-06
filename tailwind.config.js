@@ -12,10 +12,6 @@ module.exports = {
       desktop: '1280px',
     },
     extend: {
-      borderRadius: {
-        'divd-sm': '20px',
-        'divd-lg': '300px',
-      },
       colors: {
         'light-black': '#1D1D1D',
         'dark-gray': '#545454',
