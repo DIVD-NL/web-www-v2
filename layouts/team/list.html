@@ -12,7 +12,7 @@
       {{ else }}
         <div class="accordion">
           {{ range $index, $element := .Params.teams }}
-            <div class="accordion-item{{ if eq $index 0 }}active{{ end }}">
+            <div class="accordion-item {{ if eq $index 0 }}active{{ end }}">
               <h3>{{ .title }} <span> </span></h3>
               <div class="accordion-content">
                 <p>{{ .description }}</p>
