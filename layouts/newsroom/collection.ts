@@ -8,6 +8,8 @@ export const Collection = {
     structure: 'multiple_files',
   },
   folder: 'content/newsroom/articles',
+  public_folder: '/images/articles',
+  media_folder: '/assets/images/articles',
   create: true,
   slug: '{{ .Title | urlize }}',
   fields: [
