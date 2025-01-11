@@ -9,13 +9,11 @@ becomevolunteer:
   image: /images/1724437526298-1.jpg
   alt: An illustration of 2 people talking about code, shown by a speakingballoon filled with 010101.
   description: Are you interested in joining our diverse team of ethical hackers, researchers, IT professionals, or legal experts, and learning from the best? Please sign up.
-  alt: Drawing of a group of voluteer hackers
 becomepartner:
   title: Become a partner
   image: /images/DIVD Partnerevent 2024 - 2 (1).png
   alt: An illustration of 2 people talking and exchanging information
   description: "As an organization dedicated to serving the entire internet community, we extend our assistance not only to your customers but also to their suppliers. You may perceive us as the volunteer fire brigade: while you protect your own infrastructure, we stand ready to aid your neighbors, thereby indirectly safeguarding your establishment as well."
-  alt: Drawing of a DIVD voluteer shaking the hand of a DIVD partner
 appreciate:
   title: Since we’re a volunteer-run organization, we appreciate every donation
   description: As a partner, your contributions in the form of funding, volunteer work, and resources (tools) are invaluable to us. In reciprocation, you demonstrate your commitment to fostering a safer internet environment. A partnership with DIVD also provides an opportunity for your team members to engage in collaborative projects with witty hackers, enabling them to partake in enjoyable initiatives and learn from industry leaders.

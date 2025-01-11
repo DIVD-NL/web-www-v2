@@ -86,7 +86,6 @@ leftblock:
   image: ""
   alt: ""
   learnmore: /dictionary/
-  alt: null
 rightblock:
   content: |-
     ## **Zero-day Vulnerability**
@@ -101,7 +100,6 @@ rightblock:
   image: ""
   alt: ""
   learnmore: ""
-  alt: null
 contenttitle: "## Why our work matters"
 casehighlight:
   title: "# Without DIVD …"
