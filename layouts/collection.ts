@@ -7,6 +7,7 @@ export const HomeCollection = {
   },
   folder: 'content',
   create: false,
+  path: '_index',
   fields: [
     {
       label: 'Title',
