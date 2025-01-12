@@ -1,16 +1,15 @@
 ---
-title: "Leaked credentials: What we do to keep you safe"
+title: 'Leaked credentials: What we do to keep you safe'
 date: 2024-11-19T16:01:00+01:00
 author: []
-tag: ""
+tag: ''
 intro: On our website, you might have found a page called ‘how we deal with leaked credentials’ or spotted the case ‘DIVD-2020-00013 Leaked phishing credentials’. Does this mean that our volunteers send out phishing emails and leak the obtained credentials of innocent victims? Of course not!
-image: ""
-alt: ""
+image: ''
+alt: ''
 case: null
 faq_enabled: false
 faq: null
 ---
-
 **Nov 19, 2024** by [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
 
 ### What are leaked credentials?
