@@ -9,9 +9,9 @@ proudestwork:
 mission:
   title: DIVD is the voluntary fire brigade of the Internet
   description: DIVD scans the whole internet on the presence of Common Vulnerabilities and Exposures (CVEs) as soon as they are published and have a high score. When we find vulnerable URLs, we send them an email with notification on the vulnerability present, where we found it and what to do. We also find new vulnerabilities (zero-days) and share these with the software vendor, so they can fix it. Furthermore, when we detect instances of compromised credentials, we take swift action by alerting affected individuals via email and urging them to immediately change their passwords. Our volunteers provide these services for free because we believe every internet user deserves to be helped.
-  members: "120"
-  totalcases: "35"
-  ips: "285.607"
+  members: "175"
+  totalcases: "161"
+  ips: 1.842.867
 divdfamily:
   title: The DIVD Family
   description: "Within our DIVD Family we have all kind of different labels: DIVD Academy, CSIRT, CSIRT-Global etc."
