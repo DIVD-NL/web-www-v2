@@ -7,13 +7,11 @@ becomevolunteer:
   image: images/global/becomevolunteer.png
   alt: Een illustratie van 2 mensen die over code praten, weergegeven door een spreekballon gevuld met 010101.
   description: Heb je interesse om je aan te sluiten bij ons diverse team van ethische hackers, onderzoekers, IT-professionals of juridische experts en te leren van de besten? Meld je nu aan.
-  alt: Tekening van vrijwillige hackers
 becomepartner:
   title: Partner worden
   image: images/global/becomepartner.png
   alt: Een illustratie van 2 mensen die praten en informatie uitwisselen
   description: "Als organisatie die zich inzet voor de hele internetcommunity, bieden we niet alleen hulp aan uw klanten, maar ook aan diens leveranciers. U kunt ons beschouwen als de vrijwillige brandweer: terwijl u uw eigen infrastructuur beschermt, staan wij klaar om uw buren te helpen en zo indirect ook uw bedrijf te beschermen."
-  alt: Drawing can een DIVD vrijwilliger die de hand schud van een partner
 appreciate:
   title: Omdat we een vrijwilligersorganisatie zijn, waarderen we elke donatie.
   description: Als partner zijn uw bijdragen in de vorm van financiering, vrijwilligerswerk en middelen (tools) voor ons van onschatbare waarde. Als tegenprestatie toont u uw betrokkenheid bij het bevorderen van een veiligere internetomgeving. Een partnerschap met DIVD biedt uw teamleden ook de mogelijkheid om deel te nemen aan samenwerkingsprojecten met bekwame (ethisch) hackers, waarbij ze kunnen deelnemen aan leuke initiatieven en kunnen leren van vooraanstaande professionals uit de beveiligingsindustrie.

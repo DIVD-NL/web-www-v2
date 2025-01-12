@@ -1,11 +1,11 @@
 ---
-title: "CASE: SOLARWINDS ORION"
+title: 'CASE: SOLARWINDS ORION'
 date: 2022-01-28T00:01:00+01:00
 author: []
 tag: case
 intro: On December 8, 2020, FireEye announced that the company had fallen victim to a hack. DIVD scanned for Supernova and found around 700 vulnerable Solarwinds Orion systems facing the internet, worldwide, including systems of foreign defense units and satellite communication. Eight of these systems used IP addresses from the Netherlands.
-image: ""
-alt: ""
+image: /images/articles/DALL·E 2024-09-04 17.24.31 - A headshot of a humanoid Tabaxi druid in space, with golden fur and a sleek, feline appearance. The character's eyes have a supernatural glow, reflect.jpg
+alt: ''
 case:
   caseid: DIVD-2020-00014
   closed: true

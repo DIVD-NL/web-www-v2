@@ -48,3 +48,9 @@ markup:
   goldmark:
     renderer:
       hardWraps: true
+
+module:
+  mounts:
+    - excludeFiles: "**.ts" # Exclude CMS config files
+      source: layouts
+      target: layouts
