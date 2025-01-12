@@ -1,6 +1,7 @@
 import collections from './collections';
 
 export default {
+  publish_mode: 'editorial_workflow',
   backend: {
     name: 'github',
     repo: 'DIVD-NL/web-www-v2',
