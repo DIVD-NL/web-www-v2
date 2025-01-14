@@ -9,13 +9,14 @@ async function updateMarkdown() {
     const { data } = response;
 
     // Initialize totals
-    let totalMembers = 0;
+    const totalMembers = 189; // Data ia hardcoded as not correct in the API
     let totalCases = 0;
     let totalIps = 0;
 
     // Aggregate data from each year using Object.entries
     Object.entries(data).forEach(([, stats]) => {
-      totalMembers += stats.cases;
+      // TODO: undo the comment after the data is fixed in the API
+      // totalMembers += stats.cases;
       totalCases += stats.cases;
       totalIps += stats.ips;
     });
