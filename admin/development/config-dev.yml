@@ -1302,8 +1302,19 @@ collections:
           widget: "list",
           fields:
             [
-              { label: "name", name: "name", widget: "string" },
-              { label: "Link", name: "link", widget: "string" },
+              { label: "name", name: "title", widget: "string" },
+              { label: "Link", name: "url", widget: "string" },
+            ],
+        }
+      - {
+          label: "CVE Records",
+          name: "cve_records",
+          required: false,
+          widget: "list",
+          fields:
+            [
+              { label: "name", name: "title", widget: "string" },
+              { label: "Link", name: "url", widget: "string" },
             ],
         }
       - {

@@ -5,6 +5,7 @@ all_articles: "Browse all articles"
 codeofconduct: "Code of conduct"
 contribute: "Contribute"
 csirt_cases: "CSIRT cases"
+cve_records: 'CVE Records'
 donate_custom_amount: "Donate custom amount"
 donate: "Donate"
 featured_articles: "Featured articles"
