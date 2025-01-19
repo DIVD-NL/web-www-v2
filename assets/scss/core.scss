@@ -697,9 +697,14 @@ table.donations {
   border-radius: 22px;
   background-color: #f2f2f2;
   color: black;
-  display: inline-block; /* Ensure the details element is inline-block */
   padding: 0; /* Remove padding from the details element */
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  &:not([open]) {
+    max-width: 7.5rem;
+  }
 
   summary {
     background-color: #f2f2f2; /* Apply the background color to the summary */
@@ -714,6 +719,7 @@ table.donations {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+    width: 7rem;
 
     &:marker {
       color: black; /* Ensure the arrow is visible */
