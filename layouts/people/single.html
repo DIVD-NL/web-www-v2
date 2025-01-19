@@ -68,6 +68,44 @@
           {{ end }}
         {{ end }}
 
+        {{ with .Params.cve_records }}
+          <h3>{{ i18n "cve_records" }}</h3>
+          <ul class="article-list">
+            {{ $records := . }}
+            {{ $recordCount := len $records }}
+            {{ range $index, $record := $records }}
+              {{ if lt $index 5 }}
+                <li>
+                  {{ partial "svg/icon" "article" }}
+                  <a href="{{ $record.url }}" target="_blank" class="external"
+                    >{{ $record.title }} {{ partial "svg/icon" "external" }}
+                  </a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+          {{ if gt $recordCount 5 }}
+            <details class="csirt-show-more pb-sm">
+              <summary>
+                <span>Show more</span>
+                <em>Show less</em>
+              </summary>
+              <ul class="article-list">
+                {{ range $index, $record := $records }}
+                  {{ if ge $index 5 }}
+                    <li>
+                      {{ partial "svg/icon" "article" }}
+                      <a href="{{ $record.url }}" target="_blank" class="external"
+                        >{{ $record.title }} {{ partial "svg/icon" "external" }}
+                      </a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </details>
+          {{ end }}
+        {{ end }}
+
         {{ with .Params.links }}
           <h3>{{ i18n "other_links" }}</h3>
           <ul class="article-list">
