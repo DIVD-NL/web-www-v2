@@ -1,16 +1,15 @@
 ---
-title: "CASE: APACHE LOG4J2"
+title: 'CASE: APACHE LOG4J2'
 date: 2022-04-05T12:15:00+02:00
 author: []
-tag: ""
+tag: ''
 intro: Apache heeft een kwetsbaarheid gemeld voor het op afstand uitvoeren van code in Apache Log4j2. De kwetsbaarheid in het Log-framework van Apache maakt het mogelijk om misbruik te maken van de functie Record Log Information. Dit maakt het mogelijk voor een aanvaller om speciale dataverzoekpakketten samen te stellen via deze kwetsbare component, en uiteindelijk code-uitvoering op afstand te veroorzaken.
-image: ""
-alt: ""
+image: ''
+alt: ''
 case: null
 faq_enabled: false
 faq: null
 ---
-
 De zaak
 
 Op donderdag 9 december schreef Twitter-gebruiker Lunasec (@P0rZ9) een cryptische tweet:

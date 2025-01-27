@@ -1,11 +1,11 @@
 ---
-title: "CASE: APACHE LOG4J2"
+title: 'CASE: APACHE LOG4J2'
 date: 2022-04-05T12:15:00+02:00
 author: []
 tag: case
 intro: Apache reported a remote code execution vulnerability in Apache Log4j2, the vulnerability in the Log framework of Apache makes it possible to misuse the record log information feature. This makes it possible for an attacker to construct special data request packets through this vulnerable component, and ultimately trigger remote code execution.
 image: /images/DIVD-Lof4J casefile.png
-alt: ""
+alt: ''
 case:
   caseid: DIVD-2021-00038
   closed: true
