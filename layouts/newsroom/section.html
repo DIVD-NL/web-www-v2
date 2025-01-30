@@ -31,54 +31,56 @@
       </div>
     </div>
 
-    <div class="newsroom-article-list">
-      <div class="highlight">
-        {{ with site.GetPage (printf "%s" .Params.highlight) }}
+    <div class="grid gap-[32px] grid-rows-4 grid-cols-[1fr] desktop:grid-cols-2">
+      {{ with site.GetPage (printf "%s" .Params.highlight) }}
+        <a href="{{ .Permalink }}" class="article-link border-0 h-fit row-start-1 row-end-3">
+          <div class="highlight pb-4">
+            {{ with .Params.image }}
+              <figure>
+                {{ with resources.Get . }}
+                  {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+                {{ end }}
+              </figure>
+            {{ end }}
 
-          {{ with .Params.image }}
-            <figure>
-              {{ with resources.Get . }}
-                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-              {{ end }}
-            </figure>
-          {{ end }}
+            <section>
+              <h3>{{ .Title }}</h3>
+              <p>
+                {{ .Params.intro | safeHTML | truncate 192 }}
+              </p>
 
-
-          <section>
-            <h3>{{ .Title }}</h3>
-            <p>
-              {{ .Params.intro | safeHTML | truncate 192 }}
-            </p>
-
-            <a class="cta inverse" href="{{ .Permalink }}">
-              {{ i18n "readmore" }}
-            </a>
-          </section>
-        {{ end }}
-      </div>
+              <span class="button inverse" href="{{ .Permalink }}">
+                {{ i18n "readmore" }}
+              </span>
+            </section>
+          </div>
+        </a>
+      {{ end }}
 
       {{ range first 6 $articlePage.Pages.ByDate.Reverse }}
-        <div class="article">
-          <section>
-            <div class="summary">
-              <h4>{{ .Params.tag }}</h4>
-              <h3>{{ .Title }}</h3>
-              <p>{{ .Params.intro | safeHTML | truncate 192 }}</p>
-            </div>
-            <nav>
-              <a href="{{ .Permalink }}" class="button">
-                {{ i18n "readmore" }}
-              </a>
-            </nav>
-          </section>
-          {{ if .Params.image }}
-            <aside>
-              {{ with resources.Get .Params.image }}
-                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-              {{ end }}
-            </aside>
-          {{ end }}
-        </div>
+        <a href="{{ .Permalink }}" class="article-link border-0 h-fit">
+          <div class="article">
+            <section>
+              <div class="summary">
+                <h4>{{ .Params.tag }}</h4>
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Params.intro | safeHTML | truncate 192 }}</p>
+              </div>
+              <nav>
+                <span class="button">
+                  {{ i18n "readmore" }}
+                </span>
+              </nav>
+            </section>
+            {{ if .Params.image }}
+              <aside>
+                {{ with resources.Get .Params.image }}
+                  {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+                {{ end }}
+              </aside>
+            {{ end }}
+          </div>
+        </a>
       {{ end }}
     </div>
 

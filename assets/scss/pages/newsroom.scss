@@ -3,14 +3,6 @@
     padding-top: 64px;
   }
 
-  .newsroom-article-list {
-    display: grid;
-    grid-gap: 32px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 320px);
-    //grid-auto-rows: minmax(min-content, max-content);
-  }
-
   .highlight {
     grid-row: 1 / 3;
 
