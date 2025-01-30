@@ -58,27 +58,29 @@
       </div>
 
       {{ range first 6 $articlePage.Pages.ByDate.Reverse }}
-        <div class="article">
-          <section>
-            <div class="summary">
-              <h4>{{ .Params.tag }}</h4>
-              <h3>{{ .Title }}</h3>
-              <p>{{ .Params.intro | safeHTML | truncate 192 }}</p>
-            </div>
-            <nav>
-              <a href="{{ .Permalink }}" class="button">
-                {{ i18n "readmore" }}
-              </a>
-            </nav>
-          </section>
-          {{ if .Params.image }}
-            <aside>
-              {{ with resources.Get .Params.image }}
-                {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-              {{ end }}
-            </aside>
-          {{ end }}
-        </div>
+        <a href="{{ .Permalink }}" class="article-link border-0 h-fit">
+          <div class="article">
+            <section>
+              <div class="summary">
+                <h4>{{ .Params.tag }}</h4>
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Params.intro | safeHTML | truncate 192 }}</p>
+              </div>
+              <nav>
+                <span class="button">
+                  {{ i18n "readmore" }}
+                </span>
+              </nav>
+            </section>
+            {{ if .Params.image }}
+              <aside>
+                {{ with resources.Get .Params.image }}
+                  {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+                {{ end }}
+              </aside>
+            {{ end }}
+          </div>
+        </a>
       {{ end }}
     </div>
 
