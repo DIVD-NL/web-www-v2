@@ -8,7 +8,7 @@
       }
     },
     {
-      "files": ["*.js", "*.ts"],
+      "files": ["*.js", "*.mjs", "*.ts"],
       "options": {
         "printWidth": 120,
         "singleQuote": true
