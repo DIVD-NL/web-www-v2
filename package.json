@@ -1,18 +1,5 @@
 {
   "name": "divd",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "browserslist": [
-    "Android 2.3",
-    "Android >= 4",
-    "Chrome >= 20",
-    "Firefox >= 24",
-    "Explorer >= 8",
-    "iOS >= 6",
-    "Opera >= 12",
-    "Safari >= 6"
-  ],
   "scripts": {
     "postbuild": "node ./scripts/postbuild.js",
     "gen-people": "node ./scripts/generate_people.js",
@@ -21,7 +8,6 @@
     "cms": "vite",
     "cms-build": "vite build"
   },
-  "author": "Les Kleuver",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
@@ -41,7 +27,6 @@
   "dependencies": {
     "@sveltia/cms": "^0.56.2",
     "axios": "^1.7.9",
-    "caniuse-lite": "^1.0.30001696",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
     "yargs": "^17.7.2"
