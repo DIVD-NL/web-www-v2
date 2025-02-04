@@ -34,7 +34,6 @@ jobs:
           npm run update-stats
           npm run cms-build
           hugo --minify
-          npm run postbuild
       #      - name: Test HTML code
       #        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
       #        with:
