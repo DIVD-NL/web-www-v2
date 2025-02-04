@@ -39,7 +39,7 @@
     "vite": "^5.4.12"
   },
   "dependencies": {
-    "@sveltia/cms": "^0.55.0",
+    "@sveltia/cms": "^0.56.2",
     "axios": "^1.7.9",
     "caniuse-lite": "^1.0.30001695",
     "gray-matter": "^4.0.3",
