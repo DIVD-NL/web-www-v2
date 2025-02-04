@@ -1,11 +1,11 @@
-import { get } from 'axios';
+import axios from 'axios';
 import { readFileSync, writeFileSync } from 'fs';
-import matter, { stringify } from 'gray-matter';
+import matter from 'gray-matter';
 
 async function updateMarkdown() {
   try {
     // Fetch the data from the endpoint
-    const response = await get('https://csirt.divd.nl/csv/stats.json');
+    const response = await axios.get('https://csirt.divd.nl/csv/stats.json');
     const { data } = response;
 
     // Initialize totals
@@ -36,7 +36,7 @@ async function updateMarkdown() {
       frontMatter.mission.ips = totalIps.toLocaleString('nl-NL');
 
       // Convert back to markdown with updated front matter
-      const newContent = stringify(parsed.content, frontMatter);
+      const newContent = matter.stringify(parsed.content, frontMatter);
 
       // Write the updated content back to the file
       writeFileSync(filePath, newContent, 'utf8');
