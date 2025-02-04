@@ -1,16 +1,15 @@
-const fs = require('fs');
-const path = require('path');
-const yargs = require('yargs');
-const axios = require('axios');
-const matter = require('gray-matter');
+import { readFileSync, existsSync, writeFileSync } from 'fs';
+import { join } from 'path';
+import { option } from 'yargs';
+import { post } from 'axios';
+import matter, { stringify } from 'gray-matter';
 
-const { argv } = yargs
-  .option('team-path', {
-    describe: 'path of directory to create team md files',
-    type: 'string',
-    demandOption: true,
-    default: './content/who-we-are/team',
-  })
+const { argv } = option('team-path', {
+  describe: 'path of directory to create team md files',
+  type: 'string',
+  demandOption: true,
+  default: './content/who-we-are/team',
+})
   .option('create-teams', {
     describe: 'If set, will create the teams that are in TheOrg',
     type: 'boolean',
@@ -24,7 +23,7 @@ const url = 'https://prod-graphql-api.theorg.com/graphql';
 const headers = { 'Content-Type': 'application/json' };
 
 const fetchTeamsAndMembers = async () => {
-  const query = fs.readFileSync(path.join(__dirname, 'queries/teamsByCompany.graphql'), 'utf8');
+  const query = readFileSync(join(__dirname, 'queries/teamsByCompany.graphql'), 'utf8');
 
   const payload = {
     operationName: 'teamsByCompany',
@@ -38,7 +37,7 @@ const fetchTeamsAndMembers = async () => {
   };
 
   try {
-    const response = await axios.post(url, payload, { headers });
+    const response = await post(url, payload, { headers });
     console.log('Updating teams');
 
     const teamsFilePath = `${argv['team-path']}/_index.en.md`;
@@ -46,8 +45,8 @@ const fetchTeamsAndMembers = async () => {
     let existingTeams = [];
     let existingFrontMatter = {};
 
-    if (fs.existsSync(teamsFilePath)) {
-      const fileContent = fs.readFileSync(teamsFilePath, 'utf8');
+    if (existsSync(teamsFilePath)) {
+      const fileContent = readFileSync(teamsFilePath, 'utf8');
       const parsedContent = matter(fileContent);
       existingContent = parsedContent.content;
       existingTeams = parsedContent.data.teams || [];
@@ -108,8 +107,8 @@ const fetchTeamsAndMembers = async () => {
       teams: existingTeams,
     };
 
-    const updatedContent = matter.stringify(existingContent, fileData);
-    fs.writeFileSync(teamsFilePath, updatedContent);
+    const updatedContent = stringify(existingContent, fileData);
+    writeFileSync(teamsFilePath, updatedContent);
     console.log('\ndone');
   } catch (error) {
     console.error('Failed to fetch teams and members:', error);

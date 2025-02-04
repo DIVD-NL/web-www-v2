@@ -1,11 +1,11 @@
-const axios = require('axios');
-const fs = require('fs');
-const matter = require('gray-matter');
+import { get } from 'axios';
+import { readFileSync, writeFileSync } from 'fs';
+import matter, { stringify } from 'gray-matter';
 
 async function updateMarkdown() {
   try {
     // Fetch the data from the endpoint
-    const response = await axios.get('https://csirt.divd.nl/csv/stats.json');
+    const response = await get('https://csirt.divd.nl/csv/stats.json');
     const { data } = response;
 
     // Initialize totals
@@ -24,7 +24,7 @@ async function updateMarkdown() {
     ['en', 'nl'].forEach((lang) => {
       // Read the existing markdown file
       const filePath = `content/block/_index.${lang}.md`;
-      const fileContent = fs.readFileSync(filePath, 'utf8');
+      const fileContent = readFileSync(filePath, 'utf8');
 
       // Parse the front matter
       const parsed = matter(fileContent);
@@ -36,10 +36,10 @@ async function updateMarkdown() {
       frontMatter.mission.ips = totalIps.toLocaleString('nl-NL');
 
       // Convert back to markdown with updated front matter
-      const newContent = matter.stringify(parsed.content, frontMatter);
+      const newContent = stringify(parsed.content, frontMatter);
 
       // Write the updated content back to the file
-      fs.writeFileSync(filePath, newContent, 'utf8');
+      writeFileSync(filePath, newContent, 'utf8');
 
       console.log(`${lang} file updated successfully!`);
     });

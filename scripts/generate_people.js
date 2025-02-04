@@ -1,21 +1,20 @@
-const axios = require('axios');
-const fs = require('fs');
-const path = require('path');
-const yargs = require('yargs');
-const matter = require('gray-matter');
+import { get, post } from 'axios';
+import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
+import { option } from 'yargs';
+import matter, { stringify } from 'gray-matter';
 
-const { argv } = yargs
-  .option('member-path', {
-    describe: 'path to directory to create member md files',
-    type: 'string',
-    demandOption: true,
-    default: './content/who-we-are/team/people',
-  })
+const { argv } = option('member-path', {
+  describe: 'path to directory to create member md files',
+  type: 'string',
+  demandOption: true,
+  default: './content/who-we-are/team/people',
+})
   .help()
   .alias('help', 'h');
 
 const doesDirExist = (dirPath) => {
-  if (!fs.existsSync(dirPath)) {
+  if (!existsSync(dirPath)) {
     console.error('Error: Output directory does not exist.');
     return false;
   }
@@ -28,7 +27,7 @@ const headers = { 'Content-Type': 'application/json' };
 
 const fetchPublications = async () => {
   try {
-    const response = await axios.get(additionalDataURL);
+    const response = await get(additionalDataURL);
 
     return response.data;
   } catch (error) {
@@ -39,7 +38,7 @@ const fetchPublications = async () => {
 };
 
 const fetchPeople = async () => {
-  const query = fs.readFileSync(path.join(__dirname, 'queries/fullCompany.graphql'), 'utf8');
+  const query = readFileSync(join(__dirname, 'queries/fullCompany.graphql'), 'utf8');
 
   const payload = {
     operationName: 'Company',
@@ -47,7 +46,7 @@ const fetchPeople = async () => {
     query,
   };
 
-  const response = await axios.post(url, payload, { headers });
+  const response = await post(url, payload, { headers });
   console.log('Updating people', '');
 
   if (response.data.error) {
@@ -96,20 +95,20 @@ const generatePeople = async () => {
         if (person.social.websiteUrl) newPersonData.links.push({ name: 'Website', link: person.social.websiteUrl });
       }
 
-      if (fs.existsSync(personFilePath)) {
-        const existingFile = fs.readFileSync(personFilePath, 'utf8');
+      if (existsSync(personFilePath)) {
+        const existingFile = readFileSync(personFilePath, 'utf8');
         const existingContent = matter(existingFile);
 
         // Overwrite newPersonData.description and image with existing ones if available
         newPersonData.description = existingContent.data.description ?? person.description;
         newPersonData.image = existingContent.data.image ?? newPersonData.image;
 
-        const updatedContent = matter.stringify(existingContent.content, { ...existingContent.data, ...newPersonData });
-        fs.writeFileSync(personFilePath, updatedContent);
+        const updatedContent = stringify(existingContent.content, { ...existingContent.data, ...newPersonData });
+        writeFileSync(personFilePath, updatedContent);
       } else {
         // Create new file with new data and markdown content
-        const newFileContent = matter.stringify(person.description ?? '', newPersonData);
-        fs.writeFileSync(personFilePath, newFileContent);
+        const newFileContent = stringify(person.description ?? '', newPersonData);
+        writeFileSync(personFilePath, newFileContent);
       }
 
       process.stdout.write('.');
