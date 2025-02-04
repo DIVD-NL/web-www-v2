@@ -16,6 +16,9 @@ export default [
     rules: {
       ...prettierPlugin.configs.recommended.rules,
     },
+    env: {
+      node: true,
+    },
   },
   // Prettier's configuration to disable conflicting ESLint rules
   prettierConfig,

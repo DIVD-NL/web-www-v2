@@ -1,15 +1,21 @@
 import { readFileSync, existsSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { option } from 'yargs';
-import { post } from 'axios';
-import matter, { stringify } from 'gray-matter';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
+import axios from 'axios';
+import matter from 'gray-matter';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const { argv } = option('team-path', {
-  describe: 'path of directory to create team md files',
-  type: 'string',
-  demandOption: true,
-  default: './content/who-we-are/team',
-})
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const { argv } = yargs(hideBin(process.argv))
+  .option('team-path', {
+    describe: 'path to directory to create member md files',
+    type: 'string',
+    demandOption: true,
+    default: './content/who-we-are/team',
+  })
   .option('create-teams', {
     describe: 'If set, will create the teams that are in TheOrg',
     type: 'boolean',
@@ -37,7 +43,7 @@ const fetchTeamsAndMembers = async () => {
   };
 
   try {
-    const response = await post(url, payload, { headers });
+    const response = await axios.post(url, payload, { headers });
     console.log('Updating teams');
 
     const teamsFilePath = `${argv['team-path']}/_index.en.md`;
@@ -107,7 +113,7 @@ const fetchTeamsAndMembers = async () => {
       teams: existingTeams,
     };
 
-    const updatedContent = stringify(existingContent, fileData);
+    const updatedContent = matter.stringify(existingContent, fileData);
     writeFileSync(teamsFilePath, updatedContent);
     console.log('\ndone');
   } catch (error) {
