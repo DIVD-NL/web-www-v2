@@ -41,7 +41,7 @@
   "dependencies": {
     "@sveltia/cms": "^0.55.0",
     "axios": "^1.7.9",
-    "caniuse-lite": "^1.0.30001695",
+    "caniuse-lite": "^1.0.30001696",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
     "yargs": "^17.7.2"
