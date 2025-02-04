@@ -1,5 +1,7 @@
 {
   "name": "divd",
+  "type": "module",
+  "license": "ISC",
   "scripts": {
     "postbuild": "node ./scripts/postbuild.js",
     "gen-people": "node ./scripts/generate_people.js",
@@ -8,7 +10,6 @@
     "cms": "vite",
     "cms-build": "vite build"
   },
-  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "buffer": "^6.0.3",
