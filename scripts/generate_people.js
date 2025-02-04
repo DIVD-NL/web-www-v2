@@ -1,15 +1,21 @@
-import { get, post } from 'axios';
+import axios from 'axios';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { option } from 'yargs';
-import matter, { stringify } from 'gray-matter';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
+import matter from 'gray-matter';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const { argv } = option('member-path', {
-  describe: 'path to directory to create member md files',
-  type: 'string',
-  demandOption: true,
-  default: './content/who-we-are/team/people',
-})
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const { argv } = yargs(hideBin(process.argv))
+  .option('member-path', {
+    describe: 'path to directory to create member md files',
+    type: 'string',
+    demandOption: true,
+    default: './content/who-we-are/team/people',
+  })
   .help()
   .alias('help', 'h');
 
@@ -27,7 +33,7 @@ const headers = { 'Content-Type': 'application/json' };
 
 const fetchPublications = async () => {
   try {
-    const response = await get(additionalDataURL);
+    const response = await axios.get(additionalDataURL);
 
     return response.data;
   } catch (error) {
@@ -46,7 +52,7 @@ const fetchPeople = async () => {
     query,
   };
 
-  const response = await post(url, payload, { headers });
+  const response = await axios.post(url, payload, { headers });
   console.log('Updating people', '');
 
   if (response.data.error) {
@@ -103,11 +109,11 @@ const generatePeople = async () => {
         newPersonData.description = existingContent.data.description ?? person.description;
         newPersonData.image = existingContent.data.image ?? newPersonData.image;
 
-        const updatedContent = stringify(existingContent.content, { ...existingContent.data, ...newPersonData });
+        const updatedContent = matter.stringify(existingContent.content, { ...existingContent.data, ...newPersonData });
         writeFileSync(personFilePath, updatedContent);
       } else {
         // Create new file with new data and markdown content
-        const newFileContent = stringify(person.description ?? '', newPersonData);
+        const newFileContent = matter.stringify(person.description ?? '', newPersonData);
         writeFileSync(personFilePath, newFileContent);
       }
 
