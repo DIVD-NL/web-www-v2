@@ -14,5 +14,6 @@ export default {
   local_backend: true,
   media_folder: '/assets/images',
   public_folder: '/images',
+  site_url: 'https://divd.nl',
   collections,
 };
