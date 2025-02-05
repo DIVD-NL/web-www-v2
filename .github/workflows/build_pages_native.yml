@@ -69,13 +69,8 @@ jobs:
           remote_host: ${{ secrets.DEPLOY_HOST }}
           remote_user: ${{ secrets.DEPLOY_USER }}
           remote_key: ${{ secrets.DEPLOY_KEY }}
-      - name: List build artifacts
-        run: |
-          ls admin
-          ls admin/new-cms
       - name: Deploy GitHub pages
+        if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging' }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: admin
-          clean: true
-          force: true
