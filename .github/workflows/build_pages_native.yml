@@ -75,6 +75,5 @@ jobs:
           ls admin/new-cms
       - name: Deploy GitHub pages
         uses: JamesIves/github-pages-deploy-action@v4
-        if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging' }}
         with:
           folder: admin
