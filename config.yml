@@ -17,6 +17,7 @@ collections:
   - name: "_index"
     label: "Home page"
     slug: "_index"
+    path: "_index"
     i18n: true
     folder: "content"
     create: false
@@ -261,6 +262,7 @@ collections:
     name: "testimonials"
     folder: "content/testimonials"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -290,6 +292,7 @@ collections:
     label: "Contact"
     folder: "content/contact"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -325,6 +328,7 @@ collections:
     label: "Warning email"
     folder: "content/warningemail"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -448,6 +452,7 @@ collections:
     name: "newsroom"
     folder: "content/newsroom"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -699,6 +704,7 @@ collections:
     label: "Contribute"
     folder: "content/contribute"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -870,6 +876,7 @@ collections:
     label: "Become a partner"
     folder: "content/contribute/partners"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -947,6 +954,7 @@ collections:
     label: "Volunteers"
     folder: "content/contribute/volunteers"
     slug: "_index"
+    path: "_index"
     i18n: true
     create: false
     fields:
@@ -995,6 +1003,7 @@ collections:
     label: "What we do"
     folder: "content/what-we-do"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1064,6 +1073,7 @@ collections:
     label: "Code of conduct"
     folder: "content/what-we-do/code-of-conduct"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1081,6 +1091,7 @@ collections:
     label: "Code of ethics"
     folder: "content/what-we-do/code-of-ethics"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1093,6 +1104,7 @@ collections:
     label: "Terms and Conditions"
     folder: "content/toc"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1104,6 +1116,7 @@ collections:
     label: "Privacy"
     folder: "content/privacy"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1115,6 +1128,7 @@ collections:
     label: "ANBI"
     folder: "content/anbi"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1126,6 +1140,7 @@ collections:
     label: "Coordinated Vulnerability Disclosure"
     folder: "content/security"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1142,6 +1157,7 @@ collections:
     label: "Who we are"
     folder: "content/who-we-are"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1205,6 +1221,7 @@ collections:
     label: "Team"
     folder: "content/who-we-are/team"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1346,6 +1363,7 @@ collections:
     label: "Why our work matters"
     folder: "content/why-our-work-matters"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1457,6 +1475,7 @@ collections:
     label: "Dictionary"
     folder: "content/dictionary"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1483,6 +1502,7 @@ collections:
     label: "Blocks"
     folder: "content/block"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
