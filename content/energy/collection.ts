@@ -3,7 +3,7 @@ import { landingPageSections } from '../../layouts/partials/sections';
 export const ProjectEnergyCollection = {
   name: 'ProjectEnergy',
   label: 'Project Energy',
-  folder: 'content/project-energy',
+  folder: 'content/energy',
   slug: '_index',
   create: true,
   i18n: true,
