@@ -2,4 +2,7 @@
   {{ if eq .type "faq" }}
     {{ partial "sections/faq/faq" . }}
   {{ end }}
+  {{ if eq .type "two-columns" }}
+    {{ partial "sections/two-columns/two-columns" . }}
+  {{ end }}
 {{ end }}

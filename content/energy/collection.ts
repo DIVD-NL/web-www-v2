@@ -5,6 +5,7 @@ export const ProjectEnergyCollection = {
   label: 'Project Energy',
   folder: 'content/energy',
   slug: '_index',
+  path: '_index',
   create: true,
   i18n: true,
   fields: [

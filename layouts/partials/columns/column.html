@@ -1,0 +1,5 @@
+{{ range . }}
+  {{ if eq .type "text-column" }}
+    {{ partial "columns/text/text" . }}
+  {{ end }}
+{{ end }}

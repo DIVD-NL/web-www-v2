@@ -1,3 +1,14 @@
+import { TextColumn } from '../../columns/text';
+
+const columnTypes = [TextColumn];
+
+const sharedColumnProperties = {
+  widget: 'list',
+  min: 1,
+  max: 1,
+  types: columnTypes,
+};
+
 export const TwoColumnsSection = {
   label: 'Two Columns Section',
   required: false,
@@ -7,18 +18,18 @@ export const TwoColumnsSection = {
     {
       label: 'Left/upper column',
       name: 'left',
-      widget: 'list',
-      types: [],
-      min: 1,
-      max: 1,
+      ...sharedColumnProperties,
     },
     {
       label: 'Right/lower column',
       name: 'right',
-      widget: 'list',
-      types: [],
-      min: 1,
-      max: 1,
+      ...sharedColumnProperties,
     },
+    {
+      label: 'Background',
+      name: 'background',
+      widget: 'boolean',
+    },
+    { label: 'Type', name: 'type', widget: 'hidden', default: 'two-columns' },
   ],
 };
