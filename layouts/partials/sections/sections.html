@@ -1,6 +1,6 @@
 {{ range .Params.sections }}
-  {{ if eq .type "hero-section" }}
-    {{ partial "sections/hero-section/hero-section" . }}
+  {{ if eq .type "hero" }}
+    {{ partial "sections/hero/hero" . }}
   {{ else if eq .type "faq" }}
     {{ partial "sections/faq/faq" . }}
   {{ else if eq .type "two-columns" }}
