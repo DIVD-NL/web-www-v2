@@ -25,7 +25,8 @@ sections:
           Hoewel individuele apparaten weinig directe impact hebben op het elektriciteitsnetwerk, kan grootschalige manipulatie door kwaadwillenden wel degelijk het elektriciteitsnetwerk ontwrichten en in sommige gevallen leiden tot een black-out op (inter)nationale schaal. Dit maakt het eerdergenoemde ‘smart grid’ kwetsbaar voor verstoring en angstzaaierij. 
 
           In een tijd waarin hybride oorlogsvoering steeds vaker voorkomt, groeit het besef dat samenwerking tussen alle betrokken partijen essentieel is om mogelijke ontwrichting van onze energievoorziening te voorkomen.*
-    background: true
+    background:
+      color: light-black
   - type: two-columns
     left:
       - type: text-column
@@ -51,7 +52,7 @@ sections:
     left:
       - type: text-column
         content: |-
-          ## Oproep tot samenwerking
+          ## Ben jij onze nieuwe partner?
 
           DIVD zoekt partners die willen bijdragen aan een digitaal veiliger energiesysteem. Daarom nodigen we bedrijven, experts en professionals uit om expertise, apparatuur of onderzoekscapaciteit beschikbaar te stellen. Download ons sponsordeck voor meer informatie
         cta:
@@ -65,6 +66,7 @@ sections:
         image: /images/bamboozled.jpg
         description: Hackers van achteren gefotografeerd
         rounded: false
-    background: true
+    background:
+      color: divd-yellow
 type: landing-page
 ---
