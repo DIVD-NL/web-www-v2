@@ -6,10 +6,11 @@ sections:
     lead: Met onze nieuwe onderzoekslijn versterken we de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem.
     cta:
       label: download partnerdeck
-      url: google.nl
+      url: pad/naar/bestand
       invertedColors: false
-      external: true
-    image: DIVD-Project-Energy.png
+      external: false
+      download: true
+    image: /images/global/becomevolunteer.png
     imageDescription: Duurzame energie met zonnepanelen, een windmolen en EV laadpaal
   - type: two-columns
     left:
@@ -39,6 +40,7 @@ sections:
           url: pagina-op-divd-nl
           invertedColors: false
           external: false
+          download: false
     right:
       - type: image-column
         image: DIVD x Cybersquad 2024.jpg
@@ -52,12 +54,17 @@ sections:
           ## Oproep tot samenwerking
 
           DIVD zoekt partners die willen bijdragen aan een digitaal veiliger energiesysteem. Daarom nodigen we bedrijven, experts en professionals uit om expertise, apparatuur of onderzoekscapaciteit beschikbaar te stellen. Download ons sponsordeck voor meer informatie
-
-          !! todo: hier komt knopje
+        cta:
+          label: download partnerdeck
+          url: pad/naar/bestand
+          invertedColors: false
+          external: false
+          download: true
     right:
-      - type: text-column
-        content: '!! todo: hier komt plaatje'
+      - type: image-column
+        image: /images/bamboozled.jpg
+        description: Hackers van achteren gefotografeerd
+        rounded: false
     background: true
 type: landing-page
 ---
-
