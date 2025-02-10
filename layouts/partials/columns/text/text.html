@@ -1,1 +1,6 @@
-<article>{{ .content | markdownify }}</article>
+<article>
+  {{ .content | markdownify }}
+  {{ if .cta }}
+    {{ partial "components/button/button" .cta }}
+  {{ end }}
+</article>
