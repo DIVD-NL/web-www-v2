@@ -10,6 +10,7 @@ sections:
       invertedColors: false
       external: true
     image: /images/global/becomevolunteer.png
+    imageDescription: Duurzame energie met zonnepanelen, een windmolen en EV laadpaal
   - type: two-columns
     left:
       - type: caption-column
@@ -34,8 +35,10 @@ sections:
 
           !! todo: hier komt knopje
     right:
-      - type: text-column
-        content: '!! todo: hier komt plaatje'
+      - type: image-column
+        image: /images/bamboozled.jpg
+        description: Hackers van achteren gefotografeerd
+        rounded: true
     background: false
   - type: two-columns
     left:
