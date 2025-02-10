@@ -1,4 +1,4 @@
-import button from "../button";
+import { Button } from '../button';
 
 export default {
   label: 'case',
@@ -20,7 +20,7 @@ export default {
       required: false,
     },
     {
-      ...button,
+      ...Button,
       label: 'Case link',
       name: 'link',
       required: false,

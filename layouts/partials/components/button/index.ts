@@ -1,4 +1,4 @@
-export default {
+export const Button = {
   label: 'Button',
   name: 'button',
   required: false,

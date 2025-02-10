@@ -1,4 +1,4 @@
-import button from '../../components/button';
+import { Button } from '../../components/button';
 
 export const Faq = {
   label: 'FAQ',
@@ -36,12 +36,12 @@ export const Faq = {
       i18n: true,
     },
     {
-      ...button,
+      ...Button,
       label: 'Left button',
       name: 'leftButton',
     },
     {
-      ...button,
+      ...Button,
       label: 'Right button',
       name: 'rightButton',
     },
