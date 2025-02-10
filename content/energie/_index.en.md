@@ -48,6 +48,12 @@ sections:
         description: Hackers van achteren gefotografeerd
         rounded: true
     background: false
+  - type: highlighted-cases
+    title: Eerdere onderzoeken van DIVD binnen de energiesector
+    highlights:
+      - /newsroom/articles/91cd52191c65
+      - /newsroom/articles/case-apache-log4j2
+      - /newsroom/articles/case-solarwinds-orion
   - type: two-columns
     left:
       - type: text-column
@@ -70,3 +76,4 @@ sections:
       color: divd-yellow
 type: landing-page
 ---
+
