@@ -1,4 +1,5 @@
 import { CaptionColumn } from '../../columns/caption';
+import { ImageColumn } from '../../columns/image';
 import { TextColumn } from '../../columns/text';
 
 const columnTypes = [CaptionColumn, TextColumn];
@@ -7,7 +8,6 @@ const sharedColumnProperties = {
   widget: 'list',
   min: 1,
   max: 1,
-  types: columnTypes,
 };
 
 export const TwoColumnsSection = {
@@ -19,11 +19,13 @@ export const TwoColumnsSection = {
     {
       label: 'Left/upper column',
       name: 'left',
+      types: columnTypes,
       ...sharedColumnProperties,
     },
     {
       label: 'Right/lower column',
       name: 'right',
+      types: [...columnTypes, ImageColumn],
       ...sharedColumnProperties,
     },
     {

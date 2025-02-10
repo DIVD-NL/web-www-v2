@@ -1,6 +1,8 @@
 {{ range . }}
   {{ if eq .type "caption-column" }}
     {{ partial "columns/caption/caption" . }}
+  {{ else if eq .type "image-column" }}
+    {{ partial "columns/image/image" . }}
   {{ else if eq .type "text-column" }}
     {{ partial "columns/text/text" . }}
   {{ end }}

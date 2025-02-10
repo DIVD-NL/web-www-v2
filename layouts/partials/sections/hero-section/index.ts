@@ -27,6 +27,11 @@ export const HeroSection = {
       name: 'image',
       widget: 'image',
     },
+    {
+      label: 'Hero image accessibility description',
+      name: 'imageDescription',
+      widget: 'string',
+    },
     { label: 'Type', name: 'type', widget: 'hidden', default: 'hero-section' },
   ],
 };
