@@ -1,8 +1,9 @@
 {{ range .Params.sections }}
-  {{ if eq .type "faq" }}
+  {{ if eq .type "hero-section" }}
+    {{ partial "sections/hero-section/hero-section" . }}
+  {{ else if eq .type "faq" }}
     {{ partial "sections/faq/faq" . }}
-  {{ end }}
-  {{ if eq .type "two-columns" }}
+  {{ else if eq .type "two-columns" }}
     {{ partial "sections/two-columns/two-columns" . }}
   {{ end }}
 {{ end }}

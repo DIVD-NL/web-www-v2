@@ -1,6 +1,15 @@
 ---
 title: Project energy
 sections:
+  - type: hero-section
+    title: Samen voor een digitaal veilige energiesector
+    lead: Met onze nieuwe onderzoekslijn versterken we de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem.
+    cta:
+      label: download sponsordeck
+      url: google.nl
+      invertedColors: false
+      external: true
+    image: /images/global/becomevolunteer.png
   - type: two-columns
     left:
       - type: text-column
@@ -28,7 +37,7 @@ sections:
           !! todo: hier komt knopje
     right:
       - type: text-column
-        content: "!! todo: hier komt plaatje"
+        content: '!! todo: hier komt plaatje'
     background: false
   - type: two-columns
     left:
@@ -41,7 +50,8 @@ sections:
           !! todo: hier komt knopje
     right:
       - type: text-column
-        content: "!! todo: hier komt plaatje"
+        content: '!! todo: hier komt plaatje'
     background: true
 type: landing-page
 ---
+
