@@ -9,7 +9,7 @@ sections:
       url: google.nl
       invertedColors: false
       external: true
-    image: /images/global/becomevolunteer.png
+    image: DIVD-Project-Energy.png
     imageDescription: Duurzame energie met zonnepanelen, een windmolen en EV laadpaal
   - type: two-columns
     left:
@@ -41,7 +41,7 @@ sections:
           external: false
     right:
       - type: image-column
-        image: /images/bamboozled.jpg
+        image: DIVD x Cybersquad 2024.jpg
         description: Hackers van achteren gefotografeerd
         rounded: true
     background: false
@@ -56,7 +56,8 @@ sections:
           !! todo: hier komt knopje
     right:
       - type: text-column
-        content: "!! todo: hier komt plaatje"
+        content: '!! todo: hier komt plaatje'
     background: true
 type: landing-page
 ---
+
