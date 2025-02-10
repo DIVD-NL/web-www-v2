@@ -31,9 +31,14 @@ sections:
         content: |-
           ## DIVD kijkt waar netbeheerders niet kunnen komen
 
-          Netbeheerders controleren alleen het energienetwerk tot de aansluiting, terwijl de grootste risico’s in slimme apparaten achter de meter liggen. DIVD kan en mag wel tot achter de aansluiting onderzoek verrichten. Wij onderzoeken deze apparaten, identificeert kwetsbaarheden en informeert fabrikanten om misbruik te voorkomen.
+          Netbeheerders controleren alleen het energienetwerk tot de aansluiting, terwijl de grootste risico’s in slimme apparaten achter de meter liggen. DIVD kan en mag wel tot achter de aansluiting onderzoek verrichten. 
 
-          !! todo: hier komt knopje
+          Wij onderzoeken deze apparaten, identificeert kwetsbaarheden en informeert fabrikanten om misbruik te voorkomen.
+        cta:
+          label: lees meer over divd
+          url: pagina-op-divd-nl
+          invertedColors: false
+          external: false
     right:
       - type: image-column
         image: /images/bamboozled.jpg
@@ -51,8 +56,7 @@ sections:
           !! todo: hier komt knopje
     right:
       - type: text-column
-        content: '!! todo: hier komt plaatje'
+        content: "!! todo: hier komt plaatje"
     background: true
 type: landing-page
 ---
-
