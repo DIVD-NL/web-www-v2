@@ -1,7 +1,7 @@
 ---
 title: Project energie
 sections:
-  - type: hero-section
+  - type: hero
     title: Samen voor een digitaal veilige energiesector
     lead: Met onze nieuwe onderzoekslijn versterken we de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem.
     cta:
