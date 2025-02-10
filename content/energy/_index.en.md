@@ -5,7 +5,7 @@ sections:
     title: Samen voor een digitaal veilige energiesector
     lead: Met onze nieuwe onderzoekslijn versterken we de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem.
     cta:
-      label: download sponsordeck
+      label: download partnerdeck
       url: google.nl
       invertedColors: false
       external: true

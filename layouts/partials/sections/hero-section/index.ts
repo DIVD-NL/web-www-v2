@@ -18,6 +18,7 @@ export const HeroSection = {
     },
     {
       ...Button,
+      required: true,
       name: 'cta',
       label: 'Call to Action',
     },
