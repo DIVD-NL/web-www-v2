@@ -32,7 +32,13 @@ export const Button = {
       widget: 'boolean',
       required: false,
       default: 'false',
-      i18n: true,
+    },
+    {
+      label: 'Download link',
+      name: 'download',
+      widget: 'boolean',
+      required: false,
+      default: 'false',
     },
   ],
 };
