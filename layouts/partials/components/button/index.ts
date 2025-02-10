@@ -3,6 +3,7 @@ export const Button = {
   name: 'button',
   required: false,
   widget: 'object',
+  collapsed: true,
   fields: [
     {
       label: 'Label',

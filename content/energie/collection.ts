@@ -15,6 +15,7 @@ export const ProjectEnergyCollection = {
       label_singular: 'Section',
       name: 'sections',
       widget: 'list',
+      collapsed: true,
       types: landingPageSections,
     },
     { label: 'Type', name: 'type', widget: 'hidden', default: 'landing-page' },
