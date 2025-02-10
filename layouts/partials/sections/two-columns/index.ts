@@ -1,6 +1,7 @@
 import { CaptionColumn } from '../../columns/caption';
 import { ImageColumn } from '../../columns/image';
 import { TextColumn } from '../../columns/text';
+import { Background } from '../../styling/background';
 
 const columnTypes = [CaptionColumn, TextColumn];
 
@@ -28,11 +29,7 @@ export const TwoColumnsSection = {
       types: [...columnTypes, ImageColumn],
       ...sharedColumnProperties,
     },
-    {
-      label: 'Background',
-      name: 'background',
-      widget: 'boolean',
-    },
+    Background,
     { label: 'Type', name: 'type', widget: 'hidden', default: 'two-columns' },
   ],
 };
