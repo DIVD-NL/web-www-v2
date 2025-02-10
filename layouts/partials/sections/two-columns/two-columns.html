@@ -1,10 +1,10 @@
 {{ if .background }}
-  <div class="bg-light-black text-white py-16 rounded-bl-[300px]">
+  <div class="bg-light-black text-white py-6 desktop:py-16 desktop:rounded-bl-[300px]">
 {{ end }}
 
-<section class="container py-20 flex gap-12 text-body ">
-  <section class="w-1/2">{{ partial "columns/column" .left }}</section>
-  <section class="w-1/2">{{ partial "columns/column" .right }}</section>
+<section class="container flex py-8 desktop:py-20 flex-col desktop:flex-row px-8 desktop:px-0 gap-4 desktop:gap-12 text-body">
+  <section class="desktop:w-1/2">{{ partial "columns/column" .left }}</section>
+  <section class="desktop:w-1/2">{{ partial "columns/column" .right }}</section>
 </section>
 
 {{ if .background }}

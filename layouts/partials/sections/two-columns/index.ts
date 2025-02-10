@@ -1,6 +1,7 @@
+import { CaptionColumn } from '../../columns/caption';
 import { TextColumn } from '../../columns/text';
 
-const columnTypes = [TextColumn];
+const columnTypes = [CaptionColumn, TextColumn];
 
 const sharedColumnProperties = {
   widget: 'list',
