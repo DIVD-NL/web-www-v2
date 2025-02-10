@@ -1,4 +1,4 @@
-import { ProjectEnergyCollection } from '../content/energy/collection';
+import { ProjectEnergyCollection } from '../content/energie/collection';
 import { HomeCollection } from '../layouts/collection';
 import { Collection as ArticlesCollection } from '../layouts/newsroom/collection';
 import { Collection as DocumentsCollection } from './documents';
