@@ -1,5 +1,5 @@
 ---
-title: Project energy
+title: Project energie
 sections:
   - type: hero-section
     title: Samen voor een digitaal veilige energiesector
