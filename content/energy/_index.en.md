@@ -12,11 +12,9 @@ sections:
     image: /images/global/becomevolunteer.png
   - type: two-columns
     left:
-      - type: text-column
-        content: |-
-          ## Een slim, duurzaam maar kwetsbaar energiesysteem
-
-          ### Waarom veiligheid cruciaal is
+      - type: caption-column
+        title: Een slim, duurzaam maar kwetsbaar energiesysteem
+        subtitle: Waarom veiligheid cruciaal is
     right:
       - type: text-column
         content: |-
