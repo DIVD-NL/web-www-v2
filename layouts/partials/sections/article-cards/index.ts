@@ -1,6 +1,6 @@
-export const HighlightedCasesSection = {
-  name: 'highlighted-cases-section',
-  label: 'Highlighted Cases Section',
+export const ArticleCardsSection = {
+  name: 'article-cards-section',
+  label: 'Article Cards Section',
   required: false,
   widget: 'object',
   fields: [
@@ -11,16 +11,14 @@ export const HighlightedCasesSection = {
       i18n: true,
     },
     {
-      label: 'Highlights',
-      name: 'highlights',
+      label: 'Selected Articles',
+      name: 'articles',
       widget: 'relation',
       collection: 'articles',
       search_fields: ['title', 'case.caseid'],
       value_field: '/newsroom/articles/{{slug}}',
       display_fields: ['title', 'case.caseid'],
       multiple: true,
-      min: 3,
-      max: 3,
     },
   ],
 };

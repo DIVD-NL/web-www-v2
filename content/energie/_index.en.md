@@ -93,6 +93,11 @@ sections:
         rounded: false
     background:
       color: divd-yellow
+  - type: article-cards-section
+    title: Nieuwe en lopende onderzoeken
+    articles:
+      - /newsroom/articles/078c788911d9
+      - /newsroom/articles/case-ivanti
 type: landing-page
 ---
 
