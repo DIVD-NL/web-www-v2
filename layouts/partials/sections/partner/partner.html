@@ -1,0 +1,38 @@
+<div class="bg-[rgba(61,220,235,0.2)]">
+  <div class="bg-light-black py-20 desktop:py-24 desktop:rounded-tr-[300px]">
+    <section class="container flex flex-col gap-6 text-white text-center">
+      <h2 class="tracking-wide">{{ .title }}</h2>
+
+      <div
+        class="grid grid-cols-1 desktop:grid-cols-3 flex-wrap px-4 desktop:px-0 gap-8 mt-8">
+        {{ range .partners }}
+          <article>
+            <figure class="h-[200px] bg-white rounded-t-[20px] p-3">
+              <img
+                class="h-full w-full object-contain"
+                src="{{ .logo }}"
+                alt="Logo {{ .name }}" />
+            </figure>
+
+            <div
+              class="text-left p-6 bg-black h-[260px] rounded-b-[20px] relative">
+              <h3 class="line-clamp-1 mb-4">{{ .name }}</h3>
+              <p class="line-clamp-3">
+                {{ .description }}
+              </p>
+              <div class="absolute bottom-8 left-6">
+                {{ partial "components/button/button.html" (dict
+                  "label" "Bezoek site"
+                  "url" .url
+                  "invertedColors" true
+                  "external" true
+                  )
+                }}
+              </div>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  </div>
+</div>

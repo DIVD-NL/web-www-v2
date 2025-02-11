@@ -1,4 +1,8 @@
-<a class="border-none" href="{{ .url }}" {{ if .download }}download{{ end }}>
+<a
+  class="border-none"
+  href="{{ .url }}"
+  {{ if .external }}target="_blank"{{ end }}
+  {{ if .download }}download{{ end }}>
   <button
     class="px-6 py-3 gap-x-2 {{ if .invertedColors }}
       inverse

@@ -58,12 +58,21 @@ sections:
     title: Huidige partners
     partners:
       - name: Partner 1
-        description: |-
-          Lorem ipsum dolor sit amet
-          consectetur. Sagittis volutpat risus
-          euismod venenatis gravida purus non.
+        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
         url: https://google.nl/
         logo: DIVD-Project-Energy.png
+      - name: Partner 2
+        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
+        url: https://google.nl/
+        logo: DIVD-Project-Energy.png
+      - name: Partner 3
+        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
+        url: https://google.nl/
+        logo: DIVD-Project-Energy.png
+      - name: Moar
+        description: asd
+        url: asf
+        logo: DIVD x Cybersquad 2024.jpg
   - type: two-columns-section
     left:
       - type: text-column
