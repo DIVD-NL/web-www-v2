@@ -1,5 +1,5 @@
 export const HighlightedCases = {
-  name: 'highlighted-cases',
+  name: 'highlighted-cases-section',
   label: 'Highlighted Cases Section',
   required: false,
   widget: 'object',
