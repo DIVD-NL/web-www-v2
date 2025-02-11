@@ -14,7 +14,7 @@ const sharedColumnProperties = {
 export const TwoColumnsSection = {
   label: 'Two Columns Section',
   required: false,
-  name: 'two-columns',
+  name: 'two-columns-section',
   widget: 'object',
   fields: [
     {
@@ -30,6 +30,5 @@ export const TwoColumnsSection = {
       ...sharedColumnProperties,
     },
     Background,
-    { label: 'Type', name: 'type', widget: 'hidden', default: 'two-columns' },
   ],
 };

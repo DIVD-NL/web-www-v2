@@ -1,7 +1,7 @@
 ---
 title: Project energie
 sections:
-  - type: hero
+  - type: hero-section
     title: Samen voor een digitaal veilige energiesector
     lead: Met onze nieuwe onderzoekslijn versterken we de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem.
     cta:
@@ -12,7 +12,7 @@ sections:
       download: true
     image: /images/global/becomevolunteer.png
     imageDescription: Duurzame energie met zonnepanelen, een windmolen en EV laadpaal
-  - type: two-columns
+  - type: two-columns-section
     left:
       - type: caption-column
         title: Een slim, duurzaam maar kwetsbaar energiesysteem
@@ -27,7 +27,7 @@ sections:
           In een tijd waarin hybride oorlogsvoering steeds vaker voorkomt, groeit het besef dat samenwerking tussen alle betrokken partijen essentieel is om mogelijke ontwrichting van onze energievoorziening te voorkomen.*
     background:
       color: light-black
-  - type: two-columns
+  - type: two-columns-section
     left:
       - type: text-column
         content: |-
@@ -48,13 +48,23 @@ sections:
         description: Hackers van achteren gefotografeerd
         rounded: true
     background: false
-  - type: highlighted-cases
+  - type: highlighted-cases-section
     title: Eerdere onderzoeken van DIVD binnen de energiesector
     highlights:
       - /newsroom/articles/91cd52191c65
       - /newsroom/articles/case-apache-log4j2
       - /newsroom/articles/case-solarwinds-orion
-  - type: two-columns
+  - type: partner-section
+    title: Huidige partners
+    partners:
+      - name: Partner 1
+        description: |-
+          Lorem ipsum dolor sit amet
+          consectetur. Sagittis volutpat risus
+          euismod venenatis gravida purus non.
+        url: https://google.nl/
+        logo: DIVD-Project-Energy.png
+  - type: two-columns-section
     left:
       - type: text-column
         content: |-

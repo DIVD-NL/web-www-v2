@@ -32,6 +32,5 @@ export const HeroSection = {
       name: 'imageDescription',
       widget: 'string',
     },
-    { label: 'Type', name: 'type', widget: 'hidden', default: 'hero' },
   ],
 };
