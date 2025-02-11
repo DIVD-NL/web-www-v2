@@ -1,5 +1,7 @@
 {{ range .Params.sections }}
-  {{ if eq .type "hero-section" }}
+  {{ if eq .type "article-cards-section" }}
+    {{ partial "sections/article-cards/article-cards" . }}
+  {{ else if eq .type "hero-section" }}
     {{ partial "sections/hero/hero" . }}
   {{ else if eq .type "highlighted-cases-section" }}
     {{ partial "sections/highlighted-cases/highlighted-cases" . }}
