@@ -98,6 +98,7 @@ sections:
     articles:
       - /newsroom/articles/078c788911d9
       - /newsroom/articles/case-ivanti
+      - /newsroom/articles/divd-responsibly-discloses-six-new-zero-day-vulnerabilities-to-vendor
 type: landing-page
 ---
 
