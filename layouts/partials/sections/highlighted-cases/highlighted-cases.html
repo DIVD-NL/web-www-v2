@@ -7,23 +7,31 @@
       {{ range .highlights }}
         {{ with site.GetPage . }}
           <article class="desktop:w-1/3 rounded-[20px]">
-            <figure class="h-[250px]">
+            <figure class="h-[250px] relative">
               {{ with .Params.image }}
                 <img
                   class="rounded-tl-[20px] object-cover h-full [clip-path:polygon(0%_0%,calc(100%-77px)_0%,100%_67px,100%_100%,0%_100%)]"
                   src="{{ . | relURL }}"
                   alt="{{ $.Title }}" />
               {{ end }}
+              <div
+                class="absolute h-full w-full top-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_75%,rgba(0,0,0,0.4)_100%)]"></div>
+              <article
+                class="absolute bottom-5 left-5 text-white px-3 py-0.5 border-[3px] border-solid border-white rounded-full">
+                {{ dateFormat "2006" .Date }}
+              </article>
             </figure>
+
             <section
               class="bg-white px-5 py-6 text-left h-[300px] line-clamp-[9] overflow-clip">
               <h3 class="tracking-wide leading-7 mb-4">
                 {{ .Title }}
               </h3>
               <p>
-                {{ .Content }}
+                {{ .Params.intro }}
               </p>
             </section>
+
             <section
               class="flex bg-white h-[88px] rounded-b-[20px] items-end p-5">
               {{ partial "components/button/button.html" (dict
