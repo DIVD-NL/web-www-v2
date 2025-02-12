@@ -4,7 +4,7 @@
   "license": "ISC",
   "scripts": {
     "postbuild": "node ./scripts/postbuild.js",
-    "gen-people": "tsx ./scripts/generate_people.ts",
+    "gen-people": "tsx ./scripts/generate_people",
     "gen-teams": "node ./scripts/generate_teams.js",
     "update-stats": "node ./scripts/update_stats.js",
     "cms": "vite",
