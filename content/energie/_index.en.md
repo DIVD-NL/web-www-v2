@@ -27,6 +27,22 @@ sections:
           In een tijd waarin hybride oorlogsvoering steeds vaker voorkomt, groeit het besef dat samenwerking tussen alle betrokken partijen essentieel is om mogelijke ontwrichting van onze energievoorziening te voorkomen.*
     background:
       color: light-black
+  - type: slider-section
+    title: Wat gaan we doen?
+    description: "Met het project 'CVD in de energiesector' focust DIVD zich op kennisontwikkeling, samenwerking en bewustwording binnen de energiesector. In 2025 zetten we de volgende stappen:"
+    cards:
+      - title: IoT Hacking Lab
+        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        image: iothacking.png
+      - title: Onderzoek
+        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        image: onderzoek.png
+      - title: Educatie
+        description: Samen met DIVD.Academy wordt er lesmateriaal ontwikkeld, trainingen verzorgd en studenten opgeleid over de veiligheid van slimme energiesystemen.
+        image: educatie.png
+      - title: Samenwerken
+        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        image: samenwerking.png
   - type: two-columns-section
     left:
       - type: text-column
