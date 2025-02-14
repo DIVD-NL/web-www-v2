@@ -87,6 +87,22 @@ function initAccordion(el: HTMLDivElement) {
   });
 }
 
+function initSlider(el: HTMLDivElement) {
+  const slidable = el.querySelector('#slidable');
+  el.querySelector('#slider-left-button')?.addEventListener('click', function () {
+    slidable?.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  el.querySelector('#slider-right-button')?.addEventListener('click', function () {
+    slidable?.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+}
+
+function initAllSliders() {
+  let els = document.querySelectorAll<HTMLDivElement>('#divd-slider');
+  els.forEach(initSlider);
+}
+
 function initAllCarousels() {
   let els = document.querySelectorAll<HTMLDivElement>('.carousel');
   els.forEach(initCarousel);
@@ -104,6 +120,7 @@ function initUI() {
   initMainMenu();
   initAllCarousels();
   initAllAccordions();
+  initAllSliders();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
