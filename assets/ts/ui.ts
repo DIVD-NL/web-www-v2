@@ -90,11 +90,11 @@ function initAccordion(el: HTMLDivElement) {
 function initSlider(el: HTMLDivElement) {
   const slidable = el.querySelector('#slidable');
   el.querySelector('#slider-left-button')?.addEventListener('click', function () {
-    slidable?.scrollBy({ left: -300, behavior: 'smooth' });
+    slidable?.scrollBy({ left: -370, behavior: 'smooth' });
   });
 
   el.querySelector('#slider-right-button')?.addEventListener('click', function () {
-    slidable?.scrollBy({ left: 300, behavior: 'smooth' });
+    slidable?.scrollBy({ left: 370, behavior: 'smooth' });
   });
 }
 

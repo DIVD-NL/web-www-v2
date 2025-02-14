@@ -38,7 +38,7 @@ sections:
         description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
         image: onderzoek.png
       - title: Educatie
-        description: Samen met DIVD.Academy wordt er lesmateriaal ontwikkeld, trainingen verzorgd en studenten opgeleid over de veiligheid van slimme energiesystemen.
+        description: Samen met [DIVD.Academy](DIVD.Academy) wordt er lesmateriaal ontwikkeld, trainingen verzorgd en studenten opgeleid over de veiligheid van slimme energiesystemen.
         image: educatie.png
       - title: Samenwerken
         description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.

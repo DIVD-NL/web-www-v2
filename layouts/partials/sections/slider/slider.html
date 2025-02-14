@@ -1,22 +1,23 @@
-<section class="container mt-10 mb-10 deskto">
+<section class="container p-10 desktop:p-20 desktop:pl-0 desktop:pr-0">
     <h2 class="text-6xl font-bold text-left max-w-lg">{{ .title }}</h2>
     <p class="text-xl text-left text-gray-600 max-w-lg">{{ .description }}</p>
     <div id="divd-slider" class="desktop:min-w-[1290px]">
         <div id="slidable" class="flex flex-row gap-2 snap-x snap-mandatory scroll-smooth overflow-scroll mb-10">
             {{ range .cards }}
-                <article class="flex-shrink-0 w-[360px] rounded-xl shadow-lg">
-                    <img src="{{ .image }}" alt="{{ .title }}" ></img>
-                    <div class="bg-black rounded-b-xl p-6 h-[188px]">
-                        <h3 class="text-2xl text-white truncate">{{ .title }}</h3>
-                        <p class="text-[1rem] text-white line-clamp-4">{{ .description }}</p>
-                    </div>
-                </article>
+            <article class="flex-shrink-0 w-[360px] rounded-xl shadow-lg">
+                <img src="{{ .image }}" alt="{{ .title }}"></img>
+                <div class="bg-black rounded-b-xl p-6 h-[188px]">
+                    <h3 class="text-2xl text-white truncate">{{ .title }}</h3>
+                    <p class="text-[1rem] text-white line-clamp-4 [&_a]:text-gray-600 make-links-inside-divd-yellow">{{
+                        .description | markdownify }}</p>
+                </div>
+            </article>
             {{ end }}
         </div>
-        <button id="slider-left-button" class="m-1 ml-0 p-1 h-[42px] w-[42px] rounded-full hover:bg-gray-200">
+        <button id="slider-left-button" class="m-1 ml-0 p-1 h-[42px] w-[42px] rounded-full">
             {{ partial "svg/icon" (dict "icon" "arrowleft" "class" "h-5 m-0") }}
         </button>
-        <button id="slider-right-button" class="m-1 p-1 h-[42px] w-[42px] rounded-full hover:bg-gray-200">
+        <button id="slider-right-button" class="m-1 p-1 h-[42px] w-[42px] rounded-full">
             {{ partial "svg/icon" (dict "icon" "arrowright" "class" "h-5 m-0") }}
         </button>
     </div>

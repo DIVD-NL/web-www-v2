@@ -27,7 +27,7 @@ export const SliderSection = {
         {
           label: 'Card description',
           name: 'description',
-          widget: 'text',
+          widget: 'markdown',
         },
         {
           label: 'Card image',
