@@ -79,3 +79,12 @@ export interface PersonData {
   profilePicture?: string;
   role: string;
 }
+
+export interface TeamData {
+  title: TeamName;
+  members: string[];
+}
+
+export interface TeamsIndex {
+  teams: TeamData[];
+}

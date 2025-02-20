@@ -5,7 +5,7 @@ import { createHash } from 'crypto';
 import { getAuthClient } from './auth';
 
 export async function downloadImage(url: string, outputPath: string): Promise<string> {
-  console.log(`\nProcessing image from URL: ${url}`);
+  console.log(`\nProcessing image from URL`);
 
   const fileId = url.match(/\/d\/([^/]+)/)?.[1] || url.match(/id=([^&]+)/)?.[1];
 
@@ -13,7 +13,7 @@ export async function downloadImage(url: string, outputPath: string): Promise<st
     throw new Error(`Invalid Google Drive URL: ${url}`);
   }
 
-  console.log(`Extracted file ID: ${fileId}`);
+  console.log(`Extracted file ID`);
 
   const auth = await getAuthClient();
   const drive = google.drive({ version: 'v3', auth });

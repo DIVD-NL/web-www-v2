@@ -4,6 +4,8 @@ import { downloadImage } from './imageDownloader';
 import { promises as fs } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { GoogleAuth } from 'google-auth-library';
+import { JSONClient } from 'google-auth-library/build/src/auth/googleauth';
 
 export class FormProcessor {
   private headerRow: string[] = [];
@@ -13,7 +15,7 @@ export class FormProcessor {
     console.log('FormProcessor initialized with field mappings');
   }
 
-  async processResponses(auth: any, config: Config): Promise<Map<string, PersonData>> {
+  async processResponses(auth: GoogleAuth<JSONClient>, config: Config): Promise<Map<string, PersonData>> {
     const sheets = google.sheets({ version: 'v4', auth });
 
     console.log('Fetching spreadsheet metadata...');
@@ -98,6 +100,7 @@ export class FormProcessor {
         role: personData.role || 'Volunteer',
         intro: personData.about,
         links: Object.entries(personData.socialLinks)
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
           .filter(([_, url]) => url)
           .map(([platform, url]) => ({
             platform: platform as keyof typeof personData.socialLinks,
@@ -106,11 +109,10 @@ export class FormProcessor {
         csirt_cases: [],
         csirt_posts: [],
         cve_records: [],
-        description: personData.about,
       };
 
       const markdown = matter.stringify('', frontMatter);
-      const filename = `${baseFileName}.md`;
+      const filename = `${baseFileName}.en.md`;
       await fs.writeFile(path.join(config.outputDir, filename), markdown);
 
       updatedPeople.set(filename.replace('.md', ''), personData);
