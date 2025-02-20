@@ -37,6 +37,7 @@ export interface FormFieldMapping {
     facebook: string;
     website: string;
     profilePicture: string;
+    role: string;
   };
   validation: {
     consent: { validValues: string[]; transform?: (value: string) => string };
@@ -53,6 +54,7 @@ export const DEFAULT_FORM_MAPPING: FormFieldMapping = {
     lastName: 'Last name',
     about: 'About you',
     teams: 'Select your team(s)',
+    role: 'Role',
     linkedin: 'LinkedIn',
     twitter: 'Twitter',
     facebook: 'Facebook',
@@ -75,4 +77,5 @@ export interface PersonData {
   teams: TeamName[];
   socialLinks: { linkedin?: string; twitter?: string; facebook?: string; website?: string };
   profilePicture?: string;
+  role: string;
 }

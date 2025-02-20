@@ -69,6 +69,13 @@ export class FormProcessor {
       const baseFileName = `${firstName.toLowerCase()}-${lastName.toLowerCase()}`;
       console.log(`\nProcessing entry for: ${firstName} ${lastName}`);
 
+      const defaultProfilePictures = [
+        '/images/divd-profilepicture-volunteer1.svg',
+        '/images/divd-profilepicture-volunteer2.svg',
+        '/images/divd-profilepicture-volunteer3.svg',
+        '/images/divd-profilepicture-volunteer4.svg',
+      ];
+
       let localImagePath = '';
       if (personData.profilePicture) {
         try {
@@ -78,14 +85,17 @@ export class FormProcessor {
           console.log(`Profile picture processed: ${localImagePath}`);
         } catch (error) {
           console.error(`Failed to download image for ${firstName} ${lastName}:`, error);
+          localImagePath = defaultProfilePictures[Math.floor(Math.random() * defaultProfilePictures.length)];
         }
+      } else {
+        localImagePath = defaultProfilePictures[Math.floor(Math.random() * defaultProfilePictures.length)];
       }
 
       const frontMatter = {
         type: 'people',
         title: `${firstName} ${lastName}`,
-        image: localImagePath ? `/${localImagePath}` : '',
-        role: 'Volunteer',
+        image: localImagePath ? `${localImagePath}` : '',
+        role: personData.role || 'Volunteer',
         intro: personData.about,
         links: Object.entries(personData.socialLinks)
           .filter(([_, url]) => url)
@@ -169,6 +179,7 @@ export class FormProcessor {
       firstName: getValue('firstName').trim(),
       lastName: getValue('lastName').trim(),
       about: getValue('about'),
+      role: getValue('role').trim() || 'Volunteer',
       teams,
       socialLinks: {
         linkedin: getValue('linkedin'),
