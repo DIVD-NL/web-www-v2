@@ -1,0 +1,9 @@
+:root {
+  --divd-yellow: #FFD736;
+}
+
+.make-links-inside-divd-yellow {
+  a {
+    color: var(--divd-yellow);
+  }
+}
