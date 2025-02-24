@@ -1,9 +1,20 @@
 :root {
-  --divd-yellow: #FFD736;
+  --divd-yellow: #ffd736;
 }
 
 .make-links-inside-divd-yellow {
   a {
     color: var(--divd-yellow);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
   }
 }
