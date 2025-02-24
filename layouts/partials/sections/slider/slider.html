@@ -7,7 +7,7 @@
     <div id="divd-slider" class="desktop:min-w-[1320px]">
         <div id="slidable" class="flex flex-row justify-start gap-2 snap-x snap-mandatory scroll-smooth overflow-scroll mb-10">
             {{ range .cards }}
-            <article class="flex-shrink-0 w-[360px] rounded-xl rounded-t-[270px] shadow-xl">
+            <article class="flex-shrink-0 w-[360px] rounded-xl rounded-t-[270px] shadow-[0_8px_50px_0_rgba(0,0,0,0.06)]">
                 <img src="{{ .image }}" alt="{{ .title }}"></img>
                 <div class="bg-black rounded-b-xl p-6 h-[188px]">
                     <h3 class="text-2xl text-white truncate">{{ .title }}</h3>
