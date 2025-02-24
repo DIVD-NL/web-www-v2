@@ -1,8 +1,11 @@
-<section class="container p-10 desktop:p-20 desktop:pl-0 desktop:pr-0">
+<!-- About ml-[calc((100vw-1200px)/2)]: the class `container` has a max-width 1200 and then 
+ centers everything. The slider on desktop needs to go on indefintly to the right beyond 1200 
+ so we calculate the same left margin for this section -->
+<section class="desktop:ml-[calc((100vw-1200px)/2)] p-10 desktop:p-20 desktop:pl-0 desktop:pr-0">
     <h2 class="text-6xl font-bold text-left max-w-lg">{{ .title }}</h2>
     <p class="text-xl text-left text-gray-600 max-w-lg">{{ .description }}</p>
     <div id="divd-slider" class="desktop:min-w-[1320px]">
-        <div id="slidable" class="flex flex-row gap-2 snap-x snap-mandatory scroll-smooth overflow-scroll mb-10">
+        <div id="slidable" class="flex flex-row justify-start gap-2 snap-x snap-mandatory scroll-smooth overflow-scroll mb-10">
             {{ range .cards }}
             <article class="flex-shrink-0 w-[360px] rounded-xl rounded-t-[270px] shadow-xl">
                 <img src="{{ .image }}" alt="{{ .title }}"></img>
