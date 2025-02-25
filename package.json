@@ -27,7 +27,7 @@
     "vite": "^6.1.1"
   },
   "dependencies": {
-    "@sveltia/cms": "^0.58.5",
+    "@sveltia/cms": "^0.59.0",
     "axios": "^1.7.9",
     "gray-matter": "^4.0.3",
     "yargs": "^17.7.2"
