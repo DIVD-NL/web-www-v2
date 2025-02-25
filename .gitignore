@@ -1,3 +1,6 @@
+# Environment variables
+.env
+
 # VS Code config
 .vscode
 
@@ -14,3 +17,12 @@ admin/new-cms
 # Package dependencies
 node_modules/
 /npm-debug.log
+
+# nvm configuration
+.nvmrc
+
+# Service account
+service-account.json
+
+# Profile pictures
+assets/images/people/profile-pictures
