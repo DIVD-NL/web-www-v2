@@ -10,6 +10,8 @@ module.exports = {
     },
     screens: {
       desktop: '1280px',
+      tablet: '430px',
+      pill: '1686px', // 1440 + 246 we need this for the pills to be large enough to be the correct shape
     },
     extend: {
       colors: {
