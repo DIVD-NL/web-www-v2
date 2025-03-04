@@ -54,3 +54,5 @@ module:
     - excludeFiles: "**.ts" # Exclude CMS config files
       source: layouts
       target: layouts
+
+enableRobotsTXT: true
