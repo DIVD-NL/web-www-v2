@@ -1,3 +1,6 @@
+# Environment variables
+.env
+
 # VS Code config
 .vscode
 
@@ -15,5 +18,11 @@ admin/new-cms
 node_modules/
 /npm-debug.log
 
-# Compilation results from the SCSS transpiler
-resources/
+# nvm configuration
+.nvmrc
+
+# Service account
+service-account.json
+
+# Profile pictures
+assets/images/people/profile-pictures
