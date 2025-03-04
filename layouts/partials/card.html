@@ -11,35 +11,36 @@
 
 {{ $alt := $imageAlt | default $name }}
 {{ if not $alt }}
-    {{ warnf "No alt tag set for card with name '%s', title '%s', link '%s' and image '%s'" $name $title $link $imageSource }}
+  {{ warnf "No alt tag set for card with name '%s', title '%s', link '%s' and image '%s'" $name $title $link $imageSource }}
 {{ end }}
 
-<section class="card {{ range $classes }} card-{{ . }} {{ end }}">
-    <figure>
-        {{ with resources.Get $imageSource }} 
-            {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
-            <!--- $alt --->
-        {{ else }}
-            <img src="#" alt="Empty image" />
-        {{ end }}
-        {{ if $tag }}
-            <figcaption>{{ $tag }}</figcaption>
-        {{ end }}
-    </figure>
-    <header>
-        {{ if $name }}
-            <h3>{{ $name }}</h3>
-            <h6>{{ $title }}</h6>
-        {{ else }}
-            <h2>{{ $title }}</h2>
-        {{ end }}
-        {{ if $link }}
-            <div class="test">
-                <a href="{{ $link }}" class="cta">{{ $linkTitle }}</a>
-            </div>
-        {{ end }}
-    </header>
-    {{ if $content }}
-        <p class="content">{{ $content }}</p>
+
+<section class="card {{ range $classes }}card-{{ . }}{{ end }}">
+  <figure>
+    {{ with resources.Get $imageSource }}
+      {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
+      <!--- $alt --->
+    {{ else }}
+      <img src="#" alt="Empty image" />
     {{ end }}
+    {{ if $tag }}
+      <figcaption>{{ $tag }}</figcaption>
+    {{ end }}
+  </figure>
+  <header>
+    {{ if $name }}
+      <h3>{{ $name }}</h3>
+      <h6>{{ $title }}</h6>
+    {{ else }}
+      <h2>{{ $title }}</h2>
+    {{ end }}
+    {{ if $link }}
+      <div class="test">
+        <a href="{{ $link }}" class="cta">{{ $linkTitle }}</a>
+      </div>
+    {{ end }}
+  </header>
+  {{ if $content }}
+    <p class="content">{{ $content }}</p>
+  {{ end }}
 </section>

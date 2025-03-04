@@ -1,21 +1,26 @@
-const axios = require('axios');
-const fs = require('fs');
-const path = require('path');
-const yargs = require('yargs');
-const matter = require('gray-matter');
+import axios from 'axios';
+import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
+import matter from 'gray-matter';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const { argv } = yargs
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const { argv } = yargs(hideBin(process.argv))
   .option('member-path', {
     describe: 'path to directory to create member md files',
     type: 'string',
     demandOption: true,
-    default: './content/who-we-are/team/people'
+    default: './content/who-we-are/team/people',
   })
   .help()
   .alias('help', 'h');
 
 const doesDirExist = (dirPath) => {
-  if (!fs.existsSync(dirPath)) {
+  if (!existsSync(dirPath)) {
     console.error('Error: Output directory does not exist.');
     return false;
   }
@@ -39,12 +44,12 @@ const fetchPublications = async () => {
 };
 
 const fetchPeople = async () => {
-  const query = fs.readFileSync(path.join(__dirname, 'queries/fullCompany.graphql'), 'utf8');
+  const query = readFileSync(join(__dirname, 'queries/fullCompany.graphql'), 'utf8');
 
   const payload = {
     operationName: 'Company',
     variables: { slug: 'dutch-institute-for-vulnerability-disclosure' },
-    query
+    query,
   };
 
   const response = await axios.post(url, payload, { headers });
@@ -72,13 +77,20 @@ const generatePeople = async () => {
       const newPersonData = {
         type: 'people',
         title: person.fullName,
-        image: person.profileImage ? `${person.profileImage.endpoint}/${person.profileImage.uri}.${person.profileImage.ext}` : ['/images/divd-profilepicture-volunteer1.svg', '/images/divd-profilepicture-volunteer2.svg', '/images/divd-profilepicture-volunteer3.svg', '/images/divd-profilepicture-volunteer4.svg'][Math.floor(Math.random() * 4)],
+        image: person.profileImage
+          ? `${person.profileImage.endpoint}/${person.profileImage.uri}.${person.profileImage.ext}`
+          : [
+              '/images/divd-profilepicture-volunteer1.svg',
+              '/images/divd-profilepicture-volunteer2.svg',
+              '/images/divd-profilepicture-volunteer3.svg',
+              '/images/divd-profilepicture-volunteer4.svg',
+            ][Math.floor(Math.random() * 4)],
         role: person.role,
         intro: '',
         links: [],
         csirt_cases: personData.csirt_cases || [],
         csirt_posts: personData.csirt_posts || [],
-        cve_records: personData.cve_records || []
+        cve_records: personData.cve_records || [],
       };
 
       // Add social links
@@ -89,8 +101,8 @@ const generatePeople = async () => {
         if (person.social.websiteUrl) newPersonData.links.push({ name: 'Website', link: person.social.websiteUrl });
       }
 
-      if (fs.existsSync(personFilePath)) {
-        const existingFile = fs.readFileSync(personFilePath, 'utf8');
+      if (existsSync(personFilePath)) {
+        const existingFile = readFileSync(personFilePath, 'utf8');
         const existingContent = matter(existingFile);
 
         // Overwrite newPersonData.description and image with existing ones if available
@@ -98,11 +110,11 @@ const generatePeople = async () => {
         newPersonData.image = existingContent.data.image ?? newPersonData.image;
 
         const updatedContent = matter.stringify(existingContent.content, { ...existingContent.data, ...newPersonData });
-        fs.writeFileSync(personFilePath, updatedContent);
+        writeFileSync(personFilePath, updatedContent);
       } else {
         // Create new file with new data and markdown content
         const newFileContent = matter.stringify(person.description ?? '', newPersonData);
-        fs.writeFileSync(personFilePath, newFileContent);
+        writeFileSync(personFilePath, newFileContent);
       }
 
       process.stdout.write('.');

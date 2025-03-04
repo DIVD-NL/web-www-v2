@@ -1,83 +1,85 @@
 {{ define "main" }}
   <div class="topic-layout whatwedo">
-    
     <div class="bg-gradient bg-gradient-reverse">
       <div class="topic-intro reverse">
         {{ partial "breadcrumbs.html" . }}
         {{ partial "p/layout_open" (dict "classes" (slice "right")) }}
-          <div>
-            <h1>{{ .Params.opener }}</h1>
-          </div>
-          <div>
-            <p>{{ .Params.intro }}</p>
-            <a class="cta secondary" href="#mission">{{ i18n "learnmore" }}</a>
-          </div>
+        <div>
+          <h1>{{ .Params.opener }}</h1>
+        </div>
+        <div>
+          <p>{{ .Params.intro }}</p>
+          <a class="cta secondary" href="#mission">{{ i18n "learnmore" }}</a>
+        </div>
         {{ partial "p/layout_close" }}
       </div>
 
       <div class="intro-image intro-image-smaller">
-        {{ with resources.Get "images/global/what_we_do_main.svg" }} 
+        {{ with resources.Get "images/global/what_we_do_main.svg" }}
           <img src="{{ .RelPermalink }}" alt="What we do" />
         {{ end }}
       </div>
     </div>
 
-    {{ partial "p/section_open" (dict "classes" (slice "inverse" ))}} 
+    {{ partial "p/section_open" (dict "classes" (slice "inverse" )) }}
+    {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
 
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
 
-          <div class="reverse">
-            <h2 id="mission" class="offset">{{ .Params.whatwedocontent.title }}</h2>
-            <div>{{ .Params.whatwedocontent.description |markdownify }}</div>
-          </div>
+    <div class="reverse">
+      <h2 id="mission" class="offset">{{ .Params.whatwedocontent.title }}</h2>
+      <div>{{ .Params.whatwedocontent.description |markdownify }}</div>
+    </div>
+    <div>
+      <ul class="sumup">
+        <li>
+          {{ with resources.Get "/images/global/scan_for_vulnerabilities.png" }}
+            <img src="{{ .RelPermalink }}" alt="{{ .Params.scouting.title }}" />
+          {{ end }}
           <div>
-            <ul class="sumup">
-              <li>
-                {{ with resources.Get "/images/global/scan_for_vulnerabilities.png" }} 
-                  <img src="{{ .RelPermalink }}" alt="{{ .Params.scouting.title }}" />
-                {{ end }}
-                <div>
-                  <h3>{{ .Params.scouting.title }}</h3>
-                  <p>{{ .Params.scouting.description }}</p>
-                </div>
-              </li>
-              <li>
-                {{ with resources.Get "/images/global/assessing_vulnerability_scope.png" }} 
-                  <img src="{{ .RelPermalink }}" alt="{{ .Params.assessing.title }}" />
-                {{ end }}
-                <div>
-                  <h3>{{ .Params.assessing.title }}</h3>
-                  <p>{{ .Params.assessing.description }}</p>
-                </div>
-              </li>
-              <li>
-                {{ with resources.Get "/images/global/report_to_the_right_people.png" }} 
-                  <img src="{{ .RelPermalink }}" alt="{{ .Params.reporting.title }}" />
-                {{ end }}
-                <div>
-                  <h3>{{ .Params.reporting.title}}</h3>
-                  <p>{{ .Params.reporting.description }}</p>
-                </div>
-              </li>
-            </ul>
+            <h3>{{ .Params.scouting.title }}</h3>
+            <p>{{ .Params.scouting.description }}</p>
           </div>
-          {{ partial "p/layout_close" }}
-          {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
-          <div class="overlap-bottom">
-            {{ partial "block/divd_stats.html" .}}
+        </li>
+        <li>
+          {{ with resources.Get "/images/global/assessing_vulnerability_scope.png" }}
+            <img
+              src="{{ .RelPermalink }}"
+              alt="{{ .Params.assessing.title }}" />
+          {{ end }}
+          <div>
+            <h3>{{ .Params.assessing.title }}</h3>
+            <p>{{ .Params.assessing.description }}</p>
           </div>
-          {{ partial "p/layout_close" }}
+        </li>
+        <li>
+          {{ with resources.Get "/images/global/report_to_the_right_people.png" }}
+            <img
+              src="{{ .RelPermalink }}"
+              alt="{{ .Params.reporting.title }}" />
+          {{ end }}
+          <div>
+            <h3>{{ .Params.reporting.title }}</h3>
+            <p>{{ .Params.reporting.description }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    {{ partial "p/layout_close" }}
+    {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
+    <div class="overlap-bottom">
+      {{ partial "block/divd_stats.html" . }}
+    </div>
+    {{ partial "p/layout_close" }}
 
-    {{ partial "p/section_close" }}  
-    {{ partial "p/section_open" (dict "classes" (slice "gradient" "pt-md" ))}} 
-      
-      {{ partial "block/proudestwork" . }}
-      {{ partial "block/ethics" . }}
+    {{ partial "p/section_close" }}
+    {{ partial "p/section_open" (dict "classes" (slice "gradient" "pt-md" )) }}
+    {{ partial "block/proudestwork" . }}
+    {{ partial "block/ethics" . }}
 
     {{ partial "p/section_close" }}
 
-    {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
-      {{ partial "block/testimonials" }}
+    {{ partial "p/section_open" (dict "classes" (slice "default")) }}
+    {{ partial "block/testimonials" }}
     {{ partial "p/section_close" }}
   </div>
 {{ end }}

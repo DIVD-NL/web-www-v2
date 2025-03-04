@@ -1,0 +1,18 @@
+<a
+  class="border-none"
+  href="{{ .url }}"
+  {{ if .external }}target="_blank"{{ end }}
+  {{ if .download }}download{{ end }}>
+  <button
+    class="px-6 py-3 gap-x-2 {{ if .invertedColors }}
+      inverse
+    {{ end }}"
+    {{ if .external }}rel=“noopener noreferrer”{{ end }}>
+    {{ .label }}
+    {{ if .external }}
+      {{ partial "svg/icon" "external" }}
+    {{ else if .download }}
+      {{ partial "svg/icon" "download" }}
+    {{ end }}
+  </button>
+</a>

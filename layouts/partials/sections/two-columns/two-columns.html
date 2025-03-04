@@ -1,0 +1,12 @@
+{{ with .background }}
+  <div class="py-6 desktop:py-16 desktop:rounded-bl-[300px] {{if eq .color "light-black" }}bg-light-black text-white{{ else }}bg-DIVD-yellow{{ end }}">
+{{ end }}
+
+<section class="container flex py-8 desktop:py-20 flex-col desktop:flex-row px-8 desktop:px-0 gap-8 desktop:gap-16 text-body">
+  <section class="desktop:w-1/2">{{ partial "columns/column" .left }}</section>
+  <section class="desktop:w-1/2">{{ partial "columns/column" .right }}</section>
+</section>
+
+{{ if .background }}
+  </div>
+{{ end }}

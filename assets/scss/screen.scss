@@ -1,4 +1,7 @@
 @import "reset.scss";
+
+@tailwind base;
+
 @import "fonts.scss";
 @import "variables.scss";
 @import "typography.scss";
@@ -15,4 +18,8 @@
 
 @import "pages/volunteers.scss";
 @import "pages/newsroom.scss";
-@import "pages/why-our-work-matters.scss";
+
+@tailwind components;
+@tailwind utilities;
+
+@import "divdwind/utilities.scss";

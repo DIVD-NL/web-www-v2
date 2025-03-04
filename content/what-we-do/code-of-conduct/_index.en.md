@@ -2,21 +2,24 @@
 type: codeofconduct
 title: Code of Conduct
 ---
+
 ## CODE OF CONDUCT 2.1
 
 1. DIVD is a Dutch research institute that works with volunteers who aim to make the digital world safer by searching the internet for vulnerabilities and reporting the findings to those who can fix these vulnerabilities.
 2. As we work on sensitive data, gathered without informed consent, we established this Code of Conduct to provide an ethical base for the work we do. This code can also be used by other researchers working on what is currently referred to as responsible disclosure, or coordinated vulnerability disclosure.
 3. In our research projects we, for example:
 
-   * Scan the internet for vulnerabilities, mostly Common Vulnerabilities and Exposures (CVEs), and report our findings and possible solutions to the owners of these systems.
-   * Analyse online systems for new vulnerabilities (zero-days), report our findings to the makers and try to help them out in fixing the vulnerabilities.
-   * Analyse databases with leaked credentials and report to the organisations or people who are compromised to take appropriate measures.
-   * Work with trusted partners to extend our reach and notify as many organisations and people as possible
+   - Scan the internet for vulnerabilities, mostly Common Vulnerabilities and Exposures (CVEs), and report our findings and possible solutions to the owners of these systems.
+   - Analyse online systems for new vulnerabilities (zero-days), report our findings to the makers and try to help them out in fixing the vulnerabilities.
+   - Analyse databases with leaked credentials and report to the organisations or people who are compromised to take appropriate measures.
+   - Work with trusted partners to extend our reach and notify as many organisations and people as possible
+
 4. We are aware that we operate at the edges of what is legally allowed, so we proceed by these three criteria commonly used in court cases on vulnerability disclosures:
 
-   * Societal need: we do vulnerability disclosure to prevent online damage to as many internet users as possible and don’t serve any particular financial, political or individual interests.
-   * Principle of Proportionality: we serve this need with appropriate means. Our research should increase and not decrease the integrity and availability of online systems.
-   * Principle of Subsidiarity: if several means are available to meet the need, we opt for the one which has the least impact.
+   - Societal need: we do vulnerability disclosure to prevent online damage to as many internet users as possible and don’t serve any particular financial, political or individual interests.
+   - Principle of Proportionality: we serve this need with appropriate means. Our research should increase and not decrease the integrity and availability of online systems.
+   - Principle of Subsidiarity: if several means are available to meet the need, we opt for the one which has the least impact.
+
 5. We validate our findings to prevent reporting false positives or miss false negatives and sometimes need to verify if a vulnerability is actually present. We use custom-made scripts based on publicly available proof of concepts or non-weaponized exploit code and take good care that we don’t damage systems, download too much personal data, or create backdoors.
 6. Our findings typically consist of lists with several to millions of IP addresses, the type of vulnerability found, contact information, and metadata (e.g. timestamps, scripts, researchers working on the data). This is sensitive data, so we take all precautions necessary to protect the confidentiality of this data.
 7. We disclose zero-day vulnerabilities to the vendor first, then request CVE numbers and negotiate a reasonable time span for disclosing it to our Trusted Information Sharing Partners and the broader public. Ideally, the disclosure is preceded by a patch. If a vendor is obviously slow in providing the patch and it is likely others may discover and abuse the vulnerability, we may consider disclosure to warn potential victims and advise them on mitigation measures.

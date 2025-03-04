@@ -1,0 +1,41 @@
+<!-- About ml-[calc((100vw-1200px)/2)]: the class `container` has a max-width 1200 and then 
+ centers everything. The slider on desktop needs to go on indefintly to the right beyond 1200 
+ so we calculate the same left margin for this section -->
+<section
+  class="desktop:ml-[calc((100vw-1200px)/2)] py-10 desktop:py-20 flex flex-col gap-8">
+  <article class="px-8">
+    <h2 class="text-6xl font-bold text-left max-w-lg">{{ .title }}</h2>
+    <p class="text-xl text-left text-gray-600 max-w-lg">{{ .description }}</p>
+  </article>
+  <div id="divd-slider" class="desktop:min-w-[1320px] flex flex-col gap-y-8">
+    <div
+      id="slidable"
+      class="flex flex-row justify-start gap-8 snap-x snap-mandatory scroll-smooth overflow-scroll scrollbar-hidden px-8 desktop:p-0">
+      {{ range .cards }}
+        <article
+          class="flex-shrink-0 w-[360px] rounded-xl rounded-t-[270px] shadow-[0_8px_50px_0_rgba(0,0,0,0.06)] snap-center">
+          <img src="{{ .image }}" alt="{{ .title }}" />
+          <div class="bg-black rounded-b-xl p-6 h-[188px]">
+            <h3 class="text-2xl text-white truncate">{{ .title }}</h3>
+            <p
+              class="text-[1rem] text-white line-clamp-4 [&_a]:text-gray-600 make-links-inside-divd-yellow">
+              {{ .description | markdownify }}
+            </p>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+    <article class="px-8">
+      <button
+        id="slider-left-button"
+        class="m-1 ml-0 p-1 h-[42px] w-[42px] rounded-full">
+        {{ partial "svg/icon" (dict "icon" "arrowleft" "class" "h-5 m-0") }}
+      </button>
+      <button
+        id="slider-right-button"
+        class="m-1 p-1 h-[42px] w-[42px] rounded-full">
+        {{ partial "svg/icon" (dict "icon" "arrowright" "class" "h-5 m-0") }}
+      </button>
+    </article>
+  </div>
+</section>

@@ -4,17 +4,18 @@
       "files": ["*.html"],
       "options": {
         "parser": "go-template",
-        "goTemplateBracketSpacing": true,
-        "bracketSameLine": true
+        "bracketSameLine": true,
+        "bracketSpacing": true,
+        "goTemplateBracketSpacing": true
       }
     },
     {
-      "files": ["*.js", "*.ts"],
+      "files": ["*.js", "*.mjs", "*.ts"],
       "options": {
-        "useTabs": true,
         "printWidth": 120,
         "singleQuote": true
       }
     }
-  ]
+  ],
+  "plugins": ["prettier-plugin-go-template"]
 }

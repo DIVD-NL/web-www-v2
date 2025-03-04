@@ -1,0 +1,17 @@
+{{ range .Params.sections }}
+  {{ if eq .type "article-cards-section" }}
+    {{ partial "sections/article-cards/article-cards" . }}
+  {{ else if eq .type "slider-section" }}
+    {{ partial "sections/slider/slider" . }}
+  {{ else if eq .type "hero-section" }}
+    {{ partial "sections/hero/hero" . }}
+  {{ else if eq .type "highlighted-cases-section" }}
+    {{ partial "sections/highlighted-cases/highlighted-cases" . }}
+  {{ else if eq .type "faq" }}
+    {{ partial "sections/faq/faq" . }}
+  {{ else if eq .type "partner-section" }}
+    {{ partial "sections/partner/partner" . }}
+  {{ else if eq .type "two-columns-section" }}
+    {{ partial "sections/two-columns/two-columns" . }}
+  {{ end }}
+{{ end }}

@@ -1,83 +1,99 @@
 {{ define "main" }}
   <div class="topic-layout warningemail">
-    
     <div class="bg-gradient bottom-lg">
       <div class="topic-intro reverse">
         {{ partial "breadcrumbs.html" . }}
         {{ partial "p/layout_open" (dict "classes" (slice "right")) }}
-          <div>
-            <h1>{{ .Params.opener }}</h1>
-          </div>
-          <div>
-            <p>{{ .Params.intro }}</p>
-            <a class="cta secondary" href="#mission">{{ i18n "learnmore" }}</a>
-          </div>
+        <div>
+          <h1>{{ .Params.opener }}</h1>
+        </div>
+        <div>
+          <p>{{ .Params.intro }}</p>
+          <a class="cta secondary" href="#mission">{{ i18n "learnmore" }}</a>
+        </div>
         {{ partial "p/layout_close" }}
       </div>
     </div>
 
-    {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top-lg"))}} 
+    {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top-lg")) }}
 
-      {{ partial "p/layout_open" (dict "classes" (slice "overlap-top" )) }}
-        {{ with .Params.csirt }}
-          <div class="panel">
-            <div class="flex flex-50">
-              <div>
-                <h2>{{ .title }}</h2>
-                <div class="markdown">{{ .description |markdownify }}</div>
-                <a class="button external" href="https://csirt.divd.nl/" target="_blank" >CSIRT SITE {{partial "svg/icon" "external"}}</a>
-              </div>
-              <div class="image-grow">
-                {{ with resources.Get "images/global/warningemail.png" }} 
-                  {{ partial "tools/rimg/img" (dict "img" . "alt" "notification email") }}
-                {{ end }}
-              </div>
-            </div>
-          </div>
-        {{ end }}
-      {{ partial "p/layout_close" }}
-
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
-        {{ with .Params.stepbystep }}
-          <div class="reverse">
-            <h2>{{.title }}</h2>
-            <div class="markdown">
-              {{ .description |markdownify}}
-            </div>
-          </div>
-
+    {{ partial "p/layout_open" (dict "classes" (slice "overlap-top" )) }}
+    {{ with .Params.csirt }}
+      <div class="panel">
+        <div class="flex flex-50">
           <div>
-            <div class="steps">
-              <section>
-                <header><span>1</span><h4>{{.steps.step1title}}</h4></header>
-                <p>{{ .steps.step1description }}</p>
-              </section>
-
-              <section>
-                <header><span>2</span><h4>{{.steps.step2title}}</h4></header>
-                <p>{{ .steps.step2description }}</p>
-              </section>
-
-              <section>
-                <header><span>3</span><h4>{{.steps.step3title}}</h4></header>
-                <p>{{ .steps.step3description }}</p>
-              </section>
-
-              <section>
-                <header><span>4</span><h4>{{.steps.step4title}}</h4></header>
-                <p>{{ .steps.step4description }}</p>
-              </section>
-            </div>
+            <h2>{{ .title }}</h2>
+            <div class="markdown">{{ .description |markdownify }}</div>
+            <a
+              class="button external"
+              href="https://csirt.divd.nl/"
+              target="_blank"
+              >CSIRT SITE {{ partial "svg/icon" "external" }}</a
+            >
           </div>
-        {{ end }}
-      {{ partial "p/layout_close" }}
+          <div class="image-grow">
+            {{ with resources.Get "images/global/warningemail.png" }}
+              {{ partial "tools/rimg/img" (dict "img" . "alt" "notification email") }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+    {{ partial "p/layout_close" }}
+
+    {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+    {{ with .Params.stepbystep }}
+      <div class="reverse">
+        <h2>{{ .title }}</h2>
+        <div class="markdown">
+          {{ .description |markdownify }}
+        </div>
+      </div>
+
+      <div>
+        <div class="steps">
+          <section>
+            <header>
+              <span>1</span>
+              <h4>{{ .steps.step1title }}</h4>
+            </header>
+            <p>{{ .steps.step1description }}</p>
+          </section>
+
+          <section>
+            <header>
+              <span>2</span>
+              <h4>{{ .steps.step2title }}</h4>
+            </header>
+            <p>{{ .steps.step2description }}</p>
+          </section>
+
+          <section>
+            <header>
+              <span>3</span>
+              <h4>{{ .steps.step3title }}</h4>
+            </header>
+            <p>{{ .steps.step3description }}</p>
+          </section>
+
+          <section>
+            <header>
+              <span>4</span>
+              <h4>{{ .steps.step4title }}</h4>
+            </header>
+            <p>{{ .steps.step4description }}</p>
+          </section>
+        </div>
+      </div>
+    {{ end }}
+    {{ partial "p/layout_close" }}
 
     {{ partial "p/section_close" }}
-     
-    {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
-      {{ partial "block/ethics" . }}
-      {{ partial "block/faq" . }}
-      {{ partial "block/contact" . }}
+
+    {{ partial "p/section_open" (dict "classes" (slice "gradient")) }}
+    {{ partial "block/ethics" . }}
+    {{ partial "block/faq" . }}
+    {{ partial "block/contact" . }}
 
     {{ partial "p/section_close" }}
 

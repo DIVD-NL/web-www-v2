@@ -1,6 +1,7 @@
 ---
 title: Responsible Disclosure
 ---
+
 ## **General**
 
 At DIVD the security of our systems is a top priority. No matter how much effort we put into system security, there might be vulnerabilities present. If you discover a vulnerability, we would like to know about it so we can take steps to address it. We would like to ask you to help us protect our systems.
@@ -79,26 +80,26 @@ Destroy or corrupt, or attempt to destroy or corrupt, any data or information th
 
 Our following assets are explicitly in scope, if you find a vulnerability in a system you believe belongs to us but is not listed here we will review this on a case-by-case basis.
 
-- 	divd.nl
-- 	divd.academy
-- 	as50559.com
-- 	as50559.nl
-- 	as50559.org
-- 	haveyoubeenpwned.nl
-- 	divd.network
-- 	divdfonds.nl
-- 	divd.fund
-- 	csirt.global
-- 	divd.charity
-- 	divd.club
-- 	divd.space
-- 	divd.community
-- 	cyber-wear.nl
-- 	divd.today
-- 	divd.global
-- 	divd.family
-- 	divd.org
-- 	divd.observer
+-     divd.nl
+-     divd.academy
+-     as50559.com
+-     as50559.nl
+-     as50559.org
+-     haveyoubeenpwned.nl
+-     divd.network
+-     divdfonds.nl
+-     divd.fund
+-     csirt.global
+-     divd.charity
+-     divd.club
+-     divd.space
+-     divd.community
+-     cyber-wear.nl
+-     divd.today
+-     divd.global
+-     divd.family
+-     divd.org
+-     divd.observer
 
 ## **Out of Scope**
 

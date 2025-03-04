@@ -1,77 +1,76 @@
 {{ define "main" }}
-
   <div class="topic-layout whoweare">
-    {{ partial "breadcrumbs.html" . }} 
+    {{ partial "breadcrumbs.html" . }}
 
     <div class="bg-gradient bg-gradient-reverse">
       <div class="topic-intro reverse">
         {{ partial "p/layout_open" (dict "classes" (slice "right")) }}
-          <div>
-            <h1>{{ .Params.opener }}</h1>
-          </div>
-          <div class="pt-md">
-            <p>{{ .Params.intro }}</p>
-            <a class="cta secondary" href="#history">{{ i18n "learnmore" }}</a>
-          </div>
+        <div>
+          <h1>{{ .Params.opener }}</h1>
+        </div>
+        <div class="pt-md">
+          <p>{{ .Params.intro }}</p>
+          <a class="cta secondary" href="#history">{{ i18n "learnmore" }}</a>
+        </div>
         {{ partial "p/layout_close" }}
       </div>
 
       <div class="intro-image">
-        {{ with resources.Get "images/global/who_we_are_main.svg" }} 
+        {{ with resources.Get "images/global/who_we_are_main.svg" }}
           <img src="{{ .RelPermalink }}" alt="who we are" />
         {{ end }}
       </div>
     </div>
 
-      
-    {{ partial "p/section_open" (dict "classes" (slice "inverse" ))}} 
+    {{ partial "p/section_open" (dict "classes" (slice "inverse" )) }}
+    {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+    {{ with .Params.missionandhistory }}
+      <div class="reverse">
+        <h2 id="history" class="offset">{{ .title }}</h2>
+        <p class="pre primary">{{ .intro }}</p>
+      </div>
+      <div class="reverse">
+        <h2 class="hide-mob">&nbsp;</h2>
+        <p class="pre">{{ .description }}</p>
+      </div>
+    {{ end }}
+    {{ partial "p/layout_close" }}
 
-      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
-        {{ with .Params.missionandhistory }}
-          <div class="reverse">
-            <h2 id="history" class="offset">{{ .title }}</h2>
-            <p class="pre primary">{{ .intro }}</p>
-          </div>
-          <div class="reverse">
-            <h2 class="hide-mob">&nbsp;</h2>
-            <p class="pre">{{ .description }}</p>
-          </div>
-        {{ end }}
-      {{ partial "p/layout_close" }}
+    {{ partial "p/layout_open" (dict "classes" (slice "overlap-bottom")) }}
+    {{ with .Params.communicationmanager }}
+      <div class="person-highlight">
+        <figure>
+          {{ with resources.Get .image }}
+            {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Manager") }}
+          {{ end }}
+        </figure>
+        <article>
+          <h2>{{ .name }}</h2>
+          <h4>{{ .role }}</h4>
+          <p>{{ .description }}</p>
+          <a class="cta" href="{{ "who-we-are/team/" | relLangURL }}"
+            >{{ i18n "meetthewholeteam" }}</a
+          >
+        </article>
+      </div>
+    {{ end }}
+    {{ partial "p/layout_close" }}
 
-
-      {{ partial "p/layout_open" (dict "classes" (slice "overlap-bottom")) }}
-        {{ with .Params.communicationmanager }}
-          <div class="person-highlight">
-            <figure>
-            {{ with resources.Get .image }} 
-              {{ partial "tools/rimg/img" (dict "img" . "alt" "Communication Manager") }}
-            {{ end }}
-            </figure>
-            <article>
-              <h2>{{ .name }}</h2>
-              <h4>{{ .role }}</h4>
-              <p>{{ .description }}</p>
-              <a class="cta" href="{{ "who-we-are/team/" | relLangURL }}">{{ i18n "meetthewholeteam" }}</a>
-            </article>
-          </div>
-        {{ end }}
-      {{ partial "p/layout_close" }}
-        
     {{ partial "p/section_close" }}
-    
-    <div class="bg-gradient pt-xlg">
-      {{ partial "p/section_open" (dict "classes" (slice "default" "round" "round-topright"))}}
 
-        {{ partial "block/divdfamily" . }}
-        {{ partial "block/familycta" . }}
-        {{ partial "block/csirt" . }}
-      
+
+    <div class="bg-gradient pt-xlg">
+      {{ partial "p/section_open" (dict "classes" (slice "default" "round" "round-topright")) }}
+
+      {{ partial "block/divdfamily" . }}
+      {{ partial "block/familycta" . }}
+      {{ partial "block/csirt" . }}
+
       {{ partial "p/section_close" }}
     </div>
 
     <div class="image-fill">
-      {{ with resources.Get "images/6images.png" }} 
+      {{ with resources.Get "images/6images.png" }}
         <img src="{{ .RelPermalink }}" alt="who we are" />
       {{ end }}
     </div>

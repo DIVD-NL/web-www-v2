@@ -1,7 +1,8 @@
 ---
 title: ANBI
 ---
-## ANBI (Algemeen Nut Beogende Instelling)
+
+## ANBI
 
 STICHTING DUTCH INSTITUTE FOR VULNERABILITY DISCLOSURE (DIVD)
 

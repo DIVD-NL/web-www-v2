@@ -1,13 +1,9 @@
-{{ $isDev := ne hugo.Environment "production" }}
-{{ $cssOpts := (dict "targetPath" "styles/screen.css" "enableSourceMap" $isDev ) }}
-{{ $screenCSS := resources.Get "scss/screen.scss" | toCSS $cssOpts }}
+{{ $cssOpts := (dict "targetPath" "styles/screen.css" "enableSourceMap" (not hugo.IsProduction) ) }}
+{{ $screenCSS := resources.Get "scss/screen.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
 
 
-{{ if not $isDev }}
-  {{ $screenCSS = $screenCSS |  postCSS | minify | fingerprint }}
-{{ end }}
 <link
   href="{{ $screenCSS.RelPermalink }}"
   rel="stylesheet"
   media="screen"
-  {{ if not $isDev }}integrity="{{ $screenCSS.Data.Integrity }}"{{ end }} />
+  integrity="{{ $screenCSS.Data.Integrity }}" />

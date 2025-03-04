@@ -8,6 +8,8 @@
 public
 resources
 out
+dist
+admin/new-cms
 
 # Package dependencies
 node_modules/

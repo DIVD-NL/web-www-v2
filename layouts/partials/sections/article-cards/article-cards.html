@@ -1,0 +1,48 @@
+<section class="container py-24 text-center">
+  <h2 class="max-w-[800px] m-auto tracking-wider">{{ .title }}</h2>
+
+  <div
+    class="grid grid-cols-1 desktop:grid-cols-2 px-4 desktop:px-0 mt-12 gap-8">
+    {{ range .articles }}
+      {{ with site.GetPage . }}
+        <article
+          class="flex flex-col-reverse desktop:flex-row bg-light-gray rounded-[20px] desktop:h-[360px]">
+          <section class="px-5 py-7 text-left desktop:flex-1 desktop:min-w-0">
+            <article
+              class="w-fit uppercase text-[.8em] font-bold px-3 py-0.5 border-[3px] border-solid rounded-full mb-5">
+              {{ .Params.Tag }}
+            </article>
+
+            <div
+              class="desktop:h-[185px] line-clamp-[9] desktop:line-clamp-[6] overflow-clip">
+              <h3 class="tracking-wide leading-7 mb-4">
+                {{ .Title }}
+              </h3>
+              <p>
+                {{ .Params.intro }}
+              </p>
+            </div>
+
+            <article class="mt-8">
+              {{ partial "components/button/button.html" (dict
+                "label" "lees meer"
+                "url" .Permalink
+                )
+              }}
+            </article>
+          </section>
+
+          {{ with .Params.image }}
+            <figure class="desktop:w-[180px]">
+              <img
+                class="object-cover h-[280px] desktop:h-full w-full rounded-t-[20px] desktop:rounded-tl-none desktop:rounded-r-[20px]"
+                src="{{ . | relURL }}"
+                alt="{{ $.Title }}" />
+            </figure>
+          {{ end }}
+
+        </article>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>

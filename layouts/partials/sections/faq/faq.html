@@ -1,0 +1,62 @@
+<!-- Check if the FAQ is required as per the setting in the CMS -->
+{{ if .faq_enabled }}
+  <div class="px-4 desktop:px-12 lg:px-12 py-12">
+    {{ $context := . }}
+    {{ $index := 0 }}
+
+
+    <div class="grid grid-cols-1 desktop:grid-cols-2 gap-8">
+      <!-- Left Column -->
+      <div>
+        <h2 class="text-2xl font-bold">{{ .title }}</h2>
+        <p class="mt-2 text-lg text-gray-600">{{ .intro }}</p>
+
+        {{ if .leftButton }}
+          {{ partial "components/button/button.html" .leftButton }}
+        {{ end }}
+
+        {{ if .rightButton }}
+          {{ partial "components/button/button.html" .rightButton }}
+        {{ end }}
+      </div>
+      <!-- Right Column -->
+      <div>
+        <div class="space-y-4">
+          {{ with index .faqgroups $index }}
+            {{ range $index, $element := .faqs }}
+              <div class="border-b-2 border-solid border-b-black">
+                <!-- Hidden input to toggle the accordion -->
+                <input
+                  type="radio"
+                  id="faq-{{ $index }}"
+                  name="accordion-group"
+                  class="hidden peer"
+                  {{ if eq $index 0 }}checked{{ end }} />
+
+                <!-- Accordion header -->
+                <label
+                  for="faq-{{ $index }}"
+                  class="text-xl font-semibold flex justify-between desktop:justify-start items-center py-4 cursor-pointer peer-checked:[&_img]:rotate-180">
+                  {{ .title }}
+                  <!-- Arrow icon -->
+                  <span
+                    class="transform transition-transform duration-300 min-w-fit">
+                    <img
+                      src="data:image/svg+xml,%3Csvg viewBox='0 0 14 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3793 1.3614L12.0906 0.0727085L6.80938 5.35396L1.52792 0.0725092L0.239236 1.3612L6.80541 7.92737L6.80918 7.9236L6.81315 7.92757L13.3793 1.3614Z' /%3E%3C/svg%3E"
+                      alt="arrow"
+                      class="w-4 h-4 transition-transform duration-500" />
+                  </span>
+                </label>
+
+                <!-- Accordion content -->
+                <div class="hidden peer-checked:block py-4 text-gray-700">
+                  {{ .description | markdownify }}
+                </div>
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

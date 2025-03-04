@@ -1,6 +1,6 @@
-const axios = require('axios');
-const fs = require('fs');
-const matter = require('gray-matter');
+import axios from 'axios';
+import { readFileSync, writeFileSync } from 'fs';
+import matter from 'gray-matter';
 
 async function updateMarkdown() {
   try {
@@ -9,13 +9,14 @@ async function updateMarkdown() {
     const { data } = response;
 
     // Initialize totals
-    let totalMembers = 0;
+    const totalMembers = 189; // Data ia hardcoded as not correct in the API
     let totalCases = 0;
     let totalIps = 0;
 
     // Aggregate data from each year using Object.entries
     Object.entries(data).forEach(([, stats]) => {
-      totalMembers += stats.cases;
+      // TODO: undo the comment after the data is fixed in the API
+      // totalMembers += stats.cases;
       totalCases += stats.cases;
       totalIps += stats.ips;
     });
@@ -23,7 +24,7 @@ async function updateMarkdown() {
     ['en', 'nl'].forEach((lang) => {
       // Read the existing markdown file
       const filePath = `content/block/_index.${lang}.md`;
-      const fileContent = fs.readFileSync(filePath, 'utf8');
+      const fileContent = readFileSync(filePath, 'utf8');
 
       // Parse the front matter
       const parsed = matter(fileContent);
@@ -38,7 +39,7 @@ async function updateMarkdown() {
       const newContent = matter.stringify(parsed.content, frontMatter);
 
       // Write the updated content back to the file
-      fs.writeFileSync(filePath, newContent, 'utf8');
+      writeFileSync(filePath, newContent, 'utf8');
 
       console.log(`${lang} file updated successfully!`);
     });

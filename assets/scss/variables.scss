@@ -5,20 +5,19 @@
 :root {
   --fg: #000;
   --bg: #fff;
-  --brand: #FFD736;
+  --brand: #ffd736;
 
-  --font-header: 'Source Sans 3';
-  --font-text: 'Open Sans';
+  --font-header: "Source Sans 3";
+  --font-text: "Open Sans";
 
   --cw: calc(min(100vw, 1200px));
   --rest: calc((100vw - var(--cw)) / 2);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --fg: #fff;
   --bg: #000;
 }
-
 
 select {
   font-size: 24px;

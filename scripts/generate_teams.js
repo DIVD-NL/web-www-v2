@@ -1,12 +1,17 @@
-const fs = require('fs');
-const path = require('path');
-const yargs = require('yargs');
-const axios = require('axios');
-const matter = require('gray-matter');
+import { readFileSync, existsSync, writeFileSync } from 'fs';
+import { join } from 'path';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
+import axios from 'axios';
+import matter from 'gray-matter';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const { argv } = yargs
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const { argv } = yargs(hideBin(process.argv))
   .option('team-path', {
-    describe: 'path of directory to create team md files',
+    describe: 'path to directory to create member md files',
     type: 'string',
     demandOption: true,
     default: './content/who-we-are/team',
@@ -24,7 +29,7 @@ const url = 'https://prod-graphql-api.theorg.com/graphql';
 const headers = { 'Content-Type': 'application/json' };
 
 const fetchTeamsAndMembers = async () => {
-  const query = fs.readFileSync(path.join(__dirname, 'queries/teamsByCompany.graphql'), 'utf8');
+  const query = readFileSync(join(__dirname, 'queries/teamsByCompany.graphql'), 'utf8');
 
   const payload = {
     operationName: 'teamsByCompany',
@@ -46,8 +51,8 @@ const fetchTeamsAndMembers = async () => {
     let existingTeams = [];
     let existingFrontMatter = {};
 
-    if (fs.existsSync(teamsFilePath)) {
-      const fileContent = fs.readFileSync(teamsFilePath, 'utf8');
+    if (existsSync(teamsFilePath)) {
+      const fileContent = readFileSync(teamsFilePath, 'utf8');
       const parsedContent = matter(fileContent);
       existingContent = parsedContent.content;
       existingTeams = parsedContent.data.teams || [];
@@ -109,7 +114,7 @@ const fetchTeamsAndMembers = async () => {
     };
 
     const updatedContent = matter.stringify(existingContent, fileData);
-    fs.writeFileSync(teamsFilePath, updatedContent);
+    writeFileSync(teamsFilePath, updatedContent);
     console.log('\ndone');
   } catch (error) {
     console.error('Failed to fetch teams and members:', error);

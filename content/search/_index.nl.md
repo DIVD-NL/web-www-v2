@@ -1,5 +1,5 @@
 ---
 title: Zoeken
 outputs:
-- json
+  - json
 ---

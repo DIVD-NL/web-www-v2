@@ -19,9 +19,8 @@ leftblock:
 
     Cybercriminals often prefer to create exploits for big, well-known issues because they can use those exploits to create powerful, cheap attacks that have worked for many years and on many systems.
   image: ""
-  Alt tag for image: ""
+  alt: ""
   learnmore: /dictionary/
-  alt: null
 rightblock:
   content: |-
     ## **Zero-day Vulnerability**
@@ -34,9 +33,8 @@ rightblock:
 
     Since this vulnerability is *unknown*, no one is adequately protected against it. The vendor needs to disclose information about the vulnerability to its partners, but in doing so, they also unintentionally but unavoidably inform cybercriminals about the occurrence of a weakness in their software. This is when a race against the clock begins. Who works faster, the software vendor crafting and distributing a patch, or the cybercriminals crafting and deploying an exploit?
   image: ""
-  Alt tag for image: ""
+  alt: ""
   learnmore: ""
-  alt: null
 contenttitle: "## Why our work matters"
 casehighlight:
   title: "# Without DIVD …"
@@ -62,18 +60,17 @@ casehighlight:
     - [Official answers of ministers Yesilgöz-Zegeriu and Jetten to the question of Dutch representatives Queeny Rajkowski and Silvio Erkens](https://www.tweedekamer.nl/kamerstukken/kamervragen/detail?id=2022Z15333&did=2022D31877)
 
     **Note that it is very complex to summarize any DIVD case, or make accurate and precise assumptions about which risks were specifically mitigated. If you have any questions, please read about our case on the CSIRT page and [contact DIVD](https://www.divd.nl/contact/).*
-main:
-  title: More text here
 ---
-**DIVD scans the entire internet.** 
+
+**DIVD scans the entire internet.**
 
 Traditional methods, like penetration tests, often focus on a specific scope, usually limited to an organization's IP addresses or URLs.  In contrast, DIVD seeks to identify all systems with a particular vulnerability, often discovering issues in systems that organizations were unaware they had.
 
-**DIVD can take this a step further.** 
+**DIVD can take this a step further.**
 
 Because we work for the common good and adhere to guidelines for ethical hacking, we can extend our reach beyond the limits imposed on governments or commercial security companies. This allows us to determine with greater certainty whether a system is vulnerable. An email notification from DIVD almost always indicates a vulnerability that needs immediate attention.
 
-**DIVD scans for both regular security vulnerabilities *and* zero-day vulnerabilities.** 
+**DIVD scans for both regular security vulnerabilities _and_ zero-day vulnerabilities.**
 
 DIVD independently [assigns new unique identifiers (CVEs)](https://csirt.divd.nl/cna/) when new (previously unknown) vulnerabilities are identified by its researchers.
 

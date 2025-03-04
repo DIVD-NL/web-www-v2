@@ -1,3 +1,7 @@
-{{/* Set defaults */}} {{- $opts := . | merge (dict "alt" "" "class" "" "loading" "" "webpHint" "photo" "breakpoints"
-(slice 768 992 1200) "widths" (slice 768 992 1200 -1) "quality" 75) }} {{ partialCached "tools/rimg/_img.html" $opts .
-.img.Key -}}
+{{/* Set defaults */}}
+{{- $opts := . | merge (dict "alt" "" "class" "" "loading" "" "webpHint" "photo" "breakpoints"
+  (slice 768 992 1200) "widths" (slice 768 992 1200 -1) "quality" 75)
+}}
+{{ partialCached "tools/rimg/_img.html" $opts .
+  .img.Key
+-}}

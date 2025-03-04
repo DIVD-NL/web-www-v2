@@ -1,22 +1,22 @@
-
 {{ define "main" }}
-{{ partial "breadcrumbs" . }}
-{{ $taxonomyObject := .Data.tag }}
+  {{ partial "breadcrumbs" . }}
+  {{ $taxonomyObject := .Data.tag }}
 
 
-<div class="topic-layout newsroom articles">
-
-  {{ partial "p/section_open" (dict "classes" (slice "default")) }} 
+  <div class="topic-layout newsroom articles">
+    {{ partial "p/section_open" (dict "classes" (slice "default")) }}
     {{ partial "p/layout_open" }}
     {{ template "_internal/pagination.html" . }}
-    <h1>{{.Data.Term}}</h1>
-      <div class="newsroom-article-list">
-        {{ range .Paginator.Pages }}
+    <h1>{{ .Data.Term }}</h1>
+    <div class="newsroom-article-list">
+      {{ range .Paginator.Pages }}
         <div class="article">
           <section>
             <div class="summary">
               <h4>{{ .Params.tag }}</h4>
-              <h3><a href="{{ .Permalink }}" class="title-link">{{ .Title }}</a></h3>
+              <h3>
+                <a href="{{ .Permalink }}" class="title-link">{{ .Title }}</a>
+              </h3>
               <p>{{ .Params.intro  | safeHTML | truncate 192 }}</p>
             </div>
             <nav>
@@ -33,14 +33,11 @@
             </aside>
           {{ end }}
         </div>
-        {{ end }}
+      {{ end }}
 
-      </div>
-      {{ template "_internal/pagination.html" . }}
+    </div>
+    {{ template "_internal/pagination.html" . }}
     {{ partial "p/layout_close" }}
-  {{ partial "p/section_close" }}
-</div>
-
-
+    {{ partial "p/section_close" }}
+  </div>
 {{ end }}
-

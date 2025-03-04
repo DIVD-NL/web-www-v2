@@ -1,39 +1,36 @@
 {{ define "main" }}
+  <div class="article-layout">
+    {{ partial "breadcrumbs" . }}
 
-
-<div class="article-layout">
-  {{ partial "breadcrumbs" . }}
-
-  {{ partial "p/section_open" (dict "classes" (slice "article" ))}} 
-
+    {{ partial "p/section_open" (dict "classes" (slice "article" )) }}
     {{ partial "p/layout_open" (dict "classes" (slice "article")) }}
-      
-      
 
-      <div class="article-body people">
-        <article>
-          <h1>{{ .Title }}</h1>
-          <h3>{{ .Params.role }}</h3>
-        
-          <p>{{ .Params.intro }}</p>
 
-          <div class="default-text">
-            {{ .Content }}
-          </div>
+    <div class="article-body people">
+      <article>
+        <h1>{{ .Title }}</h1>
+        <h3>{{ .Params.role }}</h3>
 
-          {{ with .Params.csirt_posts }}
-            <h3>{{ i18n "featured_articles" }}</h3>
-            <ul class="article-list">
-              {{ range . }}
-                {{ $page := site.GetPage "page" .url }}
-                  <li>
-                    {{ partial "svg/icon" "article" }} <a href="{{ .url }}">{{ .title }}</a>
-                  </li>
-              {{ end }}
-            </ul>
-          {{ end }}
+        <p>{{ .Params.intro }}</p>
 
-          {{ with .Params.csirt_cases }}
+        <div class="default-text">
+          {{ .Content }}
+        </div>
+
+        {{ with .Params.csirt_posts }}
+          <h3>{{ i18n "featured_articles" }}</h3>
+          <ul class="article-list">
+            {{ range . }}
+              {{ $page := site.GetPage "page" .url }}
+              <li>
+                {{ partial "svg/icon" "article" }}
+                <a href="{{ .url }}">{{ .title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+
+        {{ with .Params.csirt_cases }}
           <h3>{{ i18n "csirt_cases" }}</h3>
           <ul class="article-list">
             {{ $cases := . }}
@@ -41,7 +38,10 @@
             {{ range $index, $case := $cases }}
               {{ if lt $index 5 }}
                 <li>
-                  {{ partial "svg/icon" "article" }}  <a href="{{ $case.url }}" target="_blank" class="external">{{ $case.title }} {{ partial "svg/icon" "external" }} </a>
+                  {{ partial "svg/icon" "article" }}
+                  <a href="{{ $case.url }}" target="_blank" class="external"
+                    >{{ $case.title }} {{ partial "svg/icon" "external" }}
+                  </a>
                 </li>
               {{ end }}
             {{ end }}
@@ -56,7 +56,10 @@
                 {{ range $index, $case := $cases }}
                   {{ if ge $index 5 }}
                     <li>
-                      {{ partial "svg/icon" "article" }}  <a href="{{ $case.url }}" target="_blank" class="external">{{ $case.title }} {{ partial "svg/icon" "external" }} </a>
+                      {{ partial "svg/icon" "article" }}
+                      <a href="{{ $case.url }}" target="_blank" class="external"
+                        >{{ $case.title }} {{ partial "svg/icon" "external" }}
+                      </a>
                     </li>
                   {{ end }}
                 {{ end }}
@@ -65,34 +68,73 @@
           {{ end }}
         {{ end }}
 
-          {{ with .Params.links }}
-            <h3>{{ i18n "other_links" }}</h3>
-            <ul class="article-list">
-              {{ range . }}
+        {{ with .Params.cve_records }}
+          <h3>{{ i18n "cve_records" }}</h3>
+          <ul class="article-list">
+            {{ $records := . }}
+            {{ $recordCount := len $records }}
+            {{ range $index, $record := $records }}
+              {{ if lt $index 5 }}
                 <li>
-                  {{ partial "link_icon" .link }}
-                  <a href="{{ .link }}" class="external" target="_blank">{{ .name }} {{ partial "svg/icon" "external" }} </a> 
+                  {{ partial "svg/icon" "article" }}
+                  <a href="{{ $record.url }}" target="_blank" class="external"
+                    >{{ $record.title }} {{ partial "svg/icon" "external" }}
+                  </a>
                 </li>
               {{ end }}
-            </ul>
+            {{ end }}
+          </ul>
+          {{ if gt $recordCount 5 }}
+            <details class="csirt-show-more pb-sm">
+              <summary>
+                <span>Show more</span>
+                <em>Show less</em>
+              </summary>
+              <ul class="article-list">
+                {{ range $index, $record := $records }}
+                  {{ if ge $index 5 }}
+                    <li>
+                      {{ partial "svg/icon" "article" }}
+                      <a href="{{ $record.url }}" target="_blank" class="external"
+                        >{{ $record.title }} {{ partial "svg/icon" "external" }}
+                      </a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </details>
           {{ end }}
-        </article>
-        <aside>
-          <div class="people-image">
+        {{ end }}
 
-            {{ $defaultImage := "/images/divd-profilepicture-volunteer2.svg" }}
-            {{ $imageFromParam := .Params.image | default $defaultImage }}
-            {{ $imageSource := strings.TrimPrefix "/assets" $imageFromParam }}
-            {{ $link := print "/" .Permalink }}
-            {{ $alt := .Params.title }}
+        {{ with .Params.links }}
+          <h3>{{ i18n "other_links" }}</h3>
+          <ul class="article-list">
+            {{ range . }}
+              <li>
+                {{ partial "link_icon" .link }}
+                <a href="{{ .link }}" class="external" target="_blank"
+                  >{{ .name }} {{ partial "svg/icon" "external" }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </article>
+      <aside>
+        <div class="people-image">
+          {{ $defaultImage := "/images/divd-profilepicture-volunteer2.svg" }}
+          {{ $imageFromParam := .Params.image | default $defaultImage }}
+          {{ $imageSource := strings.TrimPrefix "/assets" $imageFromParam }}
+          {{ $link := print "/" .Permalink }}
+          {{ $alt := .Params.title }}
 
-            <img src="{{ $imageFromParam }}" alt="{{ $alt }}" />
-          </div>
-        </aside>
-      </div>
+
+          <img src="{{ $imageFromParam }}" alt="{{ $alt }}" />
+        </div>
+      </aside>
+    </div>
     {{ partial "p/layout_close" }}
 
-  {{ partial "p/section_close" }}
-</div>
-
+    {{ partial "p/section_close" }}
+  </div>
 {{ end }}

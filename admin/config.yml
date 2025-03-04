@@ -17,6 +17,7 @@ collections:
   - name: "_index"
     label: "Home page"
     slug: "_index"
+    path: "_index"
     i18n: true
     folder: "content"
     create: false
@@ -76,7 +77,7 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
-              i18n: true
+              i18n: true,
             }
           - {
               label: t1_alt,
@@ -92,7 +93,7 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
-              i18n: true
+              i18n: true,
             }
           - {
               label: t2_alt,
@@ -108,7 +109,7 @@ collections:
               public_folder: "/images/",
               media_folder: "/assets/images/",
               required: true,
-              i18n: true
+              i18n: true,
             }
           - {
               label: t3_alt,
@@ -171,7 +172,12 @@ collections:
             widget: list
             i18n: true
             fields:
-              - { label: "heading", name: "heading", widget: "string", i18n: true }
+              - {
+                  label: "heading",
+                  name: "heading",
+                  widget: "string",
+                  i18n: true,
+                }
               - {
                   label: "FAQs",
                   name: "faqs",
@@ -258,6 +264,7 @@ collections:
     name: "testimonials"
     folder: "content/testimonials"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -287,6 +294,7 @@ collections:
     label: "Contact"
     folder: "content/contact"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -322,6 +330,7 @@ collections:
     label: "Warning email"
     folder: "content/warningemail"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -445,6 +454,7 @@ collections:
     name: "newsroom"
     folder: "content/newsroom"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -496,7 +506,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ",
+        }
       - label: "Author(s)"
         name: "author"
         widget: "relation"
@@ -595,80 +610,92 @@ collections:
             ],
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
-      - { label: "Enable FAQ", name: "faq_enabled", widget: "boolean", default: false }
+      - {
+          label: "Enable FAQ",
+          name: "faq_enabled",
+          widget: "boolean",
+          default: false,
+        }
       - {
           label: "FAQ",
           required: false,
           name: "faq",
           widget: "object",
           collapsed: true,
-          fields: [
-            {
-              label: "FAQ Title",
-              name: "title",
-              widget: "string",
-              default: "faq",
-              required: false,
-              i18n: true
-            },
-            {
-              label: "FAQ Opener",
-              name: "opener",
-              widget: "string",
-              required: false,
-              i18n: true
-            },
-            {
-              label: "FAQ Intro",
-              name: "intro",
-              widget: "text",
-              required: false,
-              i18n: true
-            },
-            {
-              label: "FAQ 'All FAQ' Url",
-              name: "url",
-              widget: "string",
-              required: false,
-              i18n: true
-            },
-            {
-              label: "FAQ groups",
-              name: "faqgroups",
-              widget: list,
-              i18n: true,
-              required: false,
-              fields:
-              [
-                { label: "heading", name: "heading", widget: "string", required: false, i18n: true },
-                {
-                    label: "FAQs",
-                    name: "faqs",
-                    widget: list,
-                    i18n: true,
-                    required: false,
-                    fields:
-                      [
-                        {
-                          label: "Title",
-                          name: "title",
-                          widget: "string",
-                          required: false,
-                          i18n: true,
-                        },
-                        {
-                          label: "Description",
-                          name: "description",
-                          widget: "markdown",
-                          required: false,
-                          i18n: true,
-                        },
-                      ],
-                  }
-              ]
-            }
-          ]
-      }
+          fields:
+            [
+              {
+                label: "FAQ Title",
+                name: "title",
+                widget: "string",
+                default: "faq",
+                required: false,
+                i18n: true,
+              },
+              {
+                label: "FAQ Opener",
+                name: "opener",
+                widget: "string",
+                required: false,
+                i18n: true,
+              },
+              {
+                label: "FAQ Intro",
+                name: "intro",
+                widget: "text",
+                required: false,
+                i18n: true,
+              },
+              {
+                label: "FAQ 'All FAQ' Url",
+                name: "url",
+                widget: "string",
+                required: false,
+                i18n: true,
+              },
+              {
+                label: "FAQ groups",
+                name: "faqgroups",
+                widget: list,
+                i18n: true,
+                required: false,
+                fields:
+                  [
+                    {
+                      label: "heading",
+                      name: "heading",
+                      widget: "string",
+                      required: false,
+                      i18n: true,
+                    },
+                    {
+                      label: "FAQs",
+                      name: "faqs",
+                      widget: list,
+                      i18n: true,
+                      required: false,
+                      fields:
+                        [
+                          {
+                            label: "Title",
+                            name: "title",
+                            widget: "string",
+                            required: false,
+                            i18n: true,
+                          },
+                          {
+                            label: "Description",
+                            name: "description",
+                            widget: "markdown",
+                            required: false,
+                            i18n: true,
+                          },
+                        ],
+                    },
+                  ],
+              },
+            ],
+        }
 
   ######################################
   # SECTION: Contribute
@@ -679,6 +706,7 @@ collections:
     label: "Contribute"
     folder: "content/contribute"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -831,7 +859,12 @@ collections:
         name: "donations"
         widget: "list"
         fields:
-          - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
+          - {
+              label: "Date",
+              name: "date",
+              widget: "datetime",
+              format: "YYYY-MM-DDTHH:mm:ssZ",
+            }
           - label: "Amount"
             name: "amount"
             hint: "include currency symbol"
@@ -845,6 +878,7 @@ collections:
     label: "Become a partner"
     folder: "content/contribute/partners"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -922,6 +956,7 @@ collections:
     label: "Volunteers"
     folder: "content/contribute/volunteers"
     slug: "_index"
+    path: "_index"
     i18n: true
     create: false
     fields:
@@ -970,6 +1005,7 @@ collections:
     label: "What we do"
     folder: "content/what-we-do"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1039,6 +1075,7 @@ collections:
     label: "Code of conduct"
     folder: "content/what-we-do/code-of-conduct"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1056,15 +1093,11 @@ collections:
     label: "Code of ethics"
     folder: "content/what-we-do/code-of-ethics"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
-      - {
-          label: "type",
-          name: "type",
-          widget: "hidden",
-          value: "codeofethics",
-        }
+      - { label: "type", name: "type", widget: "hidden", value: "codeofethics" }
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
@@ -1073,6 +1106,7 @@ collections:
     label: "Terms and Conditions"
     folder: "content/toc"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1084,6 +1118,7 @@ collections:
     label: "Privacy"
     folder: "content/privacy"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1095,6 +1130,7 @@ collections:
     label: "ANBI"
     folder: "content/anbi"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1106,6 +1142,7 @@ collections:
     label: "Coordinated Vulnerability Disclosure"
     folder: "content/security"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1122,6 +1159,7 @@ collections:
     label: "Who we are"
     folder: "content/who-we-are"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1185,6 +1223,7 @@ collections:
     label: "Team"
     folder: "content/who-we-are/team"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1287,6 +1326,17 @@ collections:
             ],
         }
       - {
+          label: "CVE Records",
+          name: "cve_records",
+          required: false,
+          widget: "list",
+          fields:
+            [
+              { label: "name", name: "name", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+            ],
+        }
+      - {
           label: "Links",
           name: "links",
           hint: "Links automatically get icons if applicable",
@@ -1315,6 +1365,7 @@ collections:
     label: "Why our work matters"
     folder: "content/why-our-work-matters"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1417,7 +1468,6 @@ collections:
             required: false
             i18n: true
 
-
   ######################################
   # SECTION: Dictionary
   ####
@@ -1427,6 +1477,7 @@ collections:
     label: "Dictionary"
     folder: "content/dictionary"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:
@@ -1453,6 +1504,7 @@ collections:
     label: "Blocks"
     folder: "content/block"
     slug: "_index"
+    path: "_index"
     create: false
     i18n: true
     fields:

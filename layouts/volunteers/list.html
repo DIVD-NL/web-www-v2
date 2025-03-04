@@ -1,59 +1,63 @@
 {{ define "main" }}
+  <div class="home-layout volunteer">
+    {{ partial "breadcrumbs" . }}
+    <div class="opener">
+      <article>
+        <section>
+          <h1>{{ .Title }}</h1>
+          <p class="opener">{{ .Params.intro }}</p>
+          <a class="cta" href="https://people.divd.nl/careers" target="_blank"
+            >Open roles {{ partial "svg/icon" "external" }}</a
+          >
+          <a
+            class="cta alternative"
+            href="https://form.jotform.com/221242784790055"
+            target="_blank"
+            >Signup</a
+          >
+        </section>
+      </article>
+      <aside>
+        <div class="bubble bubble-large far-left under"></div>
 
+        {{ with resources.Get "images/global/volunteers.png" }}
+          {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+        {{ end }}
+        <div class="bubble bubble-small-half far-right"></div>
+      </aside>
+    </div>
 
-<div class="home-layout volunteer">
-  {{ partial "breadcrumbs" . }}
-  <div class="opener">
-    <article>
-      <section>
-        <h1>{{ .Title }}</h1>
-        <p class="opener">{{ .Params.intro }}</p>
-        <a class="cta" href="https://theorg.com/org/dutch-institute-for-vulnerability-disclosure/jobs" target="_blank">Open roles {{ partial "svg/icon" "external"}}</a>
-        <a class="cta alternative" href="https://form.jotform.com/221242784790055" target="_blank">Signup</a>
-      </section>
-    </article>
-    <aside>
-      <div class="bubble bubble-large far-left under"></div>
-      
-      {{ with resources.Get "images/global/volunteers.png" }} 
-        {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-      {{ end }}
-      <div class="bubble bubble-small-half far-right over"></div>
-    </aside>
-  </div>
-
-  {{ partial "p/section_open" (dict "classes" (slice "inverse"))}} 
-    {{ partial "p/layout_open" (dict "classes" (slice "default")) }} 
-      <div class="core-values">
-        <h2>{{ .Params.corevaluestitle }}</h2>
-        <article>
-          {{ range $index, $elements := .Params.corevalues }}
-            <section>
-              <h3>
-                <span>{{ add $index 1 }}</span>
-                {{ .title }}
-              </h3>
-              <p>{{ .description }}</p>
-            </section>
-          {{ end }}
-        </article>
-      </div>
+    {{ partial "p/section_open" (dict "classes" (slice "inverse")) }}
+    {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
+    <div class="core-values">
+      <h2 class="text-white">{{ .Params.corevaluestitle }}</h2>
+      <article class="grid gap-8 grid-cols-[1fr_1fr] grid-rows-[1fr_1fr]">
+        {{ range $index, $elements := .Params.corevalues }}
+          <section>
+            <h3>
+              <span>{{ add $index 1 }}</span>
+              {{ .title }}
+            </h3>
+            <p>{{ .description }}</p>
+          </section>
+        {{ end }}
+      </article>
+    </div>
     {{ partial "p/layout_close" }}
-  {{ partial "p/section_close" }}
+    {{ partial "p/section_close" }}
 
-  {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
-
+    {{ partial "p/section_open" (dict "classes" (slice "gradient")) }}
     {{ partial "block/faq" . }}
-    
+
     {{ partial "block/proudestwork" . }}
 
-  {{ partial "p/section_close" }}
+    {{ partial "p/section_close" }}
 
-  <div class="image-fill">
-    {{ with resources.Get "images/6images.png" }} 
-      <img src="{{ .RelPermalink }}" alt="who we are" />
-    {{ end }}
+
+    <div class="image-fill">
+      {{ with resources.Get "images/6images.png" }}
+        <img src="{{ .RelPermalink }}" alt="who we are" />
+      {{ end }}
+    </div>
   </div>
-</div>
-
 {{ end }}

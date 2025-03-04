@@ -5,11 +5,15 @@ author: []
 tag: case
 intro: On March 10, 2020, Microsoft published information about a serious vulnerability in Microsoft’s Server Block Protocol version 3. The vulnerability (CVE-2020-0796) is a remote code execution vulnerability that exists in the way that the Microsoft Server Message Block 3.1.1 (SMBv3) protocol handles certain requests.
 image: ""
-Alt tag for image: ""
+alt: ""
 case:
   caseid: DIVD-2020-00006
   closed: true
-  link: https://csirt.divd.nl/cases/DIVD-2020-00006/
+  link: 
+    label: DIVD-2020-00006
+    url: https://csirt.divd.nl/cases/DIVD-2020-00006/
+    invertedColors: false
+    external: true
   lead: Sander Spierenburg
   leadlink: ""
   researchers:
@@ -19,7 +23,7 @@ case:
 faq_enabled: false
 faq: null
 ---
-Written on **08 Apr 2021** by [Jeroen van de Weerd](https://vintage.divd.nl/people/Jeroen%20van%20de%20Weerd), updated on the **12th of Dec 2024** by [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
+Written on **08 Apr 2021** by [Jeroen van de Weerd](https://www.divd.nl/who-we-are/team/people/jeroen-van-de-weerd/), updated on the **12th of Dec 2024** by [Serena de Pater](https://www.divd.nl/who-we-are/team/people/serena-de-pater/)
 
 ## The case
 

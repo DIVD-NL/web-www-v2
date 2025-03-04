@@ -3,7 +3,7 @@ type: partners
 title: Become a partner
 opener: Friends of DIVD
 intro: Share and pursue your passion for cybersecurity with like-minded people while helping to create a safer digital world
-sponsordeck: https://divd.nl
+sponsordeck: https://drive.google.com/file/d/1LlYrVy0UWurx7IfYza7yp4QyMn-iZw4z/view?usp=sharing
 partnerstitle: Our partners
 partnersintro: We would be nothing without our partners (we like to call them friends) and therefore we truly appreciate them. Let us know if you would like to become a DIVD partner.
 partnerquote:
@@ -23,7 +23,7 @@ partnerlist:
     image: /images/partners/atom86-360x200.jpg
   - name: BIT
     description: BIT is sponsoring hosting space for our websites and mail server capacity.
-    website: bit.nl
+    website: https://www.bit.nl/
     image: /images/partners/bit-360x200.jpg
   - name: Cyver
     description: Cyver provides us with their cloud platform, Cyver Core, which enables us to deliver security research reports with ticket handling.
@@ -45,6 +45,10 @@ partnerlist:
     description: Protect4S has supported DIVD with expertise in the security of SAP systems and resources to scan the internet for vulnerabilities related to SAP systems.
     website: https://www.protect4s.com/
     image: /images/partners/protect-4s-360x200.jpg
+  - name: RED SIFT
+    description: Red Sift supports DIVD by offering their service 'OnDMARC' to improve our email security.
+    website: https://redsift.com/pulse-platform/ondmarc
+    image: /images/logo_redsift_400.png
   - name: Schouten Zekerheid
     description: Schouten Zekerheid Makelaars in Assurantiën is our insurance intermediary and supports us and our cause.
     website: https://www.schoutenzekerheid.nl/

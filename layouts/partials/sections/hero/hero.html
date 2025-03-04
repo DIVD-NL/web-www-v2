@@ -1,0 +1,15 @@
+<section class="container flex flex-col desktop:flex-row px-4 desktop:px-0 desktop:gap-0">
+  
+  <section class="w-full desktop:w-[60%] py-20 ">
+    <h1>{{ .title }}</h1>
+    <p class="text-subheading-1 mb-14">{{ .lead }}</p>
+    {{ partial "components/button/button.html" .cta }}
+  </section>
+
+  <figure class="w-full min-h-[400px] desktop:w-[40%] relative">
+    <div class="absolute h-full w-100vw desktop:w-[calc(50vw-120px)] -mx-4 desktop:mx-0 overflow-hidden">
+        <image class="h-full object-cover object-left" src={{ .image }} alt="{{ .imageDescription }}" >
+    </div>
+  </figure>
+
+</section>

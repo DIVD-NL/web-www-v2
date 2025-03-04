@@ -3,85 +3,103 @@
 
 <footer class="main">
   {{ with $blocks.Params.footer }}
-  <article>
-    <div class="container">
-      <section>
-        <p>
-          {{ .intro }}
-        </p>
-        <a class="cta secondary" href="{{ "contribute/volunteers" | relLangURL }}">{{ i18n "becomeavolunteer" }}</a>
-        <a class="cta inverse" href="{{ "contribute/partners" | relLangURL }}">
-          {{ i18n "becomeapartner" }}
-        </a>
-      </section>
-      <section>
-      
-        <ul class="footernav">
-          <li>
-            <h4>{{ i18n "about" }}</h4>
-            <ul>
-              <li>
-                <a href="{{ "who-we-are/" | relLangURL }}">{{ i18n "whoweare" }}</a>
-              </li>
-              <li>
-                <a href="{{ "what-we-do/" | relLangURL }}">{{ i18n "whatwedo" }}</a>
-              </li>
-              <li>
-                <a href="{{ "who-we-are/team/" | relLangURL }}">{{ i18n "theteam" }}</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h4>{{ i18n "security" }}</h4>
-            <ul>
-              <li>
-                <a href="{{ "what-we-do/code-of-conduct/" | relLangURL }}">{{ i18n "codeofconduct" }}</a>
-              </li>
-              <li>
-                <a href="{{ "what-we-do/code-of-ethics/" | relLangURL }}">{{ i18n "codeofethics" }}</a>
-              </li>
-              <li>
-                <a href="{{ "security/" | relLangURL }}">{{ i18n "securitypolicy" }}</a>
-              </li>
-              <li>
-                <a href="{{ "anbi/" | relLangURL }}">ANBI</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h4>{{ i18n "stayuptodate" }}</h4>
-            <ul>
-              <li>
-                <a href="{{ "newsroom/" | relLangURL }}">{{ i18n "newsroom" }}</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/DIVDnl">Twitter</a>
-              </li>
-              <li>
-                <a href="https://github.com/DIVD-NL">Github</a>
-              </li>
-              <li>
-                <a href="{{ "contact/" | relLangURL }}">Contact</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-    </div>
-    {{ partial "block/ethics_footer" . }}
-    <div class="container pt-md subtle">
-        Scanning from: AS50559 IPv4: 194.5.73.0/24 aka 194.5.73.0-194.5.73.255 - Our own local infrastructure
-    </div>
-  </article>
-  <aside>
-    <div class="container">
-      <section>
-        &copy; {{ now.Year }} DIVD. All rights reserved
-      </section>
-      <section>
-        <a href="{{ "/privacy" | relLangURL }}">Privacy</a>
-      </section>
-    </div>
-  </aside>
+    <article>
+      <div class="container">
+        <section>
+          <p>
+            {{ .intro }}
+          </p>
+          <a
+            class="cta secondary"
+            href="{{ "contribute/volunteers" | relLangURL }}"
+            >{{ i18n "becomeavolunteer" }}</a
+          >
+          <a
+            class="cta inverse"
+            href="{{ "contribute/partners" | relLangURL }}">
+            {{ i18n "becomeapartner" }}
+          </a>
+        </section>
+        <section>
+          <ul class="footernav">
+            <li>
+              <h4>{{ i18n "about" }}</h4>
+              <ul>
+                <li>
+                  <a href="{{ "who-we-are/" | relLangURL }}"
+                    >{{ i18n "whoweare" }}</a
+                  >
+                </li>
+                <li>
+                  <a href="{{ "what-we-do/" | relLangURL }}"
+                    >{{ i18n "whatwedo" }}</a
+                  >
+                </li>
+                <li>
+                  <a href="{{ "who-we-are/team/" | relLangURL }}"
+                    >{{ i18n "theteam" }}</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>{{ i18n "security" }}</h4>
+              <ul>
+                <li>
+                  <a href="{{ "what-we-do/code-of-conduct/" | relLangURL }}"
+                    >{{ i18n "codeofconduct" }}</a
+                  >
+                </li>
+                <li>
+                  <a href="{{ "what-we-do/code-of-ethics/" | relLangURL }}"
+                    >{{ i18n "codeofethics" }}</a
+                  >
+                </li>
+                <li>
+                  <a href="{{ "security/" | relLangURL }}"
+                    >{{ i18n "securitypolicy" }}</a
+                  >
+                </li>
+                <li>
+                  <a href="{{ "anbi/" | relLangURL }}">ANBI</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>{{ i18n "stayuptodate" }}</h4>
+              <ul>
+                <li>
+                  <a href="{{ "newsroom/" | relLangURL }}"
+                    >{{ i18n "newsroom" }}</a
+                  >
+                </li>
+                <li>
+                  <a href="https://twitter.com/DIVDnl">Twitter</a>
+                </li>
+                <li>
+                  <a href="https://github.com/DIVD-NL">Github</a>
+                </li>
+                <li>
+                  <a href="{{ "contact/" | relLangURL }}">Contact</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+      {{ partial "block/ethics_footer" . }}
+      <div class="container pt-md subtle">
+        Scanning from: AS50559 IPv4: 194.5.73.0/24 aka 194.5.73.0-194.5.73.255 -
+        Our own local infrastructure
+      </div>
+    </article>
+    <aside>
+      <div class="container">
+        <section>&copy; {{ now.Year }} DIVD. All rights reserved</section>
+        <section>
+          <a href="{{ "/privacy" | relLangURL }}">Privacy</a>
+        </section>
+      </div>
+    </aside>
   {{ end }}
 </footer>

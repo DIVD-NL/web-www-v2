@@ -1,0 +1,8 @@
+<article>
+  {{ .content | markdownify }}
+</article>
+{{ with .cta }}
+  <article class="mt-8">
+    {{ partial "components/button/button" . }}
+  </article>
+{{ end }}

@@ -1,36 +1,33 @@
-
 {{ $blocks := .Site.GetPage "/block" }}
 
-
 {{ with $blocks.Params.mission }}
-  {{ partial "p/section_open" (dict "classes" (slice "inverse" "round" "round-topright" ))}} 
-    {{ partial "p/layout_open" (dict "classes" (slice "default")) }} 
-      <div class="sub-opener">
-        <article>
-          <h2 class="brand">{{ .Title }}</h2>
-          <p>{{ .description }}</p>
-        </article>
-      </div>
-    
-      <div class="pt-lg overlap-bottom-half">
-        <ul class="stats">
-          <li>
-            <h2>{{ .members }}</h2>
-            <h6>Members</h6>
-          </li>
+  {{ partial "p/section_open" (dict "classes" (slice "inverse" "round" "round-topright" )) }}
+  {{ partial "p/layout_open" (dict "classes" (slice "default")) }}
+  <div class="sub-opener">
+    <article>
+      <h2 class="brand">{{ .Title }}</h2>
+      <p>{{ .description }}</p>
+    </article>
+  </div>
 
-          <li>
-            <h2>{{ .totalcases }}</h2>
-            <h6>Total cases</h6>
-          </li>
+  <div class="pt-lg overlap-bottom-half">
+    <ul class="stats">
+      <li>
+        <h2>{{ .members }}</h2>
+        <h6>Members</h6>
+      </li>
 
-          <li>
-            <h2>{{ .ips }}</h2>
-            <h6>Vulnerable IPS Notified</h6>
-          </li>
-        </ul>
-      </div>
-    {{ partial "p/layout_close" }}
-  {{ partial "p/section_close" }} 
+      <li>
+        <h2>{{ .totalcases }}</h2>
+        <h6>Total cases</h6>
+      </li>
 
+      <li>
+        <h2>{{ .ips }}</h2>
+        <h6>Vulnerable IPS Notified</h6>
+      </li>
+    </ul>
+  </div>
+  {{ partial "p/layout_close" }}
+  {{ partial "p/section_close" }}
 {{ end }}

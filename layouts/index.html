@@ -1,155 +1,168 @@
 {{ define "main" }}
-<div class="home-layout">
-  <div class="opener">
-    <article>
-      <section>
-        <h1>{{ .Params.opener }}</h1>
-        <p class="opener">{{ .Params.intro }}</p>
-        <a class="cta" href="{{ "who-we-are/" | relLangURL }}">{{ i18n "whoweare" }}</a>
-      </section>
-    </article>
-    <aside>
-      {{ with resources.Get "images/home/divd_intro.png" }} 
-        {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-      {{ end }}
-    </aside>
-  </div>
+  <div class="home-layout">
+    <div class="opener">
+      <article>
+        <section>
+          <h1>{{ .Params.opener }}</h1>
+          <p class="opener">{{ .Params.intro }}</p>
+          <a class="cta" href="{{ "who-we-are/" | relLangURL }}"
+            >{{ i18n "whoweare" }}</a
+          >
+        </section>
+      </article>
+      <aside>
+        {{ with resources.Get "images/home/divd_intro.png" }}
+          {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+        {{ end }}
+      </aside>
+    </div>
 
-  {{ with .Params.fold }} 
-    {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top"))}} 
-      {{ partial "p/layout_open" (dict "classes" (slice "extend")) }} 
-        <div class="carousel responsive-controls">
-          <div class="slides">
-            {{ partial "card-article" .Showcase }} <!-- Moet worden aangepast -->
+    {{ with .Params.fold }}
+      {{ partial "p/section_open" (dict "classes" (slice "inverse" "overlap-top")) }}
+      {{ partial "p/layout_open" (dict "classes" (slice "extend")) }}
+      <div class="carousel responsive-controls">
+        <div class="slides">
+          {{ partial "card-article" .Showcase }}
+          <!-- Moet worden aangepast -->
 
-            {{ partial "card" (dict 
-                "imageSource" "images/global/received_email.jpeg" 
-                "imageAlt" .Received_Alt
-                "title" .Received 
-                "linkTitle" (i18n "readmore") 
-                "link" (relLangURL "warningemail/") 
-                "classes" (slice "article")
-                ) 
-            }}
+          {{ partial "card" (dict
+            "imageSource" "images/global/received_email.jpeg"
+            "imageAlt" .Received_Alt
+            "title" .Received
+            "linkTitle" (i18n "readmore")
+            "link" (relLangURL "warningemail/")
+            "classes" (slice "article")
+            )
+          }}
 
-            {{ partial "card" (dict 
-                "imageSource" "images/global/divd_family.png" 
-                "imageAlt" .Family_Alt
-                "title" .Family 
-                "linkTitle" (i18n "readmore") 
-                "link" (relLangURL "contribute/")  
-                "classes" (slice "cta")) 
-            }}
-          
-          </div>
-          {{ partial "carousel_controls" 3 }}
+          {{ partial "card" (dict
+            "imageSource" "images/global/divd_family.png"
+            "imageAlt" .Family_Alt
+            "title" .Family
+            "linkTitle" (i18n "readmore")
+            "link" (relLangURL "contribute/")
+            "classes" (slice "cta"))
+          }}
+
         </div>
+        {{ partial "carousel_controls" 3 }}
+      </div>
       {{ partial "p/layout_close" }}
     {{ end }}
     {{ with .Params.whatwedo }}
       {{ partial "p/layout_open" (dict "classes" (slice "left" "extend")) }}
-        
-          <div class="reverse">
-            <h2>{{ .Title }}</h2>
-            <p>{{ .description }}</p>
-            <a class="cta" href="{{ "/what-we-do" | relLangURL }}">{{ i18n "learnmore"}}</a>
-          </div>
-          <div class="carousel">
-            <div class="slides">
-              {{ partial "card" (dict 
-                "imageSource" .t1_image
-                "imageAlt" .t1_alt
-                "title" .t1 
-                "classes" (slice "cta")) 
-              }}
-              {{ partial "card" (dict 
-                "imageSource" .t2_image 
-                "imageAlt" .t2_alt
-                "title" .t2 
-                "classes" (slice "cta")) 
-              }}
-              {{ partial "card" (dict 
-                "imageSource" .t3_image
-                "imageAlt" .t3_alt
-                "title" .t3 
-                "classes" (slice "cta")) 
-              }}
-            </div>
-            {{ partial "carousel_controls" 3 }}
-          </div>
-        {{ partial "p/layout_close" }}
-      
-    {{ end }}
-  {{ partial "p/section_close" }} 
-  
 
-  {{ partial "p/section_open" (dict "classes" (slice "gradient"))}} 
-    {{ partial "block/proudestwork" . }}
-  {{ partial "p/section_close" }} 
 
-  {{ partial "block/mission" . }}
-
-  
-    {{ partial "p/section_open" (dict "classes" (slice "default"))}} 
-      <div class="pt-lg">
-      {{ partial "block/testimonials" . }}
+      <div class="reverse">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .description }}</p>
+        <a class="cta" href="{{ "/what-we-do" | relLangURL }}"
+          >{{ i18n "learnmore" }}</a
+        >
       </div>
-      {{ with .Params.helpushelpyou }}
-        {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
-          <div>
-            <h2>{{ .Title }}</h2>
-            <p>{{ .description }}</p>
-            <p>&nbsp;</p>
-            <a class="cta external" target="_blank" href="https://www.digitaltrustcenter.nl/securitytxt">More information {{ partial "svg/icon" "external" }}</a>
-            <p>&nbsp;</p>
-          </div>
-          <div class="image-container">
-            {{ with resources.Get "images/global/csirt_team.png" }} 
-              {{ partial "tools/rimg/img" (dict "img" . "alt" "CSIRT Team") }}
-            {{ end }}
-          </div>
-        {{ partial "p/layout_close" }}
-      {{ end }}
-    {{ partial "p/section_close" }}
-
-    {{ partial "p/section_open" (dict "classes" (slice "primary" "round" "round-topleft"))}} 
-      {{ partial "p/layout_open" (dict "classes" (slice "half" "extend")) }}
-        {{ with .Params.volunteer }}
-          <div class="fill-center">
-            <div>
-              <h2>{{ .Title }}</h2>
-              <ul class="checklist">
-                {{ range .checklist }}
-                  <li>
-                    {{ partial "svg/icon" "checkmark"}} {{ .item }}
-                  </li>
-                {{ end }}
-              </ul>
-
-              <a class="cta" href="{{ "/contribute/volunteers" | relLangURL }}">{{ i18n "becomeavolunteer" }}</a>
-              <a class="cta inverse external" target="_blank" href="https://theorg.com/org/dutch-institute-for-vulnerability-disclosure/jobs">
-                {{ i18n "openroles" }}
-                {{ partial "svg/icon" "external" }}
-              </a>
-            </div>
-          </div>
-          <div class="image-container">
-            <div class="image-half-pill">
-              {{ with resources.Get "images/divd/divd_team_photo.jpg" }} 
-                {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
-              {{ end }}
-            </div>
-          </div>
-        {{ end }}
+      <div class="carousel">
+        <div class="slides">
+          {{ partial "card" (dict
+            "imageSource" .t1_image
+            "imageAlt" .t1_alt
+            "title" .t1
+            "classes" (slice "cta"))
+          }}
+          {{ partial "card" (dict
+            "imageSource" .t2_image
+            "imageAlt" .t2_alt
+            "title" .t2
+            "classes" (slice "cta"))
+          }}
+          {{ partial "card" (dict
+            "imageSource" .t3_image
+            "imageAlt" .t3_alt
+            "title" .t3
+            "classes" (slice "cta"))
+          }}
+        </div>
+        {{ partial "carousel_controls" 3 }}
+      </div>
       {{ partial "p/layout_close" }}
+
+    {{ end }}
+    {{ partial "p/section_close" }}
+    {{ partial "p/section_open" (dict "classes" (slice "gradient")) }}
+    {{ partial "block/proudestwork" . }}
+    {{ partial "p/section_close" }}
+    {{ partial "block/mission" . }}
+
+    {{ partial "p/section_open" (dict "classes" (slice "default")) }}
+    <div class="pt-lg">
+      {{ partial "block/testimonials" . }}
+    </div>
+    {{ with .Params.helpushelpyou }}
+      {{ partial "p/layout_open" (dict "classes" (slice "columns" "columns-2")) }}
+      <div>
+        <h2>{{ .Title }}</h2>
+        <p>{{ .description }}</p>
+        <p>&nbsp;</p>
+        <a
+          class="cta external"
+          target="_blank"
+          href="https://www.digitaltrustcenter.nl/securitytxt"
+          >More information {{ partial "svg/icon" "external" }}</a
+        >
+        <p>&nbsp;</p>
+      </div>
+      <div class="image-container">
+        {{ with resources.Get "images/global/csirt_team.png" }}
+          {{ partial "tools/rimg/img" (dict "img" . "alt" "CSIRT Team") }}
+        {{ end }}
+      </div>
+      {{ partial "p/layout_close" }}
+    {{ end }}
     {{ partial "p/section_close" }}
 
-    {{ partial "p/section_open" (dict "classes" (slice "inverse" "round" "round-bottomright"))}} 
-        {{ partial "block/partners_carousel" .}}
+    {{ partial "p/section_open" (dict "classes" (slice "primary" "round" "round-topleft")) }}
+    {{ partial "p/layout_open" (dict "classes" (slice "half" "extend")) }}
+    {{ with .Params.volunteer }}
+      <div class="fill-center">
+        <div>
+          <h2>{{ .Title }}</h2>
+          <ul class="checklist">
+            {{ range .checklist }}
+              <li>
+                {{ partial "svg/icon" "checkmark" }}
+                {{ .item }}
+              </li>
+            {{ end }}
+          </ul>
+
+          <a class="cta" href="{{ "/contribute/volunteers" | relLangURL }}"
+            >{{ i18n "becomeavolunteer" }}</a
+          >
+          <a
+            class="cta inverse external"
+            target="_blank"
+            href="https://people.divd.nl/careers">
+            {{ i18n "openroles" }}
+            {{ partial "svg/icon" "external" }}
+          </a>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-half-pill">
+          {{ with resources.Get "images/divd/divd_team_photo.jpg" }}
+            {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+    {{ partial "p/layout_close" }}
     {{ partial "p/section_close" }}
 
-    {{ partial "p/section_open" (dict "classes" (slice "gradient-reverse"))}} 
-      {{ partial "block/faq" . }}
+    {{ partial "p/section_open" (dict "classes" (slice "inverse" "round" "round-bottomright")) }}
+    {{ partial "block/partners_carousel" . }}
     {{ partial "p/section_close" }}
-</div>
+
+    {{ partial "p/section_open" (dict "classes" (slice "gradient-reverse")) }}
+    {{ partial "block/faq" . }}
+    {{ partial "p/section_close" }}
+  </div>
 {{ end }}

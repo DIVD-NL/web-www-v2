@@ -1,17 +1,16 @@
 {{ $blocks := site.GetPage "/block" }}
 
-
 {{ with $blocks.Params.ethics }}
   <div class="ethics-footer">
-    
-      {{ with resources.Get "/images/global/ethics.png" }} 
-        <img src="{{ .RelPermalink }}" />
-      {{ end }}
+    {{ with resources.Get "/images/global/ethics.png" }}
+      <img src="{{ .RelPermalink }}" />
+    {{ end }}
     <div class="content">
       <h3>{{ .title }}</h3>
       <p>{{ .intro }}</p>
-      <a class="cta" href="{{ "what-we-do/code-of-conduct" | relLangURL }}">{{ i18n "codeofconduct" }}</a>
+      <a class="cta" href="{{ "what-we-do/code-of-conduct" | relLangURL }}"
+        >{{ i18n "codeofconduct" }}</a
+      >
     </div>
   </div>
-
 {{ end }}

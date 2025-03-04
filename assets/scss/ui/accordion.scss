@@ -10,7 +10,6 @@
 
     border-bottom: 1px solid black;
 
-
     > h3 {
       display: flex;
       align-items: center;
@@ -19,7 +18,7 @@
       display: pointer;
 
       span {
-        margin-left: 16px; 
+        margin-left: 16px;
         transform-origin: center;
       }
     }
@@ -27,15 +26,13 @@
     > h3 span::after {
       content: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3793 1.3614L12.0906 0.0727085L6.80938 5.35396L1.52792 0.0725092L0.239236 1.3612L6.80541 7.92737L6.80918 7.9236L6.81315 7.92757L13.3793 1.3614Z' /%3E%3C/svg%3E");
       display: inline-block;
-      width: 16px; 
-      height: 16px; 
+      width: 16px;
+      height: 16px;
     }
-
 
     &:first-of-type {
       padding-top: 0;
     }
-
 
     &.active {
       h3 {
@@ -50,12 +47,11 @@
     }
   }
 
-
   details {
     margin-top: 16px;
     summary {
       border-radius: 22px;
-      background-color: #F2F2F2;
+      background-color: #f2f2f2;
       color: black;
       text-transform: uppercase;
       display: inline-flex;
@@ -68,24 +64,21 @@
         display: none;
       }
     }
-
   }
 
   details[open] {
     padding-bottom: 16px;
-    summary {                          
+    summary {
       position: absolute;
       bottom: 0px;
       left: 0;
       span {
-        display:none;
+        display: none;
       }
 
       em {
         display: block;
       }
-
     }
   }
-  
 }
