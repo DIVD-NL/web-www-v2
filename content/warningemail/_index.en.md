@@ -1,5 +1,5 @@
 ---
-title: Notification email
+title: Notification emails
 opener: We report vulnerabilities to prevent issues
 intro: When a vulnerability is found, we open a case and create a fingerprint. A case is a record or file created to document and manage the process of addressing a specific vulnerability. A fingerprint serves as a unique identifier or signature for the vulnerability, aiding in the identification of affected systems. Subsequently, we start scanning to identify vulnerable instances and notify the owners of these systems. This structured approach ensures that vulnerabilities are systematically tracked, managed, and resolved.
 csirt:
