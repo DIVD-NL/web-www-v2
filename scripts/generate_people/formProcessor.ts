@@ -79,32 +79,56 @@ export class FormProcessor {
       ];
 
       let localImagePath = '';
-      if (personData.profilePicture) {
+
+      // Get the picture preference and placeholder choice
+      const picturePreference = this.getValue(row, 'picturePreference');
+      const placeholderChoice = this.getValue(row, 'placeholderChoice');
+
+      if (picturePreference === 'I want to use one of the placeholders') {
+        // Map placeholder choice to the corresponding image
+        if (placeholderChoice.startsWith('Option ')) {
+          const optionNumber = parseInt(placeholderChoice.replace('Option ', ''), 10);
+          if (optionNumber >= 1 && optionNumber <= 4) {
+            localImagePath = defaultProfilePictures[optionNumber - 1];
+            console.log(`Using placeholder image: ${localImagePath}`);
+          } else {
+            // Fallback to random placeholder if option number is invalid
+            localImagePath = defaultProfilePictures[Math.floor(Math.random() * defaultProfilePictures.length)];
+            console.log(`Invalid placeholder option, using random placeholder: ${localImagePath}`);
+          }
+        } else {
+          // Fallback to random placeholder if option format is invalid
+          localImagePath = defaultProfilePictures[Math.floor(Math.random() * defaultProfilePictures.length)];
+          console.log(`Invalid placeholder format, using random placeholder: ${localImagePath}`);
+        }
+      } else if (personData.profilePicture) {
+        // User wants to upload their own picture
         try {
           const fullImagePath = path.join(config.imagesDir, baseFileName);
           const savedPath = await downloadImage(personData.profilePicture, fullImagePath);
-          localImagePath = path.join('images', 'people', 'profile-pictures', path.basename(savedPath));
+          localImagePath = `/images/people/profile-pictures/${path.basename(savedPath)}`;
           console.log(`Profile picture processed: ${localImagePath}`);
         } catch (error) {
           console.error(`Failed to download image for ${firstName} ${lastName}:`, error);
           localImagePath = defaultProfilePictures[Math.floor(Math.random() * defaultProfilePictures.length)];
         }
       } else {
+        // Fallback to random placeholder if no preference or profile picture
         localImagePath = defaultProfilePictures[Math.floor(Math.random() * defaultProfilePictures.length)];
       }
 
       const frontMatter = {
         type: 'people',
         title: `${firstName} ${lastName}`,
-        image: localImagePath ? `${localImagePath}` : '',
+        image: localImagePath,
         role: personData.role || 'Volunteer',
         intro: personData.about,
         links: Object.entries(personData.socialLinks)
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           .filter(([_, url]) => url)
           .map(([platform, url]) => ({
-            platform: platform as keyof typeof personData.socialLinks,
-            url: url as string,
+            name: platform as keyof typeof personData.socialLinks,
+            link: url as string,
           })),
         csirt_cases: [],
         csirt_posts: [],
@@ -115,7 +139,7 @@ export class FormProcessor {
       const filename = `${baseFileName}.en.md`;
       await fs.writeFile(path.join(config.outputDir, filename), markdown);
 
-      updatedPeople.set(filename.replace('.md', ''), personData);
+      updatedPeople.set(filename, personData);
       console.log(`Generated markdown file: ${filename}`);
     }
 
@@ -150,6 +174,11 @@ export class FormProcessor {
     return missingFields;
   }
 
+  getValue(row: string[], key: keyof typeof this.formMapping.headerNames): string {
+    const index = this.headerIndices.get(key);
+    return index !== undefined ? row[index] || '' : '';
+  }
+
   processRow(row: string[]): PersonData | null {
     console.log('\nProcessing new form response...');
 
@@ -166,30 +195,27 @@ export class FormProcessor {
       return null;
     }
 
-    const getValue = (key: keyof typeof this.formMapping.headerNames): string => {
-      const index = this.headerIndices.get(key);
-      return index !== undefined ? row[index] || '' : '';
-    };
-
-    const teamsValue = getValue('teams');
+    const teamsValue = this.getValue(row, 'teams');
     const teams = this.processTeams(teamsValue);
 
     const personData: PersonData = {
-      timestamp: getValue('timestamp'),
-      email: getValue('email'),
+      timestamp: this.getValue(row, 'timestamp'),
+      email: this.getValue(row, 'email'),
       consent: consentValue,
-      firstName: getValue('firstName').trim(),
-      lastName: getValue('lastName').trim(),
-      about: getValue('about'),
-      role: getValue('role').trim() || 'Volunteer',
+      firstName: this.getValue(row, 'firstName').trim(),
+      lastName: this.getValue(row, 'lastName').trim(),
+      about: this.getValue(row, 'about'),
+      role: this.getValue(row, 'role').trim() || 'Volunteer',
       teams,
       socialLinks: {
-        linkedin: getValue('linkedin'),
-        twitter: getValue('twitter'),
-        facebook: getValue('facebook'),
-        website: getValue('website'),
+        LinkedIn: this.getValue(row, 'linkedin'),
+        Twitter: this.getValue(row, 'twitter'),
+        Facebook: this.getValue(row, 'facebook'),
+        Website: this.getValue(row, 'website'),
       },
-      profilePicture: getValue('profilePicture'),
+      profilePicture: this.getValue(row, 'profilePicture'),
+      picturePreference: this.getValue(row, 'picturePreference'),
+      placeholderChoice: this.getValue(row, 'placeholderChoice'),
     };
 
     console.log(`Processed data for ${personData.firstName} ${personData.lastName}`);
