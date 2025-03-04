@@ -3,7 +3,7 @@ title: Frequently asked questions
 opener: In case you still have any questions, we have listed the most frequently asked questions for you.
 intro: If this F.A.Q. doesn’t provide the answer you’re looking for, feel free to reach out to us. We strive to respond to your queries to the best of our ability.
 faqgroups:
-  - heading: Home
+  - heading: English
     faqs:
       - title: Is it legal what DIVD is doing?
         description: "Dutch jurisprudence is clear: if you address a societal need using appropriate methods, you are permitted to execute minor hacks to prevent more damaging ones. The Dutch Public Prosecution Office and the National Cyber Security Center endorse our approach."
