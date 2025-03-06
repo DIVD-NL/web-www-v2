@@ -38,6 +38,8 @@ export interface FormFieldMapping {
     website: string;
     profilePicture: string;
     role: string;
+    picturePreference: string;
+    placeholderChoice: string;
   };
   validation: {
     consent: { validValues: string[]; transform?: (value: string) => string };
@@ -60,6 +62,8 @@ export const DEFAULT_FORM_MAPPING: FormFieldMapping = {
     facebook: 'Facebook',
     website: 'Website (your blog, etc)',
     profilePicture: 'Profile picture',
+    picturePreference: 'Bring Your Own Picture?',
+    placeholderChoice: 'Which placeholder would you prefer?',
   },
   validation: {
     consent: { validValues: ['yes', 'agree'], transform: (value: string) => value.toLowerCase() },
@@ -75,9 +79,11 @@ export interface PersonData {
   lastName: string;
   about: string;
   teams: TeamName[];
-  socialLinks: { linkedin?: string; twitter?: string; facebook?: string; website?: string };
+  socialLinks: { LinkedIn?: string; Twitter?: string; Facebook?: string; Website?: string };
   profilePicture?: string;
   role: string;
+  picturePreference?: string;
+  placeholderChoice?: string;
 }
 
 export interface TeamData {
