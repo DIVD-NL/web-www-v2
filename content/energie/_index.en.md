@@ -30,16 +30,16 @@ sections:
     description: Met het project CVD in de energiesector starten we een nieuwe onderzoekslijn om de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem te versterken. We richten ons op kennisontwikkeling, samenwerking en bewustwording binnen de sector en onderzoeken daarbij specifiek kwetsbaarheden in randapparatuur, zoals laadpalen, omvormers, thuisbatterijen en energiebeheersystemen.
     cards:
       - title: IoT Hacking Lab
-        description: We zetten een IoT Hacking Lab op om onder andere randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen. Daarnaast werken we samen met andere labs.
+        description: We zetten een IoT Hacking Lab op om onder andere randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen.
         image: iothacking.png
       - title: Onderzoek
-        description: We doen en publiceren onderzoek om hiermee autoriteiten en partners te ondersteunen bij handhaving en het implementeren van verbeteringen binnen de energiesector.
+        description: We doen en publiceren onderzoek om hiermee autoriteiten en partners te ondersteunen bij handhaving en verbeteringen.
         image: onderzoek.png
       - title: Educatie
-        description: We leiden nieuwe experts op met [DIVD.Academy](DIVD.Academy) door lesmateriaal, trainingen en workshops te ontwikkelen voor studenten, de installatiebranche en onderwijsinstellingen in de energiesector.
+        description: We leiden nieuwe experts op met [DIVD.Academy](DIVD.Academy) door lesmateriaal, trainingen en workshops te ontwikkelen.
         image: educatie.png
       - title: Samenwerken
-        description: We werken samen met netbeheerders, overheden, leveranciers, fabrikanten, etc. om bewustzijn binnen de sector te vergroten en kwetsbaarheden te vinden en op te lossen.
+        description: We werken samen met netbeheerders, overheden, leveranciers, fabrikanten.
         image: samenwerking.png
   - type: two-columns-section
     left:
