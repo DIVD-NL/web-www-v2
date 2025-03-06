@@ -72,22 +72,29 @@ sections:
   - type: partner-section
     title: Huidige partners
     partners:
-      - name: Partner 1
-        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
+      - name: SIDN Fonds
+        description: |-
+          SIDN investeert in projecten met lef
+          en maatschappelijke meerwaarde, die
+          bijdragen aan een sterk internet, sterke
+          internetgebruikers of die zich richten op de
+          publieke waarden en maatschappelijke kant
+          van het internet.
+        url: https://google.nl/
+        logo: SIDN%20Fonds.png
+      - name: Topsector Energie
+        description: |-
+          Topsector Energie helpt bedrijven,
+          kennisinstellingen, overheden en
+          maatschappelijke organisaties samen te
+          werken aan het energiesysteem van de
+          toekomst.
+        url: https://google.nl/
+        logo: Topsector%20Energie%202.png
+      - name: jij?
+        description: Download het sponsordeck voor de mogelijkheden.
         url: https://google.nl/
         logo: DIVD-Project-Energy.png
-      - name: Partner 2
-        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
-        url: https://google.nl/
-        logo: DIVD-Project-Energy.png
-      - name: Partner 3
-        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
-        url: https://google.nl/
-        logo: DIVD-Project-Energy.png
-      - name: Moar
-        description: asd
-        url: asf
-        logo: DIVD x Cybersquad 2024.jpg
   - type: two-columns-section
     left:
       - type: text-column
