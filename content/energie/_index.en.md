@@ -92,8 +92,8 @@ sections:
         url: https://google.nl/
         logo: Topsector%20Energie%202.png
       - name: jij?
-        description: Download het sponsordeck voor de mogelijkheden.
-        url: https://google.nl/
+        description: Download ons partnerdeck voor de mogelijkheden.
+        url: divd.nl/energie
         logo: DIVD-Project-Energy.png
   - type: two-columns-section
     left:
@@ -106,13 +106,13 @@ sections:
           label: download partnerdeck
           url: pad/naar/bestand
           invertedColors: false
-          external: false
+          external: true
           download: true
     right:
       - type: image-column
-        image: /images/bamboozled.jpg
-        description: Hackers van achteren gefotografeerd
-        rounded: false
+        image: Contact_Illustratie_1.png
+        description: Illustratie van 2 personen die handen naar elkaar uitsteken
+        rounded: true
     background:
       color: divd-yellow
   - type: article-cards-section
