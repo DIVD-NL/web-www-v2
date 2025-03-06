@@ -15,33 +15,31 @@ sections:
   - type: two-columns-section
     left:
       - type: caption-column
-        title: Een slim, duurzaam maar kwetsbaar energiesysteem
+        title: Een slimme, duurzame, maar kwetsbare energiesector
         subtitle: Waarom veiligheid cruciaal is
     right:
       - type: text-column
         content: |-
-          Tijdens de energietransitie is het Europese elektriciteitsnetwerk uitgegroeid tot een complex ‘smart grid’. Hierin zijn consumenten niet langer alleen gebruikers, maar ook producenten van energie. Steeds meer apparaten zoals zonnepanelen, laadpalen, warmtepompen en slimme meters, zijn slim en met elkaar verbonden. Dit biedt grote kansen voor verduurzaming en innovatie, maar maakt het systeem ook kwetsbaarder voor schaalbare digitale aanvallen. 
+          Het Europese elektriciteitsnetwerk is een ‘smart grid’ geworden, waarin consumenten zowel gebruikers als producenten van energie zijn. Slimme, online verbonden apparaten helpen vraag en aanbod beter op elkaar af te stemmen, wat kansen biedt voor verduurzaming en marktinnovatie. Tegelijkertijd maakt dit ons energiesysteem kwetsbaar voor digitale aanvallen, zoals het bedreigende ‘Black-Out scenario, waarin cybercriminelen slimme apparaten manipuleren en grootschalige stroomstoringen veroorzaken.
 
-          Hoewel individuele apparaten weinig directe impact hebben op het elektriciteitsnetwerk, kan grootschalige manipulatie door kwaadwillenden wel degelijk het elektriciteitsnetwerk ontwrichten en in sommige gevallen leiden tot een black-out op (inter)nationale schaal. Dit maakt het eerdergenoemde ‘smart grid’ kwetsbaar voor verstoring en angstzaaierij. 
-
-          In een tijd waarin hybride oorlogsvoering steeds vaker voorkomt, groeit het besef dat samenwerking tussen alle betrokken partijen essentieel is om mogelijke ontwrichting van onze energievoorziening te voorkomen.*
+          Hoewel individuele apparaten weinig directe impact hebben op het elektriciteitsnetwerk, kan grootschalige manipulatie door kwaadwillenden wel degelijk het elektriciteitsnetwerk ontwrichten en in sommige gevallen leiden tot een black-out op (inter)nationale schaal. Dit maakt het eerdergenoemde ‘smart grid’ kwetsbaar voor verstoring en angstzaaierij.
     background:
       color: light-black
   - type: slider-section
     title: Wat gaan we doen?
-    description: "Met het project 'CVD in de energiesector' focust DIVD zich op kennisontwikkeling, samenwerking en bewustwording binnen de energiesector. In 2025 zetten we de volgende stappen:"
+    description: Met het project CVD in de energiesector starten we een nieuwe onderzoekslijn om de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem te versterken. We richten ons op kennisontwikkeling, samenwerking en bewustwording binnen de sector en onderzoeken daarbij specifiek kwetsbaarheden in randapparatuur, zoals laadpalen, omvormers, thuisbatterijen en energiebeheersystemen.
     cards:
       - title: IoT Hacking Lab
-        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        description: We zetten een IoT Hacking Lab op om onder andere randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen. Daarnaast werken we samen met andere labs.
         image: iothacking.png
       - title: Onderzoek
-        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        description: We doen en publiceren onderzoek om hiermee autoriteiten en partners te ondersteunen bij handhaving en het implementeren van verbeteringen binnen de energiesector.
         image: onderzoek.png
       - title: Educatie
-        description: Samen met [DIVD.Academy](DIVD.Academy) wordt er lesmateriaal ontwikkeld, trainingen verzorgd en studenten opgeleid over de veiligheid van slimme energiesystemen.
+        description: We leiden nieuwe experts op met [DIVD.Academy](DIVD.Academy) door lesmateriaal, trainingen en workshops te ontwikkelen voor studenten, de installatiebranche en onderwijsinstellingen in de energiesector.
         image: educatie.png
       - title: Samenwerken
-        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        description: We werken samen met netbeheerders, overheden, leveranciers, fabrikanten, etc. om bewustzijn binnen de sector te vergroten en kwetsbaarheden te vinden en op te lossen.
         image: samenwerking.png
   - type: two-columns-section
     left:
@@ -49,9 +47,9 @@ sections:
         content: |-
           ## DIVD kijkt waar netbeheerders niet kunnen komen
 
-          Netbeheerders controleren alleen het energienetwerk tot de aansluiting, terwijl de grootste risico’s in slimme apparaten achter de meter liggen. DIVD kan en mag wel tot achter de aansluiting onderzoek verrichten. 
+          Hoewel diverse instanties slimme apparaten testen en veiligheidsnormen opstellen, hebben netbeheerders alleen controle over het energienetwerk **tot de aansluiting.** Terwijl de meeste risico’s zich echter achter de aansluiting en (slimme) meter bevinden, namelijk in apparaten die cybercriminelen kunnen misbruiken. 
 
-          Wij onderzoeken deze apparaten, identificeert kwetsbaarheden en informeert fabrikanten om misbruik te voorkomen.
+          Wij hebben als doel deze slimme apparaten te onderzoeken, kwetsbaarheden tijdig te identificeren en fabrikanten te informeren zodat deze kwetsbaarheden verholpen kunnen worden en eventueel misbruik voorkomen kan worden.
         cta:
           label: lees meer over divd
           url: pagina-op-divd-nl
