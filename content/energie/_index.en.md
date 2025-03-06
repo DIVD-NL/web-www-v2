@@ -66,8 +66,8 @@ sections:
     title: Eerdere onderzoeken van DIVD binnen de energiesector
     highlights:
       - /newsroom/articles/91cd52191c65
-      - /newsroom/articles/case-apache-log4j2
-      - /newsroom/articles/case-solarwinds-orion
+      - /newsroom/articles/divd-responsibly-discloses-six-new-zero-day-vulnerabilities-to-vendor
+      - /newsroom/articles/078c788911d9
   - type: partner-section
     title: Huidige partners
     partners:
