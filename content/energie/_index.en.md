@@ -112,7 +112,7 @@ sections:
       - type: image-column
         image: Contact_Illustratie_1.png
         description: Illustratie van 2 personen die handen naar elkaar uitsteken
-        rounded: true
+        rounded: false
     background:
       color: divd-yellow
   - type: article-cards-section
