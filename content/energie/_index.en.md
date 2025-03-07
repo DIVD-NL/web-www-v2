@@ -19,10 +19,7 @@ sections:
         subtitle: Waarom veiligheid cruciaal is
     right:
       - type: text-column
-        content: |-
-          Het Europese elektriciteitsnetwerk is een ‘smart grid’ geworden, waarin consumenten zowel gebruikers als producenten van energie zijn. Slimme, online verbonden apparaten helpen vraag en aanbod beter op elkaar af te stemmen, wat kansen biedt voor verduurzaming en marktinnovatie. Tegelijkertijd maakt dit ons energiesysteem kwetsbaar voor digitale aanvallen, zoals het bedreigende ‘Black-Out scenario, waarin cybercriminelen slimme apparaten manipuleren en grootschalige stroomstoringen veroorzaken.
-
-          Hoewel individuele apparaten weinig directe impact hebben op het elektriciteitsnetwerk, kan grootschalige manipulatie door kwaadwillenden wel degelijk het elektriciteitsnetwerk ontwrichten en in sommige gevallen leiden tot een black-out op (inter)nationale schaal. Dit maakt het eerdergenoemde ‘smart grid’ kwetsbaar voor verstoring en angstzaaierij.
+        content: Het Europese elektriciteitsnetwerk is nu een 'smart grid', waarin consumenten zowel energie gebruiken als produceren. Slimme online verbonden apparaten stemmen vraag en aanbod beter op elkaar af, wat verduurzaming en innovatie stimuleert.  Tegelijkertijd maakt dit ons energiesysteem kwetsbaar voor digitale aanvallen. Hoewel losse apparaten weinig impact hebben, kan grootschalige manipulatie door cybercriminelen leiden tot ernstige stroomstoringen en zelfs een (inter)nationale black-out.
     background:
       color: light-black
   - type: slider-section
