@@ -6,7 +6,7 @@ sections:
     lead: Met onze nieuwe onderzoekslijn versterken we de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem.
     cta:
       label: download partnerdeck
-      url: https://ww.divd.nl/images/DIVD%20Partnerdeck%20Energie%202025.pdf
+      url: https://github.com/DIVD-NL/web-www-v2/blob/main/assets/images/DIVD%20Partnerdeck%20Energie%202025.pdf
       invertedColors: false
       external: false
       download: true
