@@ -1,0 +1,13 @@
+{{/* This partial processes all documents in the assets/documents directory without fingerprinting */}}
+{{ $allDocuments := resources.Match "documents/**" }}
+{{ range $allDocuments }}
+  {{/* Get the file path relative to the assets directory */}}
+  {{ $relPath := .RelPermalink }}
+  
+  {{/* Process and publish with the original filename */}}
+  {{ $processed := . | resources.Copy $relPath }}
+  
+  {{/* Store for debugging */}}
+  {{ $.Scratch.Add "processedDocs" (slice $processed.RelPermalink) }}
+{{ end }}
+{{ $.Scratch.Set "documentsCount" (len $allDocuments) }}
