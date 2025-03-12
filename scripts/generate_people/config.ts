@@ -16,7 +16,7 @@ export async function getConfig(): Promise<Config> {
         console.log(`Loaded environment variable: ${key.trim()}`);
       }
     });
-  } catch (error) {
+  } catch {
     console.log('No .env file found, continuing with environment variables');
   }
 
@@ -27,7 +27,7 @@ export async function getConfig(): Promise<Config> {
     const mappingContent = await fs.readFile(mappingPath, 'utf-8');
     formMapping = { ...DEFAULT_FORM_MAPPING, ...JSON.parse(mappingContent) };
     console.log('Custom form mapping loaded successfully');
-  } catch (error) {
+  } catch {
     console.log('Using default form field mapping');
   }
 
@@ -36,6 +36,7 @@ export async function getConfig(): Promise<Config> {
     outputDir: path.join(process.cwd(), 'content', 'who-we-are', 'team', 'people'),
     imagesDir: path.join(process.cwd(), 'assets', 'images', 'people', 'profile-pictures'),
     teamsIndexPath: path.join(process.cwd(), 'content', 'who-we-are', 'team', '_index.en.md'),
+    csirtDataUrl: 'https://csirt.divd.nl/csv/publications.json',
     formMapping,
   };
 

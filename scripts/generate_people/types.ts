@@ -15,12 +15,35 @@ export const KNOWN_TEAMS = [
 
 export type TeamName = (typeof KNOWN_TEAMS)[number];
 
+export interface CsirtCase {
+  id: string;
+  title: string;
+  start: string;
+  end: string;
+  status: string;
+  url: string;
+}
+
+export interface CsirtPost {
+  title: string;
+  date: string;
+  url: string;
+}
+
+export interface CveRecord {
+  id: string;
+  title: string;
+  full_title: string;
+  url: string;
+}
+
 export interface Config {
   readonly spreadsheetId: string;
   readonly outputDir: string;
   readonly imagesDir: string;
   readonly teamsIndexPath: string;
   readonly formMapping: FormFieldMapping;
+  readonly csirtDataUrl?: string;
 }
 
 export interface FormFieldMapping {
@@ -66,7 +89,7 @@ export const DEFAULT_FORM_MAPPING: FormFieldMapping = {
     placeholderChoice: 'Which placeholder would you prefer?',
   },
   validation: {
-    consent: { validValues: ['yes', 'agree'], transform: (value: string) => value.toLowerCase() },
+    consent: { validValues: ['yes', 'i agree'], transform: (value: string) => value.toLowerCase() },
     teams: { separator: ',', validValues: KNOWN_TEAMS },
   },
 };
