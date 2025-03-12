@@ -6,7 +6,7 @@ sections:
     lead: Met onze nieuwe onderzoekslijn versterken we de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem.
     cta:
       label: download partnerdeck
-      url: pad/naar/bestand
+      url: https://www.divd.nl/documents/DIVD%20Partnerdeck%20Energie%202025.pdf
       invertedColors: false
       external: false
       download: true
@@ -15,33 +15,28 @@ sections:
   - type: two-columns-section
     left:
       - type: caption-column
-        title: Een slim, duurzaam maar kwetsbaar energiesysteem
+        title: Een slimme, duurzame, maar kwetsbare energiesector
         subtitle: Waarom veiligheid cruciaal is
     right:
       - type: text-column
-        content: |-
-          Tijdens de energietransitie is het Europese elektriciteitsnetwerk uitgegroeid tot een complex ‘smart grid’. Hierin zijn consumenten niet langer alleen gebruikers, maar ook producenten van energie. Steeds meer apparaten zoals zonnepanelen, laadpalen, warmtepompen en slimme meters, zijn slim en met elkaar verbonden. Dit biedt grote kansen voor verduurzaming en innovatie, maar maakt het systeem ook kwetsbaarder voor schaalbare digitale aanvallen. 
-
-          Hoewel individuele apparaten weinig directe impact hebben op het elektriciteitsnetwerk, kan grootschalige manipulatie door kwaadwillenden wel degelijk het elektriciteitsnetwerk ontwrichten en in sommige gevallen leiden tot een black-out op (inter)nationale schaal. Dit maakt het eerdergenoemde ‘smart grid’ kwetsbaar voor verstoring en angstzaaierij. 
-
-          In een tijd waarin hybride oorlogsvoering steeds vaker voorkomt, groeit het besef dat samenwerking tussen alle betrokken partijen essentieel is om mogelijke ontwrichting van onze energievoorziening te voorkomen.*
+        content: Het Europese elektriciteitsnetwerk is nu een 'smart grid', waarin consumenten zowel energie gebruiken als produceren. Slimme online verbonden apparaten stemmen vraag en aanbod beter op elkaar af, wat verduurzaming en innovatie stimuleert.  Tegelijkertijd maakt dit ons energiesysteem kwetsbaar voor digitale aanvallen. Hoewel losse apparaten weinig impact hebben, kan grootschalige manipulatie door cybercriminelen leiden tot ernstige stroomstoringen en zelfs een (inter)nationale black-out.
     background:
       color: light-black
   - type: slider-section
     title: Wat gaan we doen?
-    description: "Met het project 'CVD in de energiesector' focust DIVD zich op kennisontwikkeling, samenwerking en bewustwording binnen de energiesector. In 2025 zetten we de volgende stappen:"
+    description: Met het project CVD in de energiesector starten we een nieuwe onderzoekslijn om de digitale weerbaarheid van het steeds kwetsbaarder wordende energiesysteem te versterken. We richten ons op kennisontwikkeling, samenwerking en bewustwording binnen de sector en onderzoeken daarbij specifiek kwetsbaarheden in randapparatuur, zoals laadpalen, omvormers, thuisbatterijen en energiebeheersystemen.
     cards:
       - title: IoT Hacking Lab
-        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        description: We zetten een IoT Hacking Lab op om onder andere randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen.
         image: iothacking.png
       - title: Onderzoek
-        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        description: We doen en publiceren onderzoek om hiermee autoriteiten en partners te ondersteunen bij handhaving en verbeteringen.
         image: onderzoek.png
       - title: Educatie
-        description: Samen met [DIVD.Academy](DIVD.Academy) wordt er lesmateriaal ontwikkeld, trainingen verzorgd en studenten opgeleid over de veiligheid van slimme energiesystemen.
+        description: We leiden nieuwe experts op met [DIVD.Academy](DIVD.Academy) door lesmateriaal, trainingen en workshops te ontwikkelen.
         image: educatie.png
       - title: Samenwerken
-        description: Om randapparatuur zoals laadpalen, thuisbatterijen, omvormers e.d. te onderzoeken en testen en samen te werken met andere labs.
+        description: We werken samen met netbeheerders, overheden, leveranciers, fabrikanten.
         image: samenwerking.png
   - type: two-columns-section
     left:
@@ -49,9 +44,10 @@ sections:
         content: |-
           ## DIVD kijkt waar netbeheerders niet kunnen komen
 
-          Netbeheerders controleren alleen het energienetwerk tot de aansluiting, terwijl de grootste risico’s in slimme apparaten achter de meter liggen. DIVD kan en mag wel tot achter de aansluiting onderzoek verrichten. 
+          Hoewel diverse instanties slimme apparaten testen en veiligheidsnormen opstellen, hebben netbeheerders alleen controle over het energienetwerk **tot de aansluiting.** 
+          Terwijl de meeste risico’s zich echter achter de aansluiting en (slimme) meter bevinden, namelijk in apparaten die cybercriminelen kunnen misbruiken. 
 
-          Wij onderzoeken deze apparaten, identificeert kwetsbaarheden en informeert fabrikanten om misbruik te voorkomen.
+          Wij onderzoeken deze apparaten, streven ernaar om kwetsbaarheden tijdig te identificeren en fabrikanten te informeren zodat deze kwetsbaarheden verholpen kunnen worden en evenetueel misbruik voorkomen kan worden.
         cta:
           label: lees meer over divd
           url: pagina-op-divd-nl
@@ -68,27 +64,34 @@ sections:
     title: Eerdere onderzoeken van DIVD binnen de energiesector
     highlights:
       - /newsroom/articles/91cd52191c65
-      - /newsroom/articles/case-apache-log4j2
-      - /newsroom/articles/case-solarwinds-orion
+      - /newsroom/articles/divd-responsibly-discloses-six-new-zero-day-vulnerabilities-to-vendor
+      - /newsroom/articles/078c788911d9
   - type: partner-section
     title: Huidige partners
     partners:
-      - name: Partner 1
-        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
+      - name: SIDN Fonds
+        description: |-
+          SIDN investeert in projecten met lef
+          en maatschappelijke meerwaarde, die
+          bijdragen aan een sterk internet, sterke
+          internetgebruikers of die zich richten op de
+          publieke waarden en maatschappelijke kant
+          van het internet.
         url: https://google.nl/
-        logo: DIVD-Project-Energy.png
-      - name: Partner 2
-        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non. Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
+        logo: SIDN%20Fonds.png
+      - name: Topsector Energie
+        description: |-
+          Topsector Energie helpt bedrijven,
+          kennisinstellingen, overheden en
+          maatschappelijke organisaties samen te
+          werken aan het energiesysteem van de
+          toekomst.
         url: https://google.nl/
+        logo: Topsector%20Energie%202.png
+      - name: jij?
+        description: Download ons partnerdeck voor de mogelijkheden.
+        url: divd.nl/energie
         logo: DIVD-Project-Energy.png
-      - name: Partner 3
-        description: Lorem ipsum dolor sit amet consectetur. Sagittis volutpat risus euismod venenatis gravida purus non.
-        url: https://google.nl/
-        logo: DIVD-Project-Energy.png
-      - name: Moar
-        description: asd
-        url: asf
-        logo: DIVD x Cybersquad 2024.jpg
   - type: two-columns-section
     left:
       - type: text-column
@@ -100,12 +103,12 @@ sections:
           label: download partnerdeck
           url: pad/naar/bestand
           invertedColors: false
-          external: false
+          external: true
           download: true
     right:
       - type: image-column
-        image: /images/bamboozled.jpg
-        description: Hackers van achteren gefotografeerd
+        image: Contact_Illustratie_1.png
+        description: Illustratie van 2 personen die handen naar elkaar uitsteken
         rounded: false
     background:
       color: divd-yellow
