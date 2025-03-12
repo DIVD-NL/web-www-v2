@@ -139,6 +139,8 @@ export class SpreadsheetService {
         Twitter: this.getValue(row, 'twitter'),
         Facebook: this.getValue(row, 'facebook'),
         Website: this.getValue(row, 'website'),
+        Mastodon: this.getValue(row, 'mastodon'),
+        Bluesky: this.getValue(row, 'bluesky'),
       },
       profilePicture: this.getValue(row, 'profilePicture'),
       picturePreference: this.getValue(row, 'picturePreference'),

@@ -59,6 +59,8 @@ export interface FormFieldMapping {
     twitter: string;
     facebook: string;
     website: string;
+    mastodon: string;
+    bluesky: string;
     profilePicture: string;
     role: string;
     picturePreference: string;
@@ -84,6 +86,8 @@ export const DEFAULT_FORM_MAPPING: FormFieldMapping = {
     twitter: 'Twitter',
     facebook: 'Facebook',
     website: 'Website (your blog, etc)',
+    mastodon: 'Mastodon',
+    bluesky: 'Bluesky',
     profilePicture: 'Profile picture',
     picturePreference: 'Bring Your Own Picture?',
     placeholderChoice: 'Which placeholder would you prefer?',
@@ -102,7 +106,14 @@ export interface PersonData {
   lastName: string;
   about: string;
   teams: TeamName[];
-  socialLinks: { LinkedIn?: string; Twitter?: string; Facebook?: string; Website?: string };
+  socialLinks: {
+    LinkedIn?: string;
+    Twitter?: string;
+    Facebook?: string;
+    Website?: string;
+    Mastodon?: string;
+    Bluesky?: string;
+  };
   profilePicture?: string;
   role: string;
   picturePreference?: string;
