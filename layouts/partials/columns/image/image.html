@@ -1,5 +1,6 @@
 <figure class="w-full h-full min-h-[400px] relative">
-    <div class="absolute h-full w-100vw desktop:w-[calc(50vw-2rem)] max-w-[800px] -mx-8 desktop:mx-0 overflow-hidden">
-        <image class="h-full object-cover object-left {{ if .rounded }}rounded-l-[300px]{{ end }}" src={{ .image }} alt="{{ .imageDescription }}" >
+    <div class="absolute right-0 desktop:right-auto h-full w-100vw desktop:w-[calc(50vw-2rem)] max-w-[800px] -mx-8 desktop:mx-0 overflow-hidden">
+        <image class="h-full object-cover object-left {{ if .rounded }}rounded-l-[300px] pill:rounded-[300px]{{ end }}"
+            src={{ .image }} alt="{{ .imageDescription }}">
     </div>
-  </figure>
+</figure>
