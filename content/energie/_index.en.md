@@ -47,7 +47,7 @@ sections:
           Hoewel diverse instanties slimme apparaten testen en veiligheidsnormen opstellen, hebben netbeheerders alleen controle over het energienetwerk **tot de aansluiting.** 
           Terwijl de meeste risico’s zich echter achter de aansluiting en (slimme) meter bevinden, namelijk in apparaten die cybercriminelen kunnen misbruiken. 
 
-          Wij onderzoeken deze apparaten, streven ernaar om kwetsbaarheden tijdig te identificeren en fabrikanten te informeren zodat deze kwetsbaarheden verholpen kunnen worden en evenetueel misbruik voorkomen kan worden.
+          Wij onderzoeken deze apparaten, streven ernaar om kwetsbaarheden tijdig te identificeren en fabrikanten te informeren zodat deze kwetsbaarheden verholpen kunnen worden en eventueel misbruik voorkomen kan worden.
         cta:
           label: lees meer over divd
           url: pagina-op-divd-nl
