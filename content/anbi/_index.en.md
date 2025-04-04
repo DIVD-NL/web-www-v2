@@ -27,7 +27,7 @@ We streven ernaar de digitale wereld veiliger te maken door kwetsbaarheden die w
 
 **Beloningsbeleid**
 
-Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoeding.
+* Bestuursleden zijn vrijwilligers en krijgen voor hun werkzaamheden geen vergoeding.
 
 **Documenten**
 
