@@ -49,20 +49,29 @@ partnerlist:
     description: Red Sift supports DIVD by offering their service 'OnDMARC' to improve our email security.
     website: https://redsift.com/pulse-platform/ondmarc
     image: /images/logo_redsift_400.png
+  - name: Rapid7
+    description: Rapid7 support DIVD by sharing their scanning data for our research.
+    website: https://www.rapid7.com/
+    image: rapid7logo.png
   - name: Schouten Zekerheid
     description: Schouten Zekerheid Makelaars in Assurantiën is our insurance intermediary and supports us and our cause.
     website: https://www.schoutenzekerheid.nl/
     image: /images/partners/schouten-zekerheid-360x200.jpg
-  - name: SIDN Fund
-    description: SIDN Fund provided financial support in 2020 to kick-start DIVD.
-    website: https://www.sidnfonds.nl/excerpt
-    image: /images/partners/sidn-fund-360x200.jpg
   - name: Schuberg Philis
     description: Schuberg Philis has provided us with the support of some of their employees and the equipment we have used for our scanning infrastructure.
     website: https://schubergphilis.com/en
     image: /images/partners/schuberg-philis-360x200.jpg
+  - name: Secura
+    description: Secura sponsors DIVD with a annual contribution.
+    website: https://www.secura.com/
+    image: secura%20logo.png
+  - name: SIDN Fund
+    description: SIDN Fund provided financial support in 2020 to kick-start DIVD.
+    website: https://www.sidnfonds.nl/excerpt
+    image: /images/partners/sidn-fund-360x200.jpg
   - name: VM Ware
     description: DIVD receives support from a VMware team to develop a new scanning infrastructure, funded by the VMware Foundation through licenses and hardware funding.
     website: https://www.vmware.com/
     image: /images/partners/vmware-360x200.jpg
 ---
+
