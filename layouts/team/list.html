@@ -17,25 +17,27 @@
               <div class="accordion-content">
                 <p>{{ .description }}</p>
 
-                {{ $firstFour := first 4 .members }}
-                {{ $theRest := after 4 .members }}
-                <div class="grid grid-4">
-                  {{ range $firstFour }}
-                    {{ partial "card-person" . }}
+                {{ if .members }}
+                  {{ $firstFour := first (math.Min 4 (len .members)) .members }}
+                  {{ $theRest := after (math.Min 4 (len .members)) .members }}
+                  <div class="grid grid-4">
+                    {{ range $firstFour }}
+                      {{ partial "card-person" . }}
+                    {{ end }}
+                  </div>
+                  {{ if gt (len $theRest) 0 }}
+                    <details>
+                      <summary>
+                        <span>Show more members</span><em>hide more members</em>
+                      </summary>
+                      <div class="grid grid-4">
+                        {{ range $theRest }}
+                          {{ partial "card-person" . }}
+                        {{ end }}
+                      </div>
+                    </details>
+                    <br /><br />
                   {{ end }}
-                </div>
-                {{ with $theRest }}
-                  <details>
-                    <summary>
-                      <span>Show more members</span><em>hide more members</em>
-                    </summary>
-                    <div class="grid grid-4">
-                      {{ range . }}
-                        {{ partial "card-person" . }}
-                      {{ end }}
-                    </div>
-                  </details>
-                  <br /><br />
                 {{ end }}
 
               </div>

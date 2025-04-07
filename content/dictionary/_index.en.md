@@ -21,7 +21,7 @@ At DIVD, we adhere to the ‘Principle of Proportionality’ and the ‘Principl
 
 ####
 
-#### **Case**
+**Case**
 
 When DIVD talks about a “case” we refer to a record or file created to document and manage the process of addressing a specific vulnerability. It typically includes details such as:
 
@@ -32,23 +32,21 @@ When DIVD talks about a “case” we refer to a record or file created to docum
 
 This structured approach helps ensure that vulnerabilities are tracked, managed, and resolved systematically.
 
-#### **Confidentiality**
+**Confidentiality**
 
 At DIVD, we work with sensitive data every day. Think about lists of IP addresses, types of vulnerabilities found, contact information, and metadata (e.g. timestamps, scripts, researchers working on the data). [The members of DIVD](https://www.divd.nl/who-we-are/team/) take all precautions necessary to protect the confidentiality of this data.
 
-#### **Responsible Disclosure**
+**(Ethical) Hacker** 
 
-In cybersecurity, responsible disclosure refers to the procedure where a security analyst, ethical hacker, or ethical hacker organisation such as DIVD notifies an organisation about a detected vulnerability in its systems or software. Notifying is done in such a way that the organisation has the opportunity to mitigate the weakness before it becomes public knowledge and possibly misused by hackers with malicious intentions. By privately notifying organisations, they can address the vulnerabilities before they are exploited by malicious hackers, thereby improving the security of their systems.
+DIVD members belong to the so-called "ethical" hackers. An ethical hacker is someone who breaks into a computer system with positive intentions, without disrupting any services or processes. The motivation of an ethical hacker is to detect security vulnerabilities, without misusing or exploiting them. Our members are skilled professionals that must always operate within legal boundaries. Please read our [Code of Conduct](https://www.divd.nl/what-we-do/code-of-conduct/) for more information. 
 
-Responsible disclosure helps protect users, maintains trust between (DIVD) researchers and organisations, and contributes to the ongoing improvement of cybersecurity practices.
-
-#### **Security.txt**
+**Exploit**
 
 Security.txt is a proposed standard for websites to provide a clear and consistent way for security researchers to report security vulnerabilities. It involves placing a simple text file named security.txt in the well-known location /.well-known/ directory of a website (e.g., [https://example.com/.well-known/security.txt)](https://example.com/.well-known/security.txt)). This file contains contact information and other details that guide researchers on how to responsibly disclose security issues to the organization. Wanna make DIVD’s work easier? Put our [security.txt](https://securitytxt.org/) in the code of your website and our IP 194.5.73.0-255 on your allow list.
 
 ####
 
-## Vulnerabilities
+In cybersecurity, responsible disclosure refers to the procedure where a security analyst, ethical hacker, or ethical hacker organisation such as DIVD notifies an organisation about a detected vulnerability in its systems or software. Notifying is done in such a way that the organisation has the opportunity to mitigate the weakness before it becomes public knowledge and possibly misused by hackers with malicious intentions. By privately notifying organisations, they can address the vulnerabilities before they are exploited by malicious hackers, thereby improving the security of their systems.
 
 #### CVE
 
@@ -58,13 +56,13 @@ CVE stands for "Common Vulnerabilities and Exposures", a [public list](https://c
 
 DIVD reports every [security vulnerability](https://www.divd.nl/why-our-work-matters/) that falls under the high-risk or high-impact category. A high-risk vulnerability is a security flaw in a system, application, or network that poses a significant threat to an organization’s operations, data, or users. High-risk vulnerabilities are typically characterized by being relatively easy for cybercriminals to exploit and are often found in widely used software or systems. Successful exploitation can result in severe consequences such as unauthorized access, data breaches, significant data loss, system downtime, financial loss, or damage to an organization’s reputation.
 
-The sequence in which DIVD handles vulnerabilities is influenced by multiple metrics, including the level of exposure online and whether the vulnerability is under active exploitation.
+Security.txt is a proposed standard for websites to provide a clear and consistent way for security researchers to report security vulnerabilities. It involves placing a simple text file named security.txt in the well-known location /.well-known/ directory of a website (e.g., https://example.com/.well-known/security.txt). This file contains contact information and other details that guide researchers on how to responsibly disclose security issues to the organization. Wanna make DIVD's work easier? Put our [security.txt](https://securitytxt.org/) in the code of your website and our IP 194.5.73.0-255 on your allow list.
 
-#### **Vulnerability Scanning versus Penetration Testing**
+**Types of vulnerabilities**
 
 Vulnerability scanning is aimed at *identifying* known vulnerabilities. It is typically non-intrusive and does not disrupt operations. Penetration testing is a more focused, manual effort to *exploit and assess* vulnerabilities in a real-world context. A vulnerability scan searches for vulnerabilities, whereas a penetration test (or “pentest”) also tries to exploit the vulnerabilities found to assess their severity and demonstrate the potential consequences.
 
-#### **Vulnerability versus Exploit**
+**Vulnerability versus exploit**
 
 A vulnerability is an issue or weakness in a system or application, whereas an exploit is an active component used to carry out an attack. The purpose of an exploit is to ‘exploit’ a vulnerability. A vulnerability itself does not cause harm by itself but creates an opportunity for an attacker to exploit it.
 
