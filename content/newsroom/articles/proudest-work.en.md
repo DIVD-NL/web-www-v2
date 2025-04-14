@@ -1,18 +1,11 @@
 ---
-title: "NEWS: INGE BRYAN NIEUWE BESTUURSVOORZITTER DIVD"
+title: 'NEWS: INGE BRYAN NIEUWE BESTUURSVOORZITTER DIVD'
 date: 2023-11-25T18:19:00+01:00
 tag: news
 intro: Met trots en plezier maken we bekend dat Inge Bryan de nieuwe bestuursvoorzitter is van het Dutch Institute for Vulnerability Disclosure. Ze neemt deze rol over van Astrid Oosenbrug. Astrid legt de voorzittershamer neer om zich meer te gaan richten op de ontwikkeling van de DIVD Academy.
 image: /images/articles/divd-partnerevent-2023-21.jpg
-alt: ""
-case:
-  caseid: ""
-  closed: true
-  lead: ""
-  leadlink: ""
-  researchers:
-    - label: Max van Der Horst
-      link: /
+alt: ''
+case: null
 image_alt: Picture of a bug (insect)
 ---
 Met trots en plezier maken we bekend dat [Inge Bryan](https://www.linkedin.com/in/inge-bryan/) de nieuwe bestuursvoorzitter is van [het Dutch Institute for Vulnerability Disclosure](https://www.divd.nl/). Ze neemt deze rol over van [Astrid Oosenbrug](https://www.linkedin.com/in/astridoosenbrug/). Astrid legt de voorzittershamer neer om zich meer te gaan richten op de ontwikkeling van de [DIVD Academy](https://divd.academy/).
