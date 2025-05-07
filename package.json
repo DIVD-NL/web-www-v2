@@ -35,6 +35,8 @@
     "@sveltia/cms": "^0.60.3",
     "axios": "^1.8.1",
     "gray-matter": "^4.0.3",
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.34.1",
     "yargs": "^17.7.2"
   }
 }
