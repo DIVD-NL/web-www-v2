@@ -1,10 +1,11 @@
 ---
+url: /operation-endgame-2.0
 title: OPERATION ENDGAME 2.0
 date: 2025-05-23T08:55:00+02:00
 author: []
 tag: case
 intro: DIVD is notifying victims of the Latrodectus infostealer, the evolution of IcedID. We are notifying victims that where identified as a part of Operation Endgame 2.0. If you receive a notification, please read the instructions carefully.
-image: /images/articles/DIVD-Operation%20Endgame%202.0.jpg
+image: /images/articles/divd-operation-endgame_2_0.jpg
 Alt tag for image: ''
 case:
   caseid: DIVD-2025-00018
