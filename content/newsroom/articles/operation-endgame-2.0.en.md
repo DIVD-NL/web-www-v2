@@ -1,5 +1,5 @@
 ---
-url: /operation-endgame-2.0
+url: /operation-endgame-2
 title: OPERATION ENDGAME 2.0
 date: 2025-05-23T08:55:00+02:00
 author: []
