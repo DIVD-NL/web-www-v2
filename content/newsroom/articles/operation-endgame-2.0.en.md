@@ -1,5 +1,5 @@
 ---
-title: Operation Endgame 2.0
+title: OPERATION ENDGAME 2.0
 date: 2025-05-23T08:55:00+02:00
 author: []
 tag: case
@@ -16,7 +16,6 @@ Last year, Operation Endgame marked the biggest anti-botnet operation to date. T
 
 This data has been shared with us and various other parties like: [Check Je Hack](https://www.politie.nl/informatie/checkjehack.html), [Have I Been Pwned](https://haveibeenpwned.com/), [No More Leaks](https://www.politie.nl/onderwerpen/no-more-leaks.html), the (Dutch) [NCSC](https://ncsc.nl), [CSIRT-DSP](https://csirtdsp.nl/) and Digital Trust Center. 
 The data we have received consists of usernames, (redacted) passwords, and dates of these passwords last being used. It is expected that this data originates from the password managers of popular browsers.
-
 
 ### What you can do
 
