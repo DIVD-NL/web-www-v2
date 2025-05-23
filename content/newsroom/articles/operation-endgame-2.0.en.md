@@ -37,3 +37,7 @@ As these notifications mostly span user accounts, you should start with ensuring
 ### What we are doing
 
 We have received the discovered data from the police, and are sending out notification to individuals and organizations that have fallen victim to compromise. To effectively do this, we are in close cooperation with the Dutch National Police as well as the NCSC, CSIRT-DSP and DTC.
+
+#### Press releases
+
+[Press Release of National Dutch Police](https://www.politie.nl/nieuws/2025/mei/22/11-internationale-politiediensten-pakken-met-operation-endgame-door-in-bestrijding-ransomware.html)
