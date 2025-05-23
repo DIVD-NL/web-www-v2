@@ -33,7 +33,7 @@ faq:
         - title: You are processing my personal data without my consent, is that legal?
           description: Yes it is. Under Dutch law and European privacy regulations, we can process this data based on a so-called "legitimate interest." DIVD is a private foundation that operates under a strict [code of conduct](https://www.divd.nl/code), with the aim to make the digital world safer.
         - title: Are you going to go after the criminals who stole my information?
-          description: "No, we are not. That is a matter for law enforcement. As per [article 9 of our code of conduct]([code of conduct](https://www.divd.nl/code)): \\`We analyze online threats, not threat actors. We are researchers and don't serve the needs of governments or law enforcement.\\`"
+          description: "No, we are not. That is a matter for law enforcement. As per [article 9 of our code of conduct](https://www.divd.nl/code): \\`We analyze online threats, not threat actors. We are researchers and don't serve the needs of governments or law enforcement.\\`"
         - title: if you "don't serve the needs of governments or law enforcement", why are you cooperating with the Dutch National Police on this case?
           description: |-
             Acting on this data set is directly in line with article 3 of our [code of conduct](https://www.divd.nl/code): \`Analyze databases with leaked credentials and report to the organizations or people who are compromised to take appropriate measures.\`
