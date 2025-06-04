@@ -5,8 +5,9 @@ author: []
 tag: ''
 intro: DIVD is notifying victims of the Latrodectus infostealer, the evolution of IcedID. We are notifying victims that where identified as a part of Operation Endgame 2.0. If you receive a notification, please read the instructions carefully.
 image: ''
-Alt tag for image: ''
+alt: ''
 case: null
+Alt tag for image: ''
 faq_enabled: false
 faq: null
 ---
