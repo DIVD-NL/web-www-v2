@@ -33,6 +33,10 @@ partnerlist:
     description: Dave Maasland, CEO of ESET sponsored DIVD in 2021 by paying most of the costs of our AS. Since 2022 ESET has supported us with a serious donation and free licenses.
     website: https://www.eset.com/nl/
     image: /images/partners/eset-360x200.jpg
+  - name: Elastic
+    description: Elastic sponsors DIVD by providing an Enterprise license, enabling our teams to perform large-scale data analysis and power our SIEM solution for effective vulnerability detection and response.
+    website: https://www.elastic.co/
+    image: /images/partners/DIVD-Partner-Elastic.jpg
   - name: LunaVia
     description: We have our office at LunaVia, which also helps us out with administrative tasks and acquiring funding for our DIVD Academy.
     website: https://lunavia.nl/
