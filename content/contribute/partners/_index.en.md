@@ -36,7 +36,7 @@ partnerlist:
   - name: Elastic
     description: Elastic sponsors DIVD by providing an Enterprise license, enabling our teams to perform large-scale data analysis and power our SIEM solution for effective vulnerability detection and response.
     website: https://www.elastic.co/
-    image: /images/partners/DIVD-Partner-Elastic.jpg
+    image: /images/partners/DIVD partner Elastic.jpg
   - name: LunaVia
     description: We have our office at LunaVia, which also helps us out with administrative tasks and acquiring funding for our DIVD Academy.
     website: https://lunavia.nl/
@@ -44,7 +44,7 @@ partnerlist:
   - name: Passbolt
     description: Passbolt sponsored their Pro license in 2021 to provide our teams with a secure way to share passwords.
     website: https://www.passbolt.com/
-    image: /images/partners/DIVD-Partner-Passbolt.jpg
+    image: /images/partners/DIVD Partner Passbolt.jpg
   - name: Protect4S
     description: Protect4S has supported DIVD with expertise in the security of SAP systems and resources to scan the internet for vulnerabilities related to SAP systems.
     website: https://www.protect4s.com/
@@ -52,11 +52,11 @@ partnerlist:
   - name: RED SIFT
     description: Red Sift supports DIVD by offering their service 'OnDMARC' to improve our email security.
     website: https://redsift.com/pulse-platform/ondmarc
-    image: /images/partners/DIVD-Partner-Red Sift.jpg
+    image: /images/partners/DIVD partner Red Sift.jpg
   - name: Rapid7
     description: Rapid7 support DIVD by sharing their scanning data for our research.
     website: https://www.rapid7.com/
-    image: /images/partners/DIVD-Partner-Rapid7.jpg
+    image: /images/partners/DIVD partner Rapid7.jpg
   - name: Schouten Zekerheid
     description: Schouten Zekerheid Makelaars in Assurantiën is our insurance intermediary and supports us and our cause.
     website: https://www.schoutenzekerheid.nl/
@@ -68,7 +68,7 @@ partnerlist:
   - name: Secura
     description: Secura sponsors DIVD with a annual contribution.
     website: https://www.secura.com/
-    image: /images/partners/DIVD-Partner-Secura.jpg
+    image: /images/partners/DIVD partner Secura.jpg
   - name: SIDN Fund
     description: SIDN Fund provided financial support in 2020 to kick-start DIVD.
     website: https://www.sidnfonds.nl/excerpt
