@@ -36,4 +36,4 @@ We streven ernaar de digitale wereld veiliger te maken door kwetsbaarheden die w
 - [Jaarverslag 2023](/documents/DIVD.Annual.Report.2023.pdf)
 - [Jaarverslag 2022](/documents/DIVD%20jaarverslag%202022.pdf)
 - [Jaarverslag 2021](/documents/DIVD%20jaarverslag%202021.pdf)
-- [Standaardformulier ANBI](https://www.divd.nl/documents/Publicatieplicht%20ANBI%202024.pdf)
+- [Standaardformulier ANBI](https://www.divd.nl/documents/Publicatieplicht%20ANBI%202024%20(1).pdf)
