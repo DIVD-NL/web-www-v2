@@ -2,6 +2,8 @@ import { getConfig } from './config';
 import { getAuthClient } from './auth';
 import { FormProcessor } from './formProcessor';
 import { updateTeamsIndex } from './teamUpdater';
+import * as fs from 'fs';
+import * as path from 'path';
 
 async function main() {
   try {
@@ -12,6 +14,15 @@ async function main() {
 
     // Fetch and process form responses
     const updatedPeople = await formProcessor.processResponses(auth, config);
+
+    // Write updatedPeople to the configured peopleJsonPath as an array
+    const peopleArray = Array.from(updatedPeople.values());
+    const outputDir = path.dirname(config.peopleJsonPath);
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    fs.writeFileSync(config.peopleJsonPath, JSON.stringify(peopleArray, null, 2), 'utf-8');
+    console.log(`People JSON written to ${config.peopleJsonPath}`);
 
     // Update teams index
     await updateTeamsIndex(config, updatedPeople);

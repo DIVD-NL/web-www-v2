@@ -44,6 +44,7 @@ export interface Config {
   readonly teamsIndexPath: string;
   readonly formMapping: FormFieldMapping;
   readonly csirtDataUrl?: string;
+  readonly peopleJsonPath: string;
 }
 
 export interface FormFieldMapping {
