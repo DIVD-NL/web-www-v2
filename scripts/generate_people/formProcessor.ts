@@ -84,6 +84,9 @@ export class FormProcessor {
         fullName,
       );
 
+      // Overwrite profilePicture with the local image path for JSON output
+      personData.profilePicture = localImagePath;
+
       // Get CSIRT data for this person
       const csirtPersonData = this.csirtDataService.getDataForPerson(fullName);
       this.csirtDataService.logPersonData(fullName, csirtPersonData);

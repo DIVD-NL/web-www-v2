@@ -26,3 +26,6 @@ service-account.json
 
 # Profile pictures
 assets/images/people/profile-pictures
+
+# People output file
+assets/documents/people.json
