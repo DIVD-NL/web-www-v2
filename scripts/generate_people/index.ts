@@ -15,8 +15,8 @@ async function main() {
     // Fetch and process form responses
     const updatedPeople = await formProcessor.processResponses(auth, config);
 
-    // Write updatedPeople to the configured peopleJsonPath as an array
-    const peopleArray = Array.from(updatedPeople.values());
+    // Exclude the email field from each person in the JSON output
+    const peopleArray = Array.from(updatedPeople.values()).map(({ email, ...rest }) => rest);
     const outputDir = path.dirname(config.peopleJsonPath);
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
