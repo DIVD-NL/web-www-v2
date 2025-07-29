@@ -44,7 +44,7 @@ partnerlist:
   - name: Netlas
     description: Netlas sponsors DIVD by providing an unlimited license, empowering our teams to detect both compromised and vulnerable systems at scale and notify affected organizations to help minimize the impact of cyberattacks.
     website: https://netlas.io/
-    image: /images/partners/DIVD partner Netlas.png
+    image: /images/partners/DIVD partner Netlas.svg
   - name: Passbolt
     description: Passbolt sponsored their Pro license in 2021 to provide our teams with a secure way to share passwords.
     website: https://www.passbolt.com/
