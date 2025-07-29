@@ -41,6 +41,10 @@ partnerlist:
     description: We have our office at LunaVia, which also helps us out with administrative tasks and acquiring funding for our DIVD Academy.
     website: https://lunavia.nl/
     image: /images/partners/lunavia-360x200.jpg
+  - name: Netlas
+    description: Netlas sponsors DIVD by providing an unlimited license, empowering our teams to detect both compromised and vulnerable systems at scale and notify affected organizations to help minimize the impact of cyberattacks.
+    website: https://netlas.io/
+    image: /images/partners/DIVD partner Netlas.png
   - name: Passbolt
     description: Passbolt sponsored their Pro license in 2021 to provide our teams with a secure way to share passwords.
     website: https://www.passbolt.com/
@@ -77,9 +81,5 @@ partnerlist:
     description: DIVD receives support from a VMware team to develop a new scanning infrastructure, funded by the VMware Foundation through licenses and hardware funding.
     website: https://www.vmware.com/
     image: /images/partners/vmware-360x200.jpg
-  - name: Netlas
-    description: Netlas sponsors DIVD by providing an unlimited license, empowering our teams to detect both compromised and vulnerable systems at scale and notify affected organizations to help minimize the impact of cyberattacks.
-    website: https://netlas.io/
-    image: /images/partners/DIVD partner Netlas.png
 ---
 
