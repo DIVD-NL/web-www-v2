@@ -38,25 +38,25 @@ partnerlist:
     website: https://cyver.io/
     image: /images/partners/cyver-360x200.jpg
   - name: Digital Trust Center
-    description: DTC provided DIVD funding in 2022
+    description: The Digital Trust Center (DTC) provided funding to DIVD in 2022.
     website: https://www.digitaltrustcenter.nl/
     image: /images/partners/DIVD partner dtc.svg
   - name: ElaadNL
-    description: DIVD is collaborating with Elaad on the Energy project to turn newly identified vulnerabilities into CVEs.
+    description: DIVD collaborates with ElaadNL on the Energy project, converting newly discovered vulnerabilities into CVEs.
     website: https://elaad.nl/
     image: /images/partners/DIVD partner ElaadNL.svg
   - name: European Network for Cyber Security
     description: DIVD is working together with ENCS on the Energy project to convert newly discovered vulnerabilities into CVEs.
     website: https://encs.eu/
     image: /images/partners/DIVD partner ENCS-logo-dark.svg
-  - name: ESET
-    description: Dave Maasland, CEO of ESET sponsored DIVD in 2021 by paying most of the costs of our AS. Since 2022 ESET has supported us with a serious donation and free licenses.
-    website: https://www.eset.com/nl/
-    image: /images/partners/eset-360x200.jpg
   - name: Elastic
     description: Elastic sponsors DIVD by providing an Enterprise license, enabling our teams to perform large-scale data analysis and power our SIEM solution for effective vulnerability detection and response.
     website: https://www.elastic.co/
     image: /images/partners/DIVD partner Elastic.jpg
+  - name: ESET
+    description: Dave Maasland, CEO of ESET sponsored DIVD in 2021 by paying most of the costs of our AS. Since 2022 ESET has supported us with a serious donation and free licenses.
+    website: https://www.eset.com/nl/
+    image: /images/partners/eset-360x200.jpg
   - name: Internet Cleanup Foundation
     description: The Internet Cleanup Foundation shares DIVD’s mission, and we collaborate on vulnerability disclosure.
     website: https://internetcleanup.foundation/
@@ -90,7 +90,7 @@ partnerlist:
     website: https://redsift.com/pulse-platform/ondmarc
     image: /images/partners/DIVD partner Red Sift.jpg
   - name: Rapid7
-    description: Rapid7 support DIVD by sharing their scanning data for our research.
+    description: Rapid7 supports DIVD by sharing their scanning data for our research.
     website: https://www.rapid7.com/
     image: /images/partners/DIVD partner Rapid7.jpg
   - name: Schouten Zekerheid
@@ -102,7 +102,7 @@ partnerlist:
     website: https://schubergphilis.com/en
     image: /images/partners/schuberg-philis-360x200.jpg
   - name: Secura
-    description: Secura sponsors DIVD with a annual contribution.
+    description: Secura supports DIVD with annual funding and collaborates with us on energy research.
     website: https://www.secura.com/
     image: /images/partners/DIVD partner Secura.jpg
   - name: SUPERP
