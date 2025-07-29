@@ -45,14 +45,14 @@ partnerlist:
     description: DIVD collaborates with ElaadNL on the Energy project, converting newly discovered vulnerabilities into CVEs.
     website: https://elaad.nl/
     image: /images/partners/DIVD partner ElaadNL.svg
-  - name: European Network for Cyber Security
-    description: DIVD is working together with ENCS on the Energy project to convert newly discovered vulnerabilities into CVEs.
-    website: https://encs.eu/
-    image: /images/partners/DIVD partner ENCS-logo-dark.svg
   - name: Elastic
     description: Elastic sponsors DIVD by providing an Enterprise license, enabling our teams to perform large-scale data analysis and power our SIEM solution for effective vulnerability detection and response.
     website: https://www.elastic.co/
     image: /images/partners/DIVD partner Elastic.jpg
+  - name: European Network for Cyber Security
+    description: DIVD is working together with ENCS on the Energy project to convert newly discovered vulnerabilities into CVEs.
+    website: https://encs.eu/
+    image: /images/partners/DIVD partner ENCS-logo-dark.svg
   - name: ESET
     description: Dave Maasland, CEO of ESET sponsored DIVD in 2021 by paying most of the costs of our AS. Since 2022 ESET has supported us with a serious donation and free licenses.
     website: https://www.eset.com/nl/
@@ -85,14 +85,14 @@ partnerlist:
     description: Protect4S has supported DIVD with expertise in the security of SAP systems and resources to scan the internet for vulnerabilities related to SAP systems.
     website: https://www.protect4s.com/
     image: /images/partners/protect-4s-360x200.jpg
-  - name: RED SIFT
-    description: Red Sift supports DIVD by offering their service 'OnDMARC' to improve our email security.
-    website: https://redsift.com/pulse-platform/ondmarc
-    image: /images/partners/DIVD partner Red Sift.jpg
   - name: Rapid7
     description: Rapid7 supports DIVD by sharing their scanning data for our research.
     website: https://www.rapid7.com/
     image: /images/partners/DIVD partner Rapid7.jpg
+  - name: RED SIFT
+    description: Red Sift supports DIVD by offering their service 'OnDMARC' to improve our email security.
+    website: https://redsift.com/pulse-platform/ondmarc
+    image: /images/partners/DIVD partner Red Sift.jpg
   - name: Schouten Zekerheid
     description: Schouten Zekerheid Makelaars in Assurantiën is our insurance intermediary and supports us and our cause.
     website: https://www.schoutenzekerheid.nl/
@@ -105,14 +105,14 @@ partnerlist:
     description: Secura supports DIVD with annual funding and collaborates with us on energy research.
     website: https://www.secura.com/
     image: /images/partners/DIVD partner Secura.jpg
-  - name: SUPERP
-    description: SUPERP supports DIVD by allowing some of their employees to contribute to Research and CSIRT activities.
-    website: https://superp.nl/
-    image: /images/partners/DIVD partner Superp.svg
   - name: SIDN Fund
     description: The SIDN Fund has supported DIVD from the very beginning with funding and services, and now also supports our energy research.
     website: https://www.sidnfonds.nl/excerpt
     image: /images/partners/sidn-fund-360x200.jpg
+  - name: SUPERP
+    description: SUPERP supports DIVD by allowing some of their employees to contribute to Research and CSIRT activities.
+    website: https://superp.nl/
+    image: /images/partners/DIVD partner Superp.svg
   - name: Topsector Energie
     description: Topsector Energie provides financial support to DIVD and collaborates with us on energy-related research.
     website: https://topsectorenergie.nl/
