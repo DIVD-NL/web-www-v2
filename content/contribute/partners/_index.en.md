@@ -108,7 +108,7 @@ partnerlist:
   - name: SecurityBridge
     description: SecurityBridge supports DIVD with in-depth expertise on SAP security and provides resources to help scan the internet for vulnerabilities in SAP systems.
     website: https://securitybridge.com/
-    image: /images/partners/DIVD Partner SecurityBridge-logo-svg.svg
+    image: /images/partners/DIVD partner securitybridge.svg
   - name: SIDN Fund
     description: The SIDN Fund has supported DIVD from the very beginning with funding and services, and now also supports our energy research.
     website: https://www.sidnfonds.nl/excerpt
