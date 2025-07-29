@@ -31,7 +31,7 @@
     <div class="reverse pb-xl">
       <h2>{{ .Params.partnerstitle }}</h2>
       <p>{{ .Params.partnersintro }}</p>
-      <div class="grid grid-3 partner-list">
+      <div class="grid grid-3 grid-sm partner-list">
         {{ range .Params.partnerlist }}
           {{ partial "card-partner" (dict
             "imageSource" .image
