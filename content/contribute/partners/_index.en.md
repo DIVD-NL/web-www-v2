@@ -57,10 +57,18 @@ partnerlist:
     description: Elastic sponsors DIVD by providing an Enterprise license, enabling our teams to perform large-scale data analysis and power our SIEM solution for effective vulnerability detection and response.
     website: https://www.elastic.co/
     image: /images/partners/DIVD partner Elastic.jpg
+  - name: Internet Cleanup Foundation
+    description: The Internet Cleanup Foundation shares DIVD’s mission, and we collaborate on vulnerability disclosure.
+    website: https://internetcleanup.foundation/
+    image: /images/partners/DIVD partner Internet cleanup foundation.svg
   - name: LunaVia
     description: We have our office at LunaVia, which also helps us out with administrative tasks and acquiring funding for our DIVD Academy.
     website: https://lunavia.nl/
     image: /images/partners/lunavia-360x200.jpg
+  - name: Nationaal Coördinator Terrorismebestrijding en Veiligheid
+    description: NCTV provides funding to DIVD for the period 2023–2025.
+    website: https://www.nctv.nl/
+    image: /images/partners/DIVD partner nctv.svg
   - name: Netlas
     description: Netlas sponsors DIVD by providing an unlimited license, empowering our teams to detect both compromised and vulnerable systems at scale and notify affected organizations to help minimize the impact of cyberattacks.
     website: https://netlas.io/
@@ -69,6 +77,10 @@ partnerlist:
     description: Passbolt sponsored their Pro license in 2021 to provide our teams with a secure way to share passwords.
     website: https://www.passbolt.com/
     image: /images/partners/DIVD Partner Passbolt.jpg
+  - name: Pomerium
+    description: Pomerium supports DIVD by providing us with their license free of charge.
+    website: https://www.pomerium.com/
+    image: /images/partners/DIVD partner pomerium-logo-dark.svg
   - name: Protect4S
     description: Protect4S has supported DIVD with expertise in the security of SAP systems and resources to scan the internet for vulnerabilities related to SAP systems.
     website: https://www.protect4s.com/
@@ -93,10 +105,18 @@ partnerlist:
     description: Secura sponsors DIVD with a annual contribution.
     website: https://www.secura.com/
     image: /images/partners/DIVD partner Secura.jpg
+  - name: SUPERP
+    description: SUPERP supports DIVD by allowing some of their employees to contribute to Research and CSIRT activities.
+    website: https://superp.nl/
+    image: /images/partners/DIVD partner Superp.svg
   - name: SIDN Fund
-    description: SIDN Fund provided financial support in 2020 to kick-start DIVD.
+    description: The SIDN Fund has supported DIVD from the very beginning with funding and services, and now also supports our energy research.
     website: https://www.sidnfonds.nl/excerpt
     image: /images/partners/sidn-fund-360x200.jpg
+  - name: Topsector Energie
+    description: Topsector Energie provides financial support to DIVD and collaborates with us on energy-related research.
+    website: https://topsectorenergie.nl/
+    image: /images/partners/DIVD partner topsecter energie.svg
   - name: VMware
     description: DIVD receives support from a VMware team to develop a new scanning infrastructure, funded by the VMware Foundation through licenses and hardware funding.
     website: https://www.vmware.com/
