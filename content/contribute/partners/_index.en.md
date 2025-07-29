@@ -61,6 +61,10 @@ partnerlist:
     description: The Internet Cleanup Foundation shares DIVD’s mission, and we collaborate on vulnerability disclosure.
     website: https://internetcleanup.foundation/
     image: /images/partners/DIVD partner Internet cleanup foundation.svg
+  - name: Linprofs
+    description: Linprofs provides support for DIVD’s server infrastructure.
+    website: https://linprofs.com/
+    image: /images/partners/DIVD partner linprofs.png
   - name: LunaVia
     description: We have our office at LunaVia, which also helps us out with administrative tasks and acquiring funding for our DIVD Academy.
     website: https://lunavia.nl/
