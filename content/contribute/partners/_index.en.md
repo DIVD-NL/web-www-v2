@@ -113,6 +113,10 @@ partnerlist:
     description: SUPERP supports DIVD by allowing some of their employees to contribute to Research and CSIRT activities.
     website: https://superp.nl/
     image: /images/partners/DIVD partner Superp.svg
+  - name: The Green Village
+    description: The Green Village is organizing a hack event together with DIVD.
+    website: https://www.thegreenvillage.org/
+    image: /images/partners/DIVD partner the green village.svg
   - name: Topsector Energie
     description: Topsector Energie provides financial support to DIVD and collaborates with us on energy-related research.
     website: https://topsectorenergie.nl/
