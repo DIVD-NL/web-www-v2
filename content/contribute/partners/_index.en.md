@@ -29,6 +29,10 @@ partnerlist:
     description: BIT is sponsoring hosting space for our websites and mail server capacity.
     website: https://www.bit.nl/
     image: /images/partners/bit-360x200.jpg
+  - name: Bureau Veritas
+    description: Bureau Veritas (previously known as Secura) supports DIVD with annual funding and collaborates with us on energy research.
+    website: https://cybersecurity.bureauveritas.com/
+    image: /images/partners/DIVD partner bureau-veritas-gray.svg
   - name: Cisco
     description: Cisco provides free training to DIVD and DIVD.academy.
     website: https://www.cisco.com
@@ -89,10 +93,6 @@ partnerlist:
     description: Rapid7 supports DIVD by sharing their scanning data for our research.
     website: https://www.rapid7.com/
     image: /images/partners/DIVD partner Rapid7.jpg
-  - name: SecurityBridge
-    description: SecurityBridge supports DIVD with in-depth expertise on SAP security and provides resources to help scan the internet for vulnerabilities in SAP systems.
-    website: https://securitybridge.com/
-    image: /images/partners/DIVD Partner SecurityBridge-logo-svg.svg
   - name: RED SIFT
     description: Red Sift supports DIVD by offering their service 'OnDMARC' to improve our email security.
     website: https://redsift.com/pulse-platform/ondmarc
@@ -105,10 +105,10 @@ partnerlist:
     description: Schuberg Philis has provided us with the support of some of their employees and the equipment we have used for our scanning infrastructure.
     website: https://schubergphilis.com/en
     image: /images/partners/schuberg-philis-360x200.jpg
-  - name: Secura
-    description: Secura supports DIVD with annual funding and collaborates with us on energy research.
-    website: https://www.secura.com/
-    image: /images/partners/DIVD partner Secura.jpg
+  - name: SecurityBridge
+    description: SecurityBridge supports DIVD with in-depth expertise on SAP security and provides resources to help scan the internet for vulnerabilities in SAP systems.
+    website: https://securitybridge.com/
+    image: /images/partners/DIVD Partner SecurityBridge-logo-svg.svg
   - name: SIDN Fund
     description: The SIDN Fund has supported DIVD from the very beginning with funding and services, and now also supports our energy research.
     website: https://www.sidnfonds.nl/excerpt
