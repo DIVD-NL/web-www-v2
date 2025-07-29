@@ -225,9 +225,15 @@ a.cta {
 }
 
 .partner-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 32px;
+  grid-gap: 32px !important;
+}
+
+.partner-image {
+  padding: 50px;
+
+  @media (max-width: 700px) {
+    padding: 25px;
+  }
 }
 
 button,
@@ -372,6 +378,7 @@ ol {
 .grid {
   display: grid;
   grid-auto-rows: auto;
+
   &.grid-3 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 32px;
@@ -387,6 +394,10 @@ ol {
     &.grid-3 {
       grid-template-columns: 1fr 1fr;
       grid-gap: 4px;
+
+      &.grid-sm {
+        grid-template-columns: 1fr;
+      }
     }
 
     &.grid-4 {
