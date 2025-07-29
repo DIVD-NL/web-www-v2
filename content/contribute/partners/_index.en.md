@@ -17,6 +17,10 @@ partnerlist:
     description: Erik Bais, owner of A2B-Internet was so kind to help us out getting our own Autonomous System. Since then, we have our own IP addresses to scan from.
     website: https://www.a2b-internet.com/
     image: /images/partners/a2b-internet-360x200.jpg
+  - name: Accenture
+    description: Accenture supports DIVD financially and with IT workforce.
+    website: https://www.accenture.com/
+    image: /images/partners/DIVD partner Accenture.svg
   - name: Atom86
     description: Atom86 is sponsoring connectivity and rack space for our scanning infrastructure.
     website: https://atom86.net/
@@ -25,10 +29,26 @@ partnerlist:
     description: BIT is sponsoring hosting space for our websites and mail server capacity.
     website: https://www.bit.nl/
     image: /images/partners/bit-360x200.jpg
+  - name: Cisco
+    description: Cisco provides free training to DIVD and DIVD.academy.
+    website: https://www.cisco.com
+    image: /images/partners/DIVD partner Cisco_logo_blue_2016.svg
   - name: Cyver
     description: Cyver provides us with their cloud platform, Cyver Core, which enables us to deliver security research reports with ticket handling.
     website: https://cyver.io/
     image: /images/partners/cyver-360x200.jpg
+  - name: Digital Trust Center
+    description: DTC provided DIVD funding in 2022
+    website: https://www.digitaltrustcenter.nl/
+    image: /images/partners/DIVD partner dtc.svg
+  - name: ElaadNL
+    description: DIVD is collaborating with Elaad on the Energy project to turn newly identified vulnerabilities into CVEs.
+    website: https://elaad.nl/
+    image: /images/partners/DIVD partner ElaadNL.svg
+  - name: European Network for Cyber Security
+    description: DIVD is working together with ENCS on the Energy project to convert newly discovered vulnerabilities into CVEs.
+    website: https://encs.eu/
+    image: /images/partners/DIVD partner ENCS-logo-dark.svg
   - name: ESET
     description: Dave Maasland, CEO of ESET sponsored DIVD in 2021 by paying most of the costs of our AS. Since 2022 ESET has supported us with a serious donation and free licenses.
     website: https://www.eset.com/nl/
