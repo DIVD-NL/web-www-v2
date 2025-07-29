@@ -80,6 +80,6 @@ partnerlist:
   - name: Netlas
     description: Netlas sponsors DIVD by providing an unlimited license, empowering our teams to detect both compromised and vulnerable systems at scale and notify affected organizations to help minimize the impact of cyberattacks.
     website: https://netlas.io/
-    image: /images/partners/Dark-v.png
+    image: /images/partners/DIVD partner Netlas.png
 ---
 
