@@ -73,7 +73,7 @@ partnerlist:
     description: SIDN Fund provided financial support in 2020 to kick-start DIVD.
     website: https://www.sidnfonds.nl/excerpt
     image: /images/partners/sidn-fund-360x200.jpg
-  - name: VM Ware
+  - name: VMware
     description: DIVD receives support from a VMware team to develop a new scanning infrastructure, funded by the VMware Foundation through licenses and hardware funding.
     website: https://www.vmware.com/
     image: /images/partners/vmware-360x200.jpg
