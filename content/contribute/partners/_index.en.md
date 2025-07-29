@@ -77,5 +77,9 @@ partnerlist:
     description: DIVD receives support from a VMware team to develop a new scanning infrastructure, funded by the VMware Foundation through licenses and hardware funding.
     website: https://www.vmware.com/
     image: /images/partners/vmware-360x200.jpg
+  - name: Netlas
+    description: Netlas sponsors DIVD by providing an unlimited license, empowering our teams to detect both compromised and vulnerable systems at scale and notify affected organizations to help minimize the impact of cyberattacks.
+    website: https://netlas.io/
+    image: /images/partners/Dark-v.png
 ---
 
