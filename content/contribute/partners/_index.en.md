@@ -85,14 +85,14 @@ partnerlist:
     description: Pomerium supports DIVD by providing us with their license free of charge.
     website: https://www.pomerium.com/
     image: /images/partners/DIVD partner pomerium-logo-dark.svg
-  - name: Protect4S
-    description: Protect4S has supported DIVD with expertise in the security of SAP systems and resources to scan the internet for vulnerabilities related to SAP systems.
-    website: https://www.protect4s.com/
-    image: /images/partners/protect-4s-360x200.jpg
   - name: Rapid7
     description: Rapid7 supports DIVD by sharing their scanning data for our research.
     website: https://www.rapid7.com/
     image: /images/partners/DIVD partner Rapid7.jpg
+  - name: SecurityBridge
+    description: SecurityBridge supports DIVD with in-depth expertise on SAP security and provides resources to help scan the internet for vulnerabilities in SAP systems.
+    website: https://securitybridge.com/
+    image: /images/partners/DIVD Partner SecurityBridge-logo-svg.svg
   - name: RED SIFT
     description: Red Sift supports DIVD by offering their service 'OnDMARC' to improve our email security.
     website: https://redsift.com/pulse-platform/ondmarc
