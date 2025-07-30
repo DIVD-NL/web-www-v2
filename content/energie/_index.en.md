@@ -113,6 +113,10 @@ sections:
           toekomst.
         url: https://topsectorenergie.nl/nl/
         logo: /images/partners/DIVD%20partner%20topsecter%20energie.svg
+      - name: jij?
+        description: Download ons partnerdeck voor de mogelijkheden.
+        url: https://www.divd.nl/documents/DIVD%20Partnerdeck%20Energie%202025.pdf
+        logo: DIVD-Project-Energy.png
   - type: two-columns-section
     left:
       - type: text-column
