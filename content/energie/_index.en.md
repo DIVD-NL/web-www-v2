@@ -50,7 +50,7 @@ sections:
           Wij onderzoeken deze apparaten, streven ernaar om kwetsbaarheden tijdig te identificeren en fabrikanten te informeren zodat deze kwetsbaarheden verholpen kunnen worden en eventueel misbruik voorkomen kan worden.
         cta:
           label: lees meer over divd
-          url: pagina-op-divd-nl
+          url: https://www.divd.nl/who-we-are/
           invertedColors: false
           external: false
           download: false
@@ -77,7 +77,7 @@ sections:
           internetgebruikers of die zich richten op de
           publieke waarden en maatschappelijke kant
           van het internet.
-        url: https://google.nl/
+        url: https://www.sidnfonds.nl
         logo: SIDN%20Fonds.png
       - name: Topsector Energie
         description: |-
@@ -86,7 +86,7 @@ sections:
           maatschappelijke organisaties samen te
           werken aan het energiesysteem van de
           toekomst.
-        url: https://google.nl/
+        url: https://topsectorenergie.nl/nl/
         logo: Topsector%20Energie%202.png
       - name: jij?
         description: Download ons partnerdeck voor de mogelijkheden.
@@ -101,7 +101,7 @@ sections:
           DIVD zoekt partners die willen bijdragen aan een digitaal veiliger energiesysteem. Daarom nodigen we bedrijven, experts en professionals uit om expertise, apparatuur of onderzoekscapaciteit beschikbaar te stellen. Download ons sponsordeck voor meer informatie
         cta:
           label: download partnerdeck
-          url: pad/naar/bestand
+          url: https://www.divd.nl/documents/DIVD%20Partnerdeck%20Energie%202025.pdf
           invertedColors: false
           external: true
           download: true
