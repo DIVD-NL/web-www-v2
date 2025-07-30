@@ -69,6 +69,26 @@ sections:
   - type: partner-section
     title: Huidige partners
     partners:
+      - name: Bureau Veritas
+        description: |-
+          Bureau Veritas biedt wereldwijd expertise op het gebied van inspecties, certificering en cybersecurity. Ze helpen organisaties risico’s te beheersen en hun digitale weerbaarheid te vergroten.
+        url: https://cybersecurity.bureauveritas.com/
+        logo: /images/partners/DIVD%20partner%20bureau-veritas-gray.svg
+      - name: Elaad
+        description: |-
+          ElaadNL is het kennis- en innovatiecentrum op het gebied van slimme laadinfrastructuur. Het stimuleert onderzoek en samenwerking rondom elektrisch rijden en het slim laden van voertuigen binnen een duurzaam energiesysteem.
+        url: https://elaad.nl/
+        logo: /images/partners/DIVD%20partner%20ElaadNL.svg
+      - name: European Network for Cyber Security
+        description: |-
+          ENCS versterkt de digitale weerbaarheid van Europese energie- en nutsbedrijven. Ze bieden expertise, testen en kennisdeling om de cyberveiligheid van kritieke infrastructuren te verbeteren.
+        url: https://encs.eu/
+        logo: /images/partners/DIVD%20partner%20ENCS-logo-dark.svg
+      - name: Internet Cleanup Foundation
+        description: |-
+          De Internet Cleanup Foundation spoort verouderde en onveilige systemen op het internet op en helpt eigenaren om deze op te schonen. Zo dragen ze bij aan een veiliger internet voor iedereen.
+        url: https://internetcleanup.foundation/
+        logo: /images/partners/DIVD%20partner%20Internet%20cleanup%20foundation.svg
       - name: SIDN Fonds
         description: |-
           SIDN investeert in projecten met lef
@@ -78,7 +98,12 @@ sections:
           publieke waarden en maatschappelijke kant
           van het internet.
         url: https://www.sidnfonds.nl
-        logo: SIDN%20Fonds.png
+        logo: /images/partners/sidn-fund-360x200.jpg
+      - name: The Green Village
+        description: |-
+          The Green Village is een open testlocatie op de TU Delft Campus waar onderzoekers, bedrijven en overheden samen in de praktijk werken aan duurzame innovaties in de gebouwde omgeving.
+        url: https://www.thegreenvillage.org/
+        logo: /images/partners/DIVD%20partner%20the%20green%20village.svg
       - name: Topsector Energie
         description: |-
           Topsector Energie helpt bedrijven,
@@ -87,36 +112,7 @@ sections:
           werken aan het energiesysteem van de
           toekomst.
         url: https://topsectorenergie.nl/nl/
-        logo: Topsector%20Energie%202.png
-      - name: Elaad
-        description: |-
-          ElaadNL is het kennis- en innovatiecentrum op het gebied van slimme laadinfrastructuur. Het stimuleert onderzoek en samenwerking rondom elektrisch rijden en het slim laden van voertuigen binnen een duurzaam energiesysteem.
-        url: https://elaad.nl/
-        logo: /assets/images/partners/DIVD%20partner%20ElaadNL.svg
-      - name: European Network for Cyber Security
-        description: |-
-          ENCS versterkt de digitale weerbaarheid van Europese energie- en nutsbedrijven. Ze bieden expertise, testen en kennisdeling om de cyberveiligheid van kritieke infrastructuren te verbeteren.
-        url: https://encs.eu/
-        logo: /assets/images/partners/DIVD%20partner%20ENCS-logo-dark.svg
-      - name: Internet Cleanup Foundation
-        description: |-
-          De Internet Cleanup Foundation spoort verouderde en onveilige systemen op het internet op en helpt eigenaren om deze op te schonen. Zo dragen ze bij aan een veiliger internet voor iedereen.
-        url: https://internetcleanup.foundation/
-        logo: /assets/images/partners/DIVD%20partner%20Internet%20cleanup%20foundation.svg
-      - name: The Green Village
-        description: |-
-          The Green Village is een open testlocatie op de TU Delft Campus waar onderzoekers, bedrijven en overheden samen in de praktijk werken aan duurzame innovaties in de gebouwde omgeving.
-        url: https://www.thegreenvillage.org/
-        logo: /assets/images/partners/DIVD%20partner%20the%20green%20village.svg
-      - name: Bureau Veritas
-        description: |-
-          Bureau Veritas biedt wereldwijd expertise op het gebied van inspecties, certificering en cybersecurity. Ze helpen organisaties risico’s te beheersen en hun digitale weerbaarheid te vergroten.
-        url: https://cybersecurity.bureauveritas.com/
-        logo: /assets/images/partners/DIVD%20partner%20bureau-veritas-gray.svg
-      - name: jij?
-        description: Download ons partnerdeck voor de mogelijkheden.
-        url: https://www.divd.nl/documents/DIVD%20Partnerdeck%20Energie%202025.pdf
-        logo: DIVD-Project-Energy.png
+        logo: /images/partners/DIVD%20partner%20topsecter%20energie.svg
   - type: two-columns-section
     left:
       - type: text-column
