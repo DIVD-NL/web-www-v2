@@ -3,6 +3,8 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { createHash } from 'crypto';
 import { getAuthClient } from './auth';
+import sharp from 'sharp';
+import heicConvert from 'heic-convert';
 
 export async function downloadImage(url: string, outputPath: string): Promise<string> {
   console.log(`\nProcessing image from URL`);
@@ -42,5 +44,23 @@ export async function downloadImage(url: string, outputPath: string): Promise<st
   console.log(`Saving image to: ${finalPath}`);
   await fs.writeFile(finalPath, buffer);
 
-  return finalPath;
+  // Convert HEIC to JPG and strip EXIF data
+  if (originalExt.toLowerCase() === '.heic') {
+    const jpgPath = finalPath.toLowerCase().replace('.heic', '.jpg');
+    await fs.mkdir(path.dirname(jpgPath), { recursive: true });
+    await heicConvert({
+      buffer,
+      format: 'JPEG',
+      quality: 0.9,
+    }).then((jpgBuffer) => {
+      return sharp(jpgBuffer).withMetadata({}).toFile(jpgPath);
+    });
+    console.log(`Converted HEIC to JPG: ${jpgPath}`);
+    return jpgPath;
+  } else {
+    // Strip EXIF data for non-HEIC images
+    await sharp(buffer).withMetadata({}).toFile(finalPath);
+    console.log(`Stripped EXIF data from image: ${finalPath}`);
+    return finalPath;
+  }
 }

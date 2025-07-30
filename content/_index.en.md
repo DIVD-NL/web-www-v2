@@ -10,7 +10,7 @@ fold:
   family_alt: Picture of group of people depicting the DIVD family
 whatwedo:
   title: What we do
-  description: "DIVD aims to make the digital world safer by reporting vulnerabilities we find in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative, and for free."
+  description: 'DIVD aims to make the digital world safer by reporting vulnerabilities we find in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative, and for free.'
   t1: Scan the internet for vulnerabilities
   t1_image: /images/divd-illustration-library_scout-what-we-do.png
   Alt text for t1 image: Illustration of an magnifier with a shield in the middle that contains an exclamation mark
@@ -38,3 +38,4 @@ volunteer:
     - item: Develop yourself, we provide very cool stuff at our e-learningplatform
     - item: Activities, a party so now and then and a lifetime stock of DIVD stickers & other merch
 ---
+

@@ -44,6 +44,7 @@ export interface Config {
   readonly teamsIndexPath: string;
   readonly formMapping: FormFieldMapping;
   readonly csirtDataUrl?: string;
+  readonly peopleJsonPath: string;
 }
 
 export interface FormFieldMapping {
@@ -83,9 +84,9 @@ export const DEFAULT_FORM_MAPPING: FormFieldMapping = {
     teams: 'Select your team(s)',
     role: 'Role',
     linkedin: 'LinkedIn',
-    twitter: 'Twitter',
+    twitter: 'X/Twitter',
     facebook: 'Facebook',
-    website: 'Website (your blog, etc)',
+    website: 'Website (Github, etc)',
     mastodon: 'Mastodon',
     bluesky: 'Bluesky',
     profilePicture: 'Profile picture',

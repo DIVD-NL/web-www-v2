@@ -1,9 +1,10 @@
 ---
-title: "CASE: Attackers exploit zero day vulnerabilities in Ivanti software, and hack the Norwegian governement"
+title: 'CASE: Attackers exploit zero day vulnerabilities in Ivanti software, and hack the Norwegian governement'
 date: 2024-07-03T21:27:00+02:00
 tag: case
-intro: "An unknown attacker exploited several zero-day vulnerabilities in two Ivanti services: Ivanti EPMM and Avanti Sentry. The DIVD helped notify users of Ivanti software."
-alt: ""
+intro: 'An unknown attacker exploited several zero-day vulnerabilities in two Ivanti services: Ivanti EPMM and Avanti Sentry. The DIVD helped notify users of Ivanti software.'
+image: /images/articles/Product%20Warning%20-%20SicommNet%20BASEC%20-%20DIVD.png
+alt: ''
 case:
   caseid: DIVD-2023-00031
   closed: false
@@ -21,11 +22,10 @@ case:
 faq_enabled: false
 faq:
   title: faq
-  opener: ""
-  intro: ""
-  url: ""
+  opener: ''
+  intro: ''
+  url: ''
 ---
-
 On Monday, July 24, 2023, it became clear that the Norwegian government had fallen victim to a cyberattack. The Norwegian Government Security and Service Organisation (DSS) and the Norwegian National Security Authority (NSM) reported that they had been targeted in an attack on an ICT platform used by twelve ministries. And they were not the only victims, as revealed by the story of Tor Bjørsted and Erlend Leiknes, two researchers from the company Memnonic (1).
 
 ### Zero-days

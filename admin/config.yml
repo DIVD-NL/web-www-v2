@@ -504,6 +504,8 @@ collections:
     folder: "content/newsroom/articles"
     create: true
     slug: "{{slug}}"
+    public_folder: "/images/articles"
+    media_folder: "/assets/images/articles"
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - {
@@ -709,6 +711,8 @@ collections:
     path: "_index"
     create: false
     i18n: true
+    public_folder: "/images"
+    media_folder: "/assets/images"
     fields:
       - label: "aliases"
         name: "aliases"
@@ -879,8 +883,10 @@ collections:
     folder: "content/contribute/partners"
     slug: "_index"
     path: "_index"
-    create: false
+    create: true
     i18n: true
+    public_folder: "/images/partners"
+    media_folder: "/assets/images/partners"
     fields:
       - label: "type"
         name: "type"
@@ -1131,7 +1137,7 @@ collections:
     folder: "content/anbi"
     slug: "_index"
     path: "_index"
-    create: false
+    create: true
     i18n: true
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
@@ -1162,6 +1168,8 @@ collections:
     path: "_index"
     create: false
     i18n: true
+    public_folder: "/images/whoweare"
+    media_folder: "/assets/images/whoweare"
     fields:
       - label: "Title"
         name: "title"
@@ -1278,6 +1286,8 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: name
+    public_folder: "/images/people"
+    media_folder: "/assets/images/people"
     fields:
       - { label: "type", name: "type", widget: "hidden", default: "people" }
       - {

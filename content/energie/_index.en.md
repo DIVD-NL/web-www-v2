@@ -47,10 +47,10 @@ sections:
           Hoewel diverse instanties slimme apparaten testen en veiligheidsnormen opstellen, hebben netbeheerders alleen controle over het energienetwerk **tot de aansluiting.** 
           Terwijl de meeste risico’s zich echter achter de aansluiting en (slimme) meter bevinden, namelijk in apparaten die cybercriminelen kunnen misbruiken. 
 
-          Wij onderzoeken deze apparaten, streven ernaar om kwetsbaarheden tijdig te identificeren en fabrikanten te informeren zodat deze kwetsbaarheden verholpen kunnen worden en evenetueel misbruik voorkomen kan worden.
+          Wij onderzoeken deze apparaten, streven ernaar om kwetsbaarheden tijdig te identificeren en fabrikanten te informeren zodat deze kwetsbaarheden verholpen kunnen worden en eventueel misbruik voorkomen kan worden.
         cta:
           label: lees meer over divd
-          url: pagina-op-divd-nl
+          url: https://www.divd.nl/who-we-are/
           invertedColors: false
           external: false
           download: false
@@ -77,7 +77,7 @@ sections:
           internetgebruikers of die zich richten op de
           publieke waarden en maatschappelijke kant
           van het internet.
-        url: https://google.nl/
+        url: https://www.sidnfonds.nl
         logo: SIDN%20Fonds.png
       - name: Topsector Energie
         description: |-
@@ -86,11 +86,36 @@ sections:
           maatschappelijke organisaties samen te
           werken aan het energiesysteem van de
           toekomst.
-        url: https://google.nl/
+        url: https://topsectorenergie.nl/nl/
         logo: Topsector%20Energie%202.png
+      - name: Elaad
+        description: |-
+          ElaadNL is het kennis- en innovatiecentrum op het gebied van slimme laadinfrastructuur. Het stimuleert onderzoek en samenwerking rondom elektrisch rijden en het slim laden van voertuigen binnen een duurzaam energiesysteem.
+        url: https://elaad.nl/
+        logo: /assets/images/partners/DIVD%20partner%20ElaadNL.svg
+      - name: European Network for Cyber Security
+        description: |-
+          ENCS versterkt de digitale weerbaarheid van Europese energie- en nutsbedrijven. Ze bieden expertise, testen en kennisdeling om de cyberveiligheid van kritieke infrastructuren te verbeteren.
+        url: https://encs.eu/
+        logo: /assets/images/partners/DIVD%20partner%20ENCS-logo-dark.svg
+      - name: Internet Cleanup Foundation
+        description: |-
+          De Internet Cleanup Foundation spoort verouderde en onveilige systemen op het internet op en helpt eigenaren om deze op te schonen. Zo dragen ze bij aan een veiliger internet voor iedereen.
+        url: https://internetcleanup.foundation/
+        logo: /assets/images/partners/DIVD%20partner%20Internet%20cleanup%20foundation.svg
+      - name: The Green Village
+        description: |-
+          The Green Village is een open testlocatie op de TU Delft Campus waar onderzoekers, bedrijven en overheden samen in de praktijk werken aan duurzame innovaties in de gebouwde omgeving.
+        url: https://www.thegreenvillage.org/
+        logo: /assets/images/partners/DIVD%20partner%20the%20green%20village.svg
+      - name: Bureau Veritas
+        description: |-
+          Bureau Veritas biedt wereldwijd expertise op het gebied van inspecties, certificering en cybersecurity. Ze helpen organisaties risico’s te beheersen en hun digitale weerbaarheid te vergroten.
+        url: https://cybersecurity.bureauveritas.com/
+        logo: /assets/images/partners/DIVD%20partner%20bureau-veritas-gray.svg
       - name: jij?
         description: Download ons partnerdeck voor de mogelijkheden.
-        url: divd.nl/energie
+        url: https://www.divd.nl/documents/DIVD%20Partnerdeck%20Energie%202025.pdf
         logo: DIVD-Project-Energy.png
   - type: two-columns-section
     left:
@@ -101,7 +126,7 @@ sections:
           DIVD zoekt partners die willen bijdragen aan een digitaal veiliger energiesysteem. Daarom nodigen we bedrijven, experts en professionals uit om expertise, apparatuur of onderzoekscapaciteit beschikbaar te stellen. Download ons sponsordeck voor meer informatie
         cta:
           label: download partnerdeck
-          url: pad/naar/bestand
+          url: https://www.divd.nl/documents/DIVD%20Partnerdeck%20Energie%202025.pdf
           invertedColors: false
           external: true
           download: true

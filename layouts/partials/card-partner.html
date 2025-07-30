@@ -7,7 +7,7 @@
 
 
 <div class="partner-card">
-  <figure>
+  <figure class="partner-image">
     {{ with resources.Get $imageSource }}
       {{ partial "tools/rimg/img" (dict "img" . "alt" $name) }}
     {{ else }}

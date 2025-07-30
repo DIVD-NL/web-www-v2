@@ -36,6 +36,7 @@ export async function getConfig(): Promise<Config> {
     outputDir: path.join(process.cwd(), 'content', 'who-we-are', 'team', 'people'),
     imagesDir: path.join(process.cwd(), 'assets', 'images', 'people', 'profile-pictures'),
     teamsIndexPath: path.join(process.cwd(), 'content', 'who-we-are', 'team', '_index.en.md'),
+    peopleJsonPath: path.join(process.cwd(), 'assets', 'documents', 'people.json'),
     csirtDataUrl: 'https://csirt.divd.nl/csv/publications.json',
     formMapping,
   };
@@ -48,6 +49,7 @@ export async function getConfig(): Promise<Config> {
   console.log(`Output directory: ${config.outputDir}`);
   console.log(`Images directory: ${config.imagesDir}`);
   console.log(`Teams index path: ${config.teamsIndexPath}`);
+  console.log(`People JSON path: ${config.peopleJsonPath}`);
 
   return config;
 }
