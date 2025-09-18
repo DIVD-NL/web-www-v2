@@ -14,10 +14,10 @@
     "@types/node": "^22.13.1",
     "autoprefixer": "^10.4.21",
     "buffer": "^6.0.3",
-    "eslint": "^9.31.0",
+    "eslint": "^9.35.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-prettier": "^5.5.3",
+    "eslint-plugin-prettier": "^5.5.4",
     "gaxios": "^7.1.1",
     "googleapis": "^160.0.0",
     "postcss": "^8.5.6",
@@ -26,17 +26,17 @@
     "prettier-plugin-go-template": "^0.0.15",
     "process": "^0.11.10",
     "tailwindcss": "^3.4.17",
-    "tsx": "^4.20.3",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0",
     "vite": "^7.1.6"
   },
   "dependencies": {
-    "@sveltia/cms": "^0.91.7",
-    "axios": "^1.12.0",
+    "@sveltia/cms": "^0.105.6",
+    "axios": "^1.12.2",
     "gray-matter": "^4.0.3",
     "heic-convert": "^2.1.0",
-    "sharp": "^0.34.3",
+    "sharp": "^0.34.4",
     "yargs": "^18.0.0"
   }
 }
