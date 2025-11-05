@@ -43,3 +43,8 @@ RewriteRule .* /what-we-do/code-of-conduct/ [L,r=301,QSA]
 
 RewriteCond %{REQUEST_URI} ^/divd-nl-2024/join [NC]
 RewriteRule .* /contribute/volunteers/ [L,r=301,QSA]
+
+# Redirect /nl and all subpages to the same path without /nl
+# 302 since this is a temporary measure
+RewriteCond %{REQUEST_URI} ^/nl(/.*)?$
+RewriteRule ^nl(/.*)?$ https://www.divd.nl%1 [L,R=302,QSA]
