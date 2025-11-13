@@ -9,9 +9,7 @@ Alt tag for image: ''
 case:
   caseid: DIVD-2025-00041
   closed: false
-  link:
-    label: Frank Breedijk
-    url: https://csirt.divd.nl/cases/DIVD-2025-00041/
+  link: https://csirt.divd.nl/cases/DIVD-2025-00041/
   lead: Frank Breedijk
   leadlink: ''
   researchers:
@@ -57,7 +55,7 @@ If you received a notification from us, you, members of your organization or you
 
 ### What you should do
 
-Since the datasets contain data of too many individuals, we will not be sending out individual notifications. Instead we are enabling certs, csirts and security teams to check of data of their users is present in the datasets we received and, if present, to request the details. We have outlined the [full precedure on our credentials page](https://github.com/DIVD-NL/web-csirt-hidden/blob/endgame-2025q4/credentials).
+Since the datasets contain data of too many individuals, we will not be sending out individual notifications. Instead we are enabling certs, csirts and security teams to check of data of their users is present in the datasets we received and, if present, to request the details. We have outlined the [full precedure on our credentials page](https://csirt.divd.nl/credentials/)[.](https://csirt.divd.nl/credentials/)
 
 If you want to find out if your organisation was impacted, you can find out as follows:
 
@@ -65,7 +63,7 @@ If you want to find out if your organisation was impacted, you can find out as f
 - Open the files (watch out Excel truncates them due to their size) and look for domains you are responsible for.
 - If your domains appear in the dataset, email [**divd-2025-00041@csirt.divd.nl**](mailto:divd-2025-00041@csirt.divd.nl) to request the corresponding data.
 
-**Please note: we will validate your claim and only send you data if your country has a sufficiently high score on the huan rights index.**
+**Please note: we will validate your claim and only send you data if your country has a sufficiently high score on the human rights index.**
 
 ### What we are doing
 
