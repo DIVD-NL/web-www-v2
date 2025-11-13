@@ -72,7 +72,7 @@ If you want to find out if your organisation was impacted, you can find out as f
 
 ### What we are doing
 
-As we receive more information, we will analyse them and publish more apex sets. Make sure you keep an eye on the case.
+As we receive more information, we will analyse them and publish more apex sets. Make sure you keep an eye on the case, because it will be updated.
 
 #### Press releases
 
