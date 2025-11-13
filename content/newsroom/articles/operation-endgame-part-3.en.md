@@ -5,11 +5,16 @@ author: []
 tag: case
 intro: We are notifying victims of the Rhadamanthys infostealer. Since the datasets contain information on a very large number of individuals, we will not be sending individual notifications. Instead, we enable CERTs, CSIRTs and security teams.
 image: /images/articles/Operation Endgame DIVD-2025-00041 - PART 3.jpg
-Alt tag for image: ''
+alt: ''
 case:
   caseid: DIVD-2025-00041
   closed: false
-  link: https://csirt.divd.nl/cases/DIVD-2025-00041/
+  link:
+    label: https://csirt.divd.nl/cases/DIVD-2025-00041/
+    url: DIVD-2025-00041
+    invertedColors: false
+    external: false
+    download: false
   lead: Frank Breedijk
   leadlink: ''
   researchers:
@@ -18,6 +23,7 @@ case:
     - label: Marieke Rijken
       link: ''
   researchers_people: []
+Alt tag for image: ''
 faq_enabled: true
 faq:
   title: Operation Endgame 2.0
@@ -38,7 +44,6 @@ faq:
             Acting on this data set is directly in line with article 3 of our [code of conduct](https://www.divd.nl/code): \`Analyze databases with leaked credentials and report to the organizations or people who are compromised to take appropriate measures.\`
 
             We analyze every database we receive, including those from law enforcement. However, we do this independently, without any obligation or intention to share any specific information in return.
-alt: ''
 url: /operation-endgame-3
 ---
 On November 13th 2025, The Dutch National Police, in cooperation with EuropPol and Eurojust announced they took down botnets in a another episode of [Operation Endgame](https://operation-endgame.com/), the biggest continued anti-botnet operation to date. During this takedown, stolen data has been seized.
