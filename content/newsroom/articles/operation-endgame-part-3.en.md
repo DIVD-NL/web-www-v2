@@ -1,6 +1,6 @@
 ---
 title: OPERATION ENDGAME PART 3
-date: 2025-05-23T11:01:00+02:00
+date: 2025-11-13T11:13:00+01:00
 author: []
 tag: case
 intro: We are notifying victims of the Rhadamanthys infostealer. Since the datasets contain information on a very large number of individuals, we will not be sending individual notifications. Instead, we enable CERTs, CSIRTs and security teams.
@@ -43,9 +43,9 @@ url: /operation-endgame-2
 ---
 On November 13th 2025, The Dutch National Police, in cooperation with EuropPol and Eurojust announced they took down botnets in a another episode of [Operation Endgame](https://operation-endgame.com/), the biggest continued anti-botnet operation to date. During this takedown, stolen data has been seized.
 
-As part of this operation, stealer logs containing information on many victims of the targeted malware platforms have been shared with: [DIVD](https://wwww.divd.nl/), [Have I Been Pwned](https://haveibeenpwned.com/), [Spamhaus](https://www.spamhaus.org/resource-hub/malware/operation-endgame-botnets-disrupted-after-international-action/), [Project No More Leaks](https://www.politie.nl/onderwerpen/no-more-leaks.html), [Project Check je Hack](https://www.politie.nl/informatie/checkjehack.html), the (Dutch) [NCSC](https://ncsc.nl/), [CSIRT-DSP](https://csirtdsp.nl/), and [Digital Trust Center](https://www.digitaltrustcenter.nl/). 
+As part of this operation, stealer logs containing information on many victims of the targeted malware platforms have been shared with: [DIVD](https://wwww.divd.nl/), [Have I Been Pwned](https://haveibeenpwned.com/), [Spamhaus](https://www.spamhaus.org/resource-hub/malware/operation-endgame-botnets-disrupted-after-international-action/), [Project No More Leaks](https://www.politie.nl/onderwerpen/no-more-leaks.html), [Project Check je Hack](https://www.politie.nl/informatie/checkjehack.html), the (Dutch) [NCSC](https://ncsc.nl/), [CSIRT-DSP](https://csirtdsp.nl/), and [Digital Trust Center](https://www.digitaltrustcenter.nl/).
 
-NCSC, DTC and DIVD are working together to notify victims in the datasets. To support this process, the data has been shared with parties such as [Check Je Hack](https://www.politie.nl/informatie/checkjehack.html), [Have I Been Pwned](https://haveibeenpwned.com/), [No More Leaks](https://www.politie.nl/onderwerpen/no-more-leaks.html), the (Dutch) [NCSC](https://ncsc.nl), [CSIRT-DSP](https://csirtdsp.nl/) and Digital Trust Center. 
+NCSC, DTC and DIVD are working together to notify victims in the datasets. To support this process, the data has been shared with parties such as [Check Je Hack](https://www.politie.nl/informatie/checkjehack.html), [Have I Been Pwned](https://haveibeenpwned.com/), [No More Leaks](https://www.politie.nl/onderwerpen/no-more-leaks.html), the (Dutch) [NCSC](https://ncsc.nl), [CSIRT-DSP](https://csirtdsp.nl/) and Digital Trust Center.
 
 The datasets we received consist of usernames, (redacted) passwords, and the dates these passwords were last used. It is likely that this information was taken from the built-in password managers of popular web browsers.
 
@@ -72,3 +72,4 @@ As we receive more information, we will analyse them and publish more apex sets.
 #### Press releases
 
 [Press release Europol](https://www.europol.europa.eu/media-press/newsroom/news/end-of-game-for-cybercrime-infrastructure-1025-servers-taken-down)
+[Press release Dutch Police](https://www.politie.nl/nieuws/2025/november/12/11-opnieuw-criminele-infrastructuur-ontmanteld-in-internationale-ransomware-operatie.html)
