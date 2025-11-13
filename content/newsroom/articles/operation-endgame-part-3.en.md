@@ -41,7 +41,7 @@ faq:
 
             We analyze every database we receive, including those from law enforcement. However, we do this independently, without any obligation or intention to share any specific information in return.
 alt: ''
-url: /operation-endgame-2
+url: /operation-endgame-3
 ---
 On November 13th 2025, The Dutch National Police, in cooperation with EuropPol and Eurojust announced they took down botnets in a another episode of [Operation Endgame](https://operation-endgame.com/), the biggest continued anti-botnet operation to date. During this takedown, stolen data has been seized.
 
