@@ -9,7 +9,9 @@ Alt tag for image: ''
 case:
   caseid: DIVD-2025-00041
   closed: false
-  link: https://csirt.divd.nl/cases/DIVD-2025-00041/
+  link:
+    label: Frank Breedijk
+    url: https://csirt.divd.nl/cases/DIVD-2025-00041/
   lead: Frank Breedijk
   leadlink: ''
   researchers:
