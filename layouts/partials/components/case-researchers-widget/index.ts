@@ -32,9 +32,9 @@ export default {
       required: false,
     },
     {
+      ...Button,
       label: 'Case lead Link',
       name: 'leadlink',
-      widget: 'string',
       required: false,
     },
     {
