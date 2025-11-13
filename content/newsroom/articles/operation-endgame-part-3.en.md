@@ -55,7 +55,7 @@ If you received a notification from us, you, members of your organization or you
 
 ### What you should do
 
-Since the datasets contain data of too many individuals, we will not be sending out individual notifications. Instead we are enabling certs, csirts and security teams to check of data of their users is present in the datasets we received and, if present, to request the details. We have outlined the [full precedure on our credentials page](https://csirt.divd.nl/credentials/)[.](https://csirt.divd.nl/credentials/)
+Since the datasets contain data of too many individuals, we will not be sending out individual notifications. Instead we are enabling certs, csirts and security teams to check of data of their users is present in the datasets we received and, if present, to request the details. We have outlined the [full procedure on our credentials page](https://csirt.divd.nl/credentials/)[.](https://csirt.divd.nl/credentials/)
 
 If you want to find out if your organisation was impacted, you can find out as follows:
 
