@@ -59,7 +59,7 @@ Since the datasets contain data of too many individuals, we will not be sending 
 
 If you want to find out if your organisation was impacted, you can find out as follows:
 
-- Download the Endgame 2025q4 datasets: [Batch 1: Rhadamanthys - 13-11-2025](https://github.com/DIVD-NL/web-csirt-hidden/blob/endgame-2025q4/downloads/DIVD-2025-00041/DIVD-2025-00041-batch1-apexes.tgz)
+- Download the Endgame 2025q4 datasets: [Batch 1: Rhadamanthys - 13-11-2025](https://csirt.divd.nl/downloads/DIVD-2025-00041/DIVD-2025-00041-batch1-apexes.tgz)
 - Open the files (watch out Excel truncates them due to their size) and look for domains you are responsible for.
 - If your domains appear in the dataset, email [**divd-2025-00041@csirt.divd.nl**](mailto:divd-2025-00041@csirt.divd.nl) to request the corresponding data.
 
@@ -67,7 +67,7 @@ If you want to find out if your organisation was impacted, you can find out as f
 
 ### What we are doing
 
-As we receive more information, we will analyse them and publish more apex sets. Make sure you keep an eye on this space and our [CSIRT blog](https://github.com/DIVD-NL/web-csirt-hidden/blob/endgame-2025q4/blog) or [RSS feed](https://csirt.divd.nl/feed.xml).
+As we receive more information, we will analyse them and publish more apex sets. Make sure you keep an eye on the case.
 
 #### Press releases
 
