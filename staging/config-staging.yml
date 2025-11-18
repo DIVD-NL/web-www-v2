@@ -80,7 +80,7 @@ collections:
             }
           - {
               label: t1_alt,
-              name: "Alt text for t1 image",
+              name: "alt_text_for_t1_image",
               widget: string,
               i18n: true,
             }
@@ -96,7 +96,7 @@ collections:
             }
           - {
               label: t2_alt,
-              name: "Alt text for t2 image",
+              name: "alt_text_for_t2_image",
               widget: string,
               i18n: true,
             }
@@ -112,7 +112,7 @@ collections:
             }
           - {
               label: t3_alt,
-              name: "Alt text for t3 image",
+              name: "alt_text_for_t3_image",
               widget: string,
               i18n: true,
             }
@@ -533,7 +533,7 @@ collections:
         }
       - {
           label: alt,
-          name: "Alt tag for image",
+          name: "alt_tag_for_image",
           widget: string,
           i18n: true,
           required: false,
@@ -739,7 +739,7 @@ collections:
             }
           - {
               label: alt,
-              name: "Alt tag for image",
+              name: "alt_tag_for_image",
               widget: string,
               i18n: true,
             }
@@ -766,7 +766,7 @@ collections:
             }
           - {
               label: alt,
-              name: "Alt tag for image",
+              name: "alt_tag_for_image",
               widget: string,
               i18n: true,
             }
@@ -1386,7 +1386,7 @@ collections:
             }
           - {
               label: alt,
-              name: "Alt tag for image",
+              name: "alt_tag_for_image",
               widget: string,
               required: false,
               i18n: true,
@@ -1415,7 +1415,7 @@ collections:
             }
           - {
               label: alt,
-              name: "Alt tag for image",
+              name: "alt_tag_for_image",
               widget: string,
               required: false,
               i18n: true,
