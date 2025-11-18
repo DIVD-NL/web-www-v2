@@ -7,7 +7,7 @@ intro: DIVD is notifying victims of the Latrodectus infostealer, the evolution o
 image: ''
 alt: ''
 case: null
-Alt tag for image: ''
+alt_tag_for_image: ''
 faq_enabled: false
 faq: null
 ---

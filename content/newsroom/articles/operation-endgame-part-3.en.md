@@ -23,7 +23,7 @@ case:
     - label: Marieke Rijken
       link: ''
   researchers_people: []
-Alt tag for image: ''
+alt_tag_for_image: ''
 faq_enabled: true
 faq:
   title: Operation Endgame 2.0

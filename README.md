@@ -45,6 +45,12 @@ npm run gen-teams
 npm run cms
 ```
 
+### Start the old CMS
+
+```sh
+python3 -m http.server -d admin
+```
+
 ## Test production version
 
 ```sh
