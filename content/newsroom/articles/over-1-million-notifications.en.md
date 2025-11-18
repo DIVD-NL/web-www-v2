@@ -5,7 +5,7 @@ author: []
 tag: news
 intro: Aug 1, 2024 - While the existence of a vulnerability is not something to celebrate, thanks to the hard work of skilled volunteers working for DIVD, we have been able to notify vulnerable organizations of at least 1 million compromised IP addresses.
 image: /images/B2B-Isometric-Illustration.jpg
-Alt tag for image: ""
+alt_tag_for_image: ""
 case: null
 faq_enabled: false
 faq: null
