@@ -3,5 +3,6 @@ export const Collection = {
   name: 'documents',
   public_folder: '/documents',
   media_folder: '/assets/documents',
-  create: false
+  create: false,
+  divider: true
 };

@@ -19,10 +19,24 @@ teams:
       making strategic decisions. The day-to-day operations are managed by a
       team that includes our director, department heads, the CISO, and the
       crisis manager.
-    members: []
+    members:
+      - /who-we-are/team/people/eleonora-petridou
+      - /who-we-are/team/people/otto-hulst
+      - /who-we-are/team/people/shairesh-algoe
+      - /who-we-are/team/people/tom-van-dael
   - title: Management
     description: ''
-    members: []
+    members:
+      - /who-we-are/team/people/winko-erades-van-den-berg
+      - /who-we-are/team/people/chris-vant-hof
+      - /who-we-are/team/people/frank-breedijk
+      - /who-we-are/team/people/hans-meuris
+      - /who-we-are/team/people/jan joost-bierhoff
+      - /who-we-are/team/people/jeroen-ellermeijer
+      - /who-we-are/team/people/lennaert-oudshoorn
+      - /who-we-are/team/people/marieke-rijken
+      - /who-we-are/team/people/mischa rick-van-geelen
+      - /who-we-are/team/people/roxane-kortland
   - title: DIVD-CSIRT
     description: >-
       The CSIRT (Computer Security Incident Response Team) is the beating heart
@@ -31,7 +45,28 @@ teams:
       of CNA Administrators is responsible for DIVD's role as CVE Number
       Authority (NA). They can independently assign CVE numbers and update CVE
       records for vulnerabilities within our scope.
-    members: []
+    members:
+      - /who-we-are/team/people/alwin-warringa
+      - /who-we-are/team/people/axel-boesenach
+      - /who-we-are/team/people/barre-dijkstra
+      - /who-we-are/team/people/davy-aarts
+      - /who-we-are/team/people/finn-van-der-knaap
+      - /who-we-are/team/people/frank-breedijk
+      - /who-we-are/team/people/hans-meuris
+      - /who-we-are/team/people/jacco-van-buuren
+      - /who-we-are/team/people/jelle-ursem
+      - /who-we-are/team/people/jesse-meijer
+      - /who-we-are/team/people/jort-geurts
+      - /who-we-are/team/people/kees-van-poeijer
+      - /who-we-are/team/people/kerim-sancakdar
+      - /who-we-are/team/people/koen-schagen
+      - /who-we-are/team/people/lennaert-oudshoorn
+      - /who-we-are/team/people/max-van-der-horst
+      - /who-we-are/team/people/oscar-vlugt
+      - /who-we-are/team/people/stan-plasmeijer
+      - /who-we-are/team/people/tycho-niestadt
+      - /who-we-are/team/people/victor-pasman
+      - /who-we-are/team/people/yusuf-o
   - title: Research & Development
     description: >-
       DIVD has two teams of highly skilled security researchers who voluntarily
@@ -42,7 +77,35 @@ teams:
       methods for vulnerability research and disclosure. Although you may never
       meet our researchers, you can hope they are inspecting your systems right
       now, catching issues before the bad guys do....
-    members: []
+    members:
+      - /who-we-are/team/people/bartłomiej-lizak
+      - /who-we-are/team/people/dion-w.
+      - /who-we-are/team/people/finn-van-der-knaap
+      - /who-we-are/team/people/harm-van-den-brink
+      - /who-we-are/team/people/hein-jan-hoogers
+      - /who-we-are/team/people/hidde-smit
+      - /who-we-are/team/people/jacco-van-buuren
+      - /who-we-are/team/people/jeroen-ellermeijer
+      - /who-we-are/team/people/jeroen-van-der-broek
+      - /who-we-are/team/people/jesse-meijer
+      - /who-we-are/team/people/john-cornegge
+      - /who-we-are/team/people/joost-hendricksen
+      - /who-we-are/team/people/joris-cras
+      - /who-we-are/team/people/joris-van-de-vis
+      - /who-we-are/team/people/kall-locatelli
+      - /who-we-are/team/people/kees-van-poeijer
+      - /who-we-are/team/people/mark-heijblok
+      - /who-we-are/team/people/martin-van-wingerden
+      - /who-we-are/team/people/max-van-der-horst
+      - /who-we-are/team/people/poncke-poncin
+      - /who-we-are/team/people/rené-de-groot
+      - /who-we-are/team/people/rudy-dijkstra
+      - /who-we-are/team/people/serena-de-pater
+      - /who-we-are/team/people/tabitha-vogelaar
+      - /who-we-are/team/people/victor-gevers
+      - /who-we-are/team/people/vladimir-egorov
+      - /who-we-are/team/people/wietse-boonstra
+      - /who-we-are/team/people/wilco-van-beijnum
   - title: IT Services
     description: >-
       This department manages our applications and infrastructure, including our
@@ -50,7 +113,18 @@ teams:
       to scan the internet. They handle the technical maintenance of our
       websites and have a development team that supports the teams by creating
       tools to automate tasks.
-    members: []
+    members:
+      - /who-we-are/team/people/winko-erades-van-den-berg
+      - /who-we-are/team/people/bart-reedijk
+      - /who-we-are/team/people/bert-kiers
+      - /who-we-are/team/people/edgar-hogeboom
+      - /who-we-are/team/people/gerdriaan-mulder
+      - /who-we-are/team/people/jeroen-van-der-broek
+      - /who-we-are/team/people/remco-bijlsma
+      - /who-we-are/team/people/ronald-beiboer
+      - /who-we-are/team/people/sigurd-hoenkamp-de-vries
+      - /who-we-are/team/people/wieger-bontekoe
+      - /who-we-are/team/people/wiljan-wander
   - title: People & Culture
     description: >-
       This department is responsible for the onboarding, offboarding, training,
@@ -58,7 +132,9 @@ teams:
       and team leaders in the organisation to support people in those roles to
       enable engagement, helping to make sure that everyone involved with the
       organisation enjoys their time at DIVD.
-    members: []
+    members:
+      - /who-we-are/team/people/jan-los
+      - /who-we-are/team/people/roxane-kortland
   - title: Communications
     description: >-
       The communications department handles internal and external
@@ -69,7 +145,11 @@ teams:
       events. Additionally, the PR office is responsible for building and
       maintaining relationships with our partners, keeping them engaged with our
       activities.
-    members: []
+    members:
+      - /who-we-are/team/people/jort-geurts
+      - /who-we-are/team/people/marieke-rijken
+      - /who-we-are/team/people/serena-de-pater
+      - /who-we-are/team/people/sk imtiaz-ahmed
   - title: 'Governance, Risk & Compliance (GRC)'
     description: >-
       The GRC department ensures our security is top-notch and that we comply
@@ -81,13 +161,17 @@ teams:
     description: >-
       The Project Office is a centralized entity within the DIVD responsible for
       standardizing and overseeing project management practices and processes.
-    members: []
+    members:
+      - /who-we-are/team/people/chris-vant-hof
+      - /who-we-are/team/people/jan joost-bierhoff
+      - /who-we-are/team/people/michael-connelly
   - title: Advisory board
     description: ''
     members: []
   - title: Ethics Committee
     description: ''
-    members: []
+    members:
+      - /who-we-are/team/people/hans-van-de-looy
   - title: Confidentiality Officers
     type: ''
     description: >-
@@ -120,7 +204,8 @@ teams:
       relationship, reassure employees that their concerns are taken seriously,
       and demonstrate its commitment to maintaining a workplace where integrity
       is paramount.
-    members: []
+    members:
+      - /who-we-are/team/people/astrid-oosenbrug
 type: team
 ---
 
