@@ -1,22 +1,35 @@
 {{ partial "comment.html" (dict "comment" "proudestwork.html" ) }}
 
 {{ $blocks := .Site.GetPage "/block" }}
+{{ warnf "DEBUG proudestwork - blocks page exists: %t" (ne $blocks nil) }}
+{{ warnf "DEBUG proudestwork - blocks params: %s" (jsonify $blocks.Params) }}
+{{ warnf "DEBUG proudestwork - proudestwork param exists: %t" (isset $blocks.Params "proudestwork") }}
 
 {{ with $blocks.Params.proudestwork }}
+  {{ warnf "DEBUG proudestwork - Inside with block" }}
+  {{ warnf "DEBUG proudestwork - Title: %s" .Title }}
+  {{ warnf "DEBUG proudestwork - ourproudestwork exists: %t" (isset . "ourproudestwork") }}
+  {{ warnf "DEBUG proudestwork - ourproudestwork length: %d" (len .ourproudestwork) }}
+  {{ warnf "DEBUG proudestwork - ourproudestwork data: %s" (jsonify .ourproudestwork) }}
+  
   {{ partial "p/layout_open" (dict "classes" (slice "extend")) }}
   <h2>{{ .Title }}</h2>
   <div class="carousel responsive-controls">
     <div class="slides">
       {{ with .ourproudestwork }}
+        {{ warnf "DEBUG proudestwork - Rendering %d items" (len .) }}
         {{ range . }}
           {{ partial "card-article" . }}
         {{ end }}
       {{ else }}
+        {{ warnf "DEBUG proudestwork - FALLBACK: No ourproudestwork items" }}
         <p>No items in our proudest work.</p>
       {{ end }}
     </div>
     {{ partial "carousel_controls" (len .ourproudestwork) }}
   </div>
   {{ partial "p/layout_close" }}
+{{ else }}
+  {{ warnf "DEBUG proudestwork - FALLBACK: No proudestwork param in blocks page" }}
 {{ end }}
 {{ partial "comment.html" (dict "comment" "/proudestwork.html" ) }}
