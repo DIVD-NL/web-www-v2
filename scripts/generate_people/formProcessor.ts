@@ -68,8 +68,8 @@ export class FormProcessor {
         continue;
       }
 
-      // Handle spaces in last name correctly by replacing them with hyphens in the filename
-      const baseFileName = `${firstName.toLowerCase()}-${lastName.toLowerCase().replace(/\s+/g, '-')}`;
+      // Handle spaces in first and last name correctly by replacing them with hyphens in the filename
+      const baseFileName = `${firstName.toLowerCase().replace(/\s+/g, '-')}-${lastName.toLowerCase().replace(/\s+/g, '-')}`;
       const fullName = `${firstName} ${lastName}`;
 
       console.log(`\nProcessing entry for: ${fullName}`);
