@@ -18,7 +18,7 @@ case:
     - label: Frank Breedijk
       link: ''
   researchers_people: []
-Alt tag for image: ''
+alt_tag_for_image: ''
 url: /operation-endgame-2
 faq_enabled: true
 faq:

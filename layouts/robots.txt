@@ -2,10 +2,6 @@ User-agent: *
 Allow: /
 Sitemap: https://divd.nl/sitemap.xml
 
-# Disallow staging site
-User-agent: *
-Disallow: https://staging.divd.nl/
-
 # Block AI crawlers and scrapers
 User-agent: GPTBot
 Disallow: /

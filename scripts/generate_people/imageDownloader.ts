@@ -46,7 +46,7 @@ export async function downloadImage(url: string, outputPath: string): Promise<st
 
   // Convert HEIC to JPG and strip EXIF data
   if (originalExt.toLowerCase() === '.heic') {
-    const jpgPath = finalPath.toLowerCase().replace('.heic', '.jpg');
+    const jpgPath = finalPath.replace(/\.heic$/i, '.jpg');
     await fs.mkdir(path.dirname(jpgPath), { recursive: true });
     await heicConvert({
       buffer,

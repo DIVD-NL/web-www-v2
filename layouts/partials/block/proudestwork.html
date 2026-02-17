@@ -1,6 +1,23 @@
 {{ partial "comment.html" (dict "comment" "proudestwork.html" ) }}
 
 {{ $blocks := .Site.GetPage "/block" }}
+{{ warnf "DEBUG proudestwork - blocks page exists: %t" (ne $blocks nil) }}
+{{ if $blocks }}
+  {{ warnf "DEBUG proudestwork - blocks.Path: %s" $blocks.Path }}
+  {{ warnf "DEBUG proudestwork - blocks.File.Path: %s" $blocks.File.Path }}
+  {{ warnf "DEBUG proudestwork - blocks.File.LogicalName: %s" $blocks.File.LogicalName }}
+  {{ warnf "DEBUG proudestwork - blocks.Kind: %s" $blocks.Kind }}
+  {{ warnf "DEBUG proudestwork - blocks.BundleType: %s" $blocks.BundleType }}
+  {{ warnf "DEBUG proudestwork - blocks.Lang: %s" $blocks.Lang }}
+  {{ warnf "DEBUG proudestwork - proudestwork param exists: %t" (isset $blocks.Params "proudestwork") }}
+  {{ if isset $blocks.Params "proudestwork" }}
+    {{ warnf "DEBUG proudestwork - ourproudestwork exists: %t" (isset $blocks.Params.proudestwork "ourproudestwork") }}
+    {{ warnf "DEBUG proudestwork - ourproudestwork length: %d" (len $blocks.Params.proudestwork.ourproudestwork) }}
+    {{ warnf "DEBUG proudestwork - ourproudestwork data: %s" (jsonify $blocks.Params.proudestwork.ourproudestwork) }}
+  {{ end }}
+{{ else }}
+  {{ warnf "DEBUG proudestwork - CRITICAL: blocks page is nil!" }}
+{{ end }}
 
 {{ with $blocks.Params.proudestwork }}
   {{ partial "p/layout_open" (dict "classes" (slice "extend")) }}

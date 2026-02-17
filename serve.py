@@ -24,7 +24,7 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
 handler = MyRequestHandler
 
 # Define the server
-PORT = 8000
+PORT = 8123
 httpd = socketserver.TCPServer(("", PORT), handler)
 
 print(f"Serving on port {PORT}")

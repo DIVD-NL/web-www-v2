@@ -107,7 +107,7 @@ export const HomeCollection = {
         },
         {
           label: 't1_alt',
-          name: 'Alt text for t1 image',
+          name: 'alt_text_for_t1_image',
           widget: 'string',
           i18n: true,
         },
@@ -128,7 +128,7 @@ export const HomeCollection = {
         },
         {
           label: 't2_alt',
-          name: 'Alt text for t2 image',
+          name: 'alt_text_for_t2_image',
           widget: 'string',
           i18n: true,
         },
@@ -149,7 +149,7 @@ export const HomeCollection = {
         },
         {
           label: 't3_alt',
-          name: 'Alt text for t3 image',
+          name: 'alt_text_for_t3_image',
           widget: 'string',
           i18n: true,
         },

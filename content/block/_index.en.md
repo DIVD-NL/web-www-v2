@@ -9,11 +9,12 @@ proudestwork:
     - /newsroom/articles/divd-responsibly-discloses-six-new-zero-day-vulnerabilities-to-vendor
     - /newsroom/articles/over-1-million-notifications
     - /newsroom/articles/operation-endgame-divd-2024-00019
+    - /newsroom/articles/operation-endgame-part-3
 mission:
   title: Our mission
   description: We aim to enhance digital safety by reporting system vulnerabilities to the relevant authorities. With a global reach, we adopt an open, honest, and collaborative approach, providing our services for free.
-  members: "150"
-  totalcases: "146"
+  members: '150'
+  totalcases: '146'
   ips: 1.295.494
 divdfamily:
   title: The DIVD Family
@@ -44,7 +45,7 @@ familycta:
   title: Want to become part of the family?
   intro: We are a organisation that consists of volunteers, we are always looking for new talent that wants to join our cause or potential partners and donations. Check out our contribute page to learn more about what you can do for us.
 csirt:
-  title: "CSIRT: Computer Security Incident Response Team"
+  title: 'CSIRT: Computer Security Incident Response Team'
   intro: The CSIRT handles the scanning for and disclosing of vulnerabilities, either discovered by DIVD researchers or third parties and warning people for leaked credentials and operates our CVE Numbering Authority (CNA) capability.
   link: https://csirt.divd.nl/
 contact:
@@ -56,6 +57,7 @@ contact:
   email: contact@divd.nl
 footer:
   title: footer
-  intro: "We aim to make the digital world safer by reporting vulnerabilities we find  in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative, and for free."
+  intro: 'We aim to make the digital world safer by reporting vulnerabilities we find  in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative, and for free.'
 title: Blocks
 ---
+

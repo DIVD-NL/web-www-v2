@@ -15,8 +15,8 @@ mission:
 
     We have a global reach, but do it Dutch style: open, honest, collaborative and for free.
   members: 100+
-  totalcases: "86"
-  ips: "356.781"
+  totalcases: '86'
+  ips: '356.781'
 divdfamily:
   title: The DIVD Family
   description: Lorem ipsum
@@ -45,7 +45,7 @@ familycta:
     We are a organisation that consists of volutneers, we are always looking for new talent that wants to join our cause or potential partners and donations. 
     Check out our contribute page to learn more about what you can do for us.
 csirt:
-  title: "CSIRT: Computer Security Incident Response Team"
+  title: 'CSIRT: Computer Security Incident Response Team'
   intro: A short piece of copy which explains the importance and role of CSIRT for DIVD. This text should inspire visitors to click the botom below
 contact:
   title: Not a regular office
@@ -55,6 +55,7 @@ contact:
     For questions related to our CSIRT you can email csirt@divd.nl
 footer:
   title: footer
-  intro: "We aim to make the digital world safer by reporting vulnerabilities we find  in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative and for free."
+  intro: 'We aim to make the digital world safer by reporting vulnerabilities we find  in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative and for free.'
 title: Blocks
 ---
+

@@ -5,7 +5,7 @@ author: []
 tag: case
 intro: On April 4 several news platforms reported personal data of 533 million Facebook users was leaked. This is actually a non-report, but it demonstrates where we draw the boundaries on what we can and cannot do according to our code of conduct.
 image: /images/global/assessing_vulnerability_scope.png
-Alt tag for image: ""
+alt_tag_for_image: ""
 case: null
 faq_enabled: false
 faq: null

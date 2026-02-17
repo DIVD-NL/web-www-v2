@@ -13,7 +13,7 @@ The first 10 pull requests that genuinely improve the website will receive a box
 - https://gohugo.io
 - https://just.systems/ (optional)
 - npm
-- node ^16
+- node ^22
 
 # Setup
 
@@ -25,7 +25,7 @@ npm install
 
 ## Website
 
-[Hugo](https://gohugo.io) is used as framework to run the frontend application. You can start a local server with the following command:
+[Hugo](https://gohugo.io) is used as framework to run the frontend application. You can start a local development server with the following command:
 
 ```sh
 hugo server
@@ -45,13 +45,17 @@ npm run gen-teams
 npm run cms
 ```
 
+### Start the old CMS
+
+```sh
+python3 -m http.server -d admin
+```
+
 ## Test production version
 
 ```sh
-just prod-test
-open http://localhost:8000
-
-# equivalent to:
-
+hugo
 python3 serve.py
 ```
+
+This will serve the production build on the configured port in the Python script (8123)
