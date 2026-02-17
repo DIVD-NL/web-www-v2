@@ -4,9 +4,6 @@ import { articleSections } from '../partials/sections';
 export const Collection = {
   label: 'Newsroom articles',
   name: 'articles',
-  i18n: {
-    structure: 'multiple_files',
-  },
   folder: 'content/newsroom/articles',
   public_folder: '/images/articles',
   media_folder: '/assets/images/articles',
@@ -17,7 +14,6 @@ export const Collection = {
       label: 'Title',
       name: 'title',
       widget: 'string',
-      i18n: true,
     },
     {
       label: 'Publish Date',
@@ -46,7 +42,6 @@ export const Collection = {
       label: 'Intro',
       name: 'intro',
       widget: 'text',
-      i18n: true,
     },
     {
       label: 'Image',
@@ -60,7 +55,7 @@ export const Collection = {
       label: 'alt_tag_for_image',
       name: 'alt',
       widget: 'string',
-      i18n: true,
+
       required: false,
     },
     {
@@ -70,7 +65,6 @@ export const Collection = {
       label: 'Body',
       name: 'body',
       widget: 'markdown',
-      i18n: true,
     },
     {
       label: 'Bottom sections',

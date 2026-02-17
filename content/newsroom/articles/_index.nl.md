@@ -1,4 +1,0 @@
----
-title: "Artikelen"
-type: "article"
----

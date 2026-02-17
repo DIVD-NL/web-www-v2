@@ -2,9 +2,6 @@ export const HomeCollection = {
   name: '_index',
   label: 'Home page',
   slug: '_index',
-  i18n: {
-    structure: 'multiple_files',
-  },
   folder: 'content',
   create: false,
   path: '_index',
@@ -14,24 +11,21 @@ export const HomeCollection = {
       name: 'title',
       widget: 'string',
       default: 'home',
-      i18n: true,
     },
     {
       label: 'Opener',
       name: 'opener',
       widget: 'string',
-      i18n: true,
     },
     {
       label: 'Intro',
       name: 'intro',
       widget: 'text',
-      i18n: true,
     },
     {
       label: 'fold',
       name: 'fold',
-      i18n: true,
+
       widget: 'object',
       fields: [
         {
@@ -42,32 +36,28 @@ export const HomeCollection = {
           search_fields: ['title', 'case.caseid'],
           value_field: '/newsroom/articles/{{slug}}',
           display_fields: ['title', 'case.caseid'],
-          i18n: true,
+
           multiple: false,
         },
         {
           label: 'Received an email',
           name: 'received',
           widget: 'string',
-          i18n: true,
         },
         {
           name: 'received_alt',
           label: 'Alt text for received image',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 'Family',
           name: 'family',
           widget: 'string',
-          i18n: true,
         },
         {
           name: 'family_alt',
           label: 'Alt text for family image',
           widget: 'string',
-          i18n: true,
         },
       ],
     },
@@ -76,25 +66,22 @@ export const HomeCollection = {
       label: 'What we do',
       widget: 'object',
       collapsed: true,
-      i18n: true,
+
       fields: [
         {
           label: 'title',
           name: 'title',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 'description',
           name: 'description',
           widget: 'text',
-          i18n: true,
         },
         {
           label: 't1',
           name: 't1',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 't1_Image',
@@ -103,19 +90,16 @@ export const HomeCollection = {
           public_folder: '/images/',
           media_folder: '/assets/images/',
           required: true,
-          i18n: true,
         },
         {
           label: 't1_alt',
           name: 'alt_text_for_t1_image',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 't2',
           name: 't2',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 't2_Image',
@@ -124,19 +108,16 @@ export const HomeCollection = {
           public_folder: '/images/',
           media_folder: '/assets/images/',
           required: true,
-          i18n: true,
         },
         {
           label: 't2_alt',
           name: 'alt_text_for_t2_image',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 't3',
           name: 't3',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 't3_Image',
@@ -145,13 +126,11 @@ export const HomeCollection = {
           public_folder: '/images/',
           media_folder: '/assets/images/',
           required: true,
-          i18n: true,
         },
         {
           label: 't3_alt',
           name: 'alt_text_for_t3_image',
           widget: 'string',
-          i18n: true,
         },
       ],
     },
@@ -160,19 +139,17 @@ export const HomeCollection = {
       label: 'Help us, help you',
       widget: 'object',
       collapsed: true,
-      i18n: true,
+
       fields: [
         {
           label: 'title',
           name: 'title',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 'description',
           name: 'description',
           widget: 'text',
-          i18n: true,
         },
       ],
     },
@@ -181,20 +158,19 @@ export const HomeCollection = {
       name: 'volunteer',
       widget: 'object',
       collapsed: true,
-      i18n: true,
+
       fields: [
         {
           label: 'title',
           name: 'title',
           widget: 'string',
-          i18n: true,
         },
         {
           label: 'checklist',
           name: 'checklist',
           widget: 'list',
           allow_add: true,
-          i18n: true,
+
           fields: [
             {
               label: 'Item',
