@@ -7,10 +7,6 @@ backend:
 
 media_folder: /assets/images
 public_folder: /images
-i18n:
-  structure: multiple_files
-  locales: [en, nl]
-  default_locale: en
 
 collections:
   # PAGE:  !Home #####################################################
