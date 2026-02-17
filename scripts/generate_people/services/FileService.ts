@@ -46,8 +46,8 @@ export class FileService {
     const { firstName, lastName } = personData;
     const fullName = `${firstName} ${lastName}`;
 
-    // Handle spaces in last name correctly by replacing them with hyphens in the filename
-    const baseFileName = `${firstName.toLowerCase()}-${lastName.toLowerCase().replace(/\s+/g, '-')}`;
+    // Handle spaces in first and last name correctly by replacing them with hyphens in the filename
+    const baseFileName = `${firstName.toLowerCase().replace(/\s+/g, '-')}-${lastName.toLowerCase().replace(/\s+/g, '-')}`;
     const filename = `${baseFileName}.en.md`;
 
     const frontMatter = {
