@@ -12,20 +12,6 @@ taxonomies:
 permalinks:
   tag: "/newsroom/articles/tag/:title"
 
-languages:
-  en:
-    disabled: false
-    languageCode: en
-    languageDirection: ltr
-    languageName: EN
-    weight: 1
-  nl:
-    disabled: false
-    languageCode: nl
-    languageDirection: ltr
-    languageName: NL
-    weight: 2
-
 timezone: "Europe/Amsterdam"
 
 build:

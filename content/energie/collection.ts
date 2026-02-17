@@ -7,7 +7,7 @@ export const ProjectEnergyCollection = {
   slug: '_index',
   path: '_index',
   create: true,
-  i18n: true,
+
   fields: [
     { label: 'Page title', name: 'title', widget: 'string', default: 'Project energy' },
     {
