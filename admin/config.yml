@@ -8,6 +8,7 @@ backend:
 media_folder: /assets/images
 public_folder: /images
 
+# To prevent needing to rename all files from .en.md to .md when i18n is no longer needed, we set the default extension to .en.md
 i18n:
   structure: multiple_files
   locales: [en]
