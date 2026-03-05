@@ -7,9 +7,9 @@ proudestwork:
   title: Our proudest work
   ourproudestwork:
     - /newsroom/articles/divd-responsibly-discloses-six-new-zero-day-vulnerabilities-to-vendor
-    - /newsroom/articles/over-1-million-notifications
-    - /newsroom/articles/operation-endgame-divd-2024-00019
     - /newsroom/articles/operation-endgame-part-3
+    - /newsroom/articles/over-1-million-notifications
+    - /newsroom/articles/b6f6e14afadc
 mission:
   title: Our mission
   description: We aim to enhance digital safety by reporting system vulnerabilities to the relevant authorities. With a global reach, we adopt an open, honest, and collaborative approach, providing our services for free.
@@ -60,4 +60,3 @@ footer:
   intro: 'We aim to make the digital world safer by reporting vulnerabilities we find  in digital systems to the people who can fix them. We have a global reach, but do it Dutch style: open, honest, collaborative, and for free.'
 title: Blocks
 ---
-
