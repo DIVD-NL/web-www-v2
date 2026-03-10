@@ -21,14 +21,14 @@ jobs:
           extended: true
       - name: Install npm dependencies
         run: npm install
-      - name: Fetch People Data
-        # Dependabot can't access the secrets, so we skip the people step
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        env:
-          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
-          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
-          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
-        run: npm run gen-people
+      # - name: Fetch People Data
+      #   # Dependabot can't access the secrets, so we skip the people step
+      #   if: ${{ github.actor != 'dependabot[bot]' }}
+      #   env:
+      #     GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+      #     GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+      #     GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+      #   run: npm run gen-people
       - name: Build
         run: |
           npm run update-stats
