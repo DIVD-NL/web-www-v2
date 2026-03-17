@@ -37,7 +37,8 @@ markup:
 
 module:
   mounts:
-    - excludeFiles: "**.ts" # Exclude CMS config files
+    - files:
+        - "! **.ts" # Exclude CMS config files
       source: layouts
       target: layouts
 

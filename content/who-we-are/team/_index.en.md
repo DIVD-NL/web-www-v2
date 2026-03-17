@@ -31,11 +31,11 @@ teams:
       - /who-we-are/team/people/chris-vant-hof
       - /who-we-are/team/people/frank-breedijk
       - /who-we-are/team/people/hans-meuris
-      - /who-we-are/team/people/jan joost-bierhoff
+      - /who-we-are/team/people/jan-joost-bierhoff
       - /who-we-are/team/people/jeroen-ellermeijer
       - /who-we-are/team/people/lennaert-oudshoorn
       - /who-we-are/team/people/marieke-rijken
-      - /who-we-are/team/people/mischa rick-van-geelen
+      - /who-we-are/team/people/mischa-rick-van-geelen
       - /who-we-are/team/people/roxane-kortland
   - title: DIVD-CSIRT
     description: >-
@@ -149,7 +149,7 @@ teams:
       - /who-we-are/team/people/jort-geurts
       - /who-we-are/team/people/marieke-rijken
       - /who-we-are/team/people/serena-de-pater
-      - /who-we-are/team/people/sk imtiaz-ahmed
+      - /who-we-are/team/people/sk-imtiaz-ahmed
   - title: 'Governance, Risk & Compliance (GRC)'
     description: >-
       The GRC department ensures our security is top-notch and that we comply
@@ -163,7 +163,7 @@ teams:
       standardizing and overseeing project management practices and processes.
     members:
       - /who-we-are/team/people/chris-vant-hof
-      - /who-we-are/team/people/jan joost-bierhoff
+      - /who-we-are/team/people/jan-joost-bierhoff
       - /who-we-are/team/people/michael-connelly
   - title: Advisory board
     description: ''
