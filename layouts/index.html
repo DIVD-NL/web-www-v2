@@ -10,10 +10,8 @@
           >
         </section>
       </article>
-      <aside>
-        {{ with resources.Get "images/home/divd_intro.png" }}
-          {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
-        {{ end }}
+      <aside class="af-sticker-photo af-sticker-photo-r">
+        <img src="/images/dolphin-glitter.gif" alt="" style="height:auto;">
       </aside>
     </div>
 
@@ -26,17 +24,17 @@
           <!-- Moet worden aangepast -->
 
           {{ partial "card" (dict
-            "imageSource" "images/global/received_email.jpeg"
+            "imageSource" "/images/animaatjes-katten.gif"
             "imageAlt" .Received_Alt
             "title" .Received
             "linkTitle" (i18n "readmore")
             "link" (relLangURL "warningemail/")
-            "classes" (slice "article")
+            "classes" (slice "article" "af-sticker")
             )
           }}
 
           {{ partial "card" (dict
-            "imageSource" "images/global/divd_family.png"
+            "imageSource" "/images/konijn.gif"
             "imageAlt" .Family_Alt
             "title" .Family
             "linkTitle" (i18n "readmore")
@@ -110,10 +108,8 @@
         >
         <p>&nbsp;</p>
       </div>
-      <div class="image-container">
-        {{ with resources.Get "images/global/csirt_team.png" }}
-          {{ partial "tools/rimg/img" (dict "img" . "alt" "CSIRT Team") }}
-        {{ end }}
+      <div class="image-container af-sticker-photo af-sticker-photo-r">
+        <img src="/images/koffie.gif" alt="" style="max-width:100%;height:auto;">
       </div>
       {{ partial "p/layout_close" }}
     {{ end }}
@@ -146,11 +142,9 @@
           </a>
         </div>
       </div>
-      <div class="image-container">
+      <div class="image-container af-sticker-photo af-sticker-photo-ll">
         <div class="image-half-pill">
-          {{ with resources.Get "images/divd/divd_team_photo.jpg" }}
-            {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
-          {{ end }}
+          <img src="/images/dolphin-glitter.gif" alt="" style="max-width:100%;height:auto;">
         </div>
       </div>
     {{ end }}

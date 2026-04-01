@@ -7,11 +7,18 @@
   --bg: #fff;
   --brand: #ffd736;
 
-  --font-header: "Source Sans 3";
-  --font-text: "Open Sans";
+  --font-header: "Comic Sans MS", "Comic Sans", cursive;
+  --font-text: "Comic Sans MS", "Comic Sans", cursive;
 
   --cw: calc(min(100vw, 1200px));
   --rest: calc((100vw - var(--cw)) / 2);
+  --nav-height: 128px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --nav-height: 70px;
+  }
 }
 
 [data-theme="dark"] {
