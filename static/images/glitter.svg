@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="70" viewBox="0 0 800 70">
+  <!-- ─── big 8-point stars ─── -->
+  <!-- gold, x=40 -->
+  <g transform="translate(40,35)"><g opacity="0">
+    <line x1="0" y1="-15" x2="0" y2="15"   stroke="#ffd700" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="-15" y1="0" x2="15" y2="0"   stroke="#ffd700" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="-11" y1="-11" x2="11" y2="11" stroke="#ffd700" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="11"  y1="-11" x2="-11" y2="11" stroke="#ffd700" stroke-width="1.8" stroke-linecap="round"/>
+    <circle r="4" fill="#fff"/>
+    <animate attributeName="opacity" values="0;0;1;1;1;0;0" dur="2s" begin="0s"    repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;0;45;90;135;180" dur="2s" begin="0s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- pink, x=120 -->
+  <g transform="translate(120,18)"><g opacity="0">
+    <line x1="0" y1="-11" x2="0" y2="11"   stroke="#ff1493" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-11" y1="0" x2="11" y2="0"   stroke="#ff1493" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-8" y1="-8" x2="8" y2="8"    stroke="#ff1493" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8"  y1="-8" x2="-8" y2="8"   stroke="#ff1493" stroke-width="1.5" stroke-linecap="round"/>
+    <circle r="3" fill="#fff"/>
+    <animate attributeName="opacity" values="0;0;0;1;1;0;0" dur="2.2s" begin="0.35s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="45;45;90;90;45;0" dur="2.2s" begin="0.35s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- cyan, x=210 -->
+  <g transform="translate(210,52)"><g opacity="0">
+    <line x1="0" y1="-13" x2="0" y2="13"   stroke="#00e5ff" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="-13" y1="0" x2="13" y2="0"   stroke="#00e5ff" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="-9" y1="-9" x2="9" y2="9"    stroke="#00e5ff" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="9"  y1="-9" x2="-9" y2="9"   stroke="#00e5ff" stroke-width="1.8" stroke-linecap="round"/>
+    <circle r="3.5" fill="#fff"/>
+    <animate attributeName="opacity" values="0;1;1;1;0;0;0" dur="1.8s" begin="0.6s"  repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;45;90;135;135" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- violet, x=300 -->
+  <g transform="translate(300,22)"><g opacity="0">
+    <line x1="0" y1="-17" x2="0" y2="17"   stroke="#cc44ff" stroke-width="4"   stroke-linecap="round"/>
+    <line x1="-17" y1="0" x2="17" y2="0"   stroke="#cc44ff" stroke-width="4"   stroke-linecap="round"/>
+    <line x1="-12" y1="-12" x2="12" y2="12" stroke="#cc44ff" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="12" y1="-12" x2="-12" y2="12" stroke="#cc44ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle r="5" fill="#fff"/>
+    <animate attributeName="opacity" values="0;0;1;1;1;1;0" dur="2.5s" begin="0.1s"  repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;0;45;90;135;180;180" dur="2.5s" begin="0.1s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- gold big centre, x=400 -->
+  <g transform="translate(400,35)"><g opacity="0">
+    <line x1="0" y1="-20" x2="0" y2="20"   stroke="#ffd700" stroke-width="5"   stroke-linecap="round"/>
+    <line x1="-20" y1="0" x2="20" y2="0"   stroke="#ffd700" stroke-width="5"   stroke-linecap="round"/>
+    <line x1="-14" y1="-14" x2="14" y2="14" stroke="#ffd700" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="14" y1="-14" x2="-14" y2="14" stroke="#ffd700" stroke-width="3"   stroke-linecap="round"/>
+    <circle r="6" fill="#fff"/>
+    <animate attributeName="opacity" values="0;1;1;1;1;1;0" dur="3s"   begin="0.4s"  repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;45;90;135;180;225;270" dur="3s" begin="0.4s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- lime, x=490 -->
+  <g transform="translate(490,55)"><g opacity="0">
+    <line x1="0" y1="-10" x2="0" y2="10"   stroke="#80ff00" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-10" y1="0" x2="10" y2="0"   stroke="#80ff00" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-7" y1="-7" x2="7" y2="7"    stroke="#80ff00" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="7"  y1="-7" x2="-7" y2="7"   stroke="#80ff00" stroke-width="1.5" stroke-linecap="round"/>
+    <circle r="2.8" fill="#fff"/>
+    <animate attributeName="opacity" values="0;0;0;1;1;0;0" dur="2.1s" begin="0.75s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;0;45;90;90;45" dur="2.1s" begin="0.75s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- pink mid, x=580 -->
+  <g transform="translate(580,20)"><g opacity="0">
+    <line x1="0" y1="-12" x2="0" y2="12"   stroke="#ff69b4" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="-12" y1="0" x2="12" y2="0"   stroke="#ff69b4" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="-8.5" y1="-8.5" x2="8.5" y2="8.5" stroke="#ff69b4" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="8.5"  y1="-8.5" x2="-8.5" y2="8.5" stroke="#ff69b4" stroke-width="1.8" stroke-linecap="round"/>
+    <circle r="3" fill="#fff"/>
+    <animate attributeName="opacity" values="0;1;1;0;0;0;0" dur="2s"   begin="1.0s"  repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="90;90;45;0;0" dur="2s" begin="1.0s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- cyan, x=670 -->
+  <g transform="translate(670,48)"><g opacity="0">
+    <line x1="0" y1="-14" x2="0" y2="14"   stroke="#00ccff" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-14" y1="0" x2="14" y2="0"   stroke="#00ccff" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-10" y1="-10" x2="10" y2="10" stroke="#00ccff" stroke-width="2"   stroke-linecap="round"/>
+    <line x1="10"  y1="-10" x2="-10" y2="10" stroke="#00ccff" stroke-width="2"   stroke-linecap="round"/>
+    <circle r="3.8" fill="#fff"/>
+    <animate attributeName="opacity" values="0;0;0;0;1;1;0" dur="2.3s" begin="0.5s"  repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;0;0;45;90;135;180" dur="2.3s" begin="0.5s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- gold, x=760 -->
+  <g transform="translate(760,30)"><g opacity="0">
+    <line x1="0" y1="-9" x2="0" y2="9"     stroke="#ffd700" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="-9" y1="0" x2="9" y2="0"     stroke="#ffd700" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="-6.5" y1="-6.5" x2="6.5" y2="6.5" stroke="#ffd700" stroke-width="1.3" stroke-linecap="round"/>
+    <line x1="6.5"  y1="-6.5" x2="-6.5" y2="6.5" stroke="#ffd700" stroke-width="1.3" stroke-linecap="round"/>
+    <circle r="2.2" fill="#fff"/>
+    <animate attributeName="opacity" values="0;0;1;1;0;0;0" dur="1.9s" begin="1.2s"  repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;45;90;90;45;0" dur="1.9s" begin="1.2s" repeatCount="indefinite"/>
+  </g></g>
+  <!-- ─── extra small pop dots scattered between stars ─── -->
+  <circle cx="75"  cy="55" r="3.5" fill="#ffd700" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" dur="1.5s" begin="0.2s"  repeatCount="indefinite"/><animate attributeName="r" values="0;0;3.5;3.5;0" dur="1.5s" begin="0.2s" repeatCount="indefinite"/></circle>
+  <circle cx="160" cy="12" r="3"   fill="#ff1493" opacity="0"><animate attributeName="opacity" values="0;1;1;0;0;0" dur="1.8s" begin="0.9s"  repeatCount="indefinite"/><animate attributeName="r" values="0;3;3;0"     dur="1.8s" begin="0.9s" repeatCount="indefinite"/></circle>
+  <circle cx="255" cy="38" r="4"   fill="#cc44ff" opacity="0"><animate attributeName="opacity" values="0;0;0;1;1;0" dur="2.0s" begin="0.15s" repeatCount="indefinite"/><animate attributeName="r" values="0;0;4;4;0"     dur="2.0s" begin="0.15s" repeatCount="indefinite"/></circle>
+  <circle cx="350" cy="60" r="2.5" fill="#00e5ff" opacity="0"><animate attributeName="opacity" values="0;1;0;0;0;0" dur="1.4s" begin="1.1s"  repeatCount="indefinite"/><animate attributeName="r" values="0;2.5;2.5;0" dur="1.4s" begin="1.1s" repeatCount="indefinite"/></circle>
+  <circle cx="445" cy="10" r="4.5" fill="#ff1493" opacity="0"><animate attributeName="opacity" values="0;0;1;1;1;0" dur="2.4s" begin="0.6s"  repeatCount="indefinite"/><animate attributeName="r" values="0;0;4.5;4.5;0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></circle>
+  <circle cx="535" cy="42" r="3"   fill="#80ff00" opacity="0"><animate attributeName="opacity" values="0;0;0;1;0;0" dur="1.6s" begin="0.95s" repeatCount="indefinite"/><animate attributeName="r" values="0;0;3;3;0"     dur="1.6s" begin="0.95s" repeatCount="indefinite"/></circle>
+  <circle cx="620" cy="62" r="3.5" fill="#ffd700" opacity="0"><animate attributeName="opacity" values="0;1;1;0;0;0" dur="2.1s" begin="0.4s"  repeatCount="indefinite"/><animate attributeName="r" values="0;3.5;3.5;0" dur="2.1s" begin="0.4s" repeatCount="indefinite"/></circle>
+  <circle cx="715" cy="15" r="2.5" fill="#ff69b4" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" dur="1.7s" begin="1.3s"  repeatCount="indefinite"/><animate attributeName="r" values="0;2.5;2.5;0" dur="1.7s" begin="1.3s" repeatCount="indefinite"/></circle>
+  <circle cx="790" cy="60" r="3"   fill="#00ccff" opacity="0"><animate attributeName="opacity" values="0;0;0;1;1;0" dur="1.9s" begin="0.7s"  repeatCount="indefinite"/><animate attributeName="r" values="0;0;3;3;0"     dur="1.9s" begin="0.7s" repeatCount="indefinite"/></circle>
+  <!-- midpoint accent dots -->
+  <circle cx="165" cy="60" r="2"   fill="#cc44ff" opacity="0"><animate attributeName="opacity" values="0;1;0;0" dur="1.2s" begin="0.55s" repeatCount="indefinite"/></circle>
+  <circle cx="340" cy="12" r="2"   fill="#ffd700" opacity="0"><animate attributeName="opacity" values="0;0;1;0" dur="1.3s" begin="0.3s"  repeatCount="indefinite"/></circle>
+  <circle cx="470" cy="58" r="2"   fill="#ff69b4" opacity="0"><animate attributeName="opacity" values="0;1;0;0" dur="1.1s" begin="0.85s" repeatCount="indefinite"/></circle>
+  <circle cx="600" cy="8"  r="2"   fill="#00e5ff" opacity="0"><animate attributeName="opacity" values="0;0;0;1;0" dur="1.6s" begin="1.05s" repeatCount="indefinite"/></circle>
+  <circle cx="740" cy="40" r="2.5" fill="#80ff00" opacity="0"><animate attributeName="opacity" values="0;1;1;0;0" dur="1.4s" begin="0.65s" repeatCount="indefinite"/></circle>
+</svg>
