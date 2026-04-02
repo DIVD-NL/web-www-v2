@@ -28,12 +28,12 @@
     "tailwindcss": "^3.4.19",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.1",
+    "typescript-eslint": "^8.58.0",
     "vite": "^7.3.0"
   },
   "dependencies": {
-    "@sveltia/cms": "^0.146.9",
-    "axios": "^1.13.6",
+    "@sveltia/cms": "^0.152.0",
+    "axios": "^1.14.0",
     "gray-matter": "^4.0.3",
     "heic-convert": "^2.1.0",
     "sharp": "^0.34.5",
