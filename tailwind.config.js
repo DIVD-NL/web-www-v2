@@ -29,8 +29,8 @@ module.exports = {
         body: ['1.25rem', { lineHeight: '2rem', letterSpacing: '0.025rem', fontWeight: '400' }],
       },
       fontFamily: {
-        heading: ['"Comic Sans MS", "Comic Sans", cursive'],
-        body: ['"Comic Sans MS", "Comic Sans", cursive'],
+        heading: ['Source Sans 3, sans-serif'],
+        body: ['Open Sans, sans-serif'],
       },
     },
   },

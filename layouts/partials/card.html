@@ -17,15 +17,11 @@
 
 <section class="card {{ range $classes }}card-{{ . }}{{ end }}">
   <figure>
-    {{ if or (hasPrefix $imageSource "http") (hasPrefix $imageSource "/") }}
-      <img src="{{ $imageSource }}" alt="{{ $alt }}" style="width:100%;height:100%;object-fit:cover;" />
+    {{ with resources.Get $imageSource }}
+      {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
+      <!--- $alt --->
     {{ else }}
-      {{ with resources.Get $imageSource }}
-        {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
-        <!--- $alt --->
-      {{ else }}
-        <img src="#" alt="Empty image" />
-      {{ end }}
+      <img src="#" alt="Empty image" />
     {{ end }}
     {{ if $tag }}
       <figcaption>{{ $tag }}</figcaption>

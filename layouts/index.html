@@ -10,8 +10,10 @@
           >
         </section>
       </article>
-      <aside class="af-sticker-photo af-sticker-photo-r">
-        <img src="/images/dolphin-glitter.gif" alt="" style="height:auto;">
+      <aside>
+        {{ with resources.Get "images/home/divd_intro.png" }}
+          {{ partial "tools/rimg/img" (dict "img" . "alt" "test") }}
+        {{ end }}
       </aside>
     </div>
 
@@ -24,17 +26,17 @@
           <!-- Moet worden aangepast -->
 
           {{ partial "card" (dict
-            "imageSource" "/images/animaatjes-katten.gif"
+            "imageSource" "images/global/received_email.jpeg"
             "imageAlt" .Received_Alt
             "title" .Received
             "linkTitle" (i18n "readmore")
             "link" (relLangURL "warningemail/")
-            "classes" (slice "article" "af-sticker")
+            "classes" (slice "article")
             )
           }}
 
           {{ partial "card" (dict
-            "imageSource" "/images/konijn.gif"
+            "imageSource" "images/global/divd_family.png"
             "imageAlt" .Family_Alt
             "title" .Family
             "linkTitle" (i18n "readmore")
@@ -108,8 +110,10 @@
         >
         <p>&nbsp;</p>
       </div>
-      <div class="image-container af-sticker-photo af-sticker-photo-r">
-        <img src="/images/koffie.gif" alt="" style="max-width:100%;height:auto;">
+      <div class="image-container">
+        {{ with resources.Get "images/global/csirt_team.png" }}
+          {{ partial "tools/rimg/img" (dict "img" . "alt" "CSIRT Team") }}
+        {{ end }}
       </div>
       {{ partial "p/layout_close" }}
     {{ end }}
@@ -142,9 +146,11 @@
           </a>
         </div>
       </div>
-      <div class="image-container af-sticker-photo af-sticker-photo-ll">
+      <div class="image-container">
         <div class="image-half-pill">
-          <img src="/images/dolphin-glitter.gif" alt="" style="max-width:100%;height:auto;">
+          {{ with resources.Get "images/divd/divd_team_photo.jpg" }}
+            {{ partial "tools/rimg/img" (dict "img" . "alt" "Become a volunteer") }}
+          {{ end }}
         </div>
       </div>
     {{ end }}

@@ -12,7 +12,7 @@ body {
 
 .topic-intro {
   background-color: #1d1d1d;
-  padding-top: 32px;
+  padding-top: 128px;
   border-bottom-left-radius: 150px;
   padding-bottom: 32px;
 
@@ -25,7 +25,7 @@ body {
   }
 
   @media (max-width: 700px) {
-    padding-top: 16px;
+    padding-top: 64px;
     border-bottom-left-radius: 64px;
   }
 }
@@ -253,7 +253,7 @@ button,
   border-radius: 24px;
   border: 0;
 
-  font-family: var(--font-text);
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -403,7 +403,7 @@ ol {
   @media (max-width: 900px) {
     &.grid-3 {
       grid-template-columns: 1fr 1fr;
-      grid-gap: 16px;
+      grid-gap: 4px;
 
       &.grid-sm {
         grid-template-columns: 1fr;
@@ -412,15 +412,7 @@ ol {
 
     &.grid-4 {
       grid-template-columns: 1fr 1fr;
-      grid-gap: 16px;
-    }
-  }
-
-  @media (max-width: 640px) {
-    &.grid-3,
-    &.grid-4 {
-      grid-template-columns: 1fr;
-      grid-gap: 16px;
+      grid-gap: 4px;
     }
   }
 }
