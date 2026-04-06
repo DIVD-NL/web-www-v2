@@ -7,8 +7,8 @@
   --bg: #fff;
   --brand: #ffd736;
 
-  --font-header: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive;
-  --font-text: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive;
+  --font-header: "Comic Sans MS", "Comic Sans", cursive;
+  --font-text: "Comic Sans MS", "Comic Sans", cursive;
 
   --cw: calc(min(100vw, 1200px));
   --rest: calc((100vw - var(--cw)) / 2);
