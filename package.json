@@ -11,7 +11,7 @@
     "cms-build": "vite build"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.6.0",
     "autoprefixer": "^10.4.27",
     "buffer": "^6.0.3",
     "eslint": "^9.39.2",
@@ -20,19 +20,19 @@
     "eslint-plugin-prettier": "^5.5.5",
     "gaxios": "^7.1.4",
     "googleapis": "^171.4.0",
-    "postcss": "^8.5.8",
+    "postcss": "^8.5.9",
     "postcss-cli": "^11.0.1",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.2",
     "prettier-plugin-go-template": "^0.0.15",
     "process": "^0.11.10",
     "tailwindcss": "^3.4.19",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.1",
+    "typescript-eslint": "^8.58.1",
     "vite": "^7.3.2"
   },
   "dependencies": {
-    "@sveltia/cms": "^0.146.9",
+    "@sveltia/cms": "^0.152.5",
     "axios": "^1.15.0",
     "gray-matter": "^4.0.3",
     "heic-convert": "^2.1.0",
