@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: lts/*
           cache: "npm"
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -51,7 +51,7 @@ jobs:
       #        with:
       #          name: html5validator_log
       #          path: log.log
-      - name: Modify .htacess and robots.txt for staging
+      - name: Modify .htaccess and robots.txt for staging
         if: ${{ github.ref == 'refs/heads/staging' }}
         run: |
           sed -i 's#www\.divd#staging.divd#' public/.htaccess
