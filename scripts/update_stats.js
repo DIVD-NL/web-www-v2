@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { readFileSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync } from 'fs';
 import matter from 'gray-matter';
 
 async function updateMarkdown() {
@@ -24,6 +24,11 @@ async function updateMarkdown() {
     ['en', 'nl'].forEach((lang) => {
       // Read the existing markdown file
       const filePath = `content/block/_index.${lang}.md`;
+      if (!existsSync(filePath)) {
+        console.warn(`Skipping missing locale file: ${filePath}`);
+        return;
+      }
+
       const fileContent = readFileSync(filePath, 'utf8');
 
       // Parse the front matter
