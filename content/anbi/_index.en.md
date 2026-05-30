@@ -30,10 +30,12 @@ We streven ernaar de digitale wereld veiliger te maken door kwetsbaarheden die w
 
 **Documenten**
 
-- [Financieel verslag 2024](https://www.divd.nl/documents/DIVD%20financieel%20verslag%202024_def_was%20getekend.pdf)
+- [Financieel verslag 2025](/documents/DIVD%20financieel%20verslag%202025%20was%20getekend.pdf)
+- [Financieel verslag 2024](/documents/DIVD%20financieel%20verslag%202024_def_was%20getekend.pdf)
 - [Financieel verslag 2023](/documents/DIVD.financieel.verslag.2023.pdf)
-- [Jaarverslag 2024](https://www.divd.nl/documents/DIVD_Annual_Report_2024.pdf)
+- [Jaarverslag 2025](/documents/DIVD%20Annual%20Report%202025.pdf)
+- [Jaarverslag 2024](/documents/DIVD_Annual_Report_2024.pdf)
 - [Jaarverslag 2023](/documents/DIVD.Annual.Report.2023.pdf)
 - [Jaarverslag 2022](/documents/DIVD%20jaarverslag%202022.pdf)
 - [Jaarverslag 2021](/documents/DIVD%20jaarverslag%202021.pdf)
-- [Standaardformulier ANBI](https://www.divd.nl/documents/Publicatieplicht%20ANBI%202024%20(1).pdf)
+- [Standaardformulier ANBI](https://www.divd.nl/documents/Publicatieplicht%20ANBI%202024.pdf)

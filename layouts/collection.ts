@@ -34,7 +34,7 @@ export const HomeCollection = {
           widget: 'relation',
           collection: 'articles',
           search_fields: ['title', 'case.caseid'],
-          value_field: '/newsroom/articles/{{slug}}',
+            value_field: '/newsroom/articles/\x7b\x7bslug\x7d\x7d',
           display_fields: ['title', 'case.caseid'],
 
           multiple: false,
