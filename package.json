@@ -11,12 +11,12 @@
     "cms-build": "vite build"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^25.5.0",
     "autoprefixer": "^10.4.27",
     "buffer": "^6.0.3",
-    "eslint": "^9.39.2",
+    "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.5",
     "gaxios": "^7.1.4",
     "googleapis": "^171.4.0",
@@ -27,9 +27,9 @@
     "process": "^0.11.10",
     "tailwindcss": "^3.4.19",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.1",
-    "vite": "^7.3.2"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0",
+    "vite": "^8.0.14"
   },
   "dependencies": {
     "@sveltia/cms": "^0.146.9",
