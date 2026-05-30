@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@sveltia/cms": "^0.146.9",
-    "axios": "^1.15.0",
+    "axios": "^1.16.0",
     "gray-matter": "^4.0.3",
     "heic-convert": "^2.1.0",
     "sharp": "^0.34.5",
