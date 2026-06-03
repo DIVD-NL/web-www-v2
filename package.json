@@ -32,7 +32,7 @@
     "vite": "^8.0.14"
   },
   "dependencies": {
-    "@sveltia/cms": "^0.146.9",
+    "@sveltia/cms": "^0.160.0",
     "axios": "^1.16.0",
     "gray-matter": "^4.0.3",
     "heic-convert": "^2.1.0",
