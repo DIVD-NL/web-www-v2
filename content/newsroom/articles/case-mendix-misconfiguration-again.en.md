@@ -11,16 +11,16 @@ case:
   closed: false
   link: https://csirt.divd.nl/cases/DIVD-2026-00003/
   lead: Jeroen Ellermeijer
-  leadlink: https://www.divd.nl/who-we-are/team/people/jeroen-ellermeijer/
+  leadlink: ''
   researchers:
     - label: Stan Plasmeijer
-      link: https://www.divd.nl/who-we-are/team/people/stan-plasmeijer/
+      link: ''
     - label: Jelle Ursum
-      link: https://www.divd.nl/who-we-are/team/people/jelle-ursem/
+      link: ''
     - label: Marieke Rijken
-      link: https://www.divd.nl/who-we-are/team/people/marieke-rijken/
+      link: ''
     - label: Rudy Dijkstra
-      link: https://www.divd.nl/who-we-are/team/people/rudy-dijkstra/
+      link: ''
   researchers_people: []
 faq_enabled: true
 faq: null
