@@ -19,22 +19,8 @@ case:
       link: https://www.divd.nl/who-we-are/team/people/jelle-ursem/
     - label: Marieke Rijken
       link: https://www.divd.nl/who-we-are/team/people/marieke-rijken/
-    - label: Hans Meuris
-      link: https://www.divd.nl/who-we-are/team/people/hans-meuris/
-    - label: Joris Cras
-      link: https://www.divd.nl/who-we-are/team/people/joris-cras/
-    - label: Jort Geurts
-      link: https://www.divd.nl/who-we-are/team/people/jort-geurts/
-    - label: Kees van Poeijer
-      link: https://www.divd.nl/who-we-are/team/people/kees-van-poeijer/
-    - label: Max van der Horst
-      link: https://www.divd.nl/who-we-are/team/people/max-van-der-horst/
     - label: Rudy Dijkstra
       link: https://www.divd.nl/who-we-are/team/people/rudy-dijkstra/
-    - label: Mischa Rick van Geelen
-      link: https://www.divd.nl/who-we-are/team/people/mischa-rick-van-geelen/
-    - label: Wilco van Beijnum
-      link: https://www.divd.nl/who-we-are/team/people/wilco-van-beijnum/
   researchers_people: []
 faq_enabled: true
 faq: null
