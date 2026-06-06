@@ -6,10 +6,9 @@ ethics:
 proudestwork:
   title: Our proudest work
   ourproudestwork:
-    - /newsroom/articles/divd-responsibly-discloses-six-new-zero-day-vulnerabilities-to-vendor
+    - /newsroom/articles/we-have-moved-to-enisa-as-its-root-cna
+    - /newsroom/articles/have-you-tried-turning-the-grid-off-and-on-again
     - /newsroom/articles/operation-endgame-part-3
-    - /newsroom/articles/over-1-million-notifications
-    - /newsroom/articles/b6f6e14afadc
 mission:
   title: Our mission
   description: We aim to enhance digital safety by reporting system vulnerabilities to the relevant authorities. With a global reach, we adopt an open, honest, and collaborative approach, providing our services for free.
