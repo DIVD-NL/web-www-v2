@@ -15,12 +15,6 @@ case:
   researchers:
     - label: Stan Plasmeijer
       link: ''
-    - label: Jelle Ursum
-      link: ''
-    - label: Marieke Rijken
-      link: ''
-    - label: Rudy Dijkstra
-      link: ''
   researchers_people: []
 faq_enabled: true
 faq: null
