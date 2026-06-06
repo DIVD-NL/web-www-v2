@@ -6,5 +6,5 @@ newsletter: https://divd.nl
 starter:
   title: Stay up to date
   description: Here you'll find the latest updates, announcements and stories from DIVD. Our newsroom is your go-to source for news about our ongoing efforts to enhance digital security and protect organisations from cyber threats.
-highlight: /newsroom/articles/over-1-million-notifications
+highlight: /newsroom/articles/we-have-moved-to-enisa-as-its-root-cna
 ---
