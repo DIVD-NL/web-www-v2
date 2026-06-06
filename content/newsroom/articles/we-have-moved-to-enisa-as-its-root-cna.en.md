@@ -1,6 +1,6 @@
 ---
 title: We have moved to ENISA as its Root CNA
-date: 2026-06-06T12:37:00+02:00
+date: 2026-04-23T12:37:00+02:00
 author: []
 tag: news
 intro: As a CVE Numbering Authority, we assign CVEs to vulnerabilities. Within the CVE program, every CNA operates under a Root CNA, and until now that was MITRE. From now on, it will be European Union Agency for Cybersecurity (ENISA).
