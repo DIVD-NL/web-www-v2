@@ -6,16 +6,7 @@ tag: case
 intro: DIVD warns of common configuration mistakes in Mendix applications. No vulnerability in Mendix itself. Organizations should immediately review the authorization settings of their own applications.
 image: /images/articles/DIVD - Mendix Misconfiguration.jpg
 alt_tag_for_image: ''
-case:
-  caseid: DIVD-2026-00003
-  closed: false
-  link: https://csirt.divd.nl/cases/DIVD-2026-00003/
-  lead: Jeroen Ellermeijer
-  leadlink: ''
-  researchers:
-    - label: Stan Plasmeijer
-      link: ''
-  researchers_people: []
+case: null
 faq_enabled: true
 faq: null
 ---
