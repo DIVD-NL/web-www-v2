@@ -21,7 +21,9 @@ Aside from concerns over sovereignty, cloud-dependence also brings concerns with
 
 If energy intensive OT infrastructure becomes dependent on these systems, an outage could also impact the stability of the electrical grid itself. Simultaneous shutdown of these energy intensive processes could cause imbalance in energy consumption and production. In the worst case, this could lead to a cascading shutdown of the grid due to voltage or frequency protection mechanisms.
 
-These concerns are already tangible in the renewable energy sector. Industrial renewable energy production installations are often monitored and controlled remotely through central cloud platforms. Aside from the concerns outlined above, this connectivity also introduces a larger attack surface, increasing the risk of cyber attacks. Centralized control systems create attractive targets for attackers targeting the power grid, potentially even affecting nationwide grid stability. The[ ](https://hub.dragos.com/report/electrum-targeting-polands-electric-sector)[coordinated cyberattack on Poland's electric system on December 29, 2025](https://hub.dragos.com/report/electrum-targeting-polands-electric-sector) shows that it is not a theoretical risk anymore. **This attack showed that distributed energy resources are actively being targeted.** Although this particular attack did ultimately not lead to major disruptions of the power grid, it does show how such an attack will evolve in the future.
+These concerns are already tangible in the renewable energy sector. Industrial renewable energy production installations are often monitored and controlled remotely through central cloud platforms. Aside from the concerns outlined above, this connectivity also introduces a larger attack surface, increasing the risk of cyber attacks. Centralized control systems create attractive targets for attackers targeting the power grid, potentially even affecting nationwide grid stability. 
+
+The[ ](https://hub.dragos.com/report/electrum-targeting-polands-electric-sector)[coordinated cyberattack on Poland's electric system on December 29, 2025](https://hub.dragos.com/report/electrum-targeting-polands-electric-sector) shows that it is not a theoretical risk anymore. **This attack showed that distributed energy resources are actively being targeted.** Although this particular attack did ultimately not lead to major disruptions of the power grid, it does show how such an attack will evolve in the future.
 
 ### The attack surface starts at home
 
@@ -29,7 +31,8 @@ Energy intensive devices are increasingly moving into residential environments, 
 
 Our research has repeatedly shown weaknesses in these ecosystems. We have already published s[everal cases](https://csirt.divd.nl/cases/), resulting in 80+ CVEs, a few of which could have been used to take over and shutdown all devices of a manufacturer. This shows that these types of vulnerabilities are not just theoretical, but actually a concern in practice. Thankfully some manufactures are very proactive in resolving cybersecurity issues in their systems, but unfortunately not all manufacturers take their responsibility.
 
-So, what can be done? We will continue investigating the security of devices in the energy sector and disclosing vulnerabilities in collaboration with our partners that are active in this sector such as [ElaadNL](https://elaad.nl/en/), [ENCS](https://encs.eu/) and[ Bureau Veritas.](https://benelux.bureauveritas.com/) **But that is not enough.** 
+So, what can be done? 
+We will continue investigating the security of devices in the energy sector and disclosing vulnerabilities in collaboration with our partners that are active in this sector such as [ElaadNL](https://elaad.nl/en/), [ENCS](https://encs.eu/) and[ Bureau Veritas.](https://benelux.bureauveritas.com/) **But that is not enough.** 
 
 ### The safety of the power grid should not rely on volunteers
 
@@ -39,4 +42,4 @@ The question is not whether cloud technologies should be used in the energy sect
 
 The grid we depend on is increasingly running on infrastructure we don't control. That is a choice. Not making it deliberately is also a choice.
 
-More information about our energy sector research can be found on: https://www.divd.nl/energie/
+**More information about our energy sector research can be found on: https://www.divd.nl/energie/**
