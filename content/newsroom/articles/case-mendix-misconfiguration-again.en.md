@@ -2,6 +2,9 @@
 title: 'CASE: MENDIX MISCONFIGURATION (again)'
 date: 2026-03-01T13:37:00+01:00
 author: []
+url: /mendix.html
+aliases:
+- /newsroom/articles/case-mendix-misconfiguration-again/
 tag: case
 intro: DIVD warns of common configuration mistakes in Mendix applications. No vulnerability in Mendix itself. Organizations should immediately review the authorization settings of their own applications.
 image: /images/articles/DIVD - Mendix Misconfiguration.jpg
