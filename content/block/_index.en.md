@@ -10,6 +10,7 @@ proudestwork:
     - /newsroom/articles/have-you-tried-turning-the-grid-off-and-on-again
     - /newsroom/articles/case-mendix-misconfiguration-again
     - /newsroom/articles/operation-endgame-part-3
+    - /newsroom/articles/dutch-energy-sector-we-have-a-cloud-problem
 mission:
   title: Our mission
   description: We aim to enhance digital safety by reporting system vulnerabilities to the relevant authorities. With a global reach, we adopt an open, honest, and collaborative approach, providing our services for free.
