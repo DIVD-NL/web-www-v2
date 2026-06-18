@@ -10,8 +10,8 @@ case:
   caseid: DIVD-2025-00041
   closed: false
   link:
-    label: https://csirt.divd.nl/cases/DIVD-2025-00041/
-    url: DIVD-2025-00041
+    label: DIVD-2025-00041
+    url: https://csirt.divd.nl/cases/DIVD-2025-00041/
     invertedColors: false
     external: false
     download: false
@@ -46,6 +46,7 @@ faq:
             We analyze every database we receive, including those from law enforcement. However, we do this independently, without any obligation or intention to share any specific information in return.
 url: /operation-endgame-3
 ---
+
 On November 13th 2025, The Dutch National Police, in cooperation with EuropPol and Eurojust announced they took down botnets in a another episode of [Operation Endgame](https://operation-endgame.com/), the biggest continued anti-botnet operation to date. During this takedown, stolen data has been seized.
 
 As part of this operation, stealer logs containing information on many victims of the targeted malware platforms have been shared with: [DIVD](https://wwww.divd.nl/), [Have I Been Pwned](https://haveibeenpwned.com/), [Spamhaus](https://www.spamhaus.org/resource-hub/malware/operation-endgame-botnets-disrupted-after-international-action/), [Project No More Leaks](https://www.politie.nl/onderwerpen/no-more-leaks.html), [Project Check je Hack](https://www.politie.nl/informatie/checkjehack.html), the (Dutch) [NCSC](https://ncsc.nl/), [CSIRT-DSP](https://csirtdsp.nl/), and [Digital Trust Center](https://www.digitaltrustcenter.nl/).
