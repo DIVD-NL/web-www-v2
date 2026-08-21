@@ -3,6 +3,9 @@ run-name: Build and test website, but not deploy
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   build_and_test_no_deploy:
     runs-on: ubuntu-latest
