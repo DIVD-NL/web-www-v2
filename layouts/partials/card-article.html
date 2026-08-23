@@ -18,6 +18,6 @@
     "classes" (slice "article"))
   }}
 {{ else }}
-
-  <div>Card not found</div>
+  {{ warnf "card-article: page not found for %q" . }}
+  <!-- card-article: page not found for {{ . }} -->
 {{ end }}
