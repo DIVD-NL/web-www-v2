@@ -19,7 +19,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
     "gaxios": "^7.3.0",
-    "googleapis": "^173.0.0",
+    "googleapis": "^181.0.0",
     "postcss": "^8.5.26",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.9.6",
