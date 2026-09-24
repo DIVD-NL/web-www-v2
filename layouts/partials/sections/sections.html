@@ -5,6 +5,8 @@
     {{ partial "sections/slider/slider" . }}
   {{ else if eq .type "hero-section" }}
     {{ partial "sections/hero/hero" . }}
+  {{ else if eq .type "text-display-section" }}
+    {{ partial "sections/text-display/text-display" . }}
   {{ else if eq .type "highlighted-cases-section" }}
     {{ partial "sections/highlighted-cases/highlighted-cases" . }}
   {{ else if eq .type "faq" }}
