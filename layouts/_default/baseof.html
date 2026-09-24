@@ -10,6 +10,9 @@
 
     <link rel="icon" href="/favicon.png" />
     <title>{{ .Title }}</title>
+    {{ with .Params.robots }}
+      <meta name="robots" content="{{ . }}" />
+    {{ end }}
 
     {{ partial "styles.html" . }}
     {{ partial "js.html" . }}
