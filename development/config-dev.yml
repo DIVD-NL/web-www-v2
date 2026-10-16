@@ -1260,7 +1260,7 @@ collections:
     folder: "content/who-we-are/team/people"
     create: true
     slug: "{{slug}}"
-    identifier_field: name
+    identifier_field: title
     fields:
       - { label: "type", name: "type", widget: "hidden", default: "people" }
       - {
