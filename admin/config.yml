@@ -1287,7 +1287,7 @@ collections:
     folder: "content/who-we-are/team/people"
     create: true
     slug: "{{slug}}"
-    identifier_field: name
+    identifier_field: title
     public_folder: "/images/people"
     media_folder: "/assets/images/people"
     fields:
