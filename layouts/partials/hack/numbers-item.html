@@ -1,0 +1,5 @@
+{{/* One item of the homepage stats block (.stats), same markup as block/divd_stats. Expects {value, unit, label}. */}}
+<li>
+  <h2>{{ .value }}{{ with .unit }}<span class="stats__unit">&nbsp;{{ . }}</span>{{ end }}</h2>
+  <h6>{{ .label }}</h6>
+</li>

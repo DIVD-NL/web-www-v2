@@ -1,0 +1,53 @@
+{{/* Figma component: Update-modal (49:4915). Native <dialog>; behaviour in assets/ts/ui.ts (initHackPage). */}}
+{{ $u := .update }}
+<dialog class="hack-modal" id="update-{{ $u.number }}" aria-labelledby="update-{{ $u.number }}-title">
+  <div class="hack-modal__inner">
+    <header class="flex flex-wrap items-center gap-3">
+      <span class="hack-category">Update #{{ $u.number }}</span>
+      <span class="text-sm font-bold">{{ (time $u.date).Format "2 January 2006" }}</span>
+      <button type="button" class="hack-btn hack-btn--white hack-modal__close" data-hack-close>Close</button>
+    </header>
+
+    <h2 class="hack-h2" id="update-{{ $u.number }}-title">{{ $u.title }}</h2>
+
+    {{ with $u.image }}<img class="hack-modal__image" src="{{ . }}" alt="{{ $u.imageAlt }}" loading="lazy" />{{ end }}
+
+    {{ with $u.body }}
+      <div class="hack-modal__body hack-text">{{ . | markdownify }}</div>
+    {{ else }}
+      {{ with $u.teaser }}<div class="hack-modal__body hack-text"><p>{{ . }}</p></div>{{ end }}
+    {{ end }}
+
+    {{ with $u.meta }}<p class="text-sm font-bold mt-6">{{ . }}</p>{{ end }}
+
+    {{ with $u.action }}
+      <div class="hack-modal__action">
+        <div>
+          <p class="text-sm font-bold uppercase">{{ .label }}</p>
+          <p class="text-lg desktop:text-xl font-semibold">{{ .text }}</p>
+        </div>
+        <a class="hack-btn hack-btn--black" href="{{ .url }}">{{ .button }}</a>
+      </div>
+    {{ end }}
+
+    {{ with $u.url }}
+      <a class="hack-btn hack-btn--yellow mt-8" href="{{ . }}">Read the full article</a>
+    {{ end }}
+
+    <footer class="hack-modal__footer">
+      {{ with .older }}
+        <a class="hack-modal__nav is-older" href="#update-{{ .number }}" data-hack-open="update-{{ .number }}">
+          <span class="hack-modal__arrow">{{ partial "svg/icon" "chevronleft" }}</span>
+          <span><span class="block text-xs font-bold uppercase">Update #{{ .number }}</span><span class="hack-modal__nav-title block text-sm">{{ .title | truncate 40 }}</span></span>
+        </a>
+      {{ end }}
+      <button type="button" class="hack-btn hack-btn--outline-white is-share" data-hack-share="update-{{ $u.number }}">Share</button>
+      {{ with .newer }}
+        <a class="hack-modal__nav is-newer text-right" href="#update-{{ .number }}" data-hack-open="update-{{ .number }}">
+          <span><span class="block text-xs font-bold uppercase">Update #{{ .number }}</span><span class="hack-modal__nav-title block text-sm">{{ .title | truncate 40 }}</span></span>
+          <span class="hack-modal__arrow">{{ partial "svg/icon" "chevronright" }}</span>
+        </a>
+      {{ end }}
+    </footer>
+  </div>
+</dialog>

@@ -1,0 +1,955 @@
+// "We got hacked" incident page — layouts/hacked/list.html
+// Design: Figma "DIVD HACKED" (9:4424). Layout and spacing use Tailwind classes in the
+// templates; this file only holds what Tailwind can't express nicely (shapes, gradients,
+// states driven by ui.ts).
+
+$hack-yellow: #ffd736;
+$hack-dark: #1d1d1d;
+$hack-mid: #545454;
+$hack-gradient: linear-gradient(180deg, $hack-yellow 0%, rgba($hack-yellow, 0) 100%);
+
+.hack-page {
+  background-color: #000;
+  color: #fff;
+  overflow-x: clip;
+  // Clears the fixed site nav (bottom edge at ~107px, ~60px at 640px and below) so the
+  // status strip sits directly below it. Isolation lets .hack-data's corner fill sit
+  // behind its rounded corner without being covered by this background.
+  padding-top: 112px;
+  isolation: isolate;
+
+  @media (max-width: 640px) {
+    padding-top: 64px;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  // The site-wide p/li get opacity 0.8, which renders as light grey here. Text on this
+  // page is pure white (or pure black on light blocks).
+  p,
+  li {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+
+  [data-theme="light"] {
+    color: #000;
+  }
+}
+
+// Body copy: one size and colour everywhere on the page (brand: Open Sans 20/32).
+.hack-text {
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 28px;
+  color: inherit;
+
+  @media (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  p + p {
+    margin-top: 1em;
+  }
+
+  a {
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+// Shared hover for everything clickable that looks like a pill or a card:
+// colours invert (brand brief: "Hover inverteert de kleuren").
+$hack-transition:
+  background-color 0.15s,
+  color 0.15s,
+  border-color 0.15s;
+
+// Typography ---------------------------------------------------------------
+
+.hack-h1 {
+  font-family: var(--font-header);
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 0;
+
+  @media (min-width: 1280px) {
+    font-size: 80px;
+    line-height: 84px;
+  }
+}
+
+.hack-h2 {
+  font-family: var(--font-header);
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1;
+  margin: 12px 0 0;
+
+  @media (min-width: 1280px) {
+    font-size: 40px;
+  }
+
+  &--xl {
+    @media (min-width: 1280px) {
+      font-size: 56px;
+      line-height: 1.1;
+    }
+  }
+}
+
+// Pills: labels, tags, buttons ----------------------------------------------
+
+.hack-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 200px;
+  background-color: $hack-dark;
+  color: #fff;
+  font-family: var(--font-text);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  &--dark {
+    background-color: #000;
+  }
+}
+
+// Same shape as the newsroom .tag-list pills, in yellow for the dark pop-up.
+.hack-category {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 2px solid $hack-yellow;
+  border-radius: 16px;
+  color: $hack-yellow;
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hack-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border: 2px solid #fff;
+  border-radius: 200px;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $hack-transition;
+
+  &:hover {
+    background-color: #fff !important;
+    border-color: #fff;
+    color: #000 !important;
+  }
+
+  &.is-active {
+    background-color: $hack-yellow !important;
+    border-color: $hack-yellow;
+    color: #000 !important;
+  }
+}
+
+.hack-btn,
+button.hack-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: 2px solid transparent;
+  border-radius: 200px;
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $hack-transition;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+  }
+
+  // Every variant: 2px stroke in its own colour, hover swaps fill and text.
+  &--yellow {
+    background-color: $hack-yellow;
+    border-color: $hack-yellow;
+    color: #000 !important;
+
+    &:hover {
+      background-color: transparent;
+      color: $hack-yellow !important;
+    }
+  }
+
+  &--black {
+    background-color: #000;
+    border-color: #000;
+    color: #fff !important;
+
+    &:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #000 !important;
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    border-color: #fff;
+    color: #000 !important;
+
+    &:hover {
+      background-color: transparent;
+      color: #fff !important;
+    }
+  }
+
+  // Secondary on dark: white outline, fills white on hover.
+  &--outline-white {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff !important;
+
+    &:hover {
+      background-color: #fff;
+      color: #000 !important;
+    }
+  }
+
+  // Not clickable ("Coming soon").
+  &--disabled {
+    background: transparent;
+    border-color: $hack-mid;
+    color: #fff !important;
+    cursor: default;
+  }
+}
+
+// Status strip ---------------------------------------------------------------
+
+.hack-status {
+  background-color: $hack-yellow;
+  color: #000;
+  padding: 16px 0;
+  border-bottom-left-radius: 40px;
+
+  &__case {
+    background: #000;
+    color: #fff;
+    border-radius: 200px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  &__sep {
+    width: 2px;
+    height: 20px;
+    background: #000;
+  }
+}
+
+// Header (status strip, breadcrumb, anchor nav, hero) -------------------------
+// One dark block like the site-wide .topic-intro: #1d1d1d with a large rounded
+// bottom-left corner. The anchor nav is a separate sticky element between the
+// breadcrumb and the hero, so it shares the same background.
+
+.hack-head {
+  background-color: $hack-dark;
+}
+
+.hack-hero {
+  position: relative;
+  background-color: $hack-dark;
+  padding: 24px 0 112px;
+  border-bottom-left-radius: 64px;
+
+  @media (min-width: 1280px) {
+    padding: 48px 0 176px;
+    border-bottom-left-radius: 150px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    // Starts below the stats pill that overlaps the hero's bottom edge.
+    top: 660px;
+    width: unquote("min(420px, 30vw)");
+    height: 820px;
+    border-top-left-radius: 420px;
+    background: $hack-gradient;
+    pointer-events: none;
+
+    @media (max-width: 1279px) {
+      display: none;
+    }
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// Anchor nav -----------------------------------------------------------------
+
+.hack-anchors {
+  position: sticky;
+  top: 108px;
+  z-index: 3;
+  padding: 16px 0;
+  background-color: $hack-dark;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    list-style: none;
+  }
+
+  // Borderless text pills; only the active one is filled yellow. Never a white rim.
+  a.hack-tag {
+    border-color: transparent;
+
+    &.is-active {
+      border-color: $hack-yellow;
+    }
+  }
+
+  // Line the first label's text up with the breadcrumb above it.
+  @media (min-width: 1280px) {
+    li:first-child a.hack-tag {
+      margin-left: -12px;
+    }
+  }
+
+  // The site nav only shrinks at 640px and below.
+  @media (max-width: 640px) {
+    top: 60px;
+  }
+
+  @media (max-width: 1279px) {
+    padding: 12px 0;
+
+    ul {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+// Key numbers: homepage .stats (ui/stats.scss) in dark mode --------------------
+
+.hack-numbers {
+  position: relative;
+  z-index: 2;
+  margin-top: -80px;
+
+  @media (min-width: 1280px) {
+    margin-top: -96px;
+  }
+
+  .stats--dark {
+    background-color: #000;
+    color: #fff;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+
+    li {
+      border-color: $hack-yellow;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    h6 {
+      color: rgba(#fff, 0.7);
+    }
+  }
+
+  .stats__unit {
+    font-size: 0.5em;
+  }
+
+  // Mobile: ui/stats wraps the items; stack them with a horizontal divider instead.
+  @media (max-width: 700px) {
+    .stats--dark {
+      flex-direction: column;
+      gap: 24px;
+      margin: 0;
+      width: 100%;
+      border-radius: 32px;
+
+      li {
+        border-right: 0;
+        border-bottom: 1px solid $hack-yellow;
+        padding-bottom: 24px;
+        width: 100%;
+
+        &:last-of-type {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Generic sections and cards -----------------------------------------------
+
+// Anchor targets are the section headings: land them just below the sticky nav + anchor bar.
+.hack-page h2[id] {
+  scroll-margin-top: 184px;
+
+  @media (max-width: 640px) {
+    scroll-margin-top: 136px;
+  }
+
+  @media (min-width: 1280px) {
+    scroll-margin-top: 200px;
+  }
+}
+
+.hack-page section[id] {
+  scroll-margin-top: 56px;
+}
+
+.hack-section {
+  position: relative;
+  padding: 64px 0;
+
+  @media (min-width: 1280px) {
+    padding: 120px 0;
+  }
+}
+
+.hack-card {
+  background-color: $hack-dark;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.hack-checklist {
+  list-style: none;
+
+  li::before {
+    content: "✓";
+    margin-right: 10px;
+  }
+}
+
+// Timeline -------------------------------------------------------------------
+
+.hack-timeline {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 300px;
+    width: unquote("min(380px, 26vw)");
+    height: 760px;
+    border-top-right-radius: 380px;
+    background: $hack-gradient;
+    opacity: 0.85;
+    pointer-events: none;
+
+    @media (max-width: 1279px) {
+      display: none;
+    }
+  }
+
+  > * {
+    position: relative;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  // Every event gets a dot (::after), centred on the date line. The line (::before)
+  // runs from this dot's centre to the next dot's centre, across the 24px list gap.
+  $dot: 14px;
+  $dot-top: 9px;
+  $gap: 24px;
+
+  &__item {
+    position: relative;
+    padding-left: 36px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: $dot-top;
+      width: $dot;
+      height: $dot;
+      border-radius: 50%;
+      background: $hack-yellow;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: ($dot - 2px) / 2;
+      top: $dot-top + $dot / 2;
+      bottom: -($gap + $dot-top + $dot / 2);
+      width: 2px;
+      background: $hack-yellow;
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+  }
+}
+
+// Updates list ---------------------------------------------------------------
+
+.hack-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 24px;
+  background-color: $hack-dark;
+  border-radius: 20px;
+  border: 0 !important;
+  color: #fff;
+  transition: $hack-transition;
+
+  @media (max-width: 639px) {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: #000 !important;
+  }
+
+  &__number {
+    flex: 0 0 48px;
+    font-family: var(--font-header);
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1;
+
+    @media (max-width: 639px) {
+      flex-basis: 36px;
+      font-size: 28px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: 1280px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__arrow svg {
+    width: 8px;
+    height: 14px;
+    fill: currentColor;
+  }
+}
+
+// Zammad CVE cards -----------------------------------------------------------
+
+.hack-cve {
+  display: block;
+  padding: 24px;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
+  border: 0 !important;
+  transition: $hack-transition;
+
+  @media (min-width: 1280px) {
+    padding: 24px 32px;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: #000 !important;
+  }
+
+  &__id {
+    font-family: var(--font-header);
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    overflow-wrap: anywhere;
+
+    @media (min-width: 1280px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
+
+// CSIRT data block (yellow) --------------------------------------------------
+
+.hack-data {
+  position: relative;
+  background-color: $hack-yellow;
+  padding: 64px 0;
+  border-top-left-radius: 80px;
+
+  @media (min-width: 1280px) {
+    padding: 140px 0 120px;
+    border-top-left-radius: 300px;
+  }
+
+  // Fills the corner behind the rounded top-left with the Zammad block colour. It sits
+  // inside this section (behind its background, see isolation on .hack-page), so it can
+  // never paint over the Zammad content above.
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: $hack-dark;
+  }
+}
+
+.hack-datalist {
+  margin-top: 16px;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  dd {
+    flex: 0 0 auto;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .hack-status-leak {
+    color: $hack-yellow;
+  }
+
+  .hack-status-investigating {
+    color: #fff;
+  }
+
+  .hack-status-none {
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+// Reports (dark, rounded bottom-right) ---------------------------------------
+
+.hack-reports {
+  position: relative;
+  z-index: 1;
+  background-color: $hack-dark;
+  padding: 64px 0 80px;
+  border-bottom-right-radius: 80px;
+
+  @media (min-width: 1280px) {
+    padding: 120px 0 180px;
+    border-bottom-right-radius: 300px;
+  }
+}
+
+.hack-report {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  padding: 28px;
+  border-radius: 20px;
+  background: #000;
+
+  @media (min-width: 1280px) {
+    min-height: 330px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 56px;
+    height: 68px;
+    padding-bottom: 10px;
+    border: 2px solid $hack-yellow;
+    border-top-right-radius: 20px;
+    border-radius: 4px 20px 4px 4px;
+    color: $hack-yellow;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &--expected {
+    background: transparent;
+    border: 2px dashed $hack-mid;
+    color: #fff;
+
+    .hack-report__icon {
+      border-color: $hack-mid;
+      color: #fff;
+    }
+  }
+}
+
+// Press contact (gradient behind Prominent Member) ---------------------------
+
+.hack-contact {
+  // Pulls up behind the rounded corner of the reports block.
+  margin-top: -300px;
+  padding: 380px 0 120px;
+  background: linear-gradient(180deg, #3e3416 0%, #000 60%);
+
+  @media (max-width: 1279px) {
+    margin-top: -80px;
+    padding: 144px 0 64px;
+  }
+}
+
+.hack-member {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  background-color: $hack-yellow;
+  color: #000;
+  border-radius: 60px;
+
+  @media (min-width: 1280px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 80px 20px 20px;
+    border-radius: 300px;
+  }
+
+  &__photo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    flex: 0 0 auto;
+
+    @media (min-width: 1280px) {
+      width: 440px;
+      height: 440px;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 32px;
+
+    a {
+      color: #000;
+      border-bottom: 1px solid #000;
+    }
+  }
+}
+
+.hack-faq__chevron svg {
+  width: 16px;
+  height: 10px;
+  transition: transform 0.3s;
+}
+
+// Update pop-up ----------------------------------------------------------------
+
+.hack-modal {
+  width: unquote("min(900px, calc(100vw - 24px))");
+  max-height: calc(100dvh - 24px);
+  padding: 0;
+  border: 1px solid #333;
+  border-radius: 20px 60px 20px 20px;
+  background: $hack-dark;
+  color: #fff;
+  overscroll-behavior: contain;
+
+  @media (min-width: 1280px) {
+    max-height: calc(100vh - 48px);
+    border-radius: 20px 120px 20px 20px;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  &__inner {
+    padding: 24px 20px;
+
+    @media (min-width: 1280px) {
+      padding: 64px 64px 48px;
+    }
+  }
+
+  & &__close {
+    margin-left: auto;
+    padding: 5px 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .hack-h2 {
+    margin-top: 24px;
+    font-size: 28px;
+    line-height: 1.1;
+
+    @media (min-width: 1280px) {
+      margin-top: 32px;
+      font-size: 40px;
+    }
+  }
+
+  &__body {
+    margin-top: 24px;
+  }
+
+  &__image {
+    width: 100%;
+    margin-top: 24px;
+    border-radius: 20px;
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 32px;
+    padding: 20px;
+    border-radius: 20px;
+    background: $hack-yellow;
+    color: #000;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 20px 20px 32px;
+      border-radius: 200px;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "older newer"
+      "share share";
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 2px solid #333;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-areas: "older share newer";
+      padding-top: 32px;
+    }
+
+    > .is-older {
+      grid-area: older;
+    }
+
+    > .is-newer {
+      grid-area: newer;
+      justify-self: end;
+    }
+
+    > .is-share {
+      grid-area: share;
+      justify-self: center;
+    }
+  }
+
+  &__nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: 0 !important;
+
+    &:hover .hack-modal__arrow {
+      background: #fff;
+
+      svg {
+        fill: #000;
+      }
+    }
+  }
+
+  &__nav-title {
+    @media (max-width: 767px) {
+      display: none !important;
+    }
+  }
+
+  &__arrow {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #000;
+    transition: $hack-transition;
+
+    // The chevron glyph only fills the middle third of its 42px viewBox.
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+  }
+}

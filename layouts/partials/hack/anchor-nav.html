@@ -1,0 +1,12 @@
+{{/* Sticky in-page navigation (Category pills). Only links to sections that have content. */}}
+{{ $p := .Params }}
+{{ $links := slice (slice "summary" "Summary" $p.overview) (slice "timeline" "Timeline" $p.timeline) (slice "updates" "Updates" $p.updates) (slice "zammad" "Zammad" $p.zammad) (slice "data" "Data" $p.data) (slice "reports" "Reports" $p.reports) (slice "contact" "Contact" $p.contact) (slice "faq" "FAQ" $p.faq) }}
+<nav class="hack-anchors" aria-label="On this page">
+  <ul class="container px-4 desktop:px-0">
+    {{ range $i, $l := $links }}
+      {{ if index $l 2 }}
+        <li><a class="hack-tag{{ if eq $i 0 }} is-active{{ end }}" href="#{{ index $l 0 }}" data-hack-anchor>{{ index $l 1 }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>
