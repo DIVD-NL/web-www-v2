@@ -19,7 +19,7 @@ const faqGroups = {
 };
 
 const pageHeader = (defaultTitle: string) => [
-  { label: 'Title', name: 'title', widget: 'string', default: defaultTitle },
+  { label: 'Title', name: 'title', widget: 'string', default: defaultTitle, i18n: true },
   { label: 'Opener', name: 'opener', widget: 'string' },
   { label: 'Intro', name: 'intro', widget: 'text' },
 ];

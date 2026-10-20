@@ -6,18 +6,8 @@ const list = (label: string, label_singular: string, name: string, fields: objec
   name,
   widget: 'list',
   required: false,
-  // `readonly` is ignored by the list widget, so lock structure changes explicitly.
-  allow_add: false,
-  allow_remove: false,
-  allow_reorder: false,
   fields,
 });
-
-const readonlyFields = (fields: object[]): object[] =>
-  fields.map((item) => {
-    const entry = item as { fields?: object[] };
-    return { ...entry, readonly: true, ...(entry.fields && { fields: readonlyFields(entry.fields) }) };
-  });
 
 // Files are regenerated from Google Sheets by `npm run gen-people`, so edits made here would be overwritten.
 export const PeopleCollection = {
@@ -27,14 +17,13 @@ export const PeopleCollection = {
   folder: 'content/who-we-are/team/people',
   public_folder: '/images/people',
   media_folder: '/assets/images/people',
-  create: false,
-  delete: false,
+  readonly: true,
   i18n: true,
   identifier_field: 'title',
   slug: '\x7b\x7bslug\x7d\x7d',
-  fields: readonlyFields([
+  fields: [
     { name: 'type', widget: 'hidden', default: 'people' },
-    { label: 'Name', name: 'title', widget: 'string' },
+    { label: 'Name', name: 'title', widget: 'string', i18n: true },
     { ...field('Image', 'image', 'image'), public_folder: '/images/people', media_folder: '/assets/images/people' },
     field('Role', 'role'),
     field('Intro', 'intro', 'text'),
@@ -58,5 +47,5 @@ export const PeopleCollection = {
       field('Full title', 'full_title'),
       field('URL', 'url'),
     ]),
-  ]),
+  ],
 };
