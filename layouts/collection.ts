@@ -12,6 +12,8 @@ export const HomeCollection = {
       name: 'title',
       widget: 'string',
       default: 'home',
+      // Sveltia requires one localized field when a collection enables i18n.
+      i18n: true,
     },
     {
       label: 'Opener',

@@ -32,14 +32,14 @@ export const Button = {
       name: 'external',
       widget: 'boolean',
       required: false,
-      default: 'false',
+      default: false,
     },
     {
       label: 'Download link',
       name: 'download',
       widget: 'boolean',
       required: false,
-      default: 'false',
+      default: false,
     },
   ],
 };
