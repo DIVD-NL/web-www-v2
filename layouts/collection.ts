@@ -4,6 +4,7 @@ export const HomeCollection = {
   slug: '_index',
   folder: 'content',
   create: false,
+  i18n: true,
   path: '_index',
   fields: [
     {
@@ -34,7 +35,7 @@ export const HomeCollection = {
           widget: 'relation',
           collection: 'articles',
           search_fields: ['title', 'case.caseid'],
-            value_field: '/newsroom/articles/\x7b\x7bslug\x7d\x7d',
+          value_field: '/newsroom/articles/\x7b\x7bslug\x7d\x7d',
           display_fields: ['title', 'case.caseid'],
 
           multiple: false,

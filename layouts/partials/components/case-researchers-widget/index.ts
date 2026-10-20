@@ -32,9 +32,9 @@ export default {
       required: false,
     },
     {
-      ...Button,
       label: 'Case lead Link',
       name: 'leadlink',
+      widget: 'string',
       required: false,
     },
     {
@@ -60,7 +60,7 @@ export default {
       name: 'researchers_people',
       widget: 'relation',
       collection: 'people',
-      value_field: '/who-we-are/team/people/{{ .Title | urlize }}',
+      value_field: '/who-we-are/team/people/\x7b\x7bslug\x7d\x7d',
       display_fields: ['title'],
       search_fields: ['title'],
       multiple: true,

@@ -49,6 +49,7 @@ teams:
       - /who-we-are/team/people/alwin-warringa
       - /who-we-are/team/people/axel-boesenach
       - /who-we-are/team/people/barre-dijkstra
+      - /who-we-are/team/people/bart-van-wijk
       - /who-we-are/team/people/davy-aarts
       - /who-we-are/team/people/finn-van-der-knaap
       - /who-we-are/team/people/frank-breedijk
@@ -56,6 +57,7 @@ teams:
       - /who-we-are/team/people/jacco-van-buuren
       - /who-we-are/team/people/jelle-ursem
       - /who-we-are/team/people/jesse-meijer
+      - /who-we-are/team/people/joop-ter-wal
       - /who-we-are/team/people/jort-geurts
       - /who-we-are/team/people/kees-van-poeijer
       - /who-we-are/team/people/kerim-sancakdar
@@ -78,12 +80,16 @@ teams:
       meet our researchers, you can hope they are inspecting your systems right
       now, catching issues before the bad guys do....
     members:
+      - /who-we-are/team/people/bart-van-wijk
       - /who-we-are/team/people/bartłomiej-lizak
+      - /who-we-are/team/people/coen-zandstra
       - /who-we-are/team/people/dion-w.
+      - /who-we-are/team/people/eden-stroet
       - /who-we-are/team/people/finn-van-der-knaap
       - /who-we-are/team/people/harm-van-den-brink
       - /who-we-are/team/people/hein-jan-hoogers
       - /who-we-are/team/people/hidde-smit
+      - /who-we-are/team/people/humza-ahmad
       - /who-we-are/team/people/jacco-van-buuren
       - /who-we-are/team/people/jeroen-ellermeijer
       - /who-we-are/team/people/jeroen-van-der-broek
