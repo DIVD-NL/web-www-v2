@@ -1,0 +1,18 @@
+{{/* Hero: H1 + intro, Main-Button__Yellow + CSIRT-Button. Breadcrumb and anchor nav sit above it in list.html. */}}
+{{ $p := .page.Params }}
+<section class="hack-hero">
+  <div class="container px-4 desktop:px-0">
+    <div class="grid grid-cols-1 desktop:grid-cols-2 gap-6 desktop:gap-20">
+      <h1 class="hack-h1">{{ .page.Title }}</h1>
+      <div>
+        <p class="text-lg leading-7 font-body">{{ $p.hero.intro }}</p>
+        <div class="flex flex-wrap justify-start gap-3 mt-8">
+          {{ with .latest }}
+            <a class="hack-btn hack-btn--yellow" href="#update-{{ .number }}" data-hack-open="update-{{ .number }}">Latest update</a>
+          {{ end }}
+          <a class="hack-btn hack-btn--outline-white" href="{{ $p.caseUrl }}">CSIRT case data</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

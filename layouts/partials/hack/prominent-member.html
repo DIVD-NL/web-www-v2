@@ -1,0 +1,10 @@
+{{/* Figma component: Prominent Member (48:4900). Expects {label, name, role, image, text}. */}}
+<div class="hack-member">
+  {{ with .image }}<img class="hack-member__photo" src="{{ . }}" alt="{{ $.name }}" loading="lazy" />{{ end }}
+  <div>
+    <span class="hack-label hack-label--dark">{{ .label }}</span>
+    <h2 class="hack-h2 hack-h2--xl mt-3">{{ .name }}</h2>
+    <p class="text-xl font-semibold">{{ .role }}</p>
+    <div class="hack-member__text">{{ .text | markdownify }}</div>
+  </div>
+</div>

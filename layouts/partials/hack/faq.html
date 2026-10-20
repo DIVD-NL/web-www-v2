@@ -1,0 +1,13 @@
+{{/* Accordion_FAQ, same radio/peer pattern as partials/sections/faq/faq.html. */}}
+<div>
+  {{ range $i, $q := .items }}
+    <div class="border-b-2 border-solid border-b-black">
+      <input type="radio" id="hack-faq-{{ $i }}" name="hack-faq" class="hidden peer" {{ if eq $i 0 }}checked{{ end }} />
+      <label for="hack-faq-{{ $i }}" class="text-xl desktop:text-2xl font-bold flex justify-between items-center gap-4 py-5 cursor-pointer peer-checked:[&_svg]:rotate-180">
+        {{ $q.title }}
+        <span class="hack-faq__chevron" aria-hidden="true">{{ partial "svg/icon" "chevrondown" }}</span>
+      </label>
+      <div class="hidden peer-checked:block pb-6 hack-text">{{ $q.description | markdownify }}</div>
+    </div>
+  {{ end }}
+</div>

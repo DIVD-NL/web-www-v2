@@ -1,0 +1,150 @@
+{{/*
+  "We got hacked" incident page (DIVD-2026-00014).
+  Design: Figma "DIVD HACKED" frame 9:4424, components in frame 48:4666.
+  All copy lives in the front matter of content/hacked/_index.en.md.
+*/}}
+{{ define "main" }}
+  {{ $p := .Params }}
+  {{ $updates := $p.updates }}
+  {{ $latest := index $updates 0 }}
+
+  <main class="hack-page" data-theme="dark">
+    {{/* Header: same shape as the site-wide .topic-intro (dark block, rounded bottom-left). */}}
+    <div class="hack-head">
+      {{ partial "hack/status-strip" . }}
+      <div class="container px-4 desktop:px-0 pt-6 desktop:pt-10 text-sm desktop:text-base">
+        <a class="border-0 hover:underline" href="https://csirt.divd.nl/cases/">Cases</a> › {{ $p.caseId }}
+      </div>
+    </div>
+    {{ partial "hack/anchor-nav" . }}
+    {{ partial "hack/hero" (dict "page" . "latest" $latest) }}
+
+    {{/* Key figures: the homepage stats block (block/divd_stats, .stats) in dark mode. */}}
+    <section class="hack-numbers container px-4 desktop:px-0" aria-label="Key figures">
+      <ul class="stats stats--dark">
+        {{ range $p.numbers }}{{ partial "hack/numbers-item" . }}{{ end }}
+      </ul>
+    </section>
+
+    {{/* Summary */}}
+    {{ with $p.overview }}
+      <section class="hack-section container px-4 desktop:px-0">
+        <div class="desktop:max-w-[800px]">
+          <h2 id="summary" class="hack-h2">{{ .title }}</h2>
+          <p class="hack-text mt-4">{{ .intro }}</p>
+        </div>
+        <div class="grid grid-cols-1 desktop:grid-cols-3 gap-4 desktop:gap-10 mt-8 desktop:mt-12">
+          {{ range .cards }}{{ partial "hack/action-card" . }}{{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{/* Timeline */}}
+    {{ with $p.timeline }}
+      <section class="hack-section hack-timeline">
+        <div class="container px-4 desktop:px-0 grid grid-cols-1 desktop:grid-cols-[440px_1fr] gap-8 desktop:gap-10">
+          <div>
+            <h2 id="timeline" class="hack-h2">{{ .title }}</h2>
+            <p class="hack-text mt-4">{{ .intro }}</p>
+          </div>
+          <ol class="hack-timeline__list">
+            {{ range .items }}{{ partial "hack/timeline-item" . }}{{ end }}
+          </ol>
+        </div>
+      </section>
+    {{ end }}
+
+    {{/* Updates: latest highlighted, the rest as rows */}}
+    <section class="hack-section container px-4 desktop:px-0">
+      <h2 id="updates" class="hack-h2">All {{ len $updates }} updates</h2>
+
+      <div class="grid grid-cols-1 desktop:grid-cols-[540px_1fr] gap-6 desktop:gap-10 mt-8 desktop:mt-10 items-start">
+        {{ partial "hack/highlighted-update" $latest }}
+        <ul class="flex flex-col gap-3">
+          {{ range after 1 $updates }}
+            <li>{{ partial "hack/press-release-row" . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </section>
+
+    {{/* Zammad */}}
+    {{ with $p.zammad }}
+      <section class="hack-section bg-light-black">
+        <div class="container px-4 desktop:px-0 grid grid-cols-1 desktop:grid-cols-2 gap-10 desktop:gap-20 desktop:items-center">
+          <div>
+            <h2 id="zammad" class="hack-h2">{{ .title }}</h2>
+            <div class="hack-text mt-4">{{ .text }}</div>
+            {{ with .button }}<div class="mt-8 desktop:mt-10"><a class="hack-btn hack-btn--yellow" href="{{ .url }}">{{ .label }}</a></div>{{ end }}
+          </div>
+          <div class="flex flex-col gap-4">
+            {{ range .cves }}{{ partial "hack/cve-card" . }}{{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+
+    {{/* CSIRT data */}}
+    {{ with $p.data }}
+      <section class="hack-data" data-theme="light">
+        <div class="container px-4 desktop:px-0">
+          <div class="grid grid-cols-1 desktop:grid-cols-[1fr_400px] gap-10 items-center">
+            <div>
+              <h2 id="data" class="hack-h2 hack-h2--xl">{{ .title }}</h2>
+              <p class="hack-text mt-4">{{ .text }}</p>
+              <p class="hack-text font-bold mt-4">{{ .note }}</p>
+              {{ with .button }}
+                <a class="hack-btn hack-btn--black mt-8 desktop:mt-10" href="{{ .url }}">{{ .label }} {{ partial "svg/icon" "external" }}</a>
+              {{ end }}
+            </div>
+            {{ with .image }}<img class="hidden desktop:block w-full" src="{{ . }}" alt="" loading="lazy" />{{ end }}
+          </div>
+          <div class="grid grid-cols-1 desktop:grid-cols-3 gap-4 desktop:gap-10 mt-8 desktop:mt-12">
+            {{ range .categories }}{{ partial "hack/data-category" . }}{{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+
+    {{/* Reports */}}
+    {{ with $p.reports }}
+      <section class="hack-reports">
+        <div class="container px-4 desktop:px-0">
+          <div class="desktop:max-w-[800px]">
+            <h2 id="reports" class="hack-h2">{{ .title }}</h2>
+            <p class="hack-text mt-4">{{ .intro }}</p>
+          </div>
+          <div class="grid grid-cols-1 desktop:grid-cols-4 gap-4 desktop:gap-10 mt-8 desktop:mt-10">
+            {{ range .items }}{{ partial "hack/report-card" . }}{{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+
+    {{/* Press contact */}}
+    {{ with $p.contact }}
+      <section id="contact" class="hack-contact">
+        <div class="container px-4 desktop:px-0">{{ partial "hack/prominent-member" . }}</div>
+      </section>
+    {{ end }}
+
+    {{/* FAQ */}}
+    {{ with $p.faq }}
+      <section class="hack-section bg-white" data-theme="light">
+        <div class="container px-4 desktop:px-0 grid grid-cols-1 desktop:grid-cols-2 gap-6 desktop:gap-10">
+          <h2 id="faq" class="hack-h2">{{ .title }}</h2>
+          {{ partial "hack/faq" . }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{/* One <dialog> per update; opened by [data-hack-open] or #update-N in the URL. */}}
+    {{ range $i, $u := $updates }}
+      {{ $newer := false }}
+      {{ if gt $i 0 }}{{ $newer = index $updates (sub $i 1) }}{{ end }}
+      {{ $older := false }}
+      {{ if lt (add $i 1) (len $updates) }}{{ $older = index $updates (add $i 1) }}{{ end }}
+      {{ partial "hack/update-modal" (dict "update" $u "newer" $newer "older" $older) }}
+    {{ end }}
+  </main>
+{{ end }}

@@ -1,0 +1,9 @@
+{{/* Figma component: Press-release-row (48:4742). Expects an update {number, date, title}. Opens the update pop-up. */}}
+<a class="hack-row" href="#update-{{ .number }}" data-hack-open="update-{{ .number }}">
+  <span class="hack-row__number">#{{ .number }}</span>
+  <span class="flex-1 min-w-0">
+    <span class="block text-sm font-bold uppercase">{{ (time .date).Format "2 Jan 2006" }}</span>
+    <span class="hack-row__title block font-bold">{{ .title }}</span>
+  </span>
+  <span class="hack-row__arrow" aria-hidden="true">{{ partial "svg/icon" "chevronright" }}</span>
+</a>

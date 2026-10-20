@@ -1,0 +1,10 @@
+{{/* Figma component: Status-strip (48:4921) */}}
+{{ $p := .Params }}
+<div class="hack-status">
+  <div class="container px-4 desktop:px-0 flex flex-wrap justify-start items-center gap-x-4 gap-y-2">
+    <span class="hack-status__case">{{ $p.caseId }}</span>
+    <strong class="uppercase text-sm desktop:text-base">{{ $p.status }}</strong>
+    <span class="hidden desktop:inline-block hack-status__sep" aria-hidden="true"></span>
+    <span class="text-sm desktop:text-base">Updated {{ (time $p.updated).Format "2 Jan 2006 · 15:04" }}</span>
+  </div>
+</div>

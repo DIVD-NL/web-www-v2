@@ -1,0 +1,12 @@
+{{/* Figma component: Timeline-item (48:4692). Expects {date, title, text, update?}. Dot and connecting line come from CSS. */}}
+<li class="hack-timeline__item">
+  <p class="text-xl desktop:text-2xl font-bold leading-8">{{ .date }}</p>
+  <h3 class="text-lg desktop:text-xl font-bold mt-1">
+    {{ with .update }}
+      <a class="border-0 hover:underline" href="#update-{{ . }}" data-hack-open="update-{{ . }}">{{ $.title }}</a>
+    {{ else }}
+      {{ .title }}
+    {{ end }}
+  </h3>
+  <p class="hack-text mt-1">{{ .text }}</p>
+</li>
