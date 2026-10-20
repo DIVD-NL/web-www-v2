@@ -6,7 +6,7 @@ import { PeopleCollection } from '../layouts/people/collection';
 import { HackedCollection } from '../layouts/hacked/collection';
 import { ContributeCollection } from '../layouts/contribute/collection';
 import { LegalCollection, PagesCollection } from '../layouts/_default/collection';
-import { DynamicFaqCollection, FaqCollection } from '../layouts/faq/collection';
+import { FaqCollection } from '../layouts/faq/collection';
 import { WhatWeDoCollection } from '../layouts/what-we-do/collection';
 import { WhoWeAreCollection } from '../layouts/who-we-are/collection';
 
@@ -21,7 +21,6 @@ export default [
   WhatWeDoCollection,
   WhoWeAreCollection,
   FaqCollection,
-  DynamicFaqCollection,
   LegalCollection,
   PagesCollection,
 ];
