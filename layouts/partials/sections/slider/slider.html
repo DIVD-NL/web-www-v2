@@ -13,7 +13,7 @@
       class="flex flex-row justify-start gap-8 snap-x snap-mandatory scroll-smooth overflow-scroll scrollbar-hidden px-8 desktop:p-0">
       {{ range .cards }}
         <article
-          class="flex-shrink-0 w-[360px] rounded-xl rounded-t-[270px] shadow-[0_8px_50px_0_rgba(0,0,0,0.06)] snap-center">
+          class="shrink-0 w-[360px] rounded-xl rounded-t-[270px] shadow-[0_8px_50px_0_rgba(0,0,0,0.06)] snap-center">
           <img src="{{ .image }}" alt="{{ .title }}" />
           <div class="bg-black rounded-b-xl p-6 h-[188px]">
             <h3 class="text-2xl text-white truncate">{{ .title }}</h3>

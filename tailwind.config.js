@@ -1,13 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ['./layouts/**/*.html'],
   theme: {
-    container: {
-      center: true,
-      screens: {
-        desktop: '1200px',
-      },
-    },
     screens: {
       desktop: '1280px',
     },
