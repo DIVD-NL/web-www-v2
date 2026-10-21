@@ -23,14 +23,12 @@
       <div class="carousel responsive-controls">
         <div class="slides">
           {{ partial "card-article" .Showcase }}
-          <!-- Moet worden aangepast -->
-
           {{ partial "card" (dict
-            "imageSource" "images/global/received_email.jpeg"
-            "imageAlt" .Received_Alt
-            "title" .Received
+            "imageSource" "images/we-got-hacked-frontpage.jpeg"
+            "imageAlt" .Hacked_Alt
+            "title" .Hacked
             "linkTitle" (i18n "readmore")
-            "link" (relLangURL "warningemail/")
+            "link" (relLangURL "hacked/")
             "classes" (slice "article")
             )
           }}

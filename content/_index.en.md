@@ -4,8 +4,8 @@ opener: A watchful eye in the digital world
 intro: We aim to make the digital world safer by reporting vulnerabilities we find in digital systems to the people who can fix them.
 fold:
   showcase: /newsroom/articles/operation-endgame-divd-2024-00019
-  received: Received an E-mail from us? Don’t worry! Learn more here.
-  received_alt: Image of an envelope
+  hacked: We got hacked, here’s everything we know
+  hacked_alt: "When, not if… We got hacked"
   family: Become part of DIVD and help us protect the digital world
   family_alt: Picture of group of people depicting the DIVD family
 whatwedo:
