@@ -1,2 +1,0 @@
-import{t as e}from"./rolldown-runtime-DK3Fl9T5.js";import{a as t}from"./index-BNPNKlkB.js";var n=e({n:()=>r,t:()=>i}),r=t({default:()=>i}),i={name:`en`,weekdays:`Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday`.split(`_`),months:`January_February_March_April_May_June_July_August_September_October_November_December`.split(`_`),ordinal:function(e){var t=[`th`,`st`,`nd`,`rd`],n=e%100;return`[`+e+(t[(n-20)%10]||t[n]||t[0])+`]`}};export{i as n,n as t};
-//# sourceMappingURL=en-Do8EpmnK-CGudjMNm.js.map
