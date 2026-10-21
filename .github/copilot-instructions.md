@@ -78,8 +78,9 @@ Use `{{ partial "tools/rimg/img" (dict "img" . "alt" "text") }}` for responsive 
 ### Hybrid Approach
 1. **Tailwind classes**: Used in `layouts/**/*.html` templates
 2. **Custom SCSS**: Component-specific styles in `assets/scss/ui/`
-3. **Import order** (in `screen.scss`):
-   - Reset → Tailwind base → Fonts/Typography → UI components → Tailwind utilities
+3. **CSS pipeline**: Hugo compiles `screen.scss`, concatenates it after `assets/css/tailwind.css`, then runs Tailwind v4 through `@tailwindcss/postcss`.
+   - Cascade layers: Reset → Theme → Tailwind base → Fonts/Typography/UI components → Tailwind utilities
+   - Tailwind imports stay in the CSS entry point so Sass does not process them.
 
 ### Color Variables
 Defined in both:
@@ -129,7 +130,8 @@ CMS runs on Vite dev server (port 5173) with `local_backend: true` for local git
 
 - `hugo.yaml`: Site config, CSP headers, i18n setup
 - `vite.config.mts`: CMS build configuration
-- `tailwind.config.js`: Design tokens and typography
+- `tailwind.config.js`: Design tokens and typography (explicitly loaded by the CSS entry point)
+- `assets/css/tailwind.css`: Tailwind imports, base compatibility styles, and container utility
 - `layouts/_default/baseof.html`: Base template structure
 - `assets/scss/screen.scss`: SCSS import order
 - `cms/config.ts`: CMS backend and media configuration

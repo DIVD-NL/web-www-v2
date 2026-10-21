@@ -1,0 +1,41 @@
+@layer reset, theme, base, components, utilities;
+
+@import "tailwindcss" source(none);
+/* Hugo sends the concatenated stylesheet to PostCSS from the project root. */
+@config "./tailwind.config.js";
+
+/* Preserve the v3 defaults used by borders, forms, and update dialogs. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #e5e7eb;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  dialog {
+    margin: auto;
+  }
+}
+
+/* Tailwind v4 no longer reads container settings from the JS config. */
+@utility container {
+  margin-inline: auto;
+  max-width: none;
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}

@@ -1,26 +1,26 @@
-@import "reset.scss";
+@layer reset {
+  @import "reset.scss";
+}
 
-@tailwind base;
+// Keep component styles below Tailwind utilities in the cascade.
+@layer components {
+  @import "fonts.scss";
+  @import "variables.scss";
+  @import "typography.scss";
+  @import "core.scss";
 
-@import "fonts.scss";
-@import "variables.scss";
-@import "typography.scss";
-@import "core.scss";
+  @import "ui/nav.scss";
+  @import "ui/layout.scss";
+  @import "ui/opener.scss";
+  @import "ui/card.scss";
+  @import "ui/carousel.scss";
+  @import "ui/accordion.scss";
+  @import "ui/stats.scss";
+  @import "ui/footer.scss";
 
-@import "ui/nav.scss";
-@import "ui/layout.scss";
-@import "ui/opener.scss";
-@import "ui/card.scss";
-@import "ui/carousel.scss";
-@import "ui/accordion.scss";
-@import "ui/stats.scss";
-@import "ui/footer.scss";
-
-@import "pages/volunteers.scss";
-@import "pages/newsroom.scss";
-@import "pages/hacked.scss";
-
-@tailwind components;
-@tailwind utilities;
+  @import "pages/volunteers.scss";
+  @import "pages/newsroom.scss";
+  @import "pages/hacked.scss";
+}
 
 @import "divdwind/utilities.scss";

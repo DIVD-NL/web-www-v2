@@ -1,5 +1,6 @@
 {{ $cssOpts := (dict "targetPath" "styles/screen.css" "enableSourceMap" (not hugo.IsProduction) ) }}
-{{ $screenCSS := resources.Get "scss/screen.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
+{{ $components := resources.Get "scss/screen.scss" | toCSS $cssOpts }}
+{{ $screenCSS := slice (resources.Get "css/tailwind.css") $components | resources.Concat "styles/screen.css" | postCSS | minify | fingerprint }}
 
 
 <link
