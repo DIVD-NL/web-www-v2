@@ -5,10 +5,8 @@ caseId: DIVD-2026-00014
 caseUrl: https://csirt.divd.nl/cases/DIVD-2026-00014/
 status: Investigation ongoing
 updated: 2026-10-09T20:01:00+02:00
-
 hero:
   intro: On 21 September 2026 an attacker got into our data center through two zero-days in Zammad. We said we'd be open, transparent and honest, even if it sucks. This page collects every update, the CSIRT case data and our reports.
-
 numbers:
   - value: '19'
     unit: min
@@ -19,25 +17,25 @@ numbers:
   - value: '19'
     unit: hrs
     label: time to respond
-
 overview:
   title: What happened
   intro: An attacker abused two zero-days in Zammad, our helpdesk software, to get into servers in our data center. We detected it within 19 minutes and blocked access to all systems. We treat this as a worst case until we can prove otherwise.
   cards:
     - title: What do we know?
       text: The attacker got in through two zero-days in Zammad and used AI agents along the way. Part of our data was exfiltrated. The investigation is still running.
+      checklist: []
     - title: What are we doing?
       text: All data center systems were shut down and rebuilt. We reported the zero-days to Zammad, filed a police report and keep publishing what we find.
+      checklist: []
     - title: What should you do?
+      text: ''
       checklist:
         - Running Zammad? Update to version 7
         - Emailed our CSIRT? Assume the attackers have that correspondence
         - Volunteer? Watch out for social engineering
-
 timeline:
   title: From first access to open case
   intro: The highlights only. The full timeline is on the CSIRT case page.
-  # Newest first. `update` links the step to an update number below (optional).
   items:
     - date: 9 Oct 2026
       title: Data overview updated
@@ -58,13 +56,11 @@ timeline:
     - date: 22 Sep 2026
       title: Detected and shut down
       text: Malicious activity detected within 19 minutes. Access to all systems in the data center blocked.
+      update: null
     - date: 21 Sep 2026
       title: First access
       text: First access by a malicious actor on DIVD systems, through two unknown vulnerabilities in Zammad.
-
-# Newest first. The first item is shown as the highlighted update.
-# url: optional link to the full article in the newsroom
-# body: optional markdown, shown in the update pop-up
+      update: null
 updates:
   - number: 7
     date: 2026-10-09
@@ -73,6 +69,7 @@ updates:
     teaser: Our next planned update is the report, but you never know.
     image: /images/hacked/update-7.jpg
     imageAlt: '(Hopefully) last update: collateral damage and a big thank you for all the support'
+    url: ''
     body: |-
       Let’s talk about collateral damage... While the attackers were in our systems, they tried to see if they could get into some of our providers. One of them is BIT B.V. ([bit.nl](https://www.bit.nl)), who host the mailbox we use for our ticketing system. The attackers snooped around in that mailbox, but thankfully BIT was not impacted any further and did not experience any other issues. Big thanks to BIT B.V. ([bit.nl](https://www.bit.nl)) for dropping everything when we called and helping us out, their fast response was really helpful in the first days of our investigation.
 
@@ -81,9 +78,16 @@ updates:
       Our next planned update is the report, but you never know. The agentic deep dive and the lessons learned follow when they’re ready. All updates so far and the status of the data investigation can be found in our [casefile](https://csirt.divd.nl/cases/DIVD-2026-00014/).
 
       Thanks to everyone for the overwhelming amount of support, positivity and trust. We hope that our approach and your responses show other organisations that being open about being hacked does not make it worse at all. #nocybershame
+    meta: ''
+    action: null
   - number: 6
     date: 2026-10-02
+    label: ''
     title: Hooray, we can declare ourselves contained!
+    teaser: ''
+    image: ''
+    imageAlt: ''
+    url: ''
     body: |-
       Hooray, we are contained! When we shut down our infrastructure on Tuesday 22nd, we hoped that would do the trick. Now we know for sure it did, so we've officially declared ourselves contained.
       That means we can take the pressure off a bit and focus fully on the investigation, figuring out all the details and writing the reports you've all been asking for.
@@ -94,9 +98,16 @@ updates:
 
       Next public update is still planned for Friday October 9, or sooner if we have more to share. For questions and press, please reach out to Marieke R. or [communications@divd.nl](mailto:communications@divd.nl).
       Full details in our [casefile](https://csirt.divd.nl/cases/DIVD-2026-00014/).
+    meta: ''
+    action: null
   - number: 5
     date: 2026-10-01
+    label: ''
     title: 'Open and honest, even if it sucks: the data breach'
+    teaser: ''
+    image: ''
+    imageAlt: ''
+    url: ''
     body: |-
       This is probably the most painful and awkward part of being hacked, sharing which data got out. But waiting until you have all the details does not make the world, and digital society, any safer. If it was your ass on the line, you'd want to know, right? We said we would be open, transparent and honest even if it sucks. So here we go.
 
@@ -110,9 +121,16 @@ updates:
       Our next public update follows on Friday 9 October, or sooner if we have more to share.
 
       For questions and press please reach out to Marieke R. or [communications@divd.nl](mailto:communications@divd.nl). She is the spokesperson for this incident.
+    meta: ''
+    action: null
   - number: 4
     date: 2026-09-30
+    label: ''
     title: We got hacked through zero-days in Zammad. Update now
+    teaser: ''
+    image: ''
+    imageAlt: ''
+    url: ''
     body: |-
       When hackers get hacked, we deal with it in hacker style. While trying to figure out how the attackers got into our own systems, **we found two zero-day vulnerabilities in Zammad.**
       Used together, they allowed the attackers to hijack sessions, run code remotely and escalate privileges from the Zammad user to root, in seconds, due to the agentic part of this hack. From there they were able to access other services and read and exfiltrate data. We urge everyone using any version of Zammad to update to version 7 or take it offline as soon as possible.
@@ -134,7 +152,12 @@ updates:
       url: https://csirt.divd.nl/cases/DIVD-2026-00015/
   - number: 3
     date: 2026-09-28
+    label: ''
     title: 'Worst case until proven otherwise: what we know so far'
+    teaser: ''
+    image: ''
+    imageAlt: ''
+    url: ''
     body: |-
       In every crisis you work with whatever you can find in the first moments, which is a lot and not much at all. It is easy to assume things in the heat of the moment, while collecting evidence and facts takes time, and if you act on assumptions, confirmation bias kicks in and before you know it things escalate.
       At DIVD we like to think big, but that's not helpful in, let's say, a situation where you got hacked.
@@ -155,9 +178,16 @@ updates:
       Our next public update follows on Thursday October 1st, or sooner if we have more to share.
 
       For questions and press please reach out to Marieke R. or [communications@divd.nl](mailto:communications@divd.nl). She is the spokesperson for this incident.
+    meta: ''
+    action: null
   - number: 2
     date: 2026-09-26
+    label: ''
     title: How the attacker used AI agents
+    teaser: ''
+    image: ''
+    imageAlt: ''
+    url: ''
     body: |-
       Wie jarig is, trakteert! Today is our birthday, and if it's your birthday you bring the treats. So here are two (redacted) screenshots from the logs we found during the investigation of our hack.
 
@@ -171,9 +201,15 @@ updates:
       For questions and press please reach out to Marieke R. or [communications@divd.nl](mailto:communications@divd.nl). She is the spokesperson for this incident.
 
       *PS. And since when do hackers sleep at night?*
+    meta: ''
+    action: null
   - number: 1
     date: 2026-09-24
+    label: ''
     title: 'When, not if: we are the hackers that got hacked'
+    teaser: ''
+    image: ''
+    imageAlt: ''
     url: /newsroom/articles/when-no-if/
     body: |-
       Security people always say it's not a matter of if, but when you get hacked. It took us (almost) seven years but we can now say that we're the hackers that got hacked. We noticed suspicious activity, investigated, and came to the inevitable conclusion that damn, we got hacked.
@@ -189,7 +225,37 @@ updates:
       Our next public update follows on Monday 28 September, or sooner if we have more to share.
 
       For questions and press please reach out to Marieke R. or [communications@divd.nl](mailto:communications@divd.nl). She is the spokesperson for this incident.
+    meta: ''
+    action: null
+  - number: 8
+    date: 2026-10-30
+    label: ''
+    title: Let us introduce you to ARTEX, the framework that was used in our hack
+    teaser: Now that our investigation is nearly finished, we can say, based on facts, that this open-source agentic pentest framework was used in our hack.
+    image: /images/hacked/DIVD - incident ARTEX.png
+    imageAlt: ''
+    url: ''
+    body: |-
+      Let us introduce you to ARTEX. Now that our investigation is nearly finished, we can say, based on facts, that this open-source agentic pentest framework was used in our hack. You give it a target and a model of choice, and the agent decides every step itself. This is how it looked in our logs:
 
+      - The attack was split into small jobs, each labelled with an “i” and a sequential number
+      - The agent created an admin API token for itself with no expiry date, so it could keep access without the exploit (artex-i13033)
+      - It tested a mail server for a vulnerability from 2019, with a comment saying the payload is harmless (ARTEX_i13444_CVE2019)
+      - Its first step of every job was testing whether its zero-day still worked
+      - Once it had credentials for one of our mailboxes, it logged in and sent a test mail to our CSIRT from a throwaway address, to check its own work
+      - It read that mailbox nine times, scanned our internal network, knocked on other internal systems, tried password resets for DIVD addresses at our hoster and pulled login tokens from a database, all at the same time
+      - More than 450.000 requests in total
+      - More than 2.500 scripts, where a human attacker needs twenty or thirty
+      - Almost all tooling was custom-built, with comments explaining what it was doing and why
+      - It was super loud and messy. It polluted its own MITM attack with its own password spraying
+
+      All of this led to the result that it went from initial access to root in twelve minutes, by chaining a zero-day in Zammad with a second zero-day for local privilege escalation. The privilege escalation itself took about a minute. If you’re worried about being attacked with this flavour of ARTEX (it has already been forked), we think it is safe to say that you won’t be able to miss it.
+
+      Our research data goes into a public repository once it’s redacted. That will take some time, but once it’s done, we’d like to invite the community to dig into it with us, figure out how this really worked and see if together we can come up with something clever that helps potential victims detect attacks like this earlier.
+
+      ARTEX has been in the news this past week for other attacks too, which does not mean those attacks are connected. To prevent speculation and framing, we will not share information about the attacker. We did share it with the authorities when we filed a police report.
+    meta: ''
+    action: null
 zammad:
   title: We got hacked through zero-days in Zammad
   text: The attacker used two previously unknown vulnerabilities in Zammad, the helpdesk software behind our CSIRT. We reported them to Zammad, who fixed them in 7.2 and 7.2.2. Running Zammad? Update as soon as possible.
@@ -203,7 +269,6 @@ zammad:
     - id: CVE-2026-102490
       text: Local privilege escalation to root (DEB/RPM installs), fixed in version 7.2.2
       url: https://www.cve.org/CVERecord?id=CVE-2026-102490
-
 data:
   title: What was in the leaked data?
   text: We are still finding out exactly what the attacker took. Below is the short version per category. The full, up-to-date overview lives on the CSIRT case page.
@@ -212,47 +277,68 @@ data:
     label: Full data overview
     url: https://csirt.divd.nl/DIVD-2026-00014/overview_data_investigation/
   image: /images/hacked/csirt-data.png
-  # status: leak | investigating | none
   categories:
     - title: Volunteer data
       subtitle: Office, helpdesk and community tools
       items:
-        - { name: Office suite (GSuite), status: leak }
-        - { name: IT support & helpdesk, status: leak }
-        - { name: Jira & Confluence, status: leak }
-        - { name: System data, status: leak }
-        - { name: HR, status: none }
-        - { name: Source code, status: none }
-        - { name: Slack, status: none }
+        - name: Office suite (GSuite)
+          status: leak
+        - name: IT support & helpdesk
+          status: leak
+        - name: Jira & Confluence
+          status: leak
+        - name: System data
+          status: leak
+        - name: HR
+          status: none
+        - name: Source code
+          status: none
+        - name: Slack
+          status: none
     - title: Core business data
       subtitle: Our CSIRT work and research
       items:
-        - { name: CSIRT ticket system, status: leak }
-        - { name: Private researcher email, status: leak }
-        - { name: Zammad data, status: investigating }
-        - { name: Vulnerable system lists & fingerprints, status: investigating }
-        - { name: Proofs of concept, status: investigating }
-        - { name: Leaked credential dumps, status: investigating }
+        - name: CSIRT ticket system
+          status: leak
+        - name: Private researcher email
+          status: leak
+        - name: Zammad data
+          status: investigating
+        - name: Vulnerable system lists & fingerprints
+          status: investigating
+        - name: Proofs of concept
+          status: investigating
+        - name: Leaked credential dumps
+          status: investigating
     - title: Administration & finance
       subtitle: Running the foundation
       items:
-        - { name: GSuite administration, status: investigating }
-        - { name: Accounting, status: none }
-        - { name: Bank, status: none }
-
+        - name: GSuite administration
+          status: investigating
+        - name: Accounting
+          status: none
+        - name: Bank
+          status: none
 reports:
   title: Reports & downloads
   intro: We publish everything we know. The final report follows once the investigation is done.
-  # Leave `url` empty for reports that are not published yet ("Expected").
   items:
     - title: Overview of compromised data
       type: Web
       meta: Overview · 9 Oct 2026
       url: https://csirt.divd.nl/DIVD-2026-00014/overview_data_investigation/
     - title: Final report
+      type: ''
+      meta: ''
+      url: ''
     - title: Agentic deep dive
+      type: ''
+      meta: ''
+      url: ''
     - title: Case study
-
+      type: ''
+      meta: ''
+      url: ''
 contact:
   label: Questions, press & media inquiries
   name: Marieke Rijken
@@ -261,7 +347,6 @@ contact:
   text: |-
     All questions can be sent to [communications@divd.nl](mailto:communications@divd.nl).
     All data related questions, please send an email to our Data Protection Officer [dpo@divd.nl](mailto:dpo@divd.nl).
-
 faq:
   title: Frequently asked questions
   items:
