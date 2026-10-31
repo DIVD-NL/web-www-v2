@@ -62,6 +62,35 @@ timeline:
       text: First access by a malicious actor on DIVD systems, through two unknown vulnerabilities in Zammad.
       update: null
 updates:
+  - number: 8
+    date: 2026-10-31
+    label: ''
+    title: Let us introduce you to ARTEX, the framework that was used in our hack
+    teaser: Now that our investigation is nearly finished, we can say, based on facts, that this open-source agentic pentest framework was used in our hack.
+    image: /images/hacked/DIVD - incident ARTEX.png
+    imageAlt: ''
+    url: ''
+    body: |-
+      Let us introduce you to ARTEX. Now that our investigation is nearly finished, we can say, based on facts, that this open-source agentic pentest framework was used in our hack. You give it a target and a model of choice, and the agent decides every step itself. This is how it looked in our logs:
+
+      - The attack was split into small jobs, each labelled with an “i” and a sequential number
+      - The agent created an admin API token for itself with no expiry date, so it could keep access without the exploit (artex-i13033)
+      - It tested a mail server for a vulnerability from 2019, with a comment saying the payload is harmless (ARTEX_i13444_CVE2019)
+      - Its first step of every job was testing whether its zero-day still worked
+      - Once it had credentials for one of our mailboxes, it logged in and sent a test mail to our CSIRT from a throwaway address, to check its own work
+      - It read that mailbox nine times, scanned our internal network, knocked on other internal systems, tried password resets for DIVD addresses at our hoster and pulled login tokens from a database, all at the same time
+      - More than 450.000 requests in total
+      - More than 2.500 scripts, where a human attacker needs twenty or thirty
+      - Almost all tooling was custom-built, with comments explaining what it was doing and why
+      - It was super loud and messy. It polluted its own MITM attack with its own password spraying
+
+      All of this led to the result that it went from initial access to root in twelve minutes, by chaining a zero-day in Zammad with a second zero-day for local privilege escalation. The privilege escalation itself took about a minute. If you’re worried about being attacked with this flavour of ARTEX (it has already been forked), we think it is safe to say that you won’t be able to miss it.
+
+      Our research data goes into a public repository once it’s redacted. That will take some time, but once it’s done, we’d like to invite the community to dig into it with us, figure out how this really worked and see if together we can come up with something clever that helps potential victims detect attacks like this earlier.
+
+      ARTEX has been in the news this past week for other attacks too, which does not mean those attacks are connected. To prevent speculation and framing, we will not share information about the attacker. We did share it with the authorities when we filed a police report.
+    meta: ''
+    action: null
   - number: 7
     date: 2026-10-09
     label: (Hopefully) last update
@@ -225,35 +254,6 @@ updates:
       Our next public update follows on Monday 28 September, or sooner if we have more to share.
 
       For questions and press please reach out to Marieke R. or [communications@divd.nl](mailto:communications@divd.nl). She is the spokesperson for this incident.
-    meta: ''
-    action: null
-  - number: 8
-    date: 2026-10-31
-    label: ''
-    title: Let us introduce you to ARTEX, the framework that was used in our hack
-    teaser: Now that our investigation is nearly finished, we can say, based on facts, that this open-source agentic pentest framework was used in our hack.
-    image: /images/hacked/DIVD - incident ARTEX.png
-    imageAlt: ''
-    url: ''
-    body: |-
-      Let us introduce you to ARTEX. Now that our investigation is nearly finished, we can say, based on facts, that this open-source agentic pentest framework was used in our hack. You give it a target and a model of choice, and the agent decides every step itself. This is how it looked in our logs:
-
-      - The attack was split into small jobs, each labelled with an “i” and a sequential number
-      - The agent created an admin API token for itself with no expiry date, so it could keep access without the exploit (artex-i13033)
-      - It tested a mail server for a vulnerability from 2019, with a comment saying the payload is harmless (ARTEX_i13444_CVE2019)
-      - Its first step of every job was testing whether its zero-day still worked
-      - Once it had credentials for one of our mailboxes, it logged in and sent a test mail to our CSIRT from a throwaway address, to check its own work
-      - It read that mailbox nine times, scanned our internal network, knocked on other internal systems, tried password resets for DIVD addresses at our hoster and pulled login tokens from a database, all at the same time
-      - More than 450.000 requests in total
-      - More than 2.500 scripts, where a human attacker needs twenty or thirty
-      - Almost all tooling was custom-built, with comments explaining what it was doing and why
-      - It was super loud and messy. It polluted its own MITM attack with its own password spraying
-
-      All of this led to the result that it went from initial access to root in twelve minutes, by chaining a zero-day in Zammad with a second zero-day for local privilege escalation. The privilege escalation itself took about a minute. If you’re worried about being attacked with this flavour of ARTEX (it has already been forked), we think it is safe to say that you won’t be able to miss it.
-
-      Our research data goes into a public repository once it’s redacted. That will take some time, but once it’s done, we’d like to invite the community to dig into it with us, figure out how this really worked and see if together we can come up with something clever that helps potential victims detect attacks like this earlier.
-
-      ARTEX has been in the news this past week for other attacks too, which does not mean those attacks are connected. To prevent speculation and framing, we will not share information about the attacker. We did share it with the authorities when we filed a police report.
     meta: ''
     action: null
 zammad:
