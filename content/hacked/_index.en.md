@@ -228,7 +228,7 @@ updates:
     meta: ''
     action: null
   - number: 8
-    date: 2026-10-30
+    date: 2026-10-31
     label: ''
     title: Let us introduce you to ARTEX, the framework that was used in our hack
     teaser: Now that our investigation is nearly finished, we can say, based on facts, that this open-source agentic pentest framework was used in our hack.
