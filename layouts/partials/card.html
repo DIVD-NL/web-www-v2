@@ -21,7 +21,11 @@
       {{ partial "tools/rimg/img" (dict "img" . "alt" $alt) }}
       <!--- $alt --->
     {{ else }}
-      <img src="#" alt="Empty image" />
+      {{ if fileExists (printf "static/%s" (strings.TrimPrefix "/" $imageSource)) }}
+        <img src="{{ $imageSource | relURL }}" alt="{{ $alt }}" />
+      {{ else }}
+        <img src="#" alt="Empty image" />
+      {{ end }}
     {{ end }}
     {{ if $tag }}
       <figcaption>{{ $tag }}</figcaption>

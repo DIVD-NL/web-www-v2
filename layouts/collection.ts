@@ -43,13 +43,13 @@ export const HomeCollection = {
           multiple: false,
         },
         {
-          label: 'Received an email',
-          name: 'received',
+          label: 'Hacked card title',
+          name: 'hacked',
           widget: 'string',
         },
         {
-          name: 'received_alt',
-          label: 'Alt text for received image',
+          name: 'hacked_alt',
+          label: 'Alt text for hacked image',
           widget: 'string',
         },
         {
