@@ -1,11 +1,22 @@
 @layer reset, theme, base, components, utilities;
 
 @import "tailwindcss" source(none);
+
+/* The JS config replaces v3's default breakpoints with desktop only. */
+@theme {
+  --breakpoint-*: initial;
+}
+
 /* Hugo sends the concatenated stylesheet to PostCSS from the project root. */
 @config "./tailwind.config.js";
 
-/* Preserve the v3 defaults used by borders, forms, and update dialogs. */
+/* Preserve the v3 defaults used by the reset, borders, forms, and dialogs. */
 @layer base {
+  /* Preflight v4 no longer overrides the body line-height in our reset. */
+  body {
+    line-height: inherit;
+  }
+
   *,
   ::after,
   ::before,
