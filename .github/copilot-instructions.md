@@ -78,7 +78,8 @@ Use `{{ partial "tools/rimg/img" (dict "img" . "alt" "text") }}` for responsive 
 ### Hybrid Approach
 1. **Tailwind classes**: Used in `layouts/**/*.html` templates
 2. **Custom SCSS**: Component-specific styles in `assets/scss/ui/`
-3. **CSS pipeline**: Hugo compiles `screen.scss`, concatenates it after `assets/css/tailwind.css`, then runs Tailwind v4 through `@tailwindcss/postcss`.
+3. **CSS pipeline**: Hugo compiles `screen.scss` with Dart Sass, concatenates it after `assets/css/tailwind.css`, then runs Tailwind v4 through `@tailwindcss/postcss`.
+   - The standalone Dart Sass compiler must be on `PATH`; CI installs it before the build.
    - Cascade layers: Reset → Theme → Tailwind base → Fonts/Typography/UI components → Tailwind utilities
    - Tailwind imports stay in the CSS entry point so Sass does not process them.
 

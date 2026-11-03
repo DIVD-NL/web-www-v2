@@ -11,11 +11,16 @@ The first 10 pull requests that genuinely improve the website will receive a box
 
 - golang
 - https://gohugo.io
+- [Standalone Dart Sass](https://gohugo.io/functions/css/sass/#dart-sass) (CI uses 1.107.1)
 - https://just.systems/ (optional)
 - npm
 - node ^22
 
 # Setup
+
+Install the standalone Dart Sass compiler and add its directory to `PATH`.
+Verify it with `sass --embedded --version`. The npm `sass` package does not
+support the embedded protocol required by Hugo.
 
 ```sh
 npm install

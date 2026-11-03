@@ -1,26 +1,28 @@
+@use "sass:meta";
+
 @layer reset {
-  @import "reset.scss";
+  @include meta.load-css("reset");
 }
 
 // Keep component styles below Tailwind utilities in the cascade.
 @layer components {
-  @import "fonts.scss";
-  @import "variables.scss";
-  @import "typography.scss";
-  @import "core.scss";
+  @include meta.load-css("fonts");
+  @include meta.load-css("variables");
+  @include meta.load-css("typography");
+  @include meta.load-css("core");
 
-  @import "ui/nav.scss";
-  @import "ui/layout.scss";
-  @import "ui/opener.scss";
-  @import "ui/card.scss";
-  @import "ui/carousel.scss";
-  @import "ui/accordion.scss";
-  @import "ui/stats.scss";
-  @import "ui/footer.scss";
+  @include meta.load-css("ui/nav");
+  @include meta.load-css("ui/layout");
+  @include meta.load-css("ui/opener");
+  @include meta.load-css("ui/card");
+  @include meta.load-css("ui/carousel");
+  @include meta.load-css("ui/accordion");
+  @include meta.load-css("ui/stats");
+  @include meta.load-css("ui/footer");
 
-  @import "pages/volunteers.scss";
-  @import "pages/newsroom.scss";
-  @import "pages/hacked.scss";
+  @include meta.load-css("pages/volunteers");
+  @include meta.load-css("pages/newsroom");
+  @include meta.load-css("pages/hacked");
 }
 
-@import "divdwind/utilities.scss";
+@include meta.load-css("divdwind/utilities");

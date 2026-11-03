@@ -3,10 +3,16 @@
 // templates; this file only holds what Tailwind can't express nicely (shapes, gradients,
 // states driven by ui.ts).
 
+@use "sass:math";
+
 $hack-yellow: #ffd736;
 $hack-dark: #1d1d1d;
 $hack-mid: #545454;
-$hack-gradient: linear-gradient(180deg, $hack-yellow 0%, rgba($hack-yellow, 0) 100%);
+$hack-gradient: linear-gradient(
+  180deg,
+  $hack-yellow 0%,
+  rgba($hack-yellow, 0) 100%
+);
 
 .hack-page {
   background-color: #000;
@@ -295,7 +301,7 @@ button.hack-btn {
     right: 0;
     // Starts below the stats pill that overlaps the hero's bottom edge.
     top: 660px;
-    width: unquote("min(420px, 30vw)");
+    width: min(420px, 30vw);
     height: 820px;
     border-top-left-radius: 420px;
     background: $hack-gradient;
@@ -473,7 +479,7 @@ button.hack-btn {
     position: absolute;
     left: 0;
     top: 300px;
-    width: unquote("min(380px, 26vw)");
+    width: min(380px, 26vw);
     height: 760px;
     border-top-right-radius: 380px;
     background: $hack-gradient;
@@ -520,9 +526,9 @@ button.hack-btn {
     &::before {
       content: "";
       position: absolute;
-      left: ($dot - 2px) / 2;
-      top: $dot-top + $dot / 2;
-      bottom: -($gap + $dot-top + $dot / 2);
+      left: math.div($dot - 2px, 2);
+      top: $dot-top + math.div($dot, 2);
+      bottom: -($gap + $dot-top + math.div($dot, 2));
       width: 2px;
       background: $hack-yellow;
     }
@@ -806,7 +812,7 @@ button.hack-btn {
 // Update pop-up ----------------------------------------------------------------
 
 .hack-modal {
-  width: unquote("min(900px, calc(100vw - 24px))");
+  width: min(900px, calc(100vw - 24px));
   max-height: calc(100dvh - 24px);
   padding: 0;
   border: 1px solid #333;
