@@ -1,6 +1,6 @@
 export default {
   plugins: {
-    autoprefixer: {},
-    tailwindcss: {},
+    // Hugo handles minification; Tailwind still needs to transform and prefix CSS.
+    '@tailwindcss/postcss': { optimize: { minify: false } },
   },
 };
