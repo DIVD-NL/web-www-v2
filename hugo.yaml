@@ -19,6 +19,14 @@ build:
     - source: layouts/.*
       target: css
 
+security:
+  node:
+    permissions:
+      # Tailwind v4 runs through PostCSS and loads Lightning CSS/Oxide addons.
+      allowAddons:
+        - tailwindcss
+        - postcss
+
 server:
   headers:
     - for: /**
