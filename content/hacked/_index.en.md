@@ -37,6 +37,10 @@ timeline:
   title: From first access to open case
   intro: The highlights only. The full timeline is on the CSIRT case page.
   items:
+    - date: 24 Nov 2026
+      title: Email notification sent
+      text: We emailed the people whose email address was in the leaked data, to tell them what leaked and what they can do.
+      update: null
     - date: 18 Nov 2026
       title: Case file and data overview updated
       text: The technical investigation is complete. The overview now has the final assessment per data category.
