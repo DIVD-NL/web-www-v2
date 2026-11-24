@@ -48,6 +48,11 @@ jobs:
           GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
           GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
         run: npm run gen-people
+      - name: Apply timed content (only once due)
+        if: ${{ github.ref == 'refs/heads/main' }}
+        env:
+          EMBARGO_KEY: ${{ secrets.EMBARGO_KEY }}
+        run: scripts/embargo.sh apply-if-due
       - name: Build
         run: |
           npm run update-stats
