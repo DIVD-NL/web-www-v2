@@ -11,7 +11,7 @@ numbers:
   - value: '15'
     unit: min
     label: time to detect
-  - value: '9'
+  - value: '28'
     unit: hrs
     label: time to contain
   - value: '19'
@@ -19,7 +19,7 @@ numbers:
     label: time to respond
 overview:
   title: What happened
-  intro: An attacker abused two zero-days in Zammad, our helpdesk software, to get into servers in our data center. Our monitoring raised the first alert within 15 minutes. It took us 19 hours to start our response, and another nine to contain the attack and block access to all systems.
+  intro: An attacker abused two zero-days in Zammad, our helpdesk software, to get into servers in our data center. Our monitoring raised the first alert after 15 minutes. It took us 19 hours to start our response, and another nine to contain the attack and block access to all systems.
   cards:
     - title: What do we know?
       text: The attacker got in through two zero-days in Zammad and used AI agents along the way. Part of our data was exfiltrated. The forensic investigation has been completed.
@@ -38,8 +38,8 @@ timeline:
   intro: The highlights only. The full timeline is on the CSIRT case page.
   items:
     - date: 18 Nov 2026
-      title: Investigation completed, data overview final
-      text: Case file and data overview updated with the final assessment per data category, based on the technical investigation.
+      title: Case file and data overview updated
+      text: The technical investigation is complete. The overview now has the final assessment per data category.
       update: null
     - date: 31 Oct 2026
       title: ARTEX identified
@@ -279,7 +279,7 @@ zammad:
       url: https://www.cve.org/CVERecord?id=CVE-2026-102490
 data:
   title: What was in the leaked data?
-  text: 'The technical investigation is complete. The attacker exfiltrated the titles of around 41,000 tickets and a limited set of older conversations. The leaked data contained 4,121 personal email addresses and 34 personal phone numbers. From Jira and Confluence, email addresses of 207 volunteers and former volunteers leaked, plus two phone numbers and seven identifiable profile pictures. Below is the short version per category. The full overview lives on the CSIRT case page.'
+  text: 'The technical investigation is complete. The attacker exfiltrated the titles of around 41,000 tickets and a limited set of older conversations. The leaked data contained 4,121 personal email addresses and 34 personal phone numbers. The attacker could also read our Google Workspace directory. From Jira and Confluence, email addresses of 207 volunteers and former volunteers leaked, plus two phone numbers and seven identifiable profile pictures. Below is the short version per category. The full overview lives on the CSIRT case page.'
   note: The CVE/CNA environment runs separately. There is no indication it was accessed.
   button:
     label: Full data overview
@@ -289,8 +289,8 @@ data:
     - title: Volunteer data
       subtitle: Office, helpdesk and community tools
       items:
-        - name: Office suite (GSuite directory)
-          status: leak
+        - name: Office suite (GSuite)
+          status: none
         - name: IT support & helpdesk
           status: none
         - name: Jira & Confluence
