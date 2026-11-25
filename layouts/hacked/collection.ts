@@ -244,6 +244,7 @@ export const HackedCollection = {
                   required: false,
                   hint: 'Leave empty until the report is published.',
                 },
+                { label: 'Button text', name: 'button', widget: 'string', required: false },
               ],
             },
           ],

@@ -3,15 +3,15 @@ title: We got hacked, here’s everything we know
 type: hacked
 caseId: DIVD-2026-00014
 caseUrl: https://csirt.divd.nl/cases/DIVD-2026-00014/
-status: Investigation ongoing
-updated: 2026-10-09T20:01:00+02:00
+status: Forensic investigation completed
+updated: 2026-11-24T22:30:00+01:00
 hero:
   intro: On 21 September 2026 an attacker got into our data center through two zero-days in Zammad. We said we'd be open, transparent and honest, even if it sucks. This page collects every update, the CSIRT case data and our reports.
 numbers:
-  - value: '19'
+  - value: '15'
     unit: min
     label: time to detect
-  - value: '9'
+  - value: '28'
     unit: hrs
     label: time to contain
   - value: '19'
@@ -19,10 +19,10 @@ numbers:
     label: time to respond
 overview:
   title: What happened
-  intro: An attacker abused two zero-days in Zammad, our helpdesk software, to get into servers in our data center. We detected it within 19 minutes and blocked access to all systems. We treat this as a worst case until we can prove otherwise.
+  intro: An attacker abused two zero-days in Zammad, our helpdesk software, to get into servers in our data center. Our monitoring raised the first alert after 15 minutes. It took us 19 hours to start our response, and another nine to contain the attack and block access to all systems.
   cards:
     - title: What do we know?
-      text: The attacker got in through two zero-days in Zammad and used AI agents along the way. Part of our data was exfiltrated. The investigation is still running.
+      text: The attacker got in through two zero-days in Zammad and used AI agents along the way. Part of our data was exfiltrated. The forensic investigation has been completed.
       checklist: []
     - title: What are we doing?
       text: All data center systems were shut down and rebuilt. We reported the zero-days to Zammad, filed a police report and keep publishing what we find.
@@ -37,9 +37,21 @@ timeline:
   title: From first access to open case
   intro: The highlights only. The full timeline is on the CSIRT case page.
   items:
+    - date: 24 Nov 2026
+      title: Email notification sent
+      text: We emailed the people whose email address was in the leaked data, to tell them what leaked and what they can do.
+      update: null
+    - date: 18 Nov 2026
+      title: Case file and data overview updated
+      text: The technical investigation is complete. The overview now has the final assessment per data category.
+      update: null
+    - date: 31 Oct 2026
+      title: ARTEX identified
+      text: We shared that the open-source agentic pentest framework ARTEX was used in our hack.
+      update: 8
     - date: 9 Oct 2026
       title: Data overview updated
-      text: The data investigation is still running. We update the overview as we learn more.
+      text: Case file overview of the data investigation updated. Two providers were affected as collateral damage.
       update: 7
     - date: 5–7 Oct 2026
       title: Police report and sharing lessons
@@ -55,7 +67,7 @@ timeline:
       update: 1
     - date: 22 Sep 2026
       title: Detected and shut down
-      text: Malicious activity detected within 19 minutes. Access to all systems in the data center blocked.
+      text: We became aware of malicious activity, formed an incident response team and blocked access to all systems in the data center.
       update: null
     - date: 21 Sep 2026
       title: First access
@@ -271,20 +283,20 @@ zammad:
       url: https://www.cve.org/CVERecord?id=CVE-2026-102490
 data:
   title: What was in the leaked data?
-  text: We are still finding out exactly what the attacker took. Below is the short version per category. The full, up-to-date overview lives on the CSIRT case page.
+  text: 'The technical investigation is complete. The attacker exfiltrated the titles of around 41,000 tickets and a limited set of older conversations. The leaked data contained 4,121 personal email addresses and 34 personal phone numbers. The attacker could also read our Google Workspace directory. From Jira and Confluence, email addresses of 207 volunteers and former volunteers leaked, plus two phone numbers and seven identifiable profile pictures. Below is the short version per category. The full overview lives on the CSIRT case page.'
   note: The CVE/CNA environment runs separately. There is no indication it was accessed.
   button:
     label: Full data overview
-    url: https://csirt.divd.nl/DIVD-2026-00014/overview_data_investigation/
+    url: https://csirt.divd.nl/cases/DIVD-2026-00014/overview_data_investigation/
   image: /images/hacked/csirt-data.png
   categories:
     - title: Volunteer data
       subtitle: Office, helpdesk and community tools
       items:
         - name: Office suite (GSuite)
-          status: leak
+          status: none
         - name: IT support & helpdesk
-          status: leak
+          status: none
         - name: Jira & Confluence
           status: leak
         - name: System data
@@ -300,21 +312,25 @@ data:
       items:
         - name: CSIRT ticket system
           status: leak
-        - name: Private researcher email
+        - name: Vulnerable system lists
           status: leak
-        - name: Zammad data
-          status: investigating
-        - name: Vulnerable system lists & fingerprints
-          status: investigating
+        - name: Masked credential dumps
+          status: leak
+        - name: Unmasked credential dumps
+          status: none
+        - name: Fingerprints
+          status: none
         - name: Proofs of concept
-          status: investigating
-        - name: Leaked credential dumps
-          status: investigating
+          status: none
+        - name: Zero-days (old CNA email chains)
+          status: leak
+        - name: Private researcher email
+          status: none
     - title: Administration & finance
       subtitle: Running the foundation
       items:
         - name: GSuite administration
-          status: investigating
+          status: none
         - name: Accounting
           status: none
         - name: Bank
@@ -325,8 +341,8 @@ reports:
   items:
     - title: Overview of compromised data
       type: Web
-      meta: Overview · 9 Oct 2026
-      url: https://csirt.divd.nl/DIVD-2026-00014/overview_data_investigation/
+      meta: Overview · 18 Nov 2026
+      url: https://csirt.divd.nl/cases/DIVD-2026-00014/overview_data_investigation/
     - title: Final report
       type: ''
       meta: ''
@@ -351,7 +367,7 @@ faq:
   title: Frequently asked questions
   items:
     - title: Has my data been leaked?
-      description: We are still investigating. The data overview on the CSIRT case page shows what we know per data category.
+      description: The technical investigation is complete. The data overview on the CSIRT case page shows the final assessment per data category. Questions about your personal data? Email dpo@divd.nl.
     - title: I run Zammad. What should I do?
       description: Update to Zammad version 7 as soon as possible, or take your instance offline.
     - title: How could this happen to a security organisation?
