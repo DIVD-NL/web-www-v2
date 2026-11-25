@@ -1,0 +1,161 @@
+name: embargo_publish
+run-name: Timed publication (25 Nov 2026 13:37 CET)
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - embargo/content.tar.enc
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: embargo_publish
+  cancel-in-progress: true
+
+jobs:
+  # Runs straight away, so a wrong key or a broken build shows up early.
+  verify:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: "npm"
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+      - name: Setup Dart Sass
+        env:
+          DART_SASS_VERSION: "1.107.1"
+        run: |
+          curl --fail --silent --show-error --location --retry 3 \
+            "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" \
+            --output "$RUNNER_TEMP/dart-sass.tar.gz"
+          tar -xzf "$RUNNER_TEMP/dart-sass.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/dart-sass" >> "$GITHUB_PATH"
+      - name: Install npm dependencies
+        run: npm install
+      - name: Fetch People Data
+        env:
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        run: npm run gen-people
+      - name: Apply timed content
+        env:
+          EMBARGO_KEY: ${{ secrets.EMBARGO_KEY }}
+        run: scripts/embargo.sh apply
+      - name: Build
+        run: |
+          npm run update-stats
+          npm run cms-build
+          hugo --minify
+          sha256sum public/hacked/index.html | cut -d' ' -f1 > "$RUNNER_TEMP/page.sha"
+
+  # A job may run 6 hours at most, so the wait is split up.
+  wait1:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v3
+      - run: scripts/embargo.sh wait 1500
+
+  # A job may run 6 hours at most, so the wait is split up.
+  wait2:
+    needs: wait1
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v3
+      - run: scripts/embargo.sh wait 1500
+
+  # A job may run 6 hours at most, so the wait is split up.
+  wait3:
+    needs: wait2
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v3
+      - run: scripts/embargo.sh wait 1500
+
+  publish:
+    needs: wait3
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: "npm"
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+      - name: Setup Dart Sass
+        env:
+          DART_SASS_VERSION: "1.107.1"
+        run: |
+          curl --fail --silent --show-error --location --retry 3 \
+            "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" \
+            --output "$RUNNER_TEMP/dart-sass.tar.gz"
+          tar -xzf "$RUNNER_TEMP/dart-sass.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/dart-sass" >> "$GITHUB_PATH"
+      - name: Install npm dependencies
+        run: npm install
+      - name: Fetch People Data
+        env:
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        run: npm run gen-people
+      - name: Check that the wait is nearly over
+        env:
+          MAX_WAIT: 1
+          MUST_REACH: 1
+        run: scripts/embargo.sh wait 1500
+      - name: Apply timed content
+        env:
+          EMBARGO_KEY: ${{ secrets.EMBARGO_KEY }}
+        run: scripts/embargo.sh apply
+      - name: Build
+        run: |
+          npm run update-stats
+          npm run cms-build
+          hugo --minify
+          sha256sum public/hacked/index.html | cut -d' ' -f1 > "$RUNNER_TEMP/page.sha"
+      - name: Wait until 13:37:00 CET
+        env:
+          MUST_REACH: 1
+        run: scripts/embargo.sh wait 0
+      - name: rsync deploy production
+        uses: burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -avzr --delete
+          path: public/
+          remote_path: htdocs/divd-nl-2024
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
+      - name: Check the live site
+        run: |
+          for i in 1 2 3 4 5 6; do
+            live=$(curl --silent --location "https://www.divd.nl/hacked/?t=$(date +%s)" | sha256sum | cut -d' ' -f1)
+            if [ "$live" = "$(cat "$RUNNER_TEMP/page.sha")" ]; then echo "Live."; exit 0; fi
+            sleep 10
+          done
+          echo "Live page differs from the build." >&2
+          exit 1
